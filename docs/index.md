@@ -2,7 +2,7 @@
 
 Nethereum is the .Net integration library for Ethereum, simplifying the access and smart contract interaction with Ethereum nodes both public or permissioned like Geth, Parity or Quorum. 
 
-Nethereum is developed targetting netstandard 1.1, net451 and also as a portable library, hence it is compabitable with all the operating systems (Windows, Linux, MacOS, Android and OSX) and has been tested on cloud, mobile, desktop, xbox, hololens and windows IoT. 
+Nethereum is developed targetting netstandard 1.1, net451 and also as a portable library, hence it is compabitable with all the operating systems (Windows, Linux, MacOS, Android and OSX) and has been tested on cloud, mobile, desktop, xbox, hololens and windows IoT.
 
 ## Features
 
@@ -26,6 +26,8 @@ Nethereum is developed targetting netstandard 1.1, net451 and also as a portable
 Nethereum provides two types of packages. Standalone packages targetting Netstandard 1.1, net451 and where possible net350 and the Nethereum.Portable library which combines all the packages into one as a portable library. As netstandard evolves and is more widely supported the portable library might be eventually deprecated, as it won't be longer needed.
 
 To install the latest version you can either:
+
+[//]: # (QUSJ: The two CLI lines below don't seem to apply to Macs, can you confirm?)
 
 ```
 PM > Install-Package Nethereum.Portable -Pre

@@ -72,6 +72,8 @@ geth  --rpc --networkid=39318 --maxpeers=0 --datadir=devChain  --rpccorsdomain "
 ```
 [Source code](https://github.com/Nethereum/Nethereum/blob/master/testchain/startgeth.bat)
 
+[//]: # (CJuan> I couldn't run that script, your help is welcome)
+
 #### Shell script
 ```
 rm -rf devChain/chainData

@@ -65,14 +65,13 @@ Transfer an amount to another address, using the transaction manager
  
 ```csharp
 await web3.TransactionManager.SendTransactionAsync(account.Address, addressTo, new HexBigInteger(20));
-
 ```
 
 Deploy a contract
 
 ```csharp
  web3.Eth.DeployContract.SendRequestAsync(abi, byteCode, senderAddress, new HexBigInteger(900000),
-                            multiplier)
+                            multiplier);
 ```
 
 Make a contract Function transaction

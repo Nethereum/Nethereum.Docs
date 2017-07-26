@@ -1,16 +1,16 @@
-## What is an Ethereum Dapp?
+## What is an Ethereum node?
 
 ####tl;dr
-A **Dapp** is a decentralized app: a frontend that interacts with smart contracts.
+Nodes are the point of entry of your [Dapp](/docs/Ethereum-glossary-for-newbies) to the Ethereum network, they are the equivalent of a back-end for decentralized networks. You can run your own node locally or connect to a remote one.
 
-In the case of Ethereum, a DApp has its backend code running on the Ethereum network. Contrast this with an app where the backend code is running on centralized servers.
+Nodes are instances of the Ethereum network. Each node hosts all the Ethereum transactions ever made and syncs with the network.
 
-A DApp can have frontend code and user interfaces written in any language (just like an app) that can make calls to its backend. Furthermore, its frontend can be hosted on decentralized storage such as Swarm or IPFS.
+What is an Ethereum node?
+Each node hosts all the Ethereum transactions ever made and syncs constantly with all the other nodes in the network.
+An Ethereum node is a piece of the Ethereum global computer. If Ethereum is a body, think of nodes as the cells that constitute it. Technically, a node is a piece of Ethereum software running on a computer somewhere. There are thousands of live nodes around the world right now, and it's growing every day.
 
-If an app=frontend+server, since Ethereum contracts are code that runs on the global Ethereum decentralized peer-to-peer network, then:
+How does an Ethereum node work?
+Each node hosts all the Ethereum transactions ever made and syncs constantly with all the other nodes in the network.
 
-DApp = frontend + contracts
-
-https://ethereum.stackexchange.com/a/384/3862
-
-Credits  to [BokkyPooBah](https://ethereum.stackexchange.com/users/1268/bokkypoobah) for the technical part of this explanation: https://ethereum.stackexchange.com/questions/10681/what-are-ipc-and-rpc
+This network of Walkie-Talkies works like a group of Ethereum nodes
+An analogy might help: you can think of a network of Ethereum nodes as Walkie-Talkies. Each Walkie-Talkies is constantly receiving messages from all the others and can also broadcast to its peers. Yet, their network is decentralized: if one or several Walkie-Talkies run out of battery, the network still runs, there is no central point of failure.

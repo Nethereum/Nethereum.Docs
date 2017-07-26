@@ -2,7 +2,7 @@
 
 ####tl;dr
 Both RPC / IPC are procedures used for any processes to interact with an Ethereum node. 
-They are necessary for any Dapp to interact with public/private Ethereum networks.
+They are necessary for any Dapp to communicate with public/private Ethereum networks.
 
 ####Detailed explanation
 **IPC** or "_Inter-process Communications_" generally works on your local computer. In the Ethereum space, IPC normally involves geth creating a IPC pipe (which is represented by the file $HOME/.ethereum/geth.ipc) on your computer's local filesystem.

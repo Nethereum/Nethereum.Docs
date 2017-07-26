@@ -1,6 +1,6 @@
 ## Installation and configuration of the Ethereum client Geth
 
-You can download the latest version stable version of geth from [Github](https://github.com/ethereum/go-ethereum/releases), installation is  as simple as extracting geth.exe from your chosen OS.
+You can download the latest version stable version of geth from [Github](https://github.com/ethereum/go-ethereum/releases), the installation is  as simple as extracting geth.exe from your chosen OS.
 
 If you are using a Mac or Linux you can also use Homebrew or PPA.
 
@@ -23,11 +23,10 @@ sudo apt-get install ethereum
 
 ###RPC / IPC options 
 
-######Check [here](/docs/Ethereum-glossary-for-newbies/RPC-IPC.md) if you don't know what RPC / IPC is.
+######Check [here](/docs/Ethereum-glossary-for-newbies/RPC-IPC.md) if you don't know what IPC / IPC is.
+There are several command line options to run geth [which can be found in their documentation](https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options). 
 
-There are several command line options to run geth [which can be found on their documentation](https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options). 
-
-But in any case you need have enabled RPC or IPC.
+But most important you need have enabled RPC or IPC.
 
 You can start the HTTP JSON-RPC with the --rpc flag
 
@@ -40,12 +39,12 @@ change the default port (8545) and listing address (localhost) with:
 ```
 geth --rpc --rpcaddr <ip> --rpcport <portnumber>
 ```
-If accessing the RPC from a browser, CORS will need to be enabled with the appropriate domain set. Otherwise, JavaScript calls will be limited by the same-origin policy and requests will fail:
+If accessing the RPC from a browser, CORS will need to be enabled with the appropriate domain set. Otherwise, JavaScript calls are limited by the same-origin policy and requests will fail:
 
 ```
 geth --rpc --rpccorsdomain "http://localhost:3000"
 ```
-The JSON RPC can also be started from the geth console using the admin.startRPC(addr, port) command.
+The JSON RPC can also be started from the geth console using the ```admin.startRPC(addr, port) ``` command.
 
 ### Setting up your own testnet
 
@@ -58,7 +57,7 @@ The chain keystore in the "devChain" folder contains the keys for the preconfigu
 * Private Key: 0xb5b1870957d373ef0eeffecc6e4812c0fd08f554b37b233526acc331bf1544f7
 
 
-To start the chain, a batch file (for Windows) or a shell script (for Linux and Mac) can be used, both of them will reset all the data when launched.
+To start the chain there are a batch file or a shell script which can be used, both of them will reset all the data when launched.
 
 #### Batch file
 ```

@@ -5,13 +5,13 @@ Both RPC / IPC are procedures used for any processes to interact with an Ethereu
 They are necessary for any Dapp to interact with public/private Ethereum networks.
 
 ####Detailed explanation
-IPC or 'Inter-process Communications' generally works on your local computers. In the Ethereum space, IPC normally involves geth creating a IPC pipe (which is represented by the file $HOME/.ethereum/geth.ipc) on your computer's local filesystem.
+**IPC** or "_Inter-process Communications_" generally works on your local computer. In the Ethereum space, IPC normally involves geth creating a IPC pipe (which is represented by the file $HOME/.ethereum/geth.ipc) on your computer's local filesystem.
 
 Other processes on the same computer can then use the IPC file to create bi-directional communications with geth.
 
-RPC or Remote Procedure Calls generally works across different computers. In the Ethereum space, RPC normally refers to the RPC endpoint localhost:8545 or 127.0.0.1:8545 or 192.168.1.123:8545.
+**RPC** or "_Remote Procedure Calls_" generally works across different computers. In the Ethereum space, RPC normally refers to the RPC endpoint localhost:8545 or 127.0.0.1:8545 or 192.168.1.123:8545.
 
-If you use localhost:8545 or 127.0.0.1:8545 for your RPC endpoint, other process ONLY on the local computer can communicate via this RPC endpoint, as localhost and 127.0.0.1 is only accessible from the local computer.
+If you use localhost:8545 or 127.0.0.1:8545 for your RPC endpoint, ONLY other processes on the local computer can communicate via this RPC endpoint, as localhost and 127.0.0.1 is only accessible from the local computer.
 
 If you use a non-local IP address like 192.168.1.123, any other computer on your network can access this RPC endpoint.
 

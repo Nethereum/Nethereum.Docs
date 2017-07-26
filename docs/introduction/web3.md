@@ -108,7 +108,8 @@ var senderAddress = "0x12890d2cce102216644c59daE5baed380d84830c";
 Now using web3 first you will need to retrieve the total number of transactions of your sender address.
 
 ```csharp
-var web3 = new Web3(); var txCount = await web3.Eth.Transactions.GetTransactionCount.SendRequestAsync(senderAddress);
+var web3 = new Web3(); 
+var txCount = await web3.Eth.Transactions.GetTransactionCount.SendRequestAsync(senderAddress);
 ```
 
 The txCount will be used as the nonce to sign the transaction.

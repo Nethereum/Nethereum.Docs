@@ -1,3 +1,10 @@
+---
+title: "Smart Contracts"
+author: "Gaël Blanchemain"
+date: "July 27, 2017"
+export_on_save:
+  markdown: true
+---
 ## What is a smart contract
 
 ####tl;dr

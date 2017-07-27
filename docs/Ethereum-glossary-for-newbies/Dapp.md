@@ -12,7 +12,7 @@ A **Dapp** is a decentralized app: a frontend that communicates with [smart-cont
 >DApp = frontend + smart contracts
 
 ####Detailed explanation
-A Dapp has its backend code running on a decentralized peer-to-peer network. Contrast this with an app where the backend code is running on centralized servers.
+A Dapp has its backend code running on a decentralized peer-to-peer network (as opposed to an app where the backend code is running on centralized servers).
 
 A Dapp can have frontend code and user interfaces written in any language (just like an app) that can make calls to its backend. Furthermore, its frontend can be hosted on decentralized storage such as Swarm or IPFS.
 

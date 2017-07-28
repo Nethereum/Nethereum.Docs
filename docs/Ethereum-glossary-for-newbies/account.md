@@ -1,16 +1,16 @@
 ---
-title: "What is an Ethereum transaction?"
+title: "What is an Ethereum account?"
 author: "Gaël Blanchemain"
-date: "July 28, 2017"
+date: "ddate"
 export_on_save:
   markdown: true
 ---
-## What is an Ethereum transaction?
+## What is an Ethereum account?
   
   
 #### tl;dr
 
-A transaction is a message that is sent from one [account](/docs/Ethereum-glossary-for-newbies/account.md) to another account (which might be the same or the special zero-account, see below). It can include binary data (its payload) and Ether.
+A transaction is a message that is sent from one account to another account (which might be the same or the special zero-account, see below). It can include binary data (its payload) and Ether.
 
 If the target account contains code, that code is executed and the payload is provided as input data.
 

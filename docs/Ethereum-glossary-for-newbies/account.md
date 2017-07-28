@@ -2,18 +2,24 @@
 title: "What is an Ethereum account?"
 author: "Gaël Blanchemain"
 date: "July 28, 2017"
-export_on_save:
-  markdown: true
 ---
 ## What is an Ethereum account?
 
-  
 #### tl;dr
 
 Accounts are simple public/private keypairs, which you use to sign transactions.
 There are two types of accounts: **externally owned accounts** (EOAs) and **contract accounts**. 
-1. Externally owned accounts merely have balance in Eth.
-2. Contract accounts have both balance and contract storage.
+1. Externally owned accounts:
+- Have an ether balance
+- Can send transactions (ether transfer or trigger contract code)
+- Are controlled by private keys
+- Have no associated code. merely have balance in Eth
+2. [Contract accounts (aka "contracts")](/docs/Ethereum-glossary-for-newbies/contract.md):
+- Have an ether balance
+- Have associated code
+- Their code execution is triggered by transactions or messages (calls) received from other contracts
+- When executed - contracts perform operations of arbitrary complexity (Turing completeness)
+- Manipulate their own persistent storage: i.e., can have its own permanent state - can call other contracts
   
 ### Detailed explanation
 This generic notion of account (Externally owned accounts/Contract accounts) is justified in that these entities are state objects, each of them have a state, and the state of all those accounts is the state of the Ethereum network which is updated with every block and which the network reaches consensus about. 

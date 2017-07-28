@@ -19,6 +19,21 @@ Smart contracts must pay gas for their computations on the Ethereum network. If 
 ####  2. Testnets are fast
 The Ethereum main net takes about 20 seconds to process transactions while testnets are nearly instantaneous.
 ####  3. Testnets provide more feedback
-Calls to lightweight testnet nodes provide good error messages.
+Calls to lightweight testnets nodes provide good error messages.
+
+###  What Testnets can I use?
+
+
+##### 1. Test RPC
+Although not a "true Testnet" since it runs locally, Test RPC is ideal to start a project, execute [transactions](/docs/Ethereum-glossary-for-newbies/transaction.md) instant response
+
+
+[//]: # (CJuan> Is there anything Nethereum-specific to say about Ropsten, Rinkeby and Kovan?)
+
+##### 1. Ropsten
+
+##### 2. Rinkeby
+
+##### 3. Kovan
 
 **Credits**  to [Karl Floersch](https://karl.tech) for the technical part of this explanation: https://karl.tech/intro-guide-to-ethereum-testnets/

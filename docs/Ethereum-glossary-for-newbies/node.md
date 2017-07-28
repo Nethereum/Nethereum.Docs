@@ -8,7 +8,7 @@ export_on_save:
 ##  What is an Ethereum node?
 
 ####  tl;dr
-Nodes are the point of entry of your [Dapp](/docs/Ethereum-glossary-for-newbies/Dapp.md) to the Ethereum network, they are the equivalent of a back-end for decentralized networks. You can run your own node locally or connect to a remote one.
+Nodes are the point of entry of your [Dapp](/docs/Ethereum-glossary-for-newbies/Dapp.md) to the Ethereum network, they are the equivalent of a back-end for decentralized networks. You can run your own node locally or connect to a remote node.
 
 ###  Detailed explanation
 Nodes are instances of the Ethereum network. Each node hosts all the Ethereum transactions ever made and syncs with the network.

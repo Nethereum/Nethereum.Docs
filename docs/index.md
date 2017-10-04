@@ -1,8 +1,8 @@
 # What is Nethereum ?
 
-Nethereum is the .Net integration library for Ethereum, simplifying the access and smart contract interaction with Ethereum nodes both public or permissioned like Geth, Parity or Quorum. 
+Nethereum is the .Net integration library for Ethereum, simplifying the access and smart contract interaction with Ethereum nodes both public or permissioned like Geth, Parity or Quorum.
 
-Nethereum is developed targetting netstandard 1.1, net451 and also as a portable library, hence it is compabitable with all the operating systems (Windows, Linux, MacOS, Android and OSX) and has been tested on cloud, mobile, desktop, xbox, hololens and windows IoT.
+Nethereum is developed targetting netstandard 1.1, net451 and also as a portable library, hence it is compatible with all the operating systems (Windows, Linux, MacOS, Android and OSX) and has been tested on cloud, mobile, desktop, xbox, hololens and windows IoT.
 
 ## Features
 
@@ -11,7 +11,7 @@ Nethereum is developed targetting netstandard 1.1, net451 and also as a portable
 * Parity managment api (WIP)
 * Quorum
 * Simplified smart contract interaction for deployment, function calling, transaction and event filtering and decoding of topics.
-* ABI to .Net type encoding and decoding, including attribute based for complex object deserialisation.
+* ABI to .Net type encoding and decoding, including attribute based for complex object deserialization.
 * Transaction, RLP and message signing, verification and recovery of accounts
 * Libraries for standard contracts Token, ENS and Uport
 * Integrated TestRPC testing to simplify TDD and BDD (Specflow) development
@@ -25,7 +25,10 @@ Nethereum is developed targetting netstandard 1.1, net451 and also as a portable
 
 Nethereum provides two types of packages. Standalone packages targetting Netstandard 1.1, net451 and where possible net350 and the Nethereum.Portable library which combines all the packages into one as a portable library. As netstandard evolves and is more widely supported the portable library might be eventually deprecated, as it won't be longer needed.
 
-To install the latest version you can either:
+To install the latest version.
+
+Windows users
+ you can either:
 
 [//]: # (QUSJ: The two CLI lines below don't seem to apply to Macs, can you confirm?)
 
@@ -37,13 +40,16 @@ or
 ```
 PM > Install-Package Nethereum.Web3 -Pre
 ```
+Mac/Linux users
+
+dotnet add package Nethereum.Portable --version 2.0.1
 
 ## Main Libraries
 |  Project Source | Nuget_Package |  Description |
 | ------------- |--------------------------|-----------|
 | Nethereum.Portable    | [![NuGet version](https://badge.fury.io/nu/nethereum.portable.svg)](https://badge.fury.io/nu/nethereum.portable)| Portable class library combining all the different libraries in one package |
 | [Nethereum.Web3](https://github.com/Nethereum/Nethereum/tree/master/src/Nethereum.Web3)    | [![NuGet version](https://badge.fury.io/nu/nethereum.web3.svg)](https://badge.fury.io/nu/nethereum.web3)| Ethereum Web3 Class Library simplifying the interaction via RPC includes contract interaction, deployment, transaction, encoding / decoding and event filters |
-| [Nethereum.Geth](https://github.com/Nethereum/Nethereum/tree/master/src/Nethereum.Geth)    | [![NuGet version](https://badge.fury.io/nu/nethereum.geth.svg)](https://badge.fury.io/nu/nethereum.geth)| Nethereum.Geth is the extended Web3 library for Geth. This includes the non-generic RPC API client methods to interact with the Go Ethereum Client (Geth) like Admin, Debug, Miner|  
+| [Nethereum.Geth](https://github.com/Nethereum/Nethereum/tree/master/src/Nethereum.Geth)    | [![NuGet version](https://badge.fury.io/nu/nethereum.geth.svg)](https://badge.fury.io/nu/nethereum.geth)| Nethereum.Geth is the extended Web3 library for Geth. This includes the non-generic RPC API client methods to interact with the Go Ethereum Client (Geth) like Admin, Debug, Miner|
 | [Nethereum.Quorum](https://github.com/Nethereum/Nethereum/tree/master/src/Nethereum.Quorum)| [![NuGet version](https://badge.fury.io/nu/nethereum.quorum.svg)](https://badge.fury.io/nu/nethereum.quorum)| Extension to interact with Quorum, the permissioned implementation of Ethereum supporting data privacy created by JP Morgan|
 | [Nethereum.Parity](https://github.com/Nethereum/Nethereum/tree/master/src/Nethereum.Parity)| [![NuGet version](https://badge.fury.io/nu/nethereum.parity.svg)](https://badge.fury.io/nu/nethereum.parity)| Netherum.Parity is the extended Web3 library for Parity. including the non-generic RPC API client methods to interact with Parity. (WIP)|
 

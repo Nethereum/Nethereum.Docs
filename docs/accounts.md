@@ -52,6 +52,8 @@ Once you have loaded your private keys into your account, if Web3 is instantiate
 
 ###### Check [here](/docs/Ethereum-glossary-for-newbies/nonce.md) if you don't know what a nonce key is.
 
+/docs/Ethereum-glossary-for-newbies/Ethereum-node.md)
+
 For example, in this scenario we are creating an account with the private key from a keystore file, and creating a new instance of Web3 using the default "http://localhost:8545".
 
 ```csharp

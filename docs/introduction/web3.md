@@ -22,7 +22,7 @@ So we won't go into major detail here.
 ## Web3 constructor
 
 Web3 accepts as a constructor either an url which will use as the default the RPC client, or an IClient which can be an IPC Client, or custom RPC Client.
- 
+
 The parameterless constructor uses the defaults address "http://localhost:8545/", which is the default port and used by the ethereum clients to accept RPC requests.
 
 ### Parameterless constructor
@@ -82,7 +82,7 @@ Wei conversion can be accessed though Convert
    Convert.ToWei
    Convert.FromWei
 ```
-
+[//]: # (CJuan> The below URL is broken )
 Further example can be found on the [conversion unit tests](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Web3.Tests/ConversionTests.cs)
 
 #### Offline transaction signing
@@ -101,7 +101,7 @@ To provide offline transaction signing in Nethereum you can do the following:
 First, you will need your private key, and sender address. You can retrieve the sender address from your private key using Nethereum.Core.Signing.Crypto.EthECKey.GetPublicAddress(privateKey); if you only have the private key.
 
 ```csharp
-var privateKey = "0xb5b1870957d373ef0eeffecc6e4812c0fd08f554b37b233526acc331bf1544f7"; 
+var privateKey = "0xb5b1870957d373ef0eeffecc6e4812c0fd08f554b37b233526acc331bf1544f7";
 var senderAddress = "0x12890d2cce102216644c59daE5baed380d84830c";
 ```
 
@@ -121,7 +121,7 @@ var encoded = web3.OfflineTransactionSigning.SignTransaction(privateKey, receive
 
 If you need to include the data and gas there are overloads for it.
 
-You can verify an encoded transaction: 
+You can verify an encoded transaction:
 
 ```csharp
 Assert.True(web3.OfflineTransactionSigning.VerifyTransaction(encoded));
@@ -139,8 +139,10 @@ To send the encoded transaction you will use the RPC method "SendRawTransaction"
 var txId = await web3.Eth.Transactions.SendRawTransaction.SendRequestAsync("0x" + encoded);
 ```
 
+[//]: # (CJuan> The below URL is broken )
+
 The complete example can be found on the [Transactions signing unit tests](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Web3.Tests/TransactionSigningTests.cs)
-or you can see a complete use case on the [Game sample](https://github.com/Nethereum/Nethereum.Game.Sample/) and it's service [Source code](https://github.com/Nethereum/Nethereum.Game.Sample/blob/master/Forms/Core/Ethereum/GameScoreService.cs)
+or you can see a complete use case on the [Game sample](https://github.com/Nethereum/Nethereum.Game.Sample/) and its service [Source code](https://github.com/Nethereum/Nethereum.Game.Sample/blob/master/Forms/Core/Ethereum/GameScoreService.cs)
 
 #### Address checksum validation and formatting
 There are also utilities to both validate and format addresses
@@ -161,7 +163,7 @@ The web3 transaction request to an offline signed transaction interceptor, provi
   web3.Client.OverridingRequestInterceptor = transactionInterceptor;
 ```
 
-The interceptor requires the private key, the corresponding address and an instance of web3. Once the web3 rpc client is configured all the requests will be be same.
+The interceptor requires the private key, the corresponding address and an instance of web3. Once the web3 rpc client is configured all the requests will be the same.
 
 ```csharp
     var txId = await web3.Eth.DeployContract.SendRequestAsync(abi, contractByteCode, senderAddress, new HexBigInteger(900000), 7);

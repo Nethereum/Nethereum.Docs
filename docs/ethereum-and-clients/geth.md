@@ -62,23 +62,19 @@ The chain keystore in the "devChain" folder contains the keys for the preconfigu
 To start the chain you can use batch files or shell scripts, both of them will reset all the data when launched.
 
 
-
-
-
 #### Batch file
 
 ```
-RD /S /Q %~dp0\devChain\chainData
-RD /S /Q %~dp0\devChain\dapp
-RD /S /Q %~dp0\devChain\nodes
-del %~dp0\devchain\nodekey
+RD /S /Q %~dp0\devChain\geth\chainData
+RD /S /Q %~dp0\devChain\geth\dapp
+RD /S /Q %~dp0\devChain\geth\nodes
+del %~dp0\devchain\geth\nodekey
 
-geth  --datadir=devChain init genesis_dev.json
-geth  --rpc --networkid=39318 --maxpeers=0 --datadir=devChain  --rpccorsdomain "*" --rpcapi "eth,web3,personal,net,miner,admin,debug" --ipcapi "eth,web3,personal,net,miner,admin" --verbosity 0 console
+geth  --datadir=devChain init genesis_clique.json
+geth --nodiscover --rpc --datadir=devChain  --rpccorsdomain "*" --mine --rpcapi "eth,web3,personal,net,miner,admin,debug" --unlock 0x12890d2cce102216644c59daE5baed380d84830c --password "pass.txt" --verbosity 0 console
 
 ```
-[Source code](https://github.com/Nethereum/Nethereum/blob/master/testchain/startgeth.bat)
-[Source code](https://github.com/Nethereum/Nethereum/blob/master/testchain/startgeth.bat)
+[Source code](https://github.com/Nethereum/Nethereum/edit/master/testchain/clique/startgeth.bat)
 
 [//]: # (CJuan> I couldn't run that script, your help is welcome)
 
@@ -92,11 +88,11 @@ rm -rf devChain/dapp
 rm -rf devChain/nodes
 rm -rf devchain/nodekey
 
-geth  --datadir=devChain init genesis_dev.json
-geth  --rpc --networkid=39318 --maxpeers=0 --datadir=devChain  --rpccorsdomain "*" --rpcapi "eth,web3,personal,net,miner,admin" --ipcapi "eth,web3,personal,net,miner,admin" --verbosity 0 console
+geth  --datadir=devChain init genesis_clique.json
+geth --nodiscover --rpc --datadir=devChain  --rpccorsdomain "*" --mine --rpcapi "eth,web3,personal,net,miner,admin,debug" --unlock 0x12890d2cce102216644c59daE5baed380d84830c --password "pass.txt" --verbosity 0 console
 
 ```
-[Source code](https://github.com/Nethereum/Nethereum/blob/master/testchain/startgeth.sh)
+[Source code](https://github.com/Nethereum/Nethereum/edit/master/testchain/clique/startgeth.sh)
 
 ### Other info
 If you need more information on how to setup your chain you can use this blog post

@@ -38,5 +38,6 @@ Although not a "true Testnet" since it runs locally, Test RPC is ideal to start 
 
 ####Where do I find Ether to use a testnet?...
 The ether and tokens on test networks is generally worthless and is used for testing purposes only. It's often distributed in "faucets". Faucets are best found by using keywords such as  testnet's name (```Rinkeby, Ropsten, Kovan```) + ```faucet```. We chose not to provide URLs as they change all the time :)
+You can read Nethereum-specific advice about faucets [here](https://medium.com/@juanfranblanco/netherum-faucet-and-nuget-templates-4a088f06933d)
 
 **Credits**  to [Karl Floersch](https://karl.tech) for the technical part of this explanation: https://karl.tech/intro-guide-to-ethereum-testnets/

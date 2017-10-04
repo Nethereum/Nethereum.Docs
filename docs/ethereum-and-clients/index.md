@@ -1,6 +1,6 @@
 #Ethereum Clients
 
-To integrate with Ethereum, Nethereum requires a Ethereum client node like Geth, parity, Quorum etc with RPC / IPC enabled.
+To integrate with Ethereum, Nethereum requires an Ethereum client node like Geth, parity, Quorum etc with RPC / IPC enabled.
 
 ######Check [here](/docs/Ethereum-glossary-for-newbies/Ethereum-node.md) if you don't know what an Ethereum node is.
 

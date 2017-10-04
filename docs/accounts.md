@@ -115,21 +115,21 @@ var web3 = new Web3.Web3(account);
 
 When used in conjuction with Web3, now in the same way to an "Account", you can:
 
-Transfer an amount to another address, using the transaction manager
+Transfer an amount to another address, using the transaction manager:
 
 ```csharp
 await web3.TransactionManager.SendTransactionAsync(account.Address, addressTo, new HexBigInteger(20));
 
 ```
 
-Deploy a contract
+Deploy a contract:
 
 ```csharp
  web3.Eth.DeployContract.SendRequestAsync(abi, byteCode, senderAddress, new HexBigInteger(900000),
                             multiplier)
 ```
 
-Make a contract Function transaction
+Make a contract Function transaction:
 
 ```csharp
 var multiplyFunction = contract.GetFunction("multiply");

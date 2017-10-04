@@ -3,8 +3,8 @@
 
 Every transaction in Ethereum needs to be sent and signed by an account. The account needs to verify (sign) that is the account holder of their Ether or the one that intents to interact with a smart contract.
 
-To send a transaction you will either mananage your account and sign the raw transaction locally, or the account will be managed by the client (Parity / Geth), requiring to send the password at the time of sending a transaction or unlock the account before hand.
- 
+To send a transaction you will either manage your account and sign the raw transaction locally, or the account will be managed by the client (Parity / Geth), requiring to send the password at the time of sending a transaction or unlock the account before hand.
+
 In Nethereum.Web3, to simplify and abstract the process, there are two types of account that you can use. An "Account" object or a "ManagedAccount" object. Both store the account information required to send a transaction, private key, or password.
 
 At the time of sending a transaction if using the TransactionManager, deploying a contract or using a contract function, the right method to deliver the transaction will be chosen, either the transaction will be signed offline using the private key or a personal_sendTransaction message will be sent using the password.
@@ -60,9 +60,9 @@ var account = Nethereum.Web3.Accounts.Account.LoadFromKeyStoreFile(accountFilePa
 var web3 = new Nethereum.Web3.Web3(account);
 ```
 
-Now all these type of transactions will be signed offline 
+Now all these type of transactions will be signed offline
 Transfer an amount to another address, using the transaction manager
- 
+
 ```csharp
 await web3.TransactionManager.SendTransactionAsync(account.Address, addressTo, new HexBigInteger(20));
 
@@ -113,7 +113,7 @@ var web3 = new Web3.Web3(account);
 When used in conjuction with Web3, now in the same way to an "Account", you can:
 
 Transfer an amount to another address, using the transaction manager
- 
+
 ```csharp
 await web3.TransactionManager.SendTransactionAsync(account.Address, addressTo, new HexBigInteger(20));
 

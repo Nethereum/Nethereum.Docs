@@ -27,7 +27,7 @@ Nethereum provides two types of packages. Standalone packages targetting Netstan
 
 To install the latest version.
 
-Windows users
+####Windows users
  you can either:
 
 [//]: # (QUSJ: The two CLI lines below don't seem to apply to Macs, can you confirm?)
@@ -40,9 +40,9 @@ or
 ```
 PM > Install-Package Nethereum.Web3 -Pre
 ```
-Mac/Linux users
+####Mac/Linux users
 
-dotnet add package Nethereum.Portable --version 2.0.1
+` dotnet add package Nethereum.Portable --version 2.0.1 `
 
 ## Main Libraries
 |  Project Source | Nuget_Package |  Description |

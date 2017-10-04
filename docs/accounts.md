@@ -103,7 +103,7 @@ The Nethereum.KeyStore library, allows you to encrypt and save your private key,
 
 Clients retrieve the private key for an account (if stored on their keystore folder) using a password provided to decrypt the file. This is done when unlocking an account, or just at the time of sending a transaction if using personal_sendTransaction with a password.
 
-Having an account unlocked for a certain period of time might be a security issue, so the prefered option in this scenario, is to use the rpc method personal_sendTransaction.
+Having an account unlocked for a certain period of time might be a security issue, so the prefered option in this scenario, is to use the rpc method `personal_sendTransaction`.
 
 Nethereum.Web3 wraps this functionality by using a ManagedAccount, having the managed account storing the account address and the password information.
 
@@ -115,7 +115,7 @@ var account = new ManagedAccount(senderAddress, password);
 var web3 = new Web3.Web3(account);
 ```
 
-When used in conjuction with Web3, now in the same way to an "Account", you can:
+When used in conjuction with Web3, now in the same way as an "Account", you can:
 
 Transfer an amount to another address, using the transaction manager:
 

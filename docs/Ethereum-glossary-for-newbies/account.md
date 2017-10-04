@@ -10,15 +10,15 @@ export_on_save:
 #### tl;dr
 
 Accounts are simple public/private keypairs, which you use to sign transactions.
-There are two types of accounts: [externally owned accounts](#Externally-owned-accounts) (EOAs) and [contract-accounts](#contract-accounts). 
-  
+There are two types of accounts: [externally owned accounts](#Externally-owned-accounts) (EOAs) and [contract-accounts](#contract-accounts).
+
 ### Detailed explanation
 
 ####Externally owned accounts: <a id="Externally-owned-accounts"></a>
 - Have an ether balance
 - Can send transactions (ether transfer or trigger contract code)
 - Are controlled by private keys
-- Have no associated code. merely have balance in Eth
+- Have no associated code. They merely have a balance in Eth
 ####Contract accounts (aka "contracts"): <a id="contract-accounts"></a>
 - Have an ether balance
 - Have associated code

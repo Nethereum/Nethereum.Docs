@@ -21,10 +21,10 @@ sudo apt-get update
 sudo apt-get install ethereum
 ```
 
-###RPC / IPC options 
+###RPC / IPC options
 
 ######Check [here](/docs/Ethereum-glossary-for-newbies/RPC-IPC.md) if you don't know what IPC / IPC is.
-There are several command line options to run geth [which can be found in their documentation](https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options). 
+There are several command line options to run geth [which can be found in their documentation](https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options).
 
 But most important you need have enabled RPC or IPC.
 
@@ -48,18 +48,25 @@ The JSON RPC can also be started from the geth console using the ```admin.startR
 
 ### Setting up your own testnet
 
-There is already a preconfigured tesnet in Nethereum, which [can be downloaded from github](https://github.com/Nethereum/Nethereum/tree/master/testchain)
+There is already a preconfigured tesnet in Nethereum, which [can be downloaded from github](https://github.com/Nethereum/Nethereum/tree/master/testchain/clique)
 
 The chain keystore in the "devChain" folder contains the keys for the preconfigured account, which is also present in the genesis file "genesis_dev.json".
 
 * Account : 0x12890d2cce102216644c59daE5baed380d84830c
-* Password: password 
+* Password: password
 * Private Key: 0xb5b1870957d373ef0eeffecc6e4812c0fd08f554b37b233526acc331bf1544f7
 
 
-To start the chain there are a batch file or a shell script which can be used, both of them will reset all the data when launched.
+To start the chain you can use batch files or shell scripts, both of them will reset all the data when launched.
+
+
+
+
 
 #### Batch file
+
+Make sure to make your script executable: ` chmod +x startgeth.sh `
+You can start the script from the directory where it sits: ` ./startgeth.sh `
 ```
 RD /S /Q %~dp0\devChain\chainData
 RD /S /Q %~dp0\devChain\dapp
@@ -67,9 +74,10 @@ RD /S /Q %~dp0\devChain\nodes
 del %~dp0\devchain\nodekey
 
 geth  --datadir=devChain init genesis_dev.json
-geth  --rpc --networkid=39318 --maxpeers=0 --datadir=devChain  --rpccorsdomain "*" --rpcapi "eth,web3,personal,net,miner,admin,debug" --ipcapi "eth,web3,personal,net,miner,admin" --verbosity 0 console  
+geth  --rpc --networkid=39318 --maxpeers=0 --datadir=devChain  --rpccorsdomain "*" --rpcapi "eth,web3,personal,net,miner,admin,debug" --ipcapi "eth,web3,personal,net,miner,admin" --verbosity 0 console
 
 ```
+[Source code](https://github.com/Nethereum/Nethereum/blob/master/testchain/startgeth.bat)
 [Source code](https://github.com/Nethereum/Nethereum/blob/master/testchain/startgeth.bat)
 
 [//]: # (CJuan> I couldn't run that script, your help is welcome)
@@ -82,11 +90,11 @@ rm -rf devChain/nodes
 rm -rf devchain/nodekey
 
 geth  --datadir=devChain init genesis_dev.json
-geth  --rpc --networkid=39318 --maxpeers=0 --datadir=devChain  --rpccorsdomain "*" --rpcapi "eth,web3,personal,net,miner,admin" --ipcapi "eth,web3,personal,net,miner,admin" --verbosity 0 console  
+geth  --rpc --networkid=39318 --maxpeers=0 --datadir=devChain  --rpccorsdomain "*" --rpcapi "eth,web3,personal,net,miner,admin" --ipcapi "eth,web3,personal,net,miner,admin" --verbosity 0 console
 
 ```
 [Source code](https://github.com/Nethereum/Nethereum/blob/master/testchain/startgeth.sh)
 
 ### Other info
 If you need more information on how to setup your chain you can use this blog post
-http://juan.blanco.ws/setup-your-own-tesnet-ethereum/ 
+[http://juan.blanco.ws/setup-your-own-tesnet-ethereum/](http://juan.blanco.ws/setup-your-own-tesnet-ethereum/)

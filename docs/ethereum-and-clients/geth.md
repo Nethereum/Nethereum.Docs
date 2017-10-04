@@ -65,8 +65,6 @@ To start the chain you can use batch files or shell scripts, both of them will r
 
 #### Batch file
 
-Make sure to make your script executable: ` chmod +x startgeth.sh `
-You can start the script from the directory where it sits: ` ./startgeth.sh `
 ```
 RD /S /Q %~dp0\devChain\chainData
 RD /S /Q %~dp0\devChain\dapp
@@ -83,6 +81,9 @@ geth  --rpc --networkid=39318 --maxpeers=0 --datadir=devChain  --rpccorsdomain "
 [//]: # (CJuan> I couldn't run that script, your help is welcome)
 
 #### Shell script
+
+Make sure to make your script executable: ` chmod +x startgeth.sh `
+You can start the script from the directory where it sits: ` ./startgeth.sh `
 ```
 rm -rf devChain/chainData
 rm -rf devChain/dapp

@@ -5,7 +5,7 @@ It provides a decentralized Turing-complete virtual machine, which can execute s
 
 ##Blockchain
 
-A blockchain is a distributed ledger composed of records (blocks) , which are linked and secured using cryptography.  By design, blockchains are inherently resistant to modification: Once recorded, the data in any given block cannot be altered retroactively without the alteration of all subsequent blocks, which needs a collusion of the network majority. A blockchain can serve as "an open, distributed ledger that can record transactions between two parties efficiently and in a verifiable and permanent way. Blockchains are managed by a peer-to-peer network collectively adhering to a protocol for validating new blocks.
+A blockchain is a distributed ledger composed of records (blocks) , which are linked and secured using cryptography.  By design, blockchains are inherently resistant to modification: once recorded, the data in any written block can't be changed  without the changing all subsequent blocks, which requires a collusion of the network majority. A blockchain can serve as "an open, distributed ledger that can record transactions between two parties efficiently and in a verifiable and permanent way. Blockchains are managed by a peer-to-peer network collectively adhering to a protocol for validating new blocks.
 
 ##Blocks
 Blocks are records containing transaction occuring on the blockchain.

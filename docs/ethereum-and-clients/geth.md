@@ -50,6 +50,8 @@ The JSON RPC can also be started from the geth console using the ```admin.startR
 
 There is already a preconfigured tesnet in Nethereum, which [can be downloaded from github](https://github.com/Nethereum/Nethereum/tree/master/testchain/clique)
 
+The preconfigured testnet will mine by default so you don't have to start mining manually.
+
 The chain keystore in the "devChain" folder contains the keys for the preconfigured account, which is also present in the genesis file "genesis_dev.json".
 
 * Account : 0x12890d2cce102216644c59daE5baed380d84830c

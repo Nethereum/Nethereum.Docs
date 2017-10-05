@@ -21,7 +21,7 @@ A transactions contains:
 * A signature identifying the sender and proving their intention to send the message via the blockchain to the recipient
 * a VALUE field: The amount of wei to transfer from the sender to the recipient
 * An optional data field, which can contain the message sent to a contract
-* A STARTGAS value, representing the maximum number of computational steps the transaction execution is allowed to take
+* A STARTGAS value, representing the total amount of gas a transaction can use
 * A GASPRICE value, representing the fee the sender is willing to pay for gas (one unit of gas corresponds to the execution of one atomic instruction, i.e., a computational step).
 
 ##Accounts

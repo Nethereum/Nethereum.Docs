@@ -65,7 +65,7 @@ Eth it is subdivided in further wrappers to enable a simpler way to organise the
     web3.Eth.Mining.IsMining;
     web3.Eth.Accounts;
 ```
-Each object is an RPC command which can be executed Async as:
+Each object is a RPC command which can be executed Async as:
 
 ```csharp
     await web3.Eth.Transactions.GetTransactionReceipt.SendRequestAsync(transactionHash);

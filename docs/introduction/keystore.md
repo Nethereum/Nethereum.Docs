@@ -34,7 +34,9 @@ var key = service.DecryptKeyStoreFromJson(password, json);
 
 ### KeyStore encryption and creation
 
-We ca
+First we will need to create the standard file name, which includes the UTC time and account address.
+
+Then we will use the password to encrypt and store the private key into a JSON formatted output, which it will be save into the file.
 
 ```csharp
 var fileName = service.GenerateUTCFileName(address);
@@ -45,6 +47,6 @@ using (var newfile = File.CreateText(fileName))
     newfile.Write(newJson);
     newfile.Flush();
 }
-            
+
 
 ```

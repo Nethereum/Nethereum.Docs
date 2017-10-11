@@ -4,7 +4,7 @@ The previous guide covered how to deploy and call a contract, this guide will de
 
 ## Videos
 
-This hands on demo covers in detail the steps provided in this guide for calls, transactions, events, filters and topics
+This hands on demo covers the steps provided in this guide for calls, transactions, events, filters and topics
 
 [![Introduction to Calls, Transactions, Events, Filters and Topics](http://img.youtube.com/vi/Yir_nu5mmw8/0.jpg)](https://www.youtube.com/watch?v=Yir_nu5mmw8 "Introduction to Calls, Transactions, Events, Filters and Topics")
 
@@ -28,7 +28,9 @@ contract test {
     }
  }
 ```
-The smart contract now includes an event "Multiplied". The event will store on the log the original parameter for multiplication "a", the address of the "sender" and the "result" of the multiplication.
+The smart contract now includes an Event
+######Check [here](/docs/Ethereum-glossary-for-newbies/event.md) if you don't know what an Event is in Solidity jargon.
+ "Multiplied". The event will store on the log the original parameter for multiplication "a", the address of the "sender" and the "result" of the multiplication.
 
 The parameter "a" and the "sender" address are both indexed so we can create specific filters for those two values using topics.
 

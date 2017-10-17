@@ -5,7 +5,7 @@ The first step to be able to interact with any contract is to deploy it to the E
 
 ## Videos
 
-These are two videos that can take you through all the steps, one in the classic windows, visual studio environment and another in a cross platform mac and visual studio code.
+These are two videos that can take you through all the steps, one in the classic windows, visual studio environment and another in a cross platform Mac and Visual Studio code.
 
 ### Windows, Visual Studio, .Net 451 Video
 This video takes you through the steps of creating a smart contract, compile it, start a private chain and deploy it using Nethereum.
@@ -57,7 +57,7 @@ Before a contract can be deployed it needs to be compiled. Let's quickly see how
 ### Unlocking the account
 First of all you will need to unlock your account to do so you can use web3.Personal.UnlockAccount.
 
-To unlock an account you will need to pass the address, password and the duration in seconds that you want to unlock your account.
+To unlock an account you will need to pass the address, password and the duration in seconds during which you want to unlock your account.
 
 ```csharp
    var unlockAccountResult =
@@ -84,6 +84,10 @@ Deploying a transaction will return a transactionHash which will be using later 
 ### Start mining
 
 The transaction that has deployed the contract needs to be verified by the network, if we are running a private chain with a single node we will need to mine the transaction.
+
+PS: Nethereum offers a quick and easy way to start your local test , just execute  startgeth.bat (for Windows) or startgeth.sh (for Mac and Linux) at: https://github.com/Nethereum/Nethereum.Workbooks/tree/master/testchain/clique
+
+Start the chain using startgeth.bat (Windows) or startgeth.sh (Mac/Linux). The chain is setup with the Proof of Authority consensus and will start the mining process inmediatly.
 
 ```csharp
  var mineResult = await web3.Miner.Start.SendRequestAsync(6);

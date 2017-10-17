@@ -1,16 +1,16 @@
 ---
-title: "What is an Ethereum Event?"
-author: "Gaël Blanchemain"
-date: "October 11, 2017"
-export_on_save:
-  markdown: true
----
+title: 'What is an Ethereum Event?'
+author: 'Gaël Blanchemain'
+date: 'October 11, 2017'
+---  
+  
 ## What is an Ethereum Event?
-
+  
+  
 In the Ethereum environment, functions don't return anything. In order to compensate for that limitation,  Solidity offers a way to log state changes which is called Event.
-
+  
 Events are functions that store a change on a log, they are often used to trigger UI functions.
-
+  
 In the example below, an event called 'Multiplied' is first declared (line 18) then assigned (line 26);
 ```javascript
 15	 contract test {
@@ -22,4 +22,5 @@ In the example below, an event called 'Multiplied' is first declared (line 18) t
 27	       return r;
 28	    }
 29	 }
-```
+30	```
+  

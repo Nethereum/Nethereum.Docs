@@ -1,14 +1,14 @@
 
 # Create and deploy a smart contract to Ethereum
 
-The first step to be able to interact with any contract is to deploy it to the Ethereum chain.  
+The first step to be able to interact with any contract is to deploy it to the Ethereum chain.
 
 ## Videos
 
-These are two videos that can take you through all the steps, one in the classic windows, visual studio environment and another in a cross platform mac and visual studio code.
+These are two videos that can take you through all the steps, one in the classic windows, visual studio environment and another in a cross platform Mac and Visual Studio code.
 
 ### Windows, Visual Studio, .Net 451 Video
-This video takes you through the steps of creating the a smart contract, compilet it, start a private chain and deploy it using Nethereum.
+This video takes you through the steps of creating a smart contract, compile it, start a private chain and deploy it using Nethereum.
 
 [![Smart contracts, private test chain and deployment to Ethereum with Nethereum](http://img.youtube.com/vi/4t5Z3eX59k4/0.jpg)](http://www.youtube.com/watch?v=4t5Z3eX59k4 "Smart contracts, private test chain and deployment to Ethereum with Nethereum")
 
@@ -18,20 +18,19 @@ If you want to develop in a cross platform environment this video takes you thro
 
 [![Cross platform development in Ethereum using .Net Core and VsCode and Nethereum](http://img.youtube.com/vi/M1qKcJyQcMY/0.jpg)](http://www.youtube.com/watch?v=M1qKcJyQcMY "Cross platform development in Ethereum using .Net Core and VsCode and Nethereum")
 
-
 ## The test contract
 This is a very simple example of a solidity contract:
 
 ```javascript
-    contract test { 
-               
+    contract test {
+
         uint _multiplier;
-               
-        function test(uint multiplier){      
+
+        function test(uint multiplier){
              _multiplier = multiplier;
         }
-               
-        function multiply(uint a) returns(uint d) { 
+
+        function multiply(uint a) returns(uint d) {
              return a * _multiplier;
         }
     }
@@ -43,12 +42,12 @@ The function multiply returns the result of the multiplication of a parameter "a
 ## Contract compilation, the Bytecode and the ABI
 Before a contract can be deployed it needs to be compiled. Let's quickly see how to do this with Visual Studio Code
 
-### Visual Studio Code 
+### Visual Studio Code
 
 1. Open Visual Studio Code
 2. Copy the contract test into a new file and save it as "test.sol", you will need to have opened a folder as your workspace.
 3. If you don't have the Solidity extension press F1 or Shift+Command+P on a mac and type "ext", then search for "solidity" and install it.
-4. Now that is installed you can press F1 again type "compile" and select the option to "Compile current contract" 
+4. Now that is installed you can press F1 again type "compile" and select the option to "Compile current contract"
 5. Your abi and bytecode files can be found now in your bin folder.
 
 ![VsCode solidity compilation](https://raw.githubusercontent.com/Nethereum/Nethereum/master/docs/screenshots/vscode.png)
@@ -58,7 +57,7 @@ Before a contract can be deployed it needs to be compiled. Let's quickly see how
 ### Unlocking the account
 First of all you will need to unlock your account to do so you can use web3.Personal.UnlockAccount.
 
-To unlock an account you will need to pass the address, password and the duration in seconds that you want to unlock your account.
+To unlock an account you will need to pass the address, password and the duration in seconds during which you want to unlock your account.
 
 ```csharp
    var unlockAccountResult =
@@ -80,11 +79,15 @@ To create a deployment transaction you will use web3.Eth.DeployContract, using t
         await web3.Eth.DeployContract.SendRequestAsync(abi, byteCode, senderAddress, multiplier);
 ```
 
-Deploying a transaction will return a transactionHash which will be using later on to retrieve the transaction receipt. 
+Deploying a transaction will return a transactionHash which will be using later on to retrieve the transaction receipt.
 
 ### Start mining
 
 The transaction that has deployed the contract needs to be verified by the network, if we are running a private chain with a single node we will need to mine the transaction.
+
+PS: Nethereum offers a quick and easy way to start your local test , just execute  startgeth.bat (for Windows) or startgeth.sh (for Mac and Linux) at: https://github.com/Nethereum/Nethereum.Workbooks/tree/master/testchain/clique
+
+Start the chain using startgeth.bat (Windows) or startgeth.sh (Mac/Linux). The chain is setup with the Proof of Authority consensus and will start the mining process inmediatly.
 
 ```csharp
  var mineResult = await web3.Miner.Start.SendRequestAsync(6);
@@ -116,7 +119,7 @@ Once we have the receipt, we can retrieve the contract address of our newly depl
 
 Using the contract we can get a Function object using the name of function.
 
-Now with the function we will be able to do a Call to our multiply function by passing a parameter to do the multiplication. 
+Now with the function we will be able to do a Call to our multiply function by passing a parameter to do the multiplication.
 
 Note: Calls are not the same as transactions so are not submitted to the network for consensus. Calls are a simple way to retrieve data or do an operation from a contract as our multiplication.
 
@@ -164,7 +167,7 @@ All the source code can be found under deployment in the [Tutorials solution](ht
         Thread.Sleep(5000);
         receipt = await web3.Eth.Transactions.GetTransactionReceipt.SendRequestAsync(transactionHash);
     }
-    
+
     mineResult = await web3.Miner.Stop.SendRequestAsync();
     Assert.True(mineResult);
 

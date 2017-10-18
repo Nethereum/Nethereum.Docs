@@ -1,7 +1,7 @@
 # Key Store
 
 The library Nethereum.KeyStore allows the decrytion and the encryption of private keys which using the [Web3 Secret Storage Definition](https://github.com/ethereum/wiki/wiki/Web3-Secret-Storage-Definition).
-This is the same standard followed by the node clients like geth, eth or parity.
+This is the same standard followed by node clients like geth, eth or parity.
 
 ## Usage
 
@@ -34,7 +34,9 @@ var key = service.DecryptKeyStoreFromJson(password, json);
 
 ### KeyStore encryption and creation
 
-We ca
+First we will need to create the standard file name, which includes the UTC time and account address.
+
+Then we will use the password to encrypt and store the private key into a JSON formatted output, which will be saved into the file.
 
 ```csharp
 var fileName = service.GenerateUTCFileName(address);
@@ -45,6 +47,6 @@ using (var newfile = File.CreateText(fileName))
     newfile.Write(newJson);
     newfile.Flush();
 }
-            
+
 
 ```

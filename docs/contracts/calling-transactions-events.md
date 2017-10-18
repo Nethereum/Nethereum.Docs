@@ -4,7 +4,7 @@ The previous guide covered how to deploy and call a contract, this guide will de
 
 ## Videos
 
-This hands on demo covers in detail the steps provided in this guide for calls, transactions, events, filters and topics
+This hands on demo covers the steps provided in this guide for calls, transactions, events, filters and topics
 
 [![Introduction to Calls, Transactions, Events, Filters and Topics](http://img.youtube.com/vi/Yir_nu5mmw8/0.jpg)](https://www.youtube.com/watch?v=Yir_nu5mmw8 "Introduction to Calls, Transactions, Events, Filters and Topics")
 
@@ -12,7 +12,7 @@ This hands on demo covers in detail the steps provided in this guide for calls, 
 The following smart contract is an updated version of the "multiply" contract from the previous guide:
 
 ```javascript
- contract test {
+contract test {
 
     int _multiplier;
     event Multiplied(int indexed a, address indexed sender, int result );
@@ -28,9 +28,10 @@ The following smart contract is an updated version of the "multiply" contract fr
     }
  }
 ```
-The smart contract now includes an event "Multiplied". The event will store on the log the original parameter for multiplication "a", the address of the "sender" and the "result" of the multiplication.
-
-The parameter "a" and the "sender" address are both indexed so we can create specific filters for those two values using topics.
+The smart contract now includes an Event
+ "Multiplied". The event will store on the log the original parameter for multiplication "a", the address of the "sender" and the "result" of the multiplication.
+ The parameter "a" and the "sender" address are both indexed so we can create specific filters for those two values using topics.
+######Check [here](/docs/Ethereum-glossary-for-newbies/event.md) if you don't know what an Event is in Solidity jargon.
 
 ## Deploying the contract
 As per the previous guide, we can deploy the contract as follows:
@@ -38,15 +39,15 @@ As per the previous guide, we can deploy the contract as follows:
 ```csharp
     var senderAddress = "0x12890d2cce102216644c59daE5baed380d84830c";
     var password = "password";
-    
+
     var abi = @"[{'constant':false,'inputs':[{'name':'a','type':'int256'}],'name':'multiply','outputs':[{'name':'r','type':'int256'}],'type':'function'},{'inputs':[{'name':'multiplier','type':'int256'}],'type':'constructor'},{'anonymous':false,'inputs':[{'indexed':true,'name':'a','type':'int256'},{'indexed':true,'name':'sender','type':'address'},{'indexed':false,'name':'result','type':'int256'}],'name':'Multiplied','type':'event'}]";
-    
+
     var byteCode = "0x6060604052604051602080610104833981016040528080519060200190919050505b806000600050819055505b5060ca8061003a6000396000f360606040526000357c0100000000000000000000000000000000000000000000000000000000900480631df4f144146037576035565b005b604b60048080359060200190919050506061565b6040518082815260200191505060405180910390f35b60006000600050548202905080503373ffffffffffffffffffffffffffffffffffffffff16827f841774c8b4d8511a3974d7040b5bc3c603d304c926ad25d168dacd04e25c4bed836040518082815260200191505060405180910390a380905060c5565b91905056";
 
     var multiplier = 7;
-    
+
     var web3 = new Web3.Web3();
-    
+
     var unlockResult = await web3.Personal.UnlockAccount.SendRequestAsync(senderAddress, password, new HexBigInteger(120));
     Assert.True(unlockResult);
 
@@ -67,10 +68,10 @@ Submitting a transaction to perform a function operation in a smart contract doe
     var contract = web3.Eth.GetContract(abi, contractAddress);
 
     var multiplyFunction = contract.GetFunction("multiply");
-    
+
     transactionHash = await multiplyFunction.SendTransactionAsync(senderAddress, 7);
     transactionHash = await multiplyFunction.SendTransactionAsync(senderAddress, 8);
-    
+
     receipt = await MineAndGetReceiptAsync(web3, transactionHash);
 ```
 
@@ -94,7 +95,7 @@ Events are defined as part of the abi, and similarly to the functions we can get
 
 The event object allows to create filters to retrieve the information stored on the log.
 
-We can create filters that retrieve all the event logs 
+We can create filters that retrieve all the event logs
 
 ```csharp
 var filterAll = await multiplyEvent.CreateFilterAsync();
@@ -158,21 +159,21 @@ All the source code can be found under CallTransactionEvents in the [Tutorials s
     {
         var senderAddress = "0x12890d2cce102216644c59daE5baed380d84830c";
         var password = "password";
-        
+
         var abi = @"[{'constant':false,'inputs':[{'name':'a','type':'int256'}],'name':'multiply','outputs':[{'name':'r','type':'int256'}],'type':'function'},{'inputs':[{'name':'multiplier','type':'int256'}],'type':'constructor'},{'anonymous':false,'inputs':[{'indexed':true,'name':'a','type':'int256'},{'indexed':true,'name':'sender','type':'address'},{'indexed':false,'name':'result','type':'int256'}],'name':'Multiplied','type':'event'}]";
-        
+
         var byteCode = "0x6060604052604051602080610104833981016040528080519060200190919050505b806000600050819055505b5060ca8061003a6000396000f360606040526000357c0100000000000000000000000000000000000000000000000000000000900480631df4f144146037576035565b005b604b60048080359060200190919050506061565b6040518082815260200191505060405180910390f35b60006000600050548202905080503373ffffffffffffffffffffffffffffffffffffffff16827f841774c8b4d8511a3974d7040b5bc3c603d304c926ad25d168dacd04e25c4bed836040518082815260200191505060405180910390a380905060c5565b91905056";
 
         var multiplier = 7;
-        
+
         var web3 = new Web3.Web3();
-        
+
         var unlockResult = await web3.Personal.UnlockAccount.SendRequestAsync(senderAddress, password, new HexBigInteger(120));
         Assert.True(unlockResult);
 
         var transactionHash = await web3.Eth.DeployContract.SendRequestAsync(abi, byteCode, senderAddress, new HexBigInteger(900000), multiplier);
         var receipt = await MineAndGetReceiptAsync(web3, transactionHash);
-        
+
         var contractAddress = receipt.ContractAddress;
 
         var contract = web3.Eth.GetContract(abi, contractAddress);
@@ -183,13 +184,13 @@ All the source code can be found under CallTransactionEvents in the [Tutorials s
 
         var filterAll = await multiplyEvent.CreateFilterAsync();
         var filter7 = await multiplyEvent.CreateFilterAsync(7);
-        
+
         transactionHash = await multiplyFunction.SendTransactionAsync(senderAddress, 7);
         transactionHash = await multiplyFunction.SendTransactionAsync(senderAddress, 8);
-        
+
         receipt = await MineAndGetReceiptAsync(web3, transactionHash);
 
-        
+
         var log = await multiplyEvent.GetFilterChanges<MultipliedEvent>(filterAll);
         var log7 = await multiplyEvent.GetFilterChanges<MultipliedEvent>(filter7);
 
@@ -200,7 +201,7 @@ All the source code can be found under CallTransactionEvents in the [Tutorials s
     }
 
     //event Multiplied(int indexed a, address indexed sender, int result );
-    
+
     public class MultipliedEvent
     {
         [Parameter("int", "a", 1, true)]
@@ -219,14 +220,14 @@ All the source code can be found under CallTransactionEvents in the [Tutorials s
 
         var miningResult = await web3.Miner.Start.SendRequestAsync(6);
         Assert.True(miningResult);
-        
+
         var receipt = await web3.Eth.Transactions.GetTransactionReceipt.SendRequestAsync(transactionHash);
 
         while(receipt == null){
             Thread.Sleep(1000);
             receipt = await web3.Eth.Transactions.GetTransactionReceipt.SendRequestAsync(transactionHash);
         }
-        
+
         miningResult = await web3.Miner.Stop.SendRequestAsync();
         Assert.True(miningResult);
         return receipt;

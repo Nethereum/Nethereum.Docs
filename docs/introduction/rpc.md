@@ -24,7 +24,7 @@ Hex strings: Similar to HexBigInteger some strings need to be encoded and decode
 
 There are various RPC Data transfer objects for Block, Transaction, FilterInput, and BlockParameter, to name a few.
 
-The BlockParameter can be either for the latest, earliest, pending or for a given block number, this is defaulted to latest on all the requests that uses it. 
+The BlockParameter can be either for the latest, earliest, pending or for a given block number, this is defaulted to latest on all the requests that uses it.
 
 Note: If using Web3, changing the Default Block Parameter, will cascade to all the Eth transaction commands, GetCode, GetStorageAt, GetBalance
 
@@ -41,7 +41,7 @@ web3.Eth.Blocks.GetBlockTransactionCountByNumber.SendRequestAsync(BlockParameter
 ```
 
 ##Interceptors
-Sometimes it might be a need to provide a different implementation to the RPC methods. For example, we might want to sign offline all the transaction requests, or might want to route to another provider.
+Sometimes there might be a need to provide a different implementation to the RPC methods. For example, we might want to sign offline all the transaction requests, or route to another provider.
 
 The clients provide an OverridingRequestInterceptor which can be used in these scenarios.
 
@@ -81,7 +81,7 @@ And the usage on a unit test
     public async void ShouldInterceptNoParamsRequest()
     {
         var client = new RpcClient(new Uri("http://localhost:8545/"));
-        
+
         client.OverridingRequestInterceptor = new OverridingInterceptorMock();
         var ethAccounts = new EthAccounts(client);
         var accounts = await ethAccounts.SendRequestAsync();

@@ -1,0 +1,52 @@
+---
+uti: com.xamarin.workbook
+platforms:
+- Console
+packages:
+- id: EdjCase.JsonRpc.Client
+  version: 1.1.2
+- id: Newtonsoft.Json
+  version: 9.0.1
+- id: Portable.BouncyCastle
+  version: 1.8.1.2
+- id: EdjCase.JsonRpc.Core
+  version: 1.1.2
+- id: Nethereum.Portable
+  version: 1.0.4
+---
+
+# DevChain Getting Started Guide
+
+First, you need to clone/download [https://github.com/Nethereum/Nethereum/](https://github.com/Nethereum/Nethereum/), then run startgeth.sh|bat in the testchain folder.
+
+Documentation for Nethereum can be found at [https://nethereum.readthedocs.io](https://nethereum.readthedocs.io)
+
+To get started, reference the NuGet package
+
+```csharp
+#r "Nethereum.Portable"
+```
+
+First, we need to new up a web3 object for localhost:8545 (this uses RPC)
+
+```csharp
+var web3 = new Nethereum.Web3.Web3();
+```
+
+Are we mining? (startgeth.sh|bat auto-starts mining)
+
+```csharp
+var isMining = await web3.Eth.Mining.IsMining.SendRequestAsync()
+```
+
+List all pre-defined accounts in the devchain
+
+```csharp
+var accounts = await web3.Eth.Accounts.SendRequestAsync()
+```
+
+Get the balance for the default account
+
+```csharp
+var balance = await web3.Eth.GetBalance.SendRequestAsync("0x12890d2cce102216644c59dae5baed380d84830c")
+```

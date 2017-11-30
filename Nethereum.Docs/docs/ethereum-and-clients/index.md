@@ -2,7 +2,7 @@
 
 To integrate with Ethereum, Nethereum requires an Ethereum client node like Geth, parity, Quorum etc with RPC / IPC enabled.
 
-######Check [here](/docs/Ethereum-glossary-for-newbies/Ethereum-node.md) if you don't know what an Ethereum node is.
+######Check [here](/docs/Ethereum-glossary-for-newbies/node.md) if you don't know what an Ethereum node is.
 
 The client might be installed locally, a server you control or be a public node depending on your needs and use case. For smart contract development you can also install [Test RPC](/docs/ethereum-and-clients/test-rpc.md), which provides a very fast Ethereum simulator with a great feedback cycle.
 

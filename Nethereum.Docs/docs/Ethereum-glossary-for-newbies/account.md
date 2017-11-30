@@ -15,13 +15,16 @@ There are two types of accounts: [externally owned accounts](#Externally-owned-a
 ### Detailed explanation
 
 #### Externally owned accounts: <a id="Externally-owned-accounts"></a>
+
 Accounts represent identities of external agents (e.g., human personas, mining nodes or automated agents), they use public key cryptography to sign transaction so that the EVM can securely validate the identity of a transaction sender.
 
 - Have an ether balance
 - Can send transactions (ether transfer or trigger contract code)
 - Are controlled by private keys
 - Have no associated code. They merely have a balance in Eth
+
 #### Contract accounts (aka "contracts"): <a id="contract-accounts"></a>
+
 - Have an ether balance
 - Have associated code
 - Their code execution is triggered by transactions or messages (calls) received from other contracts

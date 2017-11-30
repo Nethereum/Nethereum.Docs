@@ -15,4 +15,5 @@ Both Ethereum accounts and contracts have what is called an _address_. Ethereum 
 Addresses are used to send, receive and use Ether, Tokens and services on Ethereum.
 
 ###  Detailed explanation
+
 Ethereum addresses are generated using a contract's [public key](/Users/gael/Dropbox/dev/NethDocs/Nethereum.Docs/docs/Ethereum-glossary-for-newbies/public-private-key.md), they represent a contract on Ethereum and are used as the location at which you can interact with a contract.

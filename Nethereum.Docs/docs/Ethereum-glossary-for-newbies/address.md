@@ -8,6 +8,7 @@ export_on_save:
 ##  What is an Ethereum address?
 
 ####  tl;dr
+
 Both Ethereum accounts and contracts have what is called an _address_. Ethereum addresses look like this:
 
 ```0x88d221E36A68B19dd8aD1a5d4c21bE41a6d47b57```

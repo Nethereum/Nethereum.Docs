@@ -9,7 +9,7 @@ export_on_save:
   
 #### tl;dr
 
-A transaction is a message that is sent from one [account](/docs/Ethereum-glossary-for-newbies/account.md) to another account (which might be the same or the special zero-account). It can include binary data (its payload) and Ether.
+A transaction is a message that is sent from one [account](account.md) to another account (which might be the same or the special zero-account). It can include binary data (its payload) and Ether.
 
 If the target account contains code, that code is executed and the payload is provided as input data.
   
@@ -27,4 +27,4 @@ A transaction is a document authorizing some particular action associated with t
   
 ### Transactions vs Messages?
 
-  In Ethereum transactions and [Messages](/docs/Ethereum-glossary-for-newbies/message.md) are different; a "transaction" in Ethereum parlance specifically refers to a physical digitally signed piece of data that goes in the blockchain, and every transaction triggers an associated message, but messages can also be sent by EVM code, in which case they are never represented in data anywhere.
+In Ethereum transactions and [Messages](message.md) are different; a "transaction" in Ethereum parlance specifically refers to a physical digitally signed piece of data that goes to the blockchain, and every transaction triggers an associated message, but messages can also be sent by EVM code, in which case they are never represented in data anywhere.

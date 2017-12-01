@@ -22,11 +22,11 @@ Proofing processes make it hard for [miners](mining.md) to submit a block to the
 
 ####  Proof of Work
 
-In the context of Ethereum, a _**Proof of Work**_  is a cryptographic puzzle that [miners](mining.md/) try to solve in order to submit a new block to the blockchain and be rewarded Ether. That puzzle is difficult (costly, time-consuming) to produce. Producing a proof of work can be a random process with low probability so that a lot of trial and error is required before a valid proof of work is generated. Ethereum currently uses proof of work (as of 07/25/2017) but is slated to adopt Proof of Stake soon.
+In the context of Ethereum, a _**Proof of Work**_  is a cryptographic puzzle that [miners](mining.md) try to solve in order to submit a new block to the blockchain and be rewarded Ether. That puzzle is difficult (costly, time-consuming) to produce. Producing a proof of work can be a random process with low probability so that a lot of trial and error is required before a valid proof of work is generated. Ethereum currently uses proof of work (as of 07/25/2017) but is slated to adopt Proof of Stake soon.
 
 ####  Proof of Stake
 
-A _**Proof of Stake**_ verifies that a [miner](mining.md/) has enough Ether at stake to submit/confirm a new block. Proof of Stake rewards miners who submit/confirm a valid block and it punishes those who don't, making it insanely costly to tamper with the blockchain's transaction.
+A _**Proof of Stake**_ verifies that a [miner](mining.md) has enough Ether at stake to submit/confirm a new block. Proof of Stake rewards miners who submit/confirm a valid block and it punishes those who don't, making it insanely costly to tamper with the blockchain's transaction.
 
 
 ####  Proof of Authority

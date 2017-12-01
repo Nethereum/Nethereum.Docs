@@ -11,7 +11,7 @@ pages:
     - 'TestRPC' : 'ethereum-and-clients/test-rpc.md'
 - 'Accounts': 'accounts.md'
 - 'Ethereum for Newbies':
-    - 'Mining' : '/docs/Ethereum-glossary-for-newbies/mining.md'
+    - 'Mining' : 'Ethereum-glossary-for-newbies/mining.md'
 - 'Web3 and RPC':
     - 'Web3' : 'introduction/web3.md'
     - 'RPC' : 'introduction/rpc.md'

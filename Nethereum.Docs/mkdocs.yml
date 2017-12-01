@@ -11,7 +11,22 @@ pages:
     - 'TestRPC' : 'ethereum-and-clients/test-rpc.md'
 - 'Accounts': 'accounts.md'
 - 'Ethereum for Newbies':
+    - 'Account' : 'Ethereum-glossary-for-newbies/account.md'
+    - 'Address' : 'Ethereum-glossary-for-newbies/address.md'
+    - 'Blockchain Consensus' : 'Ethereum-glossary-for-newbies/blockchain-consensus.md'
+    - 'Dapp' : 'Ethereum-glossary-for-newbies/dapp.md'
+    - 'Event' : 'Ethereum-glossary-for-newbies/event.md'
+    - 'EVM' : 'Ethereum-glossary-for-newbies/evm.md'
+    - 'GAS' : 'Ethereum-glossary-for-newbies/gas.md'
     - 'Mining' : 'Ethereum-glossary-for-newbies/mining.md'
+    - 'Nonce' : 'Ethereum-glossary-for-newbies/nonce.md'
+    - 'Public/Private Key' : 'Ethereum-glossary-for-newbies/publice-private-key.md'
+    - 'RPC-IPC' : 'Ethereum-glossary-for-newbies/RPC-IPC.md'
+    - 'Smart Contracts' : 'Ethereum-glossary-for-newbies/smart-contracts.md'
+    - 'Testnet' : 'Ethereum-glossary-for-newbies/testnet.md'
+    - 'Transaction' : 'Ethereum-glossary-for-newbies/transaction.md'
+    - 'Wallet' : 'Ethereum-glossary-for-newbies/wallet.md'
+
 - 'Web3 and RPC':
     - 'Web3' : 'introduction/web3.md'
     - 'RPC' : 'introduction/rpc.md'
@@ -22,4 +37,4 @@ pages:
     - 'Calls, transactions, events, filters and topics' : 'contracts/calling-transactions-events.md'
     - 'Multiple output parameters and function DTOs' : 'contracts/functiondtos.md'
 - 'Sample Projects' : 'demos/sample-projects.md'
-   
+theme: readthedocs

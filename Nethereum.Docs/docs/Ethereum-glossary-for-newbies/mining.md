@@ -8,7 +8,7 @@ export_on_save:
 
 ## What does mining Ethereum mean?
 
-#### tl;dr
+**tl;dr**
 
 Mining is the process by which transactions are verified and added to an Ethereum ledger.
 

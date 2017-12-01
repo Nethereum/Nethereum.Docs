@@ -9,7 +9,7 @@ export_on_save:
 
 ####  tl;dr
 
-A **Dapp** is a decentralized app: a frontend that communicates with [smart-contracts](/docs/Ethereum-glossary-for-newbies/smart-contracts.md).
+A **Dapp** is a decentralized app: a frontend that communicates with [smart-contracts](smart-contracts.md).
 >DApp = frontend + smart contracts
 
 ####  Detailed explanation

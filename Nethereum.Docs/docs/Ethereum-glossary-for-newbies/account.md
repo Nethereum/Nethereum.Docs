@@ -30,9 +30,9 @@ Accounts represent identities of external agents (e.g., human personas, mining n
 - Their code execution is triggered by transactions or messages (calls) received from other contracts
 - When executed - contracts perform operations of arbitrary complexity (Turing completeness)
 - Manipulate their own persistent storage: i.e., can have its own permanent state - can call other contracts
-This generic notion of account (Externally owned accounts/Contract accounts) is justified in that these entities are state objects, each of them have a state, and the state of all those accounts is the state of the Ethereum network which is updated with every block when [consensus](/docs/Ethereum-glossary-for-newbies/blockchain-consensus.md) is reached.
+This generic notion of account (Externally owned accounts/Contract accounts) is justified in that these entities are state objects, each of them have a state, and the state of all those accounts is the state of the Ethereum network which is updated with every block when [consensus](blockchain-consensus.md) is reached.
 
-Accounts are essential for users to interact with the Ethereum blockchain via [transactions](/docs/Ethereum-glossary-for-newbies/transaction.md).
+Accounts are essential for users to interact with the Ethereum blockchain via [transactions](transaction.md).
 
 If we restrict Ethereum to only externally owned accounts and allow only transactions between them, we arrive at an “altcoin” system that is less powerful than bitcoin itself and can only be used to transfer ether.
 

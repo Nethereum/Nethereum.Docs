@@ -18,6 +18,7 @@ pages:
     - 'Event' : 'Ethereum-glossary-for-newbies/event.md'
     - 'EVM' : 'Ethereum-glossary-for-newbies/evm.md'
     - 'GAS' : 'Ethereum-glossary-for-newbies/gas.md'
+    - 'Message' : 'Ethereum-glossary-for-newbies/message.md'
     - 'Mining' : 'Ethereum-glossary-for-newbies/mining.md'
     - 'Node' : 'Ethereum-glossary-for-newbies/node.md'
     - 'Nonce' : 'Ethereum-glossary-for-newbies/nonce.md'

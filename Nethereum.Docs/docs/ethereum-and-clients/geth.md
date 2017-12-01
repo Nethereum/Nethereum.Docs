@@ -23,7 +23,7 @@ sudo apt-get install ethereum
 
 ###RPC / IPC options
 
-######Check [here](/docs/Ethereum-glossary-for-newbies/RPC-IPC.md) if you don't know what IPC / IPC is.
+######Check [here](Ethereum-glossary-for-newbies/RPC-IPC.md) if you don't know what IPC / IPC is.
 There are several command line options to run geth [which can be found in their documentation](https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options).
 
 But most important you need have enabled RPC or IPC.

@@ -18,7 +18,7 @@ The purpose of a consensus algorithm in a public Blockchain network is to make s
 You probably noticed that most blockchains rely on either _**PoW (Proof of Work), PoS (Proof of Stake), PoA (Proof of Authority)**_ and various others.
 The goal of the "proofing" work is to make it costly and difficult to add false transactions/spam to a block.
 
-Proofing processes make it hard for [miners](mining.md/) to submit a block to the blockchain but easy for all [nodes](node.md) to verify if the new block is valid.
+Proofing processes make it hard for [miners](mining.md) to submit a block to the blockchain but easy for all [nodes](node.md) to verify if the new block is valid.
 
 ####  Proof of Work
 

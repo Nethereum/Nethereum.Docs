@@ -30,8 +30,6 @@ To install the latest version.
 ####Windows users
  you can either:
 
-[//]: # (QUSJ: The two CLI lines below don't seem to apply to Macs, can you confirm?)
-
 ```
 PM > Install-Package Nethereum.Portable -Pre
 ```

@@ -18,6 +18,7 @@ pages:
     - 'Event' : 'Ethereum-glossary-for-newbies/event.md'
     - 'EVM' : 'Ethereum-glossary-for-newbies/evm.md'
     - 'GAS' : 'Ethereum-glossary-for-newbies/gas.md'
+    - 'Hash functions' : 'Ethereum-glossary-for-newbies/hash-functions.md'
     - 'Message' : 'Ethereum-glossary-for-newbies/message.md'
     - 'Mining' : 'Ethereum-glossary-for-newbies/mining.md'
     - 'Node' : 'Ethereum-glossary-for-newbies/node.md'
@@ -41,4 +42,5 @@ pages:
     - 'Calls, transactions, events, filters and topics' : 'contracts/calling-transactions-events.md'
     - 'Multiple output parameters and function DTOs' : 'contracts/functiondtos.md'
 - 'Sample Projects' : 'demos/sample-projects.md'
+- 'Glossary' : 'glossary.md'
 theme: readthedocs

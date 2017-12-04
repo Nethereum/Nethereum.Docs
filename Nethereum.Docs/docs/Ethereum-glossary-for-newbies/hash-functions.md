@@ -42,6 +42,6 @@ in Ethereum, Keccak-256 and  Keccak-512 are mostly used.
 - Verifying data integrity (thanks to the "same data, same hash" rule)
 - 
 
-Using hash functions in combination with [cryptographic keys](/docs/Ethereum-glossary-for-newbies/public-private-key.md) anyone can prove that they own a piece of data without disclosing the data itself.
+Using hash functions in combination with [cryptographic keys](public-private-key.md) anyone can prove that they own a piece of data without disclosing the data itself.
 Indirectly, it proves:
 That the owner of the data knows their password.

@@ -9,6 +9,7 @@ Nethereum documentation
 ## Workbooks contributionn
 1. Any modificactions should be pushed on the Nethereum.Worbooks repository
 2. Any new workbooks need to have a unit test associated with it, or changes unit tested before hand.
+  For an introduction on unit testing workbooks [Check this blog post](https://medium.com/@juanfranblanco/unit-or-integration-tests-of-xamarin-workbooks-6f206b8483d6)
 3. All the workbooks need to be in the same folder and indexed in the index.md file. See previous entry on how to format links.
 
 ## Workbooks submodule update

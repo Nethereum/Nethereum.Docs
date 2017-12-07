@@ -19,5 +19,4 @@ pages:
     - 'Getting started with smart contracts': 'Nethereum.Workbooks/docs/nethereum-gettingstard-smartcontrats.workbook'
     - 'Getting started Infura' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-infura.workbook'
 - 'Sample Projects' : 'demos/sample-projects.md'
-- 'Glossary' : 'glossary.md'
 theme: readthedocs

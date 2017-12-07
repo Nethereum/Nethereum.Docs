@@ -23,11 +23,3 @@ A transactions contains:
 * An optional data field, which can contain the message sent to a contract
 * A STARTGAS value, representing the total amount of gas a transaction can use
 * A GASPRICE value, representing the fee the sender is willing to pay for gas (one unit of gas corresponds to the execution of one atomic instruction, i.e., a computational step).
-
-##Accounts
-
-See [What is an Ethereum account](Ethereum-glossary-for-newbies/account.md)
-
-##Smart Contracts
-
-See [What is a Smart Contract](Ethereum-glossary-for-newbies/smart-contracts.md)

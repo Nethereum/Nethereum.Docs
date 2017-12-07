@@ -1,0 +1,3 @@
+[submodule "docs/Nethereum.Workbooks"]
+	path = docs/Nethereum.Workbooks
+	url = https://github.com/Nethereum/Nethereum.Workbooks.git

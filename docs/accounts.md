@@ -3,8 +3,6 @@
 
 Every transaction in Ethereum needs to be sent and signed by an account. The account needs to verify (sign) in order to authenticate the account holder of their Ether or the one that intents to interact with a smart contract.
 
-######Check [here](Ethereum-glossary-for-newbies/account.md) to learn what "account" means in Ethereum jargon.
-
 To send a transaction you will either manage your account and sign the raw transaction locally, or the account will be managed by the client (Parity / Geth), requiring to send the password at the time of sending a transaction or unlock the account before hand.
 
 In Nethereum.Web3, to simplify the process, there are two types of accounts that you can use. An "Account" object or a "ManagedAccount" object. Both store the account information required to send a transaction, private key, or password.
@@ -50,9 +48,7 @@ var account = Nethereum.Web3.Accounts.Account.LoadFromKeyStore(keyStoreEncrypted
 
 #### Working with an Account in Web3
 
-Once you have loaded your private keys into your account, if Web3 is instantiated with that acccount all the transactions made using the TransactionManager, Contract deployment or Functions will signed offline using the latest nonce key.
-
-###### [Check here if you don't know what a nonce key is](Ethereum-glossary-for-newbies/nonce.md).
+Once you have loaded your private keys into your account, if Web3 is instantiated with that acccount all the transactions made using the TransactionManager, Contract deployment or Functions will signed offline using the latest nonce.
 
 For example, in this scenario we are creating an account with the private key from a keystore file, and creating a new instance of Web3 using the default "http://localhost:8545".
 

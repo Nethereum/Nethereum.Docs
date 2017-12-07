@@ -14,7 +14,6 @@ pages:
     - 'Web3' : 'introduction/web3.md'
     - 'RPC' : 'introduction/rpc.md'
     - 'IPC' : 'introduction/ipc.md'
-- 'Client Libraries': 'client-libraries.md'
 - 'Working with Contracts':
     - 'Create and deploy contracts' : 'contracts/deploying.md'
     - 'Calls, transactions, events, filters and topics' : 'contracts/calling-transactions-events.md'

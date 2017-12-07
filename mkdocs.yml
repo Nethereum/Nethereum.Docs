@@ -18,5 +18,6 @@ pages:
     - Introduction: 'Nethereum.Workbooks/docs/index.md'
     - 'Getting started with smart contracts': 'Nethereum.Workbooks/docs/nethereum-gettingstard-smartcontrats.workbook'
     - 'Getting started Infura' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-infura.workbook'
+    - 'HD Wallet' : 'Nethereum.Workbooks/docs/nethereum-hdwallet-infura-transfer.workbook'
 - 'Sample Projects' : 'demos/sample-projects.md'
 theme: readthedocs

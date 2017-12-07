@@ -91,10 +91,8 @@ dotnet add package Nethereum.Portable --version 2.0.1
 
 |  Project Source |  Description |
 | ------------- |--------------------------|
-| [Nethereum.Generator.Console](https://github.com/Nethereum/Nethereum/tree/master/src/Nethereum.Generator.Console) | Generates .cs code file interfacing with Ethereum contracts |
+| [Nethereum.Generator.Console](https://github.com/Nethereum/Nethereum/tree/master/src/Nethereum.Generator.Console) |  |
 | [Nethereum.Console](https://github.com/Nethereum/Nethereum.Console) | A collection of command line utilities to interact with Ethereum and account management |
-
-
 
 ## Training modules
 

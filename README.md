@@ -3,6 +3,8 @@ Nethereum documentation
 
 ## Contributing guidelines
 1. One pull request per document at a time, this way they can be reviewed and edited for corrections.
+2. Any code sample, interaction, should be created as a workbook.
+3. Any general introduction and when workbooks do not make any sense obviously NOT, for example Azure BaaS interaction, Code generation, Service structure, Getting started with Unity3d, BUT ideally the aim is to have everything in Worbooks and unit tested.
 
 ## Workbooks contributionn
 1. Any modificactions should be pushed on the Nethereum.Worbooks repository

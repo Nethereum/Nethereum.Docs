@@ -14,6 +14,7 @@ pages:
     - 'Create and deploy contracts' : 'contracts/deploying.md'
     - 'Calls, transactions, events, filters and topics' : 'contracts/calling-transactions-events.md'
     - 'Multiple output parameters and function DTOs' : 'contracts/functiondtos.md'
+- 'Code generation': 'nethereum-code-generation.md'
 - 'Workbooks': 
     - 'Workbooks index': 'Nethereum.Workbooks/docs/index.md'
     - 'Getting started with smart contracts': 'Nethereum.Workbooks/docs/nethereum-gettingstard-smartcontrats.workbook'

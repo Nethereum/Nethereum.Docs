@@ -4,7 +4,7 @@ You can download ``` Geth ``` latest stable version from [Github](https://github
 
 ## Installation
 
- ### Windows
+### Windows
 
 On Windows, ``` Geth ``` installation is as simple as extracting geth.exe from your chosen OS.
 The download page provides an installer as well as a zip file. 

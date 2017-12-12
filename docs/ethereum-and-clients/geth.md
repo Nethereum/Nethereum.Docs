@@ -65,7 +65,7 @@ The JSON RPC can also be started from the geth console using the ```admin.startR
 
 There is already a preconfigured tesnet in Nethereum, which [can be downloaded from github](https://github.com/Nethereum/Nethereum/tree/master/testchain/clique)
 
-The preconfigured testnet will mine by default so you don't have to start mining manually.
+The preconfigured testnet will start producing blocks inmediately so there is no need to start this manually, for more information check the Proof of Authority section below.
 
 The chain keystore in the "devChain" folder contains the keys for the preconfigured account, which is also present in the genesis file "genesis_dev.json".
 
@@ -73,9 +73,19 @@ The chain keystore in the "devChain" folder contains the keys for the preconfigu
 * Password: ``` password ```
 * Private Key: ``` 0xb5b1870957d373ef0eeffecc6e4812c0fd08f554b37b233526acc331bf1544f7 ```
 
+### Proof of Authority
+
+The consensus mechanism used in this testchain is Proof of Authority (PoA).
+
+PoA consensus is reached by referring to a list of validators (referred to as authorities when they are linked to physical entities).
+
+It does not depend on nodes solving arbitrarily difficult mathematical problems, but instead uses a set of "authorities" - nodes that are explicitly allowed to create new blocks and secure the blockchain. The chain has to be signed off by the majority of authorities, in which case it becomes a part of the permanent record. This makes it easier to maintain a private chain and keep the block issuers accountable.
+
+For consortium setting there are no disadvantages of PoA network as compared to PoW. It is more secure (since an attacker with unwanted connection or hacked authority can not overwhelm a network potentially reverting all transactions), less computationally intensive (mining with difficulty which provides security requires lots of computation), more performant (Aura consensus provides lower transaction acceptance latency) and more predictable (blocks are issued at steady time intervals). PoA deployments are used by the enterprise and by the public (e.g. popular Kovan test network).
+
+The current testchain it has been configured to produce blocks immediately, it has only one node with one validator account which it is unlocked when launching geth. ```--unlock 0x12890d2cce102216644c59daE5baed380d84830c --password "pass.txt"```
 
 To start the chain you can use batch files or shell scripts, both of them will reset all the data when launched.
-
 
 #### Batch file
 
@@ -90,8 +100,6 @@ geth --nodiscover --rpc --datadir=devChain  --rpccorsdomain "*" --mine --rpcapi 
 
 ```
 [Source code](https://github.com/Nethereum/Nethereum/edit/master/testchain/clique/startgeth.bat)
-
-[//]: # (CJuan> I couldn't run that script, your help is welcome)
 
 #### Shell script
 
@@ -109,14 +117,6 @@ geth --nodiscover --rpc --datadir=devChain  --rpccorsdomain "*" --mine --rpcapi 
 ```
 [Source code](https://github.com/Nethereum/Nethereum/edit/master/testchain/clique/startgeth.sh)
 
-
-### Proof of Authority
-
-The consensus mechanism used in that setting is called Proof of Authority (PoA).
-
-PoA consensus is reached by referring to a list of validators (referred to as authorities when they are linked to physical entities).
-
-Since PoA doesn't require any mining, it's an extremely responsive mechanism (little to no delay after submitting a transaction) and it doesn't require manipulation to start mining ("mining" starts immediately).
 
 ### Other info
 If you need more information on how to setup your chain you can use this blog post

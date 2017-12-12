@@ -14,8 +14,7 @@ The installer puts geth into your PATH automatically. The zip file contains the 
 - Download zip file
 - Extract geth.exe from zip
 - Open a command prompt
-- ``` $ chdir ```
-- open geth.exe
+- Excute geth.exe
 
 ### Mac
 
@@ -121,3 +120,6 @@ geth --nodiscover --rpc --datadir=devChain  --rpccorsdomain "*" --mine --rpcapi 
 ### Other info
 If you need more information on how to setup your chain you can use this blog post
 [http://juan.blanco.ws/setup-your-own-tesnet-ethereum/](http://juan.blanco.ws/setup-your-own-tesnet-ethereum/)
+
+Proof of Authority in [Parity](https://github.com/paritytech/parity/wiki/Proof-of-Authority-Chains) and [Geth](https://github.com/ethereum/EIPs/issues/225)
+

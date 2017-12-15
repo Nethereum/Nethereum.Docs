@@ -1,4 +1,4 @@
-# Dapps, chains and development cycle
+# Choosing a chain for your development environment 
 
 When developing on Ethereum, different approaches are required depending on your development environment. Below are some tools we recommend:
 

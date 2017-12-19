@@ -1,6 +1,6 @@
 ## Installation and configuration of the Ethereum client Geth
 
-You can download the latest version stable version of geth from [Github](https://github.com/ethereum/go-ethereum/releases), the installation is  as simple as extracting geth.exe from your chosen OS.
+You can download the latest stable version of geth from [Github](https://github.com/ethereum/go-ethereum/releases), the installation is  as simple as extracting geth.exe from your chosen OS.
 
 If you are using a Mac or Linux you can also use Homebrew or PPA.
 
@@ -21,7 +21,7 @@ sudo apt-get update
 sudo apt-get install ethereum
 ```
 
-###RPC / IPC options
+### RPC / IPC options
 
 There are several command line options to run geth [which can be found in their documentation](https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options).
 
@@ -53,10 +53,9 @@ The preconfigured testnet will mine by default so you don't have to start mining
 
 The chain keystore in the "devChain" folder contains the keys for the preconfigured account, which is also present in the genesis file "genesis_dev.json".
 
-* Account : 0x12890d2cce102216644c59daE5baed380d84830c
-* Password: password
-* Private Key: 0xb5b1870957d373ef0eeffecc6e4812c0fd08f554b37b233526acc331bf1544f7
-
+* Account : ``` 0x12890d2cce102216644c59daE5baed380d84830c ```
+* Password: ``` password ```
+* Private Key: ``` 0xb5b1870957d373ef0eeffecc6e4812c0fd08f554b37b233526acc331bf1544f7 ```
 
 To start the chain you can use batch files or shell scripts, both of them will reset all the data when launched.
 
@@ -74,8 +73,6 @@ geth --nodiscover --rpc --datadir=devChain  --rpccorsdomain "*" --mine --rpcapi 
 
 ```
 [Source code](https://github.com/Nethereum/Nethereum/edit/master/testchain/clique/startgeth.bat)
-
-[//]: # (CJuan> I couldn't run that script, your help is welcome)
 
 #### Shell script
 

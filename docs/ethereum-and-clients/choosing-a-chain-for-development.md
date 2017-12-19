@@ -61,6 +61,21 @@ Less popular since hacked early 2017, however, Ropsten is still in service.
 
 Note: public testnets can be accessed via public nodes such as [INFURA](https://www.infura.io) 
 
+## Debug mode
+
+Debug modes are available whether you are using chain emulators or full-on Ethereum clients. 
+
+### 1 - Geth
+
+- Using option ``` debug ```
+
+### 2 - Parity
+
+- The use of Json RPC's [Trace Module](https://github.com/paritytech/parity/wiki/JSONRPC-trace-module) allows to trace transactions.
+
+### 3 - Ganache/Testnet RPC
+
+- Use the ``` --debug ``` option will Output VM opcodes for debugging
 
 ## Ether Faucets
 

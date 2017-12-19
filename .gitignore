@@ -1,0 +1,11 @@
+# Ignore everything
+*
+
+# But not these files...
+!*.md
+!.gitignore
+!/docs/index.md
+# etc...
+
+# ...even if they are in subdirectories
+!*/

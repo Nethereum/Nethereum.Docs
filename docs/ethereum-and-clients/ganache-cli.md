@@ -14,8 +14,6 @@ Ganache can be installed via NPM:
 
  ``` npm install -g ganache-cli ```
 
-### Starting ganache
-
 ### Using Ganache CLI
 
 #### Command Line

@@ -16,18 +16,44 @@ Quorum Network Manager returns an ``` enode ``` address ending in an address IP 
 
 ## Connecting to Quorum
 
-Add the Nethereum.Web3 nuget package and the "Using" statement to use Nethereum's Quorum methods.
+Add the Nethereum.Portable nuget package and the "Using" statement to use Nethereum's Quorum and Web3.
 
-``` #r "Nethereum.Web3" ```
+``` #r "Nethereum.Portable" ```
+
+``` using Nethereum.Quorum; ```
 ``` using Nethereum.Web3; ```
 
-Then set a Web3 instance using your node's IP address and 20010 as port:
+Then set a Web3/Quorum instance using your node's IP address and 20010 as port:
 
 ``` var web3Node1 = new Web3Quorum("http://46.165.246.181:20010"); ```
 
 
-## Querying a node
+## Querying with Quorum
 
-You can now try to query a node with:
+### Creating an account
 
-``` var balance = await web3Node1.Eth.GetBalance.SendRequestAsync("0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae"); ```
+``` var newAccount = await web3Node1.Personal.NewAccount.SendRequestAsync("password"); ```
+
+### Retrieving an account balance
+
+``` var balance = await web3Node1.Eth.GetBalance.SendRequestAsync("0xe68bf709a914d3a027d3d90686a3b975c3b82379"); ```
+
+### Retrieving existing accounts
+
+``` var accounts = await web3Node1.Eth.Accounts.SendRequestAsync() ```
+
+## Privatefor
+
+The ``` privateFor ``` parameter causes Quorum to treat a transaction as private. ``` PrivateFor ``` can take multiple addresses in a comma separated list, those addresses will be the only ones allowed to access private transactions in the clear. Those not on the list will simply skip private transactions.
+
+``` PrivateFor ``` will be set as following:
+
+- ``` var web3Node1 = new Web3Quorum(urlNode1); ```
+- ``` var privateFor = new List<string>(new[] { "ROAZBWtSacxXQrOe3FGAqJDyJjFePR5ce4TSIzmJ0Bc=" }); ```
+``` web3Node1.SetPrivateRequestParameters(privateFor); ```
+
+Afterwards all the transactions will use the PrivateFor parameter.
+
+- ``` var contract = web3Node1.Eth.GetContract(abi, address); ```
+- ``` var functionSet = contract.GetFunction("set"); ```
+- ``` var txnHash = await transactionService.SendRequestAsync(() => functionSet.SendTransactionAsync(account, 4)); ```

@@ -73,4 +73,4 @@ To start sending transactions, your newly created account will need some Ether. 
 To retrieve your faucet's URL, go to your Azure dashboard and select the Azure instance of the type: "Public IP Address" then "Overview". The URL provided is your Ether faucet
 ![](9.png)
 Paste your account's address in, this should bootstrap your account with 1000 ETH.
-![](11.png)
+![](10.png)

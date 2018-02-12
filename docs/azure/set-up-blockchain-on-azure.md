@@ -1,7 +1,7 @@
 ---
 title: "How to set up an Ethereum Blockchain on Azure"
 author: "Gaël Blanchemain"
-date: "January 9, 2018"
+date: "February 12, 2018"
 ---
 
 ### Nethereum supports Microsoft Azure, which puts Azure infrastructure at the service of your Nethereum project, the below will show you how to deploy a private Blockchain on Azure:

@@ -4,7 +4,7 @@ author: "Gaël Blanchemain"
 date: "February 12, 2018"
 ---
 
-### Nethereum supports Microsoft Azure, which puts Azure infrastructure at the service of your Nethereum project, the below will show you how to deploy a private Blockchain on Azure:
+Nethereum supports Microsoft Azure, the below will show you how to deploy a private Blockchain on Azure and start interacting with it:
 
 ## 1 - Create an [Azure account](https://azure.microsoft.com/en-us/resources/videos/sign-up-for-microsoft-azure/) or [sign](https://azure.microsoft.com/en-us/account/) in if you already have one
 

@@ -2,9 +2,12 @@ site_name: Nethereum
 pages: 
 - 'Home': 'index.md'
 - 'Ethereum': 'ethereum.md'
-- 'Ethereum and Clients': 
+- 'Ethereum: Clients and tools': 
     - Introduction: 'ethereum-and-clients/index.md'
     - 'Geth (Go client)' : 'ethereum-and-clients/geth.md'
+    - 'Quorum' : 'ethereum-and-clients/quorum.md'
+    - 'Azure BaaS' : 'ethereum-and-clients/azure-baas.md'
+    - 'TestRPC' : 'ethereum-and-clients/test-rpc.md'
 - 'Accounts': 'accounts.md'
 - 'Web3 and RPC':
     - 'Web3' : 'introduction/web3.md'

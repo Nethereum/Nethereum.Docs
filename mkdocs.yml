@@ -7,7 +7,7 @@ pages:
     - 'Geth (Go client)' : 'ethereum-and-clients/geth.md'
     - 'Quorum' : 'ethereum-and-clients/quorum.md'
     - 'Azure BaaS' : 'ethereum-and-clients/azure-baas.md'
-    - 'Setting up a Private Blockchain on Azure' : 'docs/azure/set-up-blockchain-on-azure.md'
+    - 'Setting up a Private Blockchain on Azure' : 'azure/set-up-blockchain-on-azure.md'
     - 'TestRPC' : 'ethereum-and-clients/test-rpc.md'
     - 'Ganache CLI' : 'ganache-cli.md'
     - 'Choosing a chain for development' : 'choosing-a-chain-for-development.md'

@@ -5,6 +5,7 @@ pages:
 - 'Ethereum: Clients and tools': 
     - Introduction: 'ethereum-and-clients/index.md'
     - 'Geth (Go client)' : 'ethereum-and-clients/geth.md'
+    - 'Parity' : 'ethereum-and-clients/parity.md'
     - 'Quorum' : 'ethereum-and-clients/quorum.md'
     - 'Azure BaaS' : 'ethereum-and-clients/azure-baas.md'
     - 'Setting up a Private Blockchain on Azure' : 'azure/set-up-blockchain-on-azure.md'

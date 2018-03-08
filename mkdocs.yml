@@ -10,7 +10,7 @@ pages:
     - 'Setting up a Private Blockchain on Azure' : 'azure/set-up-blockchain-on-azure.md'
     - 'TestRPC' : 'ethereum-and-clients/test-rpc.md'
     - 'Ganache CLI' : 'ethereum-and-clients/ganache-cli.md'
-    - 'Choosing a chain for development' : 'choosing-a-chain-for-development.md'
+    - 'Choosing a chain for development' : 'ethereum-and-clients/choosing-a-chain-for-development.md'
 - 'Accounts': 'accounts.md'
 - 'Web3 and RPC':
     - 'Web3' : 'introduction/web3.md'

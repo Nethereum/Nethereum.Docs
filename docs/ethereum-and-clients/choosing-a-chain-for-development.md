@@ -95,4 +95,4 @@ For more specific advice about faucets please check [this article.](https://medi
 
 
 
-**Credits**  to [Karl Floersch](https://karl.tech) for the technical part of this explanation: https://karl.tech/intro-guide-to-ethereum-testnets/
+**Credits**  to [Karl Floersch](https://karl.tech) for the information about the different testnets: https://karl.tech/intro-guide-to-ethereum-testnets/

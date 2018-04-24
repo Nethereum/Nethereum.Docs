@@ -11,7 +11,7 @@ At the time of sending a transaction, the right method to deliver the transactio
 
 ### Working with an Account
 
-An account is generated with a private key, you can generate a new private key and store it using the Web3 storage definition (compatible with all clients), or load an exiting one from any storage, or from the key storage folder of your locally installed client.
+An account is generated with a private key, you can generate a new private key and store it using the Web3 storage definition (compatible with all clients), or load an existing one from any storage, or from the key storage folder of your locally installed client.
 
 One of the major advantages, apart from security (avoiding the transfer of passwords in plain text), is that you don't need to have a local installation of a client, allowing you to target public nodes like Infura.
 
@@ -37,7 +37,7 @@ var accountFilePath = @"c:\xxx\UTC--2015-11-25T05-05-03.116905600Z--12890d2cce10
 var account = Account.LoadFromKeyStoreFile(accountFilePath, string password);
 ```
 
-If you are targetting other frameworks like core ora netstandard, portable loading directly from a file is not supported, to allow for major platform compatibility, in this scenario you will need to extract the json fist and pass it as a parameter.
+If you are targetting other frameworks like core or netstandard, portable loading directly from a file is not supported, to allow for major platform compatibility, in this scenario you will need to extract the json fist and pass it as a parameter.
 
 ```csharp
  var password = "password";
@@ -60,7 +60,7 @@ var account = Nethereum.Web3.Accounts.Account.LoadFromKeyStoreFile(accountFilePa
 var web3 = new Nethereum.Web3.Web3(account);
 ```
 
-Now all these type of transactions will be signed offline.
+Now all these types of transactions will be signed offline.
 
 Transfer an amount to another address, using the transaction manager:
 

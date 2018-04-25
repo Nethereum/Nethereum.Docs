@@ -33,9 +33,9 @@ contract test {
 
 When a transaction calls the StoreDocument a new document struct is created and added to the array that matches the given bytes32 key.
 
-## Retrieving the a document using a DTO
+## Retrieving a document using a DTO
 
-### The abi for the mapping
+### The abi for mapping
 If we inspect the abi and find "documents" we can see that it is a function and has multiple outputs, name, description and sender. The outputs match the attributes of our struct.
 
 ```

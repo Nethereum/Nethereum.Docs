@@ -1,4 +1,4 @@
-# Netherum Code Generator
+# Nethereum Code Generator
 
 Nethereum offers a code generator which allows you to generates C# classes from the ABI and Bin output of the compilation of Solidity contracts.
 

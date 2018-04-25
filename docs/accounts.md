@@ -11,9 +11,9 @@ At the time of sending a transaction, the right method to deliver the transactio
 
 ### Working with an Account
 
-An account is generated with a private key, you can generate a new private key and store it using the Web3 storage definition (compatible with all clients), or load an exiting one from any storage, or from the key storage folder of your locally installed client.
+An account is generated with a private key, you can generate a new private key and store it using the Web3 storage definition (compatible with all clients), or load an existing one from any storage, or from the key storage folder of your locally installed client.
 
-One of the major advantages, apart from security (avoiding the transfer of passwords in plain text), is that you don't need to have a local installation of a client, allowing you to target public nodes like Infura.
+One of the major advantages, apart from security (avoiding the transfer of passwords in plain text), is that you don't need to instal a client, allowing you to target public nodes like Infura.
 
 #### Loading an existing Account
 
@@ -37,7 +37,7 @@ var accountFilePath = @"c:\xxx\UTC--2015-11-25T05-05-03.116905600Z--12890d2cce10
 var account = Account.LoadFromKeyStoreFile(accountFilePath, string password);
 ```
 
-If you are targetting other frameworks like core ora netstandard, portable loading directly from a file is not supported, to allow for major platform compatibility, in this scenario you will need to extract the json fist and pass it as a parameter.
+If you are targetting other frameworks like core or netstandard, portable loading directly from a file is not supported, to allow for major platform compatibility, in this scenario you will need to extract the json fist and pass it as a parameter.
 
 ```csharp
  var password = "password";
@@ -48,7 +48,7 @@ var account = Nethereum.Web3.Accounts.Account.LoadFromKeyStore(keyStoreEncrypted
 
 #### Working with an Account in Web3
 
-Once you have loaded your private keys into your account, if Web3 is instantiated with that acccount all the transactions made using the TransactionManager, Contract deployment or Functions will signed offline using the latest nonce.
+Once you have loaded your private keys into your account, if Web3 is instantiated with that account all the transactions made using the TransactionManager, Contract deployment or Functions will signed offline using the latest nonce.
 
 For example, in this scenario we are creating an account with the private key from a keystore file, and creating a new instance of Web3 using the default "http://localhost:8545".
 
@@ -93,13 +93,13 @@ var privateKey = ecKey.GetPrivateKeyAsBytes().ToHex();
 var account = new Nethereum.Accounts.Account(privateKey);
 ```
 
-The Nethereum.KeyStore library, allows you to encrypt and save your private key, in a compatible way to all the clients.
+The Nethereum.KeyStore library, allows you to encrypt and save your private key, in a way that is compatible with all the clients.
 
 ### Working with a Managed Account in Web3
 
 Clients retrieve the private key for an account (if stored on their keystore folder) using a password provided to decrypt the file. This is done when unlocking an account, or just at the time of sending a transaction if using personal_sendTransaction with a password.
 
-Having an account unlocked for a certain period of time might be a security issue, so the prefered option in this scenario, is to use the rpc method `personal_sendTransaction`.
+Having an account unlocked for a certain period of time might be a security issue, so the prefered option in this scenario is to use the rpc method `personal_sendTransaction`.
 
 Nethereum.Web3 wraps this functionality by using a ManagedAccount, having the managed account storing the account address and the password information.
 

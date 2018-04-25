@@ -1,6 +1,6 @@
 ## Installation and configuration of the Ethereum client Geth
 
-You can download the latest version stable version of geth from [Github](https://github.com/ethereum/go-ethereum/releases), the installation is  as simple as extracting geth.exe from your chosen OS.
+You can download the latest version stable version of geth from [Github](https://github.com/ethereum/go-ethereum/releases), the installation is as simple as extracting geth.exe from your chosen OS.
 
 If you are using a Mac or Linux you can also use Homebrew or PPA.
 
@@ -75,8 +75,6 @@ geth --nodiscover --rpc --datadir=devChain  --rpccorsdomain "*" --mine --rpcapi 
 ```
 [Source code](https://github.com/Nethereum/Nethereum/edit/master/testchain/clique/startgeth.bat)
 
-[//]: # (CJuan> I couldn't run that script, your help is welcome)
-
 #### Shell script
 
 Make sure to make your script executable: ` chmod +x startgeth.sh `
@@ -94,5 +92,5 @@ geth --nodiscover --rpc --datadir=devChain  --rpccorsdomain "*" --mine --rpcapi 
 [Source code](https://github.com/Nethereum/Nethereum/edit/master/testchain/clique/startgeth.sh)
 
 ### Other info
-If you need more information on how to setup your chain you can use this blog post
+If you need more information on how to setup your chain, you can use this blog post
 [http://juan.blanco.ws/setup-your-own-tesnet-ethereum/](http://juan.blanco.ws/setup-your-own-tesnet-ethereum/)

@@ -14,12 +14,12 @@ This video takes you through the steps of creating a smart contract, compile it,
 
 ### Cross platform, Visual Studio Code, .Net core Video
 
-If you want to develop in a cross platform environment this video takes you through same steps but in a Mac using Visual Studio Code and .Net Core.
+If you want to develop in a cross platform environment this video takes you through same steps but with a Mac using Visual Studio Code and .Net Core.
 
 [![Cross platform development in Ethereum using .Net Core and VsCode and Nethereum](http://img.youtube.com/vi/M1qKcJyQcMY/0.jpg)](http://www.youtube.com/watch?v=M1qKcJyQcMY "Cross platform development in Ethereum using .Net Core and VsCode and Nethereum")
 
 ## The test contract
-This is a very simple example of a solidity contract:
+Here is is a very simple example of a solidity contract:
 
 ```javascript
     contract test {
@@ -36,11 +36,11 @@ This is a very simple example of a solidity contract:
     }
 ```
 
-The contract named "test" has a  constructor named after the contract (class) and a function multiply.
-The function multiply returns the result of the multiplication of a parameter "a" by the value of the "multiplier" provider at time of deployment to the constructor.
+The contract named "test" has a constructor named after the contract (class) and a  multiply function.
+The multiply unction returns the result of the multiplication of a parameter "a" by the value of the "multiplier" provider at time of deployment to the constructor.
 
 ## Contract compilation, the Bytecode and the ABI
-Before a contract can be deployed it needs to be compiled. Let's quickly see how to do this with Visual Studio Code
+Before a contract can be deployed, it needs to be compiled. Let's quickly see how to do this with Visual Studio Code:
 
 ### Visual Studio Code
 
@@ -85,16 +85,17 @@ Deploying a transaction will return a transactionHash which will be using later 
 
 The transaction that has deployed the contract needs to be verified by the network, if we are running a private chain with a single node we will need to mine the transaction.
 
-PS: Nethereum offers a quick and easy way to start your local test , just execute  startgeth.bat (for Windows) or startgeth.sh (for Mac and Linux) at: https://github.com/Nethereum/Nethereum.Workbooks/tree/master/testchain/clique
+PS: Nethereum offers a quick and easy way to start your local test , just download the test chain matching your environment from <https://github.com/Nethereum/Testchains>
 
-Start the chain using startgeth.bat (Windows) or startgeth.sh (Mac/Linux). The chain is setup with the Proof of Authority consensus and will start the mining process inmediatly.
+Start a Geth chain (geth-clique-linux\\, geth-clique-windows\\ or geth-clique-mac\\) using **startgeth.bat** (Windows) or **startgeth.sh** (Mac/Linux). The chain is setup with the Proof of Authority consensus and will start the mining process immediately.
+
 
 ```csharp
  var mineResult = await web3.Miner.Start.SendRequestAsync(6);
 ```
 
 ### The transaction receipt
-Once we have started mining (or we know that are miners in the network) we can can attempt to retrieve the transaction receipt, we will need this as it contains our contract address.
+Once we have started mining (or when we know that there are miners in the network) we can can attempt to retrieve the transaction receipt, we will need this as it contains our contract address.
 
 The transaction might have not be mined yet, so when attempting to get the receipt it might return a null value, in this scenario we will continue trying until we get a not null result.
 
@@ -117,11 +118,11 @@ The transaction might have not be mined yet, so when attempting to get the recei
 ### Calling the contract function and return a value
 Once we have the receipt, we can retrieve the contract address of our newly deployed contract. Using the contract address and the abi we can create an instance of the Contract object.
 
-Using the contract we can get a Function object using the name of function.
+Using the contract, we can get a Function object using the name of the function.
 
 Now with the function we will be able to do a Call to our multiply function by passing a parameter to do the multiplication.
 
-Note: Calls are not the same as transactions so are not submitted to the network for consensus. Calls are a simple way to retrieve data or do an operation from a contract as our multiplication.
+Note: Calls are not the same as transactions so they are not submitted to the network for consensus. Calls are a simple way to retrieve data or do an operation from a contract as our multiplication.
 
 ```csharp
     var contractAddress = receipt.ContractAddress;

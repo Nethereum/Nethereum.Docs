@@ -60,7 +60,7 @@ var account = Nethereum.Web3.Accounts.Account.LoadFromKeyStoreFile(accountFilePa
 var web3 = new Nethereum.Web3.Web3(account);
 ```
 
-Now all these type of transactions will be signed offline.
+Now all these types of transactions will be signed offline.
 
 Transfer an amount to another address, using the transaction manager:
 

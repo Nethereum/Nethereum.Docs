@@ -2,9 +2,16 @@ site_name: Nethereum
 pages: 
 - 'Home': 'index.md'
 - 'Ethereum': 'ethereum.md'
-- 'Ethereum and Clients': 
+- 'Ethereum: Clients and tools': 
     - Introduction: 'ethereum-and-clients/index.md'
     - 'Geth (Go client)' : 'ethereum-and-clients/geth.md'
+    - 'Parity' : 'ethereum-and-clients/parity.md'
+    - 'Quorum' : 'ethereum-and-clients/quorum.md'
+    - 'Azure BaaS' : 'ethereum-and-clients/azure-baas.md'
+    - 'Setting up a Private Blockchain on Azure' : 'azure/set-up-blockchain-on-azure.md'
+    - 'TestRPC' : 'ethereum-and-clients/test-rpc.md'
+    - 'Ganache CLI' : 'ethereum-and-clients/ganache-cli.md'
+    - 'Choosing a chain for development' : 'ethereum-and-clients/choosing-a-chain-for-development.md'
 - 'Accounts': 'accounts.md'
 - 'Web3 and RPC':
     - 'Web3' : 'introduction/web3.md'
@@ -20,5 +27,6 @@ pages:
     - 'Getting started with smart contracts': 'Nethereum.Workbooks/docs/nethereum-gettingstard-smartcontrats.workbook'
     - 'Getting started Infura' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-infura.workbook'
     - 'HD Wallet' : 'Nethereum.Workbooks/docs/nethereum-hdwallet-infura-transfer.workbook'
+    - 'Logging events' : 'Nethereum.Workbooks/docs/nethereum-eventdtos-getallchanges.workbook'
 - 'Sample Projects' : 'demos/sample-projects.md'
 theme: readthedocs

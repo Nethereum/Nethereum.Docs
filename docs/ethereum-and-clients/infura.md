@@ -1,8 +1,8 @@
 ## Infura
 
-Since running a local Ethereum/IPFS node is becoming more and more challenging, [Infura](www.infura.io) provides a scalable infrastructure of nodes that can be accessed via standard libraries and API (JSON-RPC API, web3 libraries).
+Since running a local Ethereum/IPFS node is becoming more and more challenging, [Infura](http://www.infura.io) provides a scalable infrastructure of nodes that can be accessed via standard libraries and API (JSON-RPC API, web3 libraries).
 
-The following will help you connect to [Infura](www.infura.io) and retrieve the balance of an account from the mainnet (live Ethereum). Infura provides a set of public nodes removing the need to have a local or maintained client fully synchronised with the main Ethereum network.
+The following will help you connect to [Infura](http://www.infura.io) and retrieve the balance of an account from the mainnet (live Ethereum). Infura provides a set of public nodes removing the need to have a local or maintained client fully synchronised with the main Ethereum network.
 
 ## Setting up
 

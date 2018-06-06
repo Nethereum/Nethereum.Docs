@@ -1,10 +1,10 @@
-# Netherum Code Generator
+# Nethereum Code Generator
 
 Nethereum offers a code generator which allows you to generates C# classes from the ABI and Bin output of the compilation of Solidity contracts.
 
 The "smart contract c# service code generator" generates a generic C# service to interact with the smart contract, including Deployment, access to Functions and Events.
 
-There are two types of code generators a JavaScript one, which is integrated on the Visual Studio Code Solidity extension and a .Net console application
+There are two types of code generators: a JavaScript one, which is integrated on the Visual Studio Code Solidity extension and a .Net console application
 
 ## Code generation using the Visual Studio Code extension
 
@@ -39,7 +39,9 @@ Prerequisites:
 
 Then simply use the command:
 
-```dotnet Nethereum.Generator.Console.dll gen-service -af UportRegistry.abi -bf UportRegistry.bin -c UportRegistry -n Uport```
+```
+dotnet Nethereum.Generator.Console.dll gen-service -af UportRegistry.abi -bf UportRegistry.bin -c UportRegistry -n Uport
+```
 
 In this scenario the parameters are:
 

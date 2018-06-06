@@ -8,13 +8,12 @@ Ethereum TestRPC is a fast and customizable blockchain emulator. It allows makin
 
 ### Get started
 
-Test RPC can be installed:
 |  Install Method | Command |
 | ------------- |---------|
-[via NPM](https://www.npmjs.com/package/ethereumjs-testrpc) |  ` npm install -g ethereumjs-testrpc `|
-Quicks start using Docker image (unsupported) | ` docker run -d -p 8545:8545 ethereumjs/testrpc:latest ` |
-Passing options to testrpc through Docker |  ` docker run -d -p 8545:8545 ethereumjs/testrpc:latest -a 10 --debug ` |
-Build the Docker container from source |  ` git clone https://github.com/ethereumjs/testrpc.git && cd testrpc docker build -t ethereumjs/testrpc ` |
+|[via NPM](https://www.npmjs.com/package/ethereumjs-testrpc) |  ` npm install -g ethereumjs-testrpc `|
+|Quicks start using Docker image (unsupported) | ` docker run -d -p 8545:8545 ethereumjs/testrpc:latest ` |
+|Passing options to testrpc through Docker |  ` docker run -d -p 8545:8545 ethereumjs/testrpc:latest -a 10 --debug ` |
+|Build the Docker container from source |  ` git clone https://github.com/ethereumjs/testrpc.git && cd testrpc docker build -t ethereumjs/testrpc ` |
 
 
 ## Starting Test RPC

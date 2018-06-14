@@ -49,6 +49,7 @@ Before a contract can be deployed it needs to be compiled. Let's quickly see how
 3. If you don't have the Solidity extension press F1 or Shift+Command+P on a mac and type "ext", then search for "solidity" and install it.
 4. Now that is installed you can press F1 again type "compile" and select the option to "Compile current contract"
 ![Bytecode and ABI compilation on VS Code](screenshots/how-to-use-console-generator1.gif)
+![Workbook sample](screenshots/deploymentSample.gif)
 5. Your abi and bytecode files can be found now in your bin folder.
 
 ## Deployment

@@ -5,12 +5,7 @@ pages:
 ##    - 'Windows'
 ##    - 'Mac'
 ##    - 'Linux'
-- '2 minute crash-courses':
-    - 'Workbooks index' : 'Nethereum.Workbooks/docs/index.md'
-    - 'Getting started with smart contracts' : 'Nethereum.Workbooks/docs/nethereum-gettingstard-smartcontrats.workbook'
-    - 'Getting started Infura' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-infura.workbook'
-    - 'HD Wallet' : 'Nethereum.Workbooks/docs/nethereum-hdwallet-infura-transfer.workbook'
-    - 'Logging events' : 'Nethereum.Workbooks/docs/nethereum-eventdtos-getallchanges.workbook'
+- '2 minute crash-courses': 'Nethereum.Workbooks/docs/index.md'
 ## - 'Running a local Blockchain' 
 ## - 'Deploying a contract'
 ## - 'Generating a contract interface'

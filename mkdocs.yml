@@ -1,5 +1,4 @@
 site_name: Nethereum
-'docs_dir'
 pages:
 - 'Install'
     - 'Windows'

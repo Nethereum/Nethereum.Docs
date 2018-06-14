@@ -1,6 +1,6 @@
 site_name: Nethereum
 pages:
-- 'Home': 'index.md'
+- 'Home' : 'index.md'
 ## - 'Install':
 ##    - 'Windows'
 ##    - 'Mac'

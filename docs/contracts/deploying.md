@@ -89,9 +89,6 @@ PS: Nethereum offers a quick and easy way to start your local test, just choose 
 
 Testchains are setup with the Proof of Authority consensus and will start the mining process inmediatly.
 
-```csharp
- var mineResult = await web3.Miner.Start.SendRequestAsync(6);
-```
 
 ### The transaction receipt
 Once we have started mining (or we know that are miners in the network) we can can attempt to retrieve the transaction receipt, we will need this as it contains our contract address.
@@ -108,16 +105,10 @@ The transaction might have not be mined yet, so when attempting to get the recei
     }
 ```
 
-### Stop mining
-
-```csharp
-    var mineResult = await web3.Miner.Stop.SendRequestAsync();
-```
-
 ### Calling the contract function and return a value
 Once we have the receipt, we can retrieve the contract address of our newly deployed contract. Using the contract address and the abi we can create an instance of the Contract object.
 
-Using the contract we can get a Function object using the name of function.
+Using the contract we can get a Function object using the function name.
 
 Now with the function we will be able to do a Call to our multiply function by passing a parameter to do the multiplication.
 

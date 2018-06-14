@@ -15,7 +15,7 @@ pages:
 - 'Tools and clients':
     - 'Introduction' : 'ethereum-and-clients/index.md'
     - 'Geth (Go client)' : 'ethereum-and-clients/geth.md'
-##    - 'Testchains' : 'https://github.com/Nethereum/TestChains'
+    - 'Testchains' : 'using-testchains.md'
     - 'Parity' : 'ethereum-and-clients/parity.md'
     - 'Quorum' : 'ethereum-and-clients/quorum.md'
     - 'Azure BaaS' : 'ethereum-and-clients/azure-baas.md'

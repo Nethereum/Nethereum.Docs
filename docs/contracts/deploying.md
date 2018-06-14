@@ -159,9 +159,6 @@ All the source code can be found under deployment in the [Tutorials solution](ht
         receipt = await web3.Eth.Transactions.GetTransactionReceipt.SendRequestAsync(transactionHash);
     }
 
-    mineResult = await web3.Miner.Stop.SendRequestAsync();
-    Assert.True(mineResult);
-
     var contractAddress = receipt.ContractAddress;
 
     var contract = web3.Eth.GetContract(abi, contractAddress);

@@ -40,7 +40,7 @@ The contract named "test" has a  constructor named after the contract (class) an
 The function multiply returns the result of the multiplication of a parameter "a" by the value of the "multiplier" provider at time of deployment to the constructor.
 
 ## Contract compilation, the Bytecode and the ABI
-Before a contract can be deployed it needs to be compiled. Let's quickly see how to do this with Visual Studio Code
+Before a contract can be deployed it needs to be compiled. Let's quickly see how to do this with Visual Studio Code.
 
 ### Visual Studio Code
 
@@ -48,9 +48,8 @@ Before a contract can be deployed it needs to be compiled. Let's quickly see how
 2. Copy the contract test into a new file and save it as "test.sol", you will need to have opened a folder as your workspace.
 3. If you don't have the Solidity extension press F1 or Shift+Command+P on a mac and type "ext", then search for "solidity" and install it.
 4. Now that is installed you can press F1 again type "compile" and select the option to "Compile current contract"
+![Bytecode and ABI compilation on VS Code](screenshots/how-to-use-console-generator1.gif)
 5. Your abi and bytecode files can be found now in your bin folder.
-
-![VsCode solidity compilation](https://raw.githubusercontent.com/Nethereum/Nethereum/master/docs/screenshots/vscode.png)
 
 ## Deployment
 
@@ -85,9 +84,9 @@ Deploying a transaction will return a transactionHash which will be using later 
 
 The transaction that has deployed the contract needs to be verified by the network, if we are running a private chain with a single node we will need to mine the transaction.
 
-PS: Nethereum offers a quick and easy way to start your local test , just execute  startgeth.bat (for Windows) or startgeth.sh (for Mac and Linux) at: https://github.com/Nethereum/Nethereum.Workbooks/tree/master/testchain/clique
+PS: Nethereum offers a quick and easy way to start your local test, just choose your preferred client and start it in seconds at: [https://github.com/Nethereum/TestChains](https://github.com/Nethereum/TestChains)
 
-Start the chain using startgeth.bat (Windows) or startgeth.sh (Mac/Linux). The chain is setup with the Proof of Authority consensus and will start the mining process inmediatly.
+Testchains are setup with the Proof of Authority consensus and will start the mining process inmediatly.
 
 ```csharp
  var mineResult = await web3.Miner.Start.SendRequestAsync(6);

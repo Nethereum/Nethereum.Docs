@@ -1,10 +1,26 @@
 site_name: Nethereum
-pages: 
-- 'Home': 'index.md'
-- 'Ethereum': 'ethereum.md'
-- 'Ethereum: Clients and tools': 
-    - Introduction: 'ethereum-and-clients/index.md'
+'docs_dir'
+pages:
+- 'Install'
+    - 'Windows'
+    - 'Mac'
+    - 'Linux'
+- '2 minute crash-courses'
+    - 'Workbooks index': 'Nethereum.Workbooks/docs/index.md'
+    - 'Getting started with smart contracts': 'Nethereum.Workbooks/docs/nethereum-gettingstard-smartcontrats.workbook'
+    - 'Getting started Infura' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-infura.workbook'
+    - 'HD Wallet' : 'Nethereum.Workbooks/docs/nethereum-hdwallet-infura-transfer.workbook'
+    - 'Logging events' : 'Nethereum.Workbooks/docs/nethereum-eventdtos-getallchanges.workbook'
+- 'Running a local Blockchain' : 
+- 'Deploying a contract'
+- 'Generating a contract interface'
+- 'Interacting with a contract'
+- 'Sending a transaction'
+- 'Creating and managing an account'
+- 'Tools and clients'
+    - 'Introduction' : 'ethereum-and-clients/index.md'
     - 'Geth (Go client)' : 'ethereum-and-clients/geth.md'
+    - 'Testchains' : 'https://github.com/Nethereum/TestChains'
     - 'Parity' : 'ethereum-and-clients/parity.md'
     - 'Quorum' : 'ethereum-and-clients/quorum.md'
     - 'Azure BaaS' : 'ethereum-and-clients/azure-baas.md'
@@ -12,21 +28,17 @@ pages:
     - 'TestRPC' : 'ethereum-and-clients/test-rpc.md'
     - 'Ganache CLI' : 'ethereum-and-clients/ganache-cli.md'
     - 'Choosing a chain for development' : 'ethereum-and-clients/choosing-a-chain-for-development.md'
-- 'Accounts': 'accounts.md'
-- 'Web3 and RPC':
-    - 'Web3' : 'introduction/web3.md'
-    - 'RPC' : 'introduction/rpc.md'
-    - 'IPC' : 'introduction/ipc.md'
-- 'Working with Contracts':
-    - 'Create and deploy contracts' : 'contracts/deploying.md'
-    - 'Calls, transactions, events, filters and topics' : 'contracts/calling-transactions-events.md'
-    - 'Multiple output parameters and function DTOs' : 'contracts/functiondtos.md'
-- 'Code generation': 'nethereum-code-generation.md'
-- 'Workbooks': 
-    - 'Workbooks index': 'Nethereum.Workbooks/docs/index.md'
-    - 'Getting started with smart contracts': 'Nethereum.Workbooks/docs/nethereum-gettingstard-smartcontrats.workbook'
-    - 'Getting started Infura' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-infura.workbook'
-    - 'HD Wallet' : 'Nethereum.Workbooks/docs/nethereum-hdwallet-infura-transfer.workbook'
-    - 'Logging events' : 'Nethereum.Workbooks/docs/nethereum-eventdtos-getallchanges.workbook'
-- 'Sample Projects' : 'demos/sample-projects.md'
-theme: readthedocs
+    - 'Infura' : 'ethereum-and-clients/infura.md'
+- 'Advanced'
+    - 'Working with Contracts':
+       - 'Create and deploy contracts' : 'contracts/deploying.md'
+       - 'Calls, transactions, events, filters and topics' : 'contracts/calling-transactions-events.md'
+       - 'Multiple output parameters and function DTOs' : 'contracts/functiondtos.md'
+    - 'Azure'
+       - 'set-up-blockchain-on-azure' : 'azure/set-up-blockchain-on-azure.md'
+    - 'Web3, RPC, IPC':
+       - 'Web3' : 'introduction/web3.md'
+       - 'RPC' : 'introduction/rpc.md'
+       - 'IPC' : 'introduction/ipc.md'
+- 'Code Examples'
+

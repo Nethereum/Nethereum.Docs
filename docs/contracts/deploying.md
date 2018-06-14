@@ -16,8 +16,6 @@ This video takes you through the steps of creating a smart contract, compile it,
 
 If you want to develop in a cross platform environment this video takes you through same steps but in a Mac using Visual Studio Code and .Net Core.
 
-[![Cross platform development in Ethereum using .Net Core and VsCode and Nethereum](http://img.youtube.com/vi/M1qKcJyQcMY/0.jpg)](http://www.youtube.com/watch?v=M1qKcJyQcMY "Cross platform development in Ethereum using .Net Core and VsCode and Nethereum")
-
 ## The test contract
 This is a very simple example of a solidity contract:
 

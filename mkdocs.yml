@@ -2,21 +2,21 @@ site_name: Nethereum
 pages:
 - 'Home': 'index.md'
 - 'Install':
-    - 'Windows'
-    - 'Mac'
-    - 'Linux'
+##    - 'Windows'
+##    - 'Mac'
+##    - 'Linux'
 - '2 minute crash-courses':
     - 'Workbooks index' : 'Nethereum.Workbooks/docs/index.md'
     - 'Getting started with smart contracts' : 'Nethereum.Workbooks/docs/nethereum-gettingstard-smartcontrats.workbook'
     - 'Getting started Infura' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-infura.workbook'
     - 'HD Wallet' : 'Nethereum.Workbooks/docs/nethereum-hdwallet-infura-transfer.workbook'
     - 'Logging events' : 'Nethereum.Workbooks/docs/nethereum-eventdtos-getallchanges.workbook'
-- 'Running a local Blockchain' 
-- 'Deploying a contract'
-- 'Generating a contract interface'
-- 'Interacting with a contract'
-- 'Sending a transaction'
-- 'Creating and managing an account'
+## - 'Running a local Blockchain' 
+## - 'Deploying a contract'
+## - 'Generating a contract interface'
+## - 'Interacting with a contract'
+## - 'Sending a transaction'
+## - 'Creating and managing an account'
 - 'Tools and clients':
     - 'Introduction' : 'ethereum-and-clients/index.md'
     - 'Geth (Go client)' : 'ethereum-and-clients/geth.md'
@@ -40,5 +40,5 @@ pages:
        - 'Web3' : 'introduction/web3.md'
        - 'RPC' : 'introduction/rpc.md'
        - 'IPC' : 'introduction/ipc.md'
-- 'Code Examples'
+## - 'Code Examples'
 

@@ -19,7 +19,7 @@ pages:
     - 'Testchains' : 'using-testchains.md'
     - 'Parity' : 'ethereum-and-clients/parity.md'
     - 'Quorum' : 'ethereum-and-clients/quorum.md'
-    - 'Azure BaaS' : 'ethereum-and-clients/azure-baas.md'
+    - 'Azure BaaS' : 'azure/set-up-blockchain-on-azure.md'
     - 'Setting up a Private Blockchain on Azure' : 'azure/set-up-blockchain-on-azure.md'
     - 'TestRPC' : 'ethereum-and-clients/test-rpc.md'
     - 'Ganache CLI' : 'ethereum-and-clients/ganache-cli.md'
@@ -30,8 +30,6 @@ pages:
        - 'Create and deploy contracts' : 'contracts/deploying.md'
        - 'Calls, transactions, events, filters and topics' : 'contracts/calling-transactions-events.md'
        - 'Multiple output parameters and function DTOs' : 'contracts/functiondtos.md'
-    - 'Azure':
-       - 'set-up-blockchain-on-azure' : 'azure/set-up-blockchain-on-azure.md'
     - 'Web3, RPC, IPC':
        - 'Web3' : 'introduction/web3.md'
        - 'RPC' : 'introduction/rpc.md'

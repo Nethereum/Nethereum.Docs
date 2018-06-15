@@ -16,8 +16,6 @@ This video takes you through the steps of creating a smart contract, compile it,
 
 If you want to develop in a cross platform environment this video takes you through same steps but in a Mac using Visual Studio Code and .Net Core.
 
-[![Cross platform development in Ethereum using .Net Core and VsCode and Nethereum](http://img.youtube.com/vi/M1qKcJyQcMY/0.jpg)](http://www.youtube.com/watch?v=M1qKcJyQcMY "Cross platform development in Ethereum using .Net Core and VsCode and Nethereum")
-
 ## The test contract
 This is a very simple example of a solidity contract:
 
@@ -40,7 +38,7 @@ The contract named "test" has a  constructor named after the contract (class) an
 The function multiply returns the result of the multiplication of a parameter "a" by the value of the "multiplier" provider at time of deployment to the constructor.
 
 ## Contract compilation, the Bytecode and the ABI
-Before a contract can be deployed it needs to be compiled. Let's quickly see how to do this with Visual Studio Code
+Before a contract can be deployed it needs to be compiled. Let's quickly see how to do this with Visual Studio Code.
 
 ### Visual Studio Code
 
@@ -48,9 +46,11 @@ Before a contract can be deployed it needs to be compiled. Let's quickly see how
 2. Copy the contract test into a new file and save it as "test.sol", you will need to have opened a folder as your workspace.
 3. If you don't have the Solidity extension press F1 or Shift+Command+P on a mac and type "ext", then search for "solidity" and install it.
 4. Now that is installed you can press F1 again type "compile" and select the option to "Compile current contract"
-5. Your abi and bytecode files can be found now in your bin folder.
 
-![VsCode solidity compilation](https://raw.githubusercontent.com/Nethereum/Nethereum/master/docs/screenshots/vscode.png)
+![Bytecode and ABI compilation on VS Code](../screenshots/how-to-use-console-generator1.gif)
+
+
+5. Your abi and bytecode files can be found now in your bin folder.
 
 ## Deployment
 
@@ -85,13 +85,10 @@ Deploying a transaction will return a transactionHash which will be using later 
 
 The transaction that has deployed the contract needs to be verified by the network, if we are running a private chain with a single node we will need to mine the transaction.
 
-PS: Nethereum offers a quick and easy way to start your local test , just execute  startgeth.bat (for Windows) or startgeth.sh (for Mac and Linux) at: https://github.com/Nethereum/Nethereum.Workbooks/tree/master/testchain/clique
+PS: Nethereum offers a quick and easy way to start your local test, just choose your preferred client and start it in seconds at: [https://github.com/Nethereum/TestChains](https://github.com/Nethereum/TestChains)
 
-Start the chain using startgeth.bat (Windows) or startgeth.sh (Mac/Linux). The chain is setup with the Proof of Authority consensus and will start the mining process inmediatly.
+Testchains are setup with the Proof of Authority consensus and will start the mining process inmediatly.
 
-```csharp
- var mineResult = await web3.Miner.Start.SendRequestAsync(6);
-```
 
 ### The transaction receipt
 Once we have started mining (or we know that are miners in the network) we can can attempt to retrieve the transaction receipt, we will need this as it contains our contract address.
@@ -108,16 +105,10 @@ The transaction might have not be mined yet, so when attempting to get the recei
     }
 ```
 
-### Stop mining
-
-```csharp
-    var mineResult = await web3.Miner.Stop.SendRequestAsync();
-```
-
 ### Calling the contract function and return a value
 Once we have the receipt, we can retrieve the contract address of our newly deployed contract. Using the contract address and the abi we can create an instance of the Contract object.
 
-Using the contract we can get a Function object using the name of function.
+Using the contract we can get a Function object using the function name.
 
 Now with the function we will be able to do a Call to our multiply function by passing a parameter to do the multiplication.
 
@@ -167,9 +158,6 @@ All the source code can be found under deployment in the [Tutorials solution](ht
         Thread.Sleep(5000);
         receipt = await web3.Eth.Transactions.GetTransactionReceipt.SendRequestAsync(transactionHash);
     }
-
-    mineResult = await web3.Miner.Stop.SendRequestAsync();
-    Assert.True(mineResult);
 
     var contractAddress = receipt.ContractAddress;
 

@@ -42,7 +42,8 @@ Ensure to make your script executable: ` chmod +x launch.sh `
 ```
 parity.exe --config node0.toml --tracing=on
 ```
-You can start the script from the directory where it sits: ` ./launch.sh
+You can start the script from the directory where it sits: ` ./launch.sh `
+
 [Source code](https://github.com/Nethereum/Nethereum.Workbooks/blob/9c7088591006f9677e167722d0d2a84f61bd93cc/testchain/parity%20poa/launch.sh)
 
 

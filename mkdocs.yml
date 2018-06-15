@@ -20,7 +20,6 @@ pages:
     - 'Parity' : 'ethereum-and-clients/parity.md'
     - 'Quorum' : 'ethereum-and-clients/quorum.md'
     - 'Azure BaaS' : 'azure/set-up-blockchain-on-azure.md'
-    - 'Setting up a Private Blockchain on Azure' : 'azure/set-up-blockchain-on-azure.md'
     - 'TestRPC' : 'ethereum-and-clients/test-rpc.md'
     - 'Ganache CLI' : 'ethereum-and-clients/ganache-cli.md'
     - 'Choosing a chain for development' : 'ethereum-and-clients/choosing-a-chain-for-development.md'

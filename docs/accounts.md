@@ -15,6 +15,30 @@ An account is generated with a private key, you can generate a new private key a
 
 One of the major advantages, apart from security (avoiding the transfer of passwords in plain text), is that you don't need to have a local installation of a client, allowing you to target public nodes like Infura.
 
+        Propagates transaction to the Network                 Signs transaction and propagates it to the Network
+                          ^                                                           ^
+                          |                                                           |
+             +------------+------------+                                 +------------+------------+
+             |          INFURA         |                                 |     ETHEREUM CLIENT     |
+             +------------+------------+                                 +------------+------------+
+                          ^                                                           ^
+                          |                                                           |
+             +------------+------------+                                 +------------+------------+
+             |  SIGNED    TRANSACTION  |                                 |  UNSIGNED  TRANSACTION  |
+             +------------+------------+                                 +------------+------------+
+                          ^                                                           ^
+                          +                                                           +
+  Signs transaction using Nethereum's "Account" object      Sends transaction using Nethereums's "ManagedAccount" object
+                          ^
+                          |                                                           ^
+                          |                                                           |
+             +------------+------------+                                 +------------+------------+
+             |                         |                                 |                         |
+             |        NETHEREUM        |                                 |        NETHEREUM        |
+             |                         |                                 |                         |
+             +-------------------------+                                 +-------------------------+
+
+
 #### Loading an existing Account
 
 Encrypted Accounts key store files can be found in different locations depending on the client and operating system:
@@ -98,30 +122,6 @@ The Nethereum.KeyStore library, allows you to encrypt and save your private key,
 ### Working with a Managed Account in Web3
 
 Clients retrieve the private key for an account (if stored on their keystore folder) using a password provided to decrypt the file. This is done when unlocking an account, or just at the time of sending a transaction if using personal_sendTransaction with a password.
-
-
-        Propagates transaction to the Network                 Signs transaction and propagates it to the Network
-                          ^                                                           ^
-                          |                                                           |
-             +------------+------------+                                 +------------+------------+
-             |          INFURA         |                                 |     ETHEREUM CLIENT     |
-             +------------+------------+                                 +------------+------------+
-                          ^                                                           ^
-                          |                                                           |
-             +------------+------------+                                 +------------+------------+
-             |  SIGNED    TRANSACTION  |                                 |  UNSIGNED  TRANSACTION  |
-             +------------+------------+                                 +------------+------------+
-                          ^                                                           ^
-                          +                                                           +
-  Signs transaction using Nethereum's "Account" object      Sends transaction using Nethereums's "ManagedAccount" object
-                          ^
-                          |                                                           ^
-                          |                                                           |
-             +------------+------------+                                 +------------+------------+
-             |                         |                                 |                         |
-             |        NETHEREUM        |                                 |        NETHEREUM        |
-             |                         |                                 |                         |
-             +-------------------------+                                 +-------------------------+
 
 
 Having an account unlocked for a certain period of time might be a security issue, so the prefered option in this scenario, is to use the rpc method `personal_sendTransaction`.

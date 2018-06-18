@@ -99,9 +99,34 @@ The Nethereum.KeyStore library, allows you to encrypt and save your private key,
 
 Clients retrieve the private key for an account (if stored on their keystore folder) using a password provided to decrypt the file. This is done when unlocking an account, or just at the time of sending a transaction if using personal_sendTransaction with a password.
 
+
+        Propagates transaction to the Network                 Signs transaction and propagates it to the Network
+                          ^                                                           ^
+                          |                                                           |
+             +------------+------------+                                 +------------+------------+
+             |          INFURA         |                                 |     ETHEREUM CLIENT     |
+             +------------+------------+                                 +------------+------------+
+                          ^                                                           ^
+                          |                                                           |
+             +------------+------------+                                 +------------+------------+
+             |  SIGNED    TRANSACTION  |                                 |  UNSIGNED  TRANSACTION  |
+             +------------+------------+                                 +------------+------------+
+                          ^                                                           ^
+                          +                                                           +
+  Signs transaction using Nethereum's "Account" object      Sends transaction using Nethereums's "ManagedAccount" object
+                          ^
+                          |                                                           ^
+                          |                                                           |
+             +------------+------------+                                 +------------+------------+
+             |                         |                                 |                         |
+             |        NETHEREUM        |                                 |        NETHEREUM        |
+             |                         |                                 |                         |
+             +-------------------------+                                 +-------------------------+
+
+
 Having an account unlocked for a certain period of time might be a security issue, so the prefered option in this scenario, is to use the rpc method `personal_sendTransaction`.
 
-Nethereum.Web3 wraps this functionality by using a ManagedAccount, having the managed account storing the account address and the password information.
+Nethereum.Web3 wraps this functionality by using a ` ManagedAccount `, having the managed account storing the account address and the password information. 
 
 ```csharp
 var senderAddress = "0x12890d2cce102216644c59daE5baed380d84830c";

@@ -15,7 +15,7 @@ An account is generated with a private key, you can generate a new private key a
 
 One of the major advantages, apart from security (avoiding the transfer of passwords in plain text), is that you don't need to have a local installation of a client, allowing you to target public nodes like Infura.
 
-        Propagates transaction to the Network                 Signs transaction and propagates it to the Network
+        Propagates transaction to the Network               Signs transaction and propagates it to the Network
                           ^                                                           ^
                           |                                                           |
              +------------+------------+                                 +------------+------------+
@@ -28,7 +28,7 @@ One of the major advantages, apart from security (avoiding the transfer of passw
              +------------+------------+                                 +------------+------------+
                           ^                                                           ^
                           +                                                           +
-  Signs transaction using Nethereum's "Account" object      Sends transaction using Nethereums's "ManagedAccount" object
+  Signs transaction using Nethereum's "Account" object   Sends transaction using Nethereums's "ManagedAccount" object
                           ^
                           |                                                           ^
                           |                                                           |

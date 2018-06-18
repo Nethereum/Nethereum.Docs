@@ -27,10 +27,12 @@ One of the major advantages, apart from security (avoiding the transfer of passw
              |  SIGNED    TRANSACTION  |                                 |  UNSIGNED  TRANSACTION  |
              +------------+------------+                                 +------------+------------+
                           ^                                                           ^
-                          +                                                           +
+                          |                                                           |
+                          |                                                           |
   Signs transaction using Nethereum's "Account" object   Sends transaction using Nethereums's "ManagedAccount" object
-                          ^
-                          |                                                           ^
+                         
+                          ^                                                           ^
+                          |                                                           |
                           |                                                           |
              +------------+------------+                                 +------------+------------+
              |                         |                                 |                         |

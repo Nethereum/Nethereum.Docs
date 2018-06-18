@@ -6,7 +6,7 @@ pages:
 ##    - 'Mac'
 ##    - 'Linux'
 - '2 minute crash-courses' : 'Nethereum.Workbooks/docs/index.md'
-- 'Creating and managing an account' : 'docs/accounts.md'
+- 'Creating and managing an account' : 'accounts.md'
 ## - 'Running a local Blockchain' 
 - 'Deploying a contract' : 'contracts/deploying.md'
 ## - 'Generating a contract interface'

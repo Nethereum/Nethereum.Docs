@@ -67,11 +67,11 @@ You might consider using our [Creating a new Account using Geth Personal Api](ht
 
 ### Setting up your own testnet
 
-There is already a preconfigured tesnet in Nethereum, which [can be downloaded from github](https://github.com/Nethereum/TestChains)
+There is already a preconfigured testnet in Nethereum, which [can be downloaded from github](https://github.com/Nethereum/TestChains)
 
 The preconfigured testnet will start producing blocks inmediately so there is no need to start this manually, for more information check the Proof of Authority section below.
 
-The chain keystore in the "devChain" folder contains the keys for the preconfigured account, which is also present in the genesis file "genesis_dev.json".
+The chain keystore in the "devChain" folder contains the keys to the preconfigured account, which is also present in the genesis file "genesis_dev.json".
 
 * Account : ``` 0x12890d2cce102216644c59daE5baed380d84830c ```
 * Password: ``` password ```
@@ -85,7 +85,7 @@ PoA consensus is reached by referring to a list of validators (referred to as au
 
 It does not depend on nodes solving arbitrarily difficult mathematical problems, but instead uses a set of "authorities" - nodes that are explicitly allowed to create new blocks and secure the blockchain. The chain has to be signed off by the majority of authorities, in which case it becomes a part of the permanent record. This makes it easier to maintain a private chain and keep the block issuers accountable.
 
-For consortium setting there are no disadvantages of PoA network as compared to PoW. It is more secure (since an attacker with unwanted connection or hacked authority can not overwhelm a network potentially reverting all transactions), less computationally intensive (mining with difficulty which provides security requires lots of computation), more performant (Aura consensus provides lower transaction acceptance latency) and more predictable (blocks are issued at steady time intervals). PoA deployments are used by the enterprise and by the public (e.g. popular Kovan test network).
+For consortium setting there are no disadvantages of PoA network compared to PoW. It is more secure (since an attacker with unwanted connection or hacked authority can not overwhelm a network potentially reverting all transactions), less computationally intensive (mining with difficulty which provides security requires lots of computation), more performant (Aura consensus provides lower transaction acceptance latency) and more predictable (blocks are issued at steady time intervals). PoA deployments are used by the enterprise and by the public (e.g. popular Kovan test network).
 
 The current testchain has been configured to produce blocks immediately, it has only one node with one validator account which it is unlocked when launching geth. ```--unlock 0x12890d2cce102216644c59daE5baed380d84830c --password "pass.txt"```
 

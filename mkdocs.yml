@@ -1,14 +1,24 @@
 site_name: Nethereum
-pages: 
-- 'Home': 'index.md'
-- 'Ethereum': 'ethereum.md'
-- 'Ethereum: Clients and tools': 
-    - Introduction: 'ethereum-and-clients/index.md'
+pages:
+- 'Home' : 'index.md'
+## - 'Install':
+##    - 'Windows'
+##    - 'Mac'
+##    - 'Linux'
+- '2 minute crash-courses' : 'Nethereum.Workbooks/docs/index.md'
+- 'Creating and managing an account' : 'accounts.md'
+## - 'Running a local Blockchain' 
+- 'Deploying a contract' : 'contracts/deploying.md'
+## - 'Generating a contract interface'
+- 'Generating Code' : 'nethereum-code-generation.md'
+## - 'Interacting with a contract'
+## - 'Sending a transaction'
+- 'Tools and clients':
+    - 'Introduction' : 'ethereum-and-clients/index.md'
     - 'Geth (Go client)' : 'ethereum-and-clients/geth.md'
     - 'Parity' : 'ethereum-and-clients/parity.md'
     - 'Quorum' : 'ethereum-and-clients/quorum.md'
-    - 'Azure BaaS' : 'ethereum-and-clients/azure-baas.md'
-    - 'Setting up a Private Blockchain on Azure' : 'azure/set-up-blockchain-on-azure.md'
+    - 'Azure BaaS' : 'azure/set-up-blockchain-on-azure.md'
     - 'TestRPC' : 'ethereum-and-clients/test-rpc.md'
     - 'Ganache CLI' : 'ethereum-and-clients/ganache-cli.md'
     - 'Choosing a chain for development' : 'ethereum-and-clients/choosing-a-chain-for-development.md'

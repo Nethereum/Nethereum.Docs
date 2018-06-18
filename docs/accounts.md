@@ -15,6 +15,8 @@ An account is generated with a private key, you can generate a new private key a
 
 One of the major advantages, apart from security (avoiding the transfer of passwords in plain text), is that you don't need to have a local installation of a client, allowing you to target public nodes like Infura.
 
+![Account vs ManagedAccount](screenshots/graph_Ethereum_Managed_Unmanaged_Account.png)
+
 #### Loading an existing Account
 
 Encrypted Accounts key store files can be found in different locations depending on the client and operating system:
@@ -99,9 +101,10 @@ The Nethereum.KeyStore library, allows you to encrypt and save your private key,
 
 Clients retrieve the private key for an account (if stored on their keystore folder) using a password provided to decrypt the file. This is done when unlocking an account, or just at the time of sending a transaction if using personal_sendTransaction with a password.
 
+
 Having an account unlocked for a certain period of time might be a security issue, so the prefered option in this scenario, is to use the rpc method `personal_sendTransaction`.
 
-Nethereum.Web3 wraps this functionality by using a ManagedAccount, having the managed account storing the account address and the password information.
+Nethereum.Web3 wraps this functionality by using a ` ManagedAccount `, having the managed account storing the account address and the password information. 
 
 ```csharp
 var senderAddress = "0x12890d2cce102216644c59daE5baed380d84830c";

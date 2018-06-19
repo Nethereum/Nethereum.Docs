@@ -15,9 +15,9 @@ An account is generated with a private key, you can generate a new private key a
 
 One of the major advantages, apart from security (avoiding the transfer of passwords in plain text), is that you don't need to have a local installation of a client, allowing you to target public nodes like Infura.
 
-![Offline Signing](graph_Ethereum_Managed_Unmanaged_Account_1.png)
+![Offline Signing](screenshots/graph_Ethereum_Managed_Unmanaged_Account_1.png)
 
-![Online Signing](graph_Ethereum_Managed_Unmanaged_Account_2.png)
+![Online Signing](screenshots/graph_Ethereum_Managed_Unmanaged_Account_2.png)
 
 #### Loading an existing Account
 

@@ -1,16 +1,19 @@
 
-# Nethereum Started Guide for Windows
+# Nethereum Getting Started Guide for Windows
 
 Documentation about Nethereum can be found at: <https://nethereum.readthedocs.io>
 
 ## Pre-requisites
 
-First, make sure your environment is set to work with .NET Core, either in CLI mode or using [Visual Studio](https://visualstudio.microsoft.com/), you can find all the instructions on https://www.microsoft.com/net/learn/get-started
+### Installing .NET
+First, make sure your environment is set to work with .NET Core, either in CLI mode or using [Visual Studio](https://visualstudio.microsoft.com/), you can find all the instructions on [https://www.microsoft.com/net/learn/get-started](https://www.microsoft.com/net/learn/get-started)
 
-Once done setting your .NET environment, you can now add Nethereum to your environment by installing one of [Nethereum Nugets](https://www.nuget.org/packages?q=nethereum) 
+### Adding Nethereum
+Once done setting your .NET environment, you can now add Nethereum to your stack by installing one of [Nethereum Nugets](https://www.nuget.org/packages?q=nethereum) 
 
-To apply the following Tutorial, you will need  [Nethereum Nugets](https://www.nuget.org/packages/Nethereum.Web3/) 
- 
+For this Tutorial, you will need  [Nethereum Nugets](https://www.nuget.org/packages/Nethereum.Web3/) 
+### Starting a Devchain
+
 First, let's download the test chain matching your environment from <https://github.com/Nethereum/Testchains>
 
 Start a Geth chain (geth-clique-linux\\, geth-clique-windows\\ or geth-clique-mac\\) using **startgeth.bat** (Windows) or **startgeth.sh** (Mac/Linux). The chain is setup with the Proof of Authority consensus and will start the mining process immediately.

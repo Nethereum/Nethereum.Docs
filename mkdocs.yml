@@ -2,9 +2,10 @@ site_name: Nethereum
 pages:
 - 'Home' : 'index.md'
 ## - 'Install':
-##    - 'Windows'
 ##    - 'Mac'
 ##    - 'Linux'
+
+- 'Windows' : 'get-started-windows.md'
 - '2 minute crash-courses' : 'Nethereum.Workbooks/docs/index.md'
 - 'Creating and managing an account' : 'accounts.md'
 ## - 'Running a local Blockchain' 
@@ -13,7 +14,7 @@ pages:
 - 'Generating Code' : 'nethereum-code-generation.md'
 ## - 'Interacting with a contract'
 ## - 'Sending a transaction'
-   - 'Code example' : 'index.md'
+##   - 'Code example' : 'index.md'
 - 'Tools and clients':
     - 'Introduction' : 'ethereum-and-clients/index.md'
     - 'Geth (Go client)' : 'ethereum-and-clients/geth.md'

@@ -13,7 +13,7 @@ pages:
 - 'Generating Code' : 'nethereum-code-generation.md'
 ## - 'Interacting with a contract'
 ## - 'Sending a transaction'
-   - 'Code example' : 'index.md/#code-templates'
+   - 'Code example' : 'index.md#code-templates'
 - 'Tools and clients':
     - 'Introduction' : 'ethereum-and-clients/index.md'
     - 'Geth (Go client)' : 'ethereum-and-clients/geth.md'

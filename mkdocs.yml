@@ -1,7 +1,7 @@
 site_name: Nethereum
 pages:
 - 'Home' : 'index.md'
-## - 'Install':
+ - 'Get Started':
    - 'Windows' : 'get-started-windows.md'
 ##    - 'Mac'
 ##    - 'Linux'

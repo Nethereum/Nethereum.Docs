@@ -13,6 +13,7 @@ pages:
 - 'Generating Code' : 'nethereum-code-generation.md'
 ## - 'Interacting with a contract'
 ## - 'Sending a transaction'
+   - 'Code example' : 'index.md/#code-templates'
 - 'Tools and clients':
     - 'Introduction' : 'ethereum-and-clients/index.md'
     - 'Geth (Go client)' : 'ethereum-and-clients/geth.md'
@@ -38,5 +39,5 @@ pages:
     - 'Getting started Infura' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-infura.workbook'
     - 'HD Wallet' : 'Nethereum.Workbooks/docs/nethereum-hdwallet-infura-transfer.workbook'
     - 'Logging events' : 'Nethereum.Workbooks/docs/nethereum-eventdtos-getallchanges.workbook'
-- 'Sample Projects' : 'demos/sample-projects.md'
+## - 'Sample Projects' : 'demos/sample-projects.md'
 theme: readthedocs

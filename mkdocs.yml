@@ -1,10 +1,9 @@
 site_name: Nethereum
 pages:
 - 'Home' : 'index.md'
-## - 'Install':
-##    - 'Mac'
+- 'Install':
+   - 'Get Started: Smart Contracts' : 'get-started-smart-contracts.md'
 ##    - 'Linux'
-
 - 'Windows' : 'get-started-windows.md'
 - '2 minute crash-courses' : 'Nethereum.Workbooks/docs/index.md'
 - 'Creating and managing an account' : 'accounts.md'

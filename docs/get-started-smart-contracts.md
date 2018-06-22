@@ -1,7 +1,6 @@
 
 # Nethereum Getting Started With Smart Contracts
 
-
 This tutorial will show you how to set up your environment with Nethereum and interact with a simple token contract.
 
 ## Pre-requisites
@@ -21,7 +20,7 @@ Your app directory now contains a file named: `Program.cs` this is the file that
 
 ### Install Nethereum packages.
 You can now add Nethereum to your stack by installing one of [Nethereum Nugets](https://www.nuget.org/packages?q=nethereum)
-For this Tutorial, you will need  [Nethereum Portable](https://www.nuget.org/packages/Nethereum.Web3/):
+For this Tutorial, you will need  [Nethereum Portable](https://www.nuget.org/packages/Nethereum.Portable/):
 
 ```
 $ dotnet add package Nethereum.Portable

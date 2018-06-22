@@ -1,31 +1,39 @@
 
 # Nethereum Getting Started With Smart Contracts
+
+
 This tutorial will show you how to set up your environment with Nethereum and interact with a simple token contract.
 
 ## Pre-requisites
-The below applies to Windows, Mac and Linux OSes.
+The below instructions apply to Windows, Mac and Linux OSes.
 ### Install .NET
 First, make sure your environment is set to work with .NET Core, you can find all the instructions on [https://www.microsoft.com/net/learn/get-started](https://www.microsoft.com/net/learn/get-started)
 
 ### Create a .NET app
 
 In a new directory, use the dotnet command to create a new console app:
- `dotnet create new console`
+```
+ $ dotnet create new console
+ ```
  
-Your app directory now contains a `Program.cs` this is the file that we will use throughout this tutorial.
+Your app directory now contains a file named: `Program.cs` this is the file that we will use throughout this tutorial.
 
 ### Install Nethereum packages.
 You can now add Nethereum to your stack by installing one of [Nethereum Nugets](https://www.nuget.org/packages?q=nethereum)
-For this Tutorial, you will need  [Nethereum Nugets](https://www.nuget.org/packages/Nethereum.Web3/) 
-`dotnet add package Nethereum.Portable` 
+For this Tutorial, you will need  [Nethereum Portable](https://www.nuget.org/packages/Nethereum.Web3/):
+
+```
+$ dotnet add package Nethereum.Portable
+```
 
 ### Smart Contract Byte code and ABI
 
-Here is the smart contract we'll be working with, it's a standard token contract written in Solidity which can be found here: <https://github.com/Nethereum/Nethereum.Workbooks/blob/master/StandardToken.sol>.
+The smart contract we'll be working with is a standard token contract written in Solidity which can be found here: <https://github.com/Nethereum/Nethereum.Workbooks/blob/master/StandardToken.sol>.
 
 The contract includes an initial supply of tokens when deployed, and capability to transfer amounts between accounts and retrieve the balance.
 
 The next step is to declare the contract byte code and abi for the contract.
+
 For the sake of efficiency, we'll skip the compilation process (feel free to refer to [this article](nethereum-code-generation.md) to know how it's done)
 
 The bytecode represents the compiled contract, and the abi represents the interface definition with the contract.
@@ -61,10 +69,12 @@ Web3 provides a simple interaction wrapper with Ethereum clients. To create an i
 
 In this example, we are going to use the standard token smart contract. This smart contract is initialized on deployment with the “totalSupply” of tokens. As we can see in the code below, the total balance is assigned to the sender (the address that deployed the contract)
 
+```
 function Standard\_Token(uint256 \_initialAmount) {
         balances\[msg.sender] = \_initialAmount;
         \_totalSupply = \_initialAmount;
     }
+```
 
 When deploying the smart contract using Nethereum, this constructor parameter is send alongside the byteCode as follows:
 

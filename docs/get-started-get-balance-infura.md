@@ -24,10 +24,10 @@ Your app directory now contains a file named: `Program.cs` this is the file that
 
 ### Install Nethereum packages.
 You can now add Nethereum to your stack by installing one of [Nethereum Nugets](https://www.nuget.org/packages?q=nethereum)
-For this Tutorial, you will need  [Nethereum Portable](https://www.nuget.org/packages/Nethereum.Web3/):
+For this Tutorial, you will need  [Nethereum Web3](https://www.nuget.org/packages/Nethereum.Web3/):
 
 ```
-$ dotnet add package Nethereum.Portable
+$ dotnet add package Nethereum.Web3
 ```
 
 The next step is to create an instance of Web3, with the infura url for mainnet.

@@ -12,9 +12,10 @@ First, make sure your environment is set to work with .NET Core, you can find al
 ### Create a .NET app
 
 In a new directory, use the dotnet command to create a new console app:
+
 ```
- $ dotnet create new console
- ```
+$ dotnet create new console
+```
  
 Your app directory now contains a file named: `Program.cs` this is the file that we will use throughout this tutorial.
 

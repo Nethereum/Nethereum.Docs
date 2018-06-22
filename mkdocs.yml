@@ -4,6 +4,7 @@ pages:
 - 'Get Started: Smart Contracts' : 'get-started-smart-contracts.md'
 ##    - 'Linux'
 - 'Getting Started With Smart Contracts' : 'get-started-smart-contracts.md'
+- 'Getting Started: Infura' : 'get-started-get-balance-infura.md'
 - '2 minute crash-courses' : 'Nethereum.Workbooks/docs/index.md'
 - 'Creating and managing an account' : 'accounts.md'
 ## - 'Running a local Blockchain' 

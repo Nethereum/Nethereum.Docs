@@ -42,3 +42,4 @@ pages:
     - 'Logging events' : 'Nethereum.Workbooks/docs/nethereum-eventdtos-getallchanges.workbook'
 ## - 'Sample Projects' : 'demos/sample-projects.md'
 theme: mkdocs
+extra_css: [extra.css]

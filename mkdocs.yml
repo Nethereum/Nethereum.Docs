@@ -1,4 +1,6 @@
 site_name: Nethereum
+theme: mkdocs
+extra_css: [extra.css]
 pages:
 - 'Home' : 'index.md'
 - 'Get Started: Smart Contracts' : 'get-started-smart-contracts.md'
@@ -35,10 +37,9 @@ pages:
     - 'Multiple output parameters and function DTOs' : 'contracts/functiondtos.md'
 - 'Code generation': 'nethereum-code-generation.md'
 - 'Workbooks': 
-    - 'Workbooks index': 'Nethereum.Workbooks/docs/index.md'
-    - 'Getting started with smart contracts': 'Nethereum.Workbooks/docs/nethereum-gettingstard-smartcontrats.workbook'
+    - 'Workbooks index' : 'Nethereum.Workbooks/docs/index.md'
+    - 'Getting started with smart contracts' : 'Nethereum.Workbooks/docs/nethereum-gettingstard-smartcontrats.workbook'
     - 'Getting started Infura' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-infura.workbook'
     - 'HD Wallet' : 'Nethereum.Workbooks/docs/nethereum-hdwallet-infura-transfer.workbook'
     - 'Logging events' : 'Nethereum.Workbooks/docs/nethereum-eventdtos-getallchanges.workbook'
 ## - 'Sample Projects' : 'demos/sample-projects.md'
-theme: mkdocs

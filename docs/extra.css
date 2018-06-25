@@ -5,3 +5,7 @@
 .wy-nav-side {
     background: #6c429c;
 }
+
+wy-side-nav-search {
+    border-radius: 0px;   
+}

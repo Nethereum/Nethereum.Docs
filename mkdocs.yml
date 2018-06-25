@@ -41,4 +41,4 @@ pages:
     - 'HD Wallet' : 'Nethereum.Workbooks/docs/nethereum-hdwallet-infura-transfer.workbook'
     - 'Logging events' : 'Nethereum.Workbooks/docs/nethereum-eventdtos-getallchanges.workbook'
 ## - 'Sample Projects' : 'demos/sample-projects.md'
-theme: mkdocs
+theme: 'mkdocs'

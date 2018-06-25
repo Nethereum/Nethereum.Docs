@@ -1,4 +1,5 @@
 site_name: Nethereum
+theme: mkdocs
 pages:
 - 'Home' : 'index.md'
 - 'Get Started: Smart Contracts' : 'get-started-smart-contracts.md'
@@ -41,5 +42,4 @@ pages:
     - 'HD Wallet' : 'Nethereum.Workbooks/docs/nethereum-hdwallet-infura-transfer.workbook'
     - 'Logging events' : 'Nethereum.Workbooks/docs/nethereum-eventdtos-getallchanges.workbook'
 ## - 'Sample Projects' : 'demos/sample-projects.md'
-theme: mkdocs
 ## extra_css: [extra.css]

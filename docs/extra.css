@@ -6,6 +6,6 @@
     background: #6c429c;
 }
 
-.wy-side-nav-search {
-    border-radius: 0%;   
+.wy-side-nav-search input[type=text] {
+    border-radius: 5px;   
 }

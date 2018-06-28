@@ -2,6 +2,7 @@
 *
 
 # But not these files...
+!*.gif
 !*.png
 !*.md
 !.gitignore

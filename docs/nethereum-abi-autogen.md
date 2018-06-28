@@ -49,7 +49,7 @@ Install-Package Nethereum.Abi.Autogen
 Build the project.  You should see a folder created in the project for each abi file.  For Dot Net Core projects this will be obvious in the IDE as the files will be visible in the project, for .Net Framework v4.* projects check the project folder in the file system.
 
 Example Video (Dot Net Core Project)
-![Abi.Autogen Example Video](screenshots/abi-autogen-video.gif)
+![Abi.Autogen Example Video](screenshots/how-to-use-abi-autogen.gif)
 
 ## Disabling code generation
 

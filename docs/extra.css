@@ -10,14 +10,10 @@
     border-radius: 5px;   
 }
 
-.wy-body-for-nav {
-    background-image: ;
+.wy-side-nav-search {
+ background-color: #32907a;
 }
 
 .body {
  font-family: Source Sans Pro,Arial,sans-serif;   
-}
-
-.wy-side-nav-search {
- background-color: #32907a;   
 }

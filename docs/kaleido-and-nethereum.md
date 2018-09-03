@@ -1,3 +1,6 @@
+# Kaleido and Nethereum
+This was pulled from the Kaleido blog [here](https://kaleido.io/kaleido-and-nethereum/)
+
 Recently, we've received questions about connecting to the Kaleido platform via <a href="https://nethereum.com/">Nethereum</a>, an open source .NET integration library for Ethereum. To test this, I've written a short application to connect to a Kaleido node and get the balance of an account. You can <a href="https://github.com/kaleido-io/kaleido-nethereum-example">check it out here</a>. Before we can run this, we need to set a few things up first.
 <h2>Set up</h2>
 Obviously, the most important thing we need when testing connection to a Kaleido node is a Kaleido node itself. If you don't already have one, you can follow the <a href="http://console.kaleido.io/docs/docs/createnet/">documentation here</a> on setting up a network. After you have an environment with at least one node, you will need to create app credentials in order to securely communicate with the node. To do so:
@@ -14,15 +17,15 @@ Obviously, the most important thing we need when testing connection to a Kaleido
 </li>
 </ol>
 
-![New App Credentials](docs/screenshots/NewAppCredentials.png)
+![New App Credentials](screenshots/NewAppCredentials.png)
 
-![App Credentials](docs/screenshots/AppCreds.png)
+![App Credentials](screenshots/AppCreds.png)
 
 Next we need to fund an account so that we can get a non-zero balance to ensure this actually works. Using the environment-specific Kaleido Ether Pool, you have the ability to send ether to any valid Ethereum address; however it's probably better that we send ether to an account we actually control. So let's grab a user account address for one of the nodes in our network. You can find this by clicking on a node to see the node details page. User accounts will have at least one address at the bottom of the list. We also need the RPC endpoint for a node with the same membership as the app credentials. Take note of this so we can use it later.
-![Not Details with Arrows](docs/screenshots/NodeDetails-arrows.png)
+![Not Details with Arrows](screenshots/NodeDetails-arrows.png)
 
 Now that we have an address, we can go to the Ether Pool, which is located at the bottom of the Environment page. Here we can input the account address we just copied and an ether amount. Click <strong>Fund</strong> and the account will get funded!
-![Fund Account](docs/screenshots/FundAccount.png)
+![Fund Account](screenshots/FundAccount.png)
 <h2>Test it out!</h2>
 Now we want to clone the <a href="https://github.com/kaleido-io/kaleido-nethereum-example">GitHub repo</a> I mentioned earlier and open the <a href="https://github.com/kaleido-io/kaleido-nethereum-example/blob/master/Application/Program.cs">Program.cs file</a> under the Application directory. I'll be using Visual Studio 2015 to edit and run this application.
 
@@ -32,7 +35,7 @@ static string PASS = "";
 static string ACCOUNT_ADDRESS = "";</code>
 
 These are the the only fields you need to change in order to run the program. Here, you'll add the RPC endpoint of the node in quotes, the username of the application credentials, the password for the credentials, and the account address. Now, you can run the application and see the ether balance print out in the debug console.
-![Visual Studio with arrows](docs/screenshots/VS_arrows.png)
+![Visual Studio with arrows](screenshots/VS_arrows.png)
 
 To break this down, we have a main function that gets executed initially, calls the <code>getEthBalance</code> function that does most of the work, and then prints out the balance once the <code>getEthBalance</code> function is finished.
 

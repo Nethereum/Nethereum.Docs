@@ -1,7 +1,6 @@
 # Kaleido and Nethereum
 This was pulled from the Kaleido blog [here](https://kaleido.io/kaleido-and-nethereum/)
 
-Recently, we've received questions about connecting to the Kaleido platform via <a href="https://nethereum.com/">Nethereum</a>, an open source .NET integration library for Ethereum. To test this, I've written a short application to connect to a Kaleido node and get the balance of an account. You can <a href="https://github.com/kaleido-io/kaleido-nethereum-example">check it out here</a>. Before we can run this, we need to set a few things up first.
 <h2>Set up</h2>
 Obviously, the most important thing we need when testing connection to a Kaleido node is a Kaleido node itself. If you don't already have one, you can follow the <a href="http://console.kaleido.io/docs/docs/createnet/">documentation here</a> on setting up a network. After you have an environment with at least one node, you will need to create app credentials in order to securely communicate with the node. To do so:
 <ol>

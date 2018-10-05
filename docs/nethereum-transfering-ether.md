@@ -1,5 +1,5 @@
 
-# Sending transactions with Nethereum
+# Sending Ether with Nethereum
 
 This article will walk you through the basics of Nethereum to send Ether using INFURA.
 
@@ -54,17 +54,12 @@ To send a transaction, we will manage our account and sign the raw transaction l
 
 At the time of sending a transaction, the right method to deliver the transaction will be chosen. If using Nethereum **`TransactionManager`**, deploying a contract or using a contract function, the transaction will either be signed offline using the private key or a **`personal\_sendTransaction`** message will be sent using the password.
 
-The below explains how to: 
-
-### Send a transaction with an `Account` object
-
 Here is how to set up a new account by creating an `account` object instance:
 
 ```csharp
 var privateKey = "0xb5b1870957d373ef0eeffecc6e4812c0fd08f554b37b233526acc331bf1544f7";
 var account = new Account(privateKey);
 ```
-
 
 Now, the transaction itself, in this case, we are sending 1 Ether.
 ```csharp

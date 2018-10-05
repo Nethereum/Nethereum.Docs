@@ -1,7 +1,7 @@
 
 # Sending transactions with Nethereum
 
-This workbook will walk you through the basics of using Nethereum to send transactions.
+This article will walk you through the basics of using Nethereum to send transactions.
 
 ## Pre-requisites
 The below instructions apply to Windows, Mac and Linux OSes.
@@ -48,12 +48,6 @@ First, let's download the test chain matching your environment from <https://git
 
 Start a Geth chain (geth-clique-linux\\, geth-clique-windows\\ or geth-clique-mac\\) using **startgeth.bat** (Windows) or **startgeth.sh** (Mac/Linux). The chain is setup with the Proof of Authority consensus and will start the mining process immediately.
 
-We need to add Web3 Nuget package:
-
-```csharp
-#r "Nethereum.Web3"
-```
-   
 Then, let's add the using statement to Nethereum.Web3.
 
 ```csharp

@@ -22,11 +22,12 @@ The account address and password are hard coded in this sample and are specific 
  - Call the function below
 
 ``` csharp
-        public static async Task EIP20_Deploy_And_Query()
+        public static async Task ERC20_Deploy_And_Query()
         {
             var account = new ManagedAccount("0x12890d2cce102216644c59daE5baed380d84830c", "password");
             var web3 = new Web3(account);
             var deploymentHandler =  web3.Eth.GetContractDeploymentHandler<EIP20Deployment>();
+            
             var receipt = await deploymentHandler.SendRequestAndWaitForReceiptAsync(new EIP20Deployment()
             {
                 DecimalUnits = 18,
@@ -36,9 +37,10 @@ The account address and password are hard coded in this sample and are specific 
             });
 
             var contractHandler = web3.Eth.GetContractHandler(receipt.ContractAddress);
-            var symbol = await contractHandler.QueryRawAsync<SymbolFunction, StringBytes32Decoder, string>();
-            var token = await contractHandler.QueryRawAsync<NameFunction, StringBytes32Decoder, string>();
 
+            var symbol = await contractHandler.QueryAsync<SymbolFunction, string>();
+            var token = await contractHandler.QueryAsync<NameFunction, string>();
+            
             Console.WriteLine($"Symbol: {symbol}");
             Console.WriteLine($"Token: {token}");
         }

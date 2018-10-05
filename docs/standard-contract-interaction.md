@@ -1,8 +1,8 @@
 # Standard Contract Interaction
 
-## EIP 20
+## ERC20 / EIP20
 
-The snippet below demonstrates deploying and querying a standard EIP20 contract.
+The snippet below demonstrates deploying and querying a standard ERC20 / EIP20 contract.
 
 ### Pre Requisites
 

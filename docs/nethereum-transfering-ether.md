@@ -1,9 +1,10 @@
 
 # Sending Ether with Nethereum
 
-This article will walk you through the basics of Nethereum to send Ether using INFURA.
+This article will show you how to send Ether using INFURA.
 
 ## Pre-requisites
+
 The below instructions apply to Windows, Mac and Linux OSes.
 
 ### Install .NET
@@ -22,12 +23,12 @@ Your app directory now contains a file named: `Program.cs` this is the file that
 
 ### Install Nethereum packages.
 You can now add Nethereum to your stack by installing one of [Nethereum Nugets](https://www.nuget.org/packages?q=nethereum)
+
 For this Tutorial, you will need  [Nethereum Web3](https://www.nuget.org/packages/Nethereum.Web3/):
 
 ```
 $ dotnet add package Nethereum.Web3
 ```
-
 The next step is to create an instance of Web3, with the infura url for mainnet.
 
 ```csharp
@@ -37,9 +38,9 @@ var web3 = new Web3("https://mainnet.infura.io");
 
 First, let's download the test chain matching your environment from <https://github.com/Nethereum/Testchains>
 
-Start a Geth chain (geth-clique-linux\\, geth-clique-windows\\ or geth-clique-mac\\) using **startgeth.bat** (Windows) or **startgeth.sh** (Mac/Linux). The chain is setup with the Proof of Authority consensus and will start the mining process immediately.
+Start a Geth chain (geth-clique-linux\\, geth-clique-windows\\ or geth-clique-mac\\) using **startgeth.bat** (Windows) or **startgeth.sh** (Mac/Linux). The chain is setup with Proof of Authority consensus and will start the mining process immediately.
 
-Then, let's add the using statement to Nethereum.Web3.
+Then, let's add using statements to Nethereum.Web3.
 
 ```csharp
 using Nethereum.Web3;

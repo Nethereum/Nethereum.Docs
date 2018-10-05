@@ -1,15 +1,4 @@
----
-uti: com.xamarin.workbook
-id: 578c6875-84b7-4d50-9013-86ecb08880d5
-title: nethereum-infura-transfer
-platforms:
-- Console
-packages:
-- id: Nethereum.Web3
-  version: 2.0.1
----
-
-# Sending Ether using Infura
+# Sending Ether
 
 Documentation about Nethereum can be found at: <https://nethereum.readthedocs.io>
 
@@ -42,7 +31,7 @@ var keyStorePassword = "password";
 var keyStorePath = ".\\keystore\\UTC--2015-11-25T05-05-03.116905600Z--12890d2cce102216644c59dae5baed380d84830c"
 ```
 
-We just need to open the file, read its contents and decrypt them using our password
+Now we need to open the file, read its contents and decrypt them using our password
 
 ```csharp
 if(openfromKeyStore)

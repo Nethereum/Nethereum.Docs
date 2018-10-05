@@ -1,8 +1,8 @@
 # Standard Contract Interaction
 
-## ERC 20
+## EIP 20
 
-The snippet below demonstrates deploying and querying a standard ERC20 contract.
+The snippet below demonstrates deploying and querying a standard EIP20 contract.
 
 ### Pre Requisites
 
@@ -22,7 +22,7 @@ The account address and password are hard coded in this sample and are specific 
  - Call the function below
 
 ``` csharp
-        public static async Task ERC20_Deploy_And_Query()
+        public static async Task EIP20_Deploy_And_Query()
         {
             var account = new ManagedAccount("0x12890d2cce102216644c59daE5baed380d84830c", "password");
             var web3 = new Web3(account);

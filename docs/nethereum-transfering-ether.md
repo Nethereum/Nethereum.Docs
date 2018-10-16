@@ -68,22 +68,24 @@ We need to instantiate a variable with our recipient's address as value:
 var toAddress = "0x13f022d72158410433cbd66f5dd8bf6d2d129924";
 ```
 We can now send the transaction itself using the transaction manager. In this case, we let the transaction manager use the default amount of gas to pay for the transaction.
+Note: when using the transaction manager,  Ether needs to be converted to Wei before sending it, for this we will use the Conversion Utility.
 
+Assuming we need to send 1 Ether we will use:
+
+```csharp
+var wei = Web3.Convert.ToWei(1);
+```
+### Sending Ether using default gas amount
+Sending the transaction with the default amount of gas can be done as such:
 ```csharp
 var transaction = await web3.TransactionManager.SendTransactionAsync(account.Address, toAddress, new Nethereum.Hex.HexTypes.HexBigInteger(1));
 ```
 
+### Sending Ether using specific gas amount
 We can also choose the amount of gas we want to attribute to our transaction, by adding its amount as an argument (in this case, the last argument):
 ```csharp
 var transaction = await web3.TransactionManager.SendTransactionAsync(account.Address, toAddress, new Nethereum.Hex.HexTypes.HexBigInteger(1),2);
 ```
-## Converting Ether to Wei
 
-Ether needs to be converted to Wei before sending it, for this we will use the Conversion Utility.
 
-So if we were going to send 1 Ether we will use:
 
-```csharp
-var wei = Web3.Convert.ToWei(1);
-
-```

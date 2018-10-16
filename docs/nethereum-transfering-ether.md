@@ -29,11 +29,7 @@ For this Tutorial, you will need  [Nethereum Web3](https://www.nuget.org/package
 ```
 $ dotnet add package Nethereum.Web3
 ```
-The next step is to create an instance of Web3, with the infura url for mainnet.
 
-```csharp
-var web3 = new Web3();
-```
 ## Prerequisites:
 
 First, let's download the test chain matching your environment from <https://github.com/Nethereum/Testchains>
@@ -54,18 +50,32 @@ using Nethereum.Hex.HexTypes;
 
 To send a transaction, we will manage our account and sign the raw transaction locally. 
 
-### Sending a transaction with a `ManagedAccount` object
-
- Nethereum's managed accounts are maintained by the Ethereum client (geth/parity), allowing to automatic sign transactions and to manage the account's private key securely:
-
-
-At the time of sending a transaction, the right method to deliver the transaction will be chosen. If using Nethereum **`TransactionManager`**, deploying a contract or using a contract function, the transaction will either be signed offline using the private key or a **`personal\_sendTransaction`** message will be sent using the password.
+### Sending a transaction with default gas amount 
 
 Here is how to set up a new account by creating an `account` object instance:
 
 ```csharp
 var privateKey = "0xb5b1870957d373ef0eeffecc6e4812c0fd08f554b37b233526acc331bf1544f7";
 var account = new Account(privateKey);
+```
+The next step is to create an instance of Web3, with the infura url for mainnet.
+
+```csharp
+var web3 = new Web3(account);
+```
+We need to instantiate a variable with our recipient's address as value:
+```csharp
+var toAddress = "0x13f022d72158410433cbd66f5dd8bf6d2d129924";
+```
+We can now send the transaction itself using the transaction manager. In this case, we let the transaction manager use the default amount of gas to pay for the transaction.
+
+```csharp
+var transaction = await web3.TransactionManager.SendTransactionAsync(account.Address, toAddress, new Nethereum.Hex.HexTypes.HexBigInteger(1));
+```
+
+We can also choose the amount of gas we want to attribute to our transaction, by adding its amount as an argument (in this case, the last argument):
+```csharp
+var transaction = await web3.TransactionManager.SendTransactionAsync(account.Address, toAddress, new Nethereum.Hex.HexTypes.HexBigInteger(1),2);
 ```
 ## Converting Ether to Wei
 
@@ -75,11 +85,5 @@ So if we were going to send 1 Ether we will use:
 
 ```csharp
 var wei = Web3.Convert.ToWei(1);
-```
-Finally we will just set the address that we want to send some Ether to, and using the Transaction manager this will be signed with our private key and and sent to the network.
 
-```csharp
-var toAddress = "0x12890D2cce102216644c59daE5baed380d84830c";
-var transaction = await web3.TransactionManager.SendTransactionAsync(account.Address, toAddress, new Nethereum.Hex.HexTypes.HexBigInteger(wei));
-var receipt = await web3.Eth.GetEtherTransferService().TransferEtherAndWaitForReceiptAsync(toAddress, 1.11m, 2);
 ```

@@ -68,10 +68,10 @@ We need to instantiate a variable with our recipient's address as value:
 var toAddress = "0x13f022d72158410433cbd66f5dd8bf6d2d129924";
 ```
 We can now send the transaction itself using the transaction manager. In this case, we let the transaction manager use the default amount of gas to pay for the transaction.
+
 Note: when using the transaction manager,  Ether needs to be converted to Wei before sending it, for this we will use the Conversion Utility.
 
 Assuming we need to send 1 Ether we will use:
-
 ```csharp
 var wei = Web3.Convert.ToWei(1);
 ```
@@ -86,6 +86,12 @@ We can also choose the amount of gas we want to attribute to our transaction, by
 ```csharp
 var transaction = await web3.TransactionManager.SendTransactionAsync(account.Address, toAddress, new Nethereum.Hex.HexTypes.HexBigInteger(1),2);
 ```
+### Estimating gas
 
+Ethereum allows to retrieve a *gas* estimation for the transaction you need to send.
+
+```csharp
+var estimatedGas = await transferHandler.EstimateGasAsync(account.Address, toAddress, new Nethereum.Hex.HexTypes.HexBigInteger(1));
+```
 
 

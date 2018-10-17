@@ -1,7 +1,7 @@
 
 # Sending Ether with Nethereum
 
-This article will show you how to send Ether using INFURA.
+This article will show you how to send Ether using a local Ethereum Node.
 
 ## Pre-requisites
 
@@ -21,7 +21,7 @@ $ dotnet create new console
  
 Your app directory now contains a file named: `Program.cs` this is the file that we will use throughout this tutorial.
 
-### Install Nethereum packages.
+### Install Nethereum packages
 You can now add Nethereum to your stack by installing one of [Nethereum Nugets](https://www.nuget.org/packages?q=nethereum)
 
 For this Tutorial, you will need  [Nethereum Web3](https://www.nuget.org/packages/Nethereum.Web3/):

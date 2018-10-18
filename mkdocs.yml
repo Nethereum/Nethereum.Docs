@@ -1,5 +1,5 @@
 site_name: Nethereum
-theme: mkdocs
+theme: readthedocs
 extra_css: [extra.css]
 pages:
 - 'Home' : 'index.md'

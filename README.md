@@ -7,7 +7,9 @@ Nethereum documentation
 3. Any general introduction and when workbooks do not make any sense obviously NOT, for example Azure BaaS interaction, Code generation, Service structure, Getting started with Unity3d, BUT ideally the aim is to have everything in Worbooks and unit tested.
 
 ## Workbooks contribution
-1. Any modificactions should be pushed on the Nethereum.Worbooks repository
+
+1. Any modifications should be pushed on the Nethereum.Worbooks repository
+
 2. Any new workbooks need to have a unit test associated with it, or changes unit tested before hand.
   For an introduction on unit testing workbooks [Check this blog post](https://medium.com/@juanfranblanco/unit-or-integration-tests-of-xamarin-workbooks-6f206b8483d6)
 3. All the workbooks need to be in the same folder and indexed in the index.md file. See previous entry on how to format links.

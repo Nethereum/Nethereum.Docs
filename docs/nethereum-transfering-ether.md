@@ -85,4 +85,19 @@ We can also choose the amount of gas we want to attribute to our transaction, by
 ```csharp
 var transaction = await web3.TransactionManager.SendTransactionAsync(account.Address, toAddress, new Nethereum.Hex.HexTypes.HexBigInteger(1),2);
 ```
+### Using a HD Wallet
 
+Required Namespaces:
+```csharp
+Nethereum.Web3, Nethereum.HdWallet;
+```
+The process of transferring Ether using a HD Wallet is the same as using a standalone account, the only difference lies in initiating a HD Wallet and loading one of its accounts in a Web3 instance.
+```csharp
+string Words = "ripple scissors kick mammal hire column oak again sun offer wealth tomorrow wagon turn fatal";
+                string Password = "password";
+var wallet = new Wallet(Words, Password);
+var account = wallet.GetAccount(0);
+var toAddress = "0x13f022d72158410433cbd66f5dd8bf6d2d129924";
+var web3 = new Web3(account);
+var transaction = web3.TransactionManager.SendTransactionAsync(account.Address, toAddress, new Nethereum.Hex.HexTypes.HexBigInteger(1));
+```

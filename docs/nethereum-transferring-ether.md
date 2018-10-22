@@ -77,13 +77,15 @@ var wei = Web3.Convert.ToWei(1);
 ### Sending Ether using default gas amount
 Sending the transaction with the default amount of gas can be done as such:
 ```csharp
-var transaction = await web3.TransactionManager.SendTransactionAsync(account.Address, toAddress, new Nethereum.Hex.HexTypes.HexBigInteger(1));
+var transaction = await web3.Eth.GetEtherTransferService()
+                .TransferEtherAndWaitForReceiptAsync(toAddress, 1.11m);
 ```
 
 ### Sending Ether using specific gas amount
 We can also choose the amount of gas we want to attribute to our transaction, by adding its amount as an argument (in this case, the last argument):
 ```csharp
-var transaction = await web3.TransactionManager.SendTransactionAsync(account.Address, toAddress, new Nethereum.Hex.HexTypes.HexBigInteger(1),2);
+var transaction = await web3.Eth.GetEtherTransferService()
+                .TransferEtherAndWaitForReceiptAsync(toAddress, 1.11m, 2);
 ```
 ### Using a HD Wallet
 
@@ -99,5 +101,6 @@ var wallet = new Wallet(Words, Password);
 var account = wallet.GetAccount(0);
 var toAddress = "0x13f022d72158410433cbd66f5dd8bf6d2d129924";
 var web3 = new Web3(account);
-var transaction = web3.TransactionManager.SendTransactionAsync(account.Address, toAddress, new Nethereum.Hex.HexTypes.HexBigInteger(1));
+var transaction = await web3.Eth.GetEtherTransferService()
+                .TransferEtherAndWaitForReceiptAsync(toAddress, 1.11m, 2);
 ```

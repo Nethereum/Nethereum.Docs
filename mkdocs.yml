@@ -1,22 +1,15 @@
 site_name: Nethereum
 theme: readthedocs
-extra_css: [extra.css]
 pages:
 - 'Home' : 'index.md'
 - 'Get Started: Smart Contracts' : 'get-started-smart-contracts.md'
-##    - 'Linux'
 - 'Getting Started With Smart Contracts' : 'get-started-smart-contracts.md'
 - 'Getting Started: Infura' : 'get-started-get-balance-infura.md'
 - 'Getting Started: Sending Transaction' : 'nethereum-sending-transactions.md'
 - '2 minute crash-courses' : 'Nethereum.Workbooks/docs/index.md'
 - 'Creating and managing an account' : 'accounts.md'
-## - 'Running a local Blockchain' 
 - 'Deploying a contract' : 'contracts/deploying.md'
-## - 'Generating a contract interface'
 - 'Generating Code' : 'nethereum-code-generation.md'
-## - 'Interacting with a contract'
-## - 'Sending a transaction'
-##   - 'Code example' : 'index.md'
 - 'Tools and clients':
     - 'Introduction' : 'ethereum-and-clients/index.md'
     - 'Geth (Go client)' : 'ethereum-and-clients/geth.md'
@@ -42,4 +35,3 @@ pages:
     - 'Getting started Infura' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-infura.workbook'
     - 'HD Wallet' : 'Nethereum.Workbooks/docs/nethereum-hdwallet-infura-transfer.workbook'
     - 'Logging events' : 'Nethereum.Workbooks/docs/nethereum-eventdtos-getallchanges.workbook'
-## - 'Sample Projects' : 'demos/sample-projects.md'

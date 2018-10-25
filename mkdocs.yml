@@ -10,7 +10,7 @@ pages:
 - 'Code generation':
     - 'vs-code and console': 'nethereum-code-generation.md'
     - 'ABI based code generator' : 'nethereum-abi-autogen.md'
-- '2 minute crash-courses' : 'Nethereum.Workbooks/docs/index.md'
+- 'Interactive Workbooks' : 'Nethereum.Workbooks/docs/index.md'
 - 'Ethereum accounts' : 'accounts.md'
 - 'Ethereum clients':
     - 'Introduction' : 'ethereum-and-clients/index.md'

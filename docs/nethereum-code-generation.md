@@ -14,6 +14,22 @@ Prerequisites:
 * [Solidity vscode extension](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity).
 * A solidity smart contract [(like any of these)](http://solidity.readthedocs.io/en/develop/solidity-by-example.html)
 
+# Nethereum Code Generator
+
+Nethereum offers a code generator which allows you to generates C# classes from the ABI and Bin output of the compilation of Solidity contracts.
+
+The "smart contract c# service code generator" generates a generic C# service to interact with the smart contract, including Deployment, access to Functions and Events.
+
+There are two types of code generators: a JavaScript one, which is integrated on the Visual Studio Code Solidity extension and a .Net console application
+
+## Code generation using the Visual Studio Code extension
+
+Prerequisites: 
+
+* [Visual Studio Code (windows/Linux or Mac)](https://code.visualstudio.com/) 
+* [Solidity vscode extension](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity).
+* A solidity smart contract [(like any of these)](http://solidity.readthedocs.io/en/develop/solidity-by-example.html)
+
 ### Step 1:
 
 In visual studio code, open the command palette with ``` Ctrl+Shift+P ```. then type "solidity" and select "compile current Solidity contract".
@@ -21,13 +37,31 @@ In visual studio code, open the command palette with ``` Ctrl+Shift+P ```. then 
 
 You should now see a newly generated ``` bin ``` folder containing three generated files.
 
-### Step 2:
+### Step 2 Single contract:
 
-Select the Json files contained in ``` bin ```, then open the command palette, type solidity and select ``` code generate from compilation output 'YourFile.json'```
+Select the Json files contained in ``` bin ```, then open the command palette, type solidity and select ``` Solidity: Code generate CSharp from compilation output "contract.json"```
 
-![Convert Json file to CS](screenshots/how-to-use-console-generator2.gif)
+If you work in Vb.Net or FSharp chose those instead.
 
-You're done :)
+![Convert Json file to CS](screenshots/code-generation-single-contract.gif)
+
+
+### Step 2 Multiple contracts
+
+Open the command palette, type solidity and select ``` Solidity: Code generate CSharp project from all compiled files```
+
+If you work in Vb.Net or FSharp chose those instead.
+
+If you want to adjust your namespace and project name you can do it by including a file named "nethereum-gen.settings" including:
+
+```javascript
+{
+    "projectName" : "YourProjectName"
+    "namespace" : "YourNamespace"
+}
+```
+
+![Convert Json file to CS](screenshots/code-generation-mutltiple.contracts.gif)
 
 ## Code generation using the Console application.
 

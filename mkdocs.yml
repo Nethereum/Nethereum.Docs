@@ -11,6 +11,7 @@ pages:
     - 'vs-code and console': 'nethereum-code-generation.md'
     - 'ABI based code generator' : 'nethereum-abi-autogen.md'
 - 'Interactive Workbooks' : 'Nethereum.Workbooks/docs/index.md'
+    - 'Nethereum Getting Started Test Chain' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-testchain.workbook'
 - 'Ethereum accounts' : 'accounts.md'
 - 'Ethereum clients':
     - 'Introduction' : 'ethereum-and-clients/index.md'

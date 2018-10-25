@@ -3,15 +3,18 @@ theme: readthedocs
 pages:
 - 'Home' : 'index.md'
 - 'Get Started with Nethereum' : 'getting-started.md'
-- 'Get Started: Smart Contracts' : 'get-started-smart-contracts.md'
-- 'Getting Started With Smart Contracts' : 'get-started-smart-contracts.md'
-- 'Getting Started: Infura' : 'get-started-get-balance-infura.md'
-- 'Getting Started: Sending Transaction' : 'nethereum-sending-transactions.md'
-- '2 minute crash-courses' : 'Nethereum.Workbooks/docs/index.md'
-- 'Creating and managing an account' : 'accounts.md'
-- 'Deploying a contract' : 'contracts/deploying.md'
-- 'Generating Code' : 'nethereum-code-generation.md'
-- 'Tools and clients':
+- 'Nugets' : 'nugets.md'
+- 'Transferring Ether' : 'nethereum-transferring-ether.md'
+- 'Smart Contracts Interaction' : 'nethereum-smartcontrats-gettingstarted.md'
+- 'Smart contracts Events / Logs / Filters' : 'nethereum-events-gettingstarted.md'
+- 'Code generation':
+    - 'vs-code and console': 'nethereum-code-generation.md'
+    - 'ABI based code generator' : 'nethereum-abi-autogen.md'
+- 'Interactive Workbooks' :
+    - 'Index' : 'Nethereum.Workbooks/docs/index.md'
+    - 'Getting Started Test Chain' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-testchain.workbook'
+- 'Ethereum accounts' : 'accounts.md'
+- 'Ethereum clients':
     - 'Introduction' : 'ethereum-and-clients/index.md'
     - 'Geth (Go client)' : 'ethereum-and-clients/geth.md'
     - 'Parity' : 'ethereum-and-clients/parity.md'
@@ -20,21 +23,13 @@ pages:
     - 'TestRPC' : 'ethereum-and-clients/test-rpc.md'
     - 'Ganache CLI' : 'ethereum-and-clients/ganache-cli.md'
     - 'Choosing a chain for development' : 'ethereum-and-clients/choosing-a-chain-for-development.md'
-- 'Accounts': 'accounts.md'
+- 'Other tooling':
+    - 'Kaleido': 'kaleido-and-nethereum.md'
 - 'Web3 and RPC':
     - 'Web3' : 'introduction/web3.md'
     - 'RPC' : 'introduction/rpc.md'
     - 'IPC' : 'introduction/ipc.md'
-- 'Working with Contracts':
+- 'Smart Contracts untyped':
     - 'Create and deploy contracts' : 'contracts/deploying.md'
     - 'Calls, transactions, events, filters and topics' : 'contracts/calling-transactions-events.md'
     - 'Multiple output parameters and function DTOs' : 'contracts/functiondtos.md'
-- 'Code generation':
-    - 'nethereum-code-generation.md'
-    - 'ABI based code generator' : 'nethereum-abi-autogen.md'
-- 'Workbooks': 
-    - 'Workbooks index' : 'Nethereum.Workbooks/docs/index.md'
-    - 'Getting started with smart contracts' : 'Nethereum.Workbooks/docs/nethereum-gettingstard-smartcontrats.workbook'
-    - 'Getting started Infura' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-infura.workbook'
-    - 'HD Wallet' : 'Nethereum.Workbooks/docs/nethereum-hdwallet-infura-transfer.workbook'
-    - 'Logging events' : 'Nethereum.Workbooks/docs/nethereum-eventdtos-getallchanges.workbook'

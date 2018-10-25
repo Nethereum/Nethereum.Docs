@@ -11,7 +11,7 @@ First, let's load our account in a Web3 object:
             var web3 = new Web3.Web3(account);
 
 ```
-Then, let's define a simple transfer interface:
+Then, let's define a function message to interface with Ethereum's transfer method: 
 ```csharp
         public class TransferFunction : FunctionMessage
         {
@@ -23,7 +23,7 @@ Then, let's define a simple transfer interface:
         }
 ```
 
-Then, define a message: in this case, a simple token transfer:
+Now, we can define our transaction parameters. In this case, a simple token transfer:
 
 ```csharp 
             var transfer = new TransferFunction()

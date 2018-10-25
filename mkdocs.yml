@@ -6,7 +6,7 @@ pages:
 - 'Nugets' : 'nugets.md'
 - 'Transferring Ether' : 'nethereum-transferring-ether.md'
 - 'Smart Contracts Interaction' : 'nethereum-smartcontrats-gettingstarted.md'
-- 'Smart contracts Events / Logs / Filters' : 'nethereum-sending-transactions.md'
+- 'Smart contracts Events / Logs / Filters' : 'nethereum-events-gettingstarted'
 - 'Code generation':
     - 'vs-code and console': 'nethereum-code-generation.md'
     - 'ABI based code generator' : 'nethereum-abi-autogen.md'

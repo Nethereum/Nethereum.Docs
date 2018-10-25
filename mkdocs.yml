@@ -5,7 +5,6 @@ pages:
 - 'Get Started with Nethereum' : 'getting-started.md'
 - 'Nugets' : 'nugets.md'
 - 'Transferring Ether' : 'nethereum-transferring-ether.md'
-- 'Connecting to Infura' : 'get-started-get-balance-infura.md'
 - 'Smart Contracts Interaction' : 'get-started-smart-contracts.md'
 - 'Smart contracts Events / Logs / Filters' : 'nethereum-sending-transactions.md'
 - 'Code generation':

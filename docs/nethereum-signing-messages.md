@@ -9,7 +9,20 @@ First, let's load our account in a Web3 object:
 ```csharp
             var account = new Account("0xb5b1870957d373ef0eeffecc6e4812c0fd08f554b37b233526acc331bf1544f7");
             var web3 = new Web3.Web3(account);
+
 ```
+Then, let's define a simple transfer interface:
+```csharp
+        public class TransferFunction : FunctionMessage
+        {
+            [Parameter("address", "_to", 1)]
+            public string To { get; set; }
+
+            [Parameter("uint256", "_value", 2)]
+            public int TokenAmount { get; set; }
+        }
+```
+
 Then, define a message: in this case, a simple token transfer:
 
 ```csharp 

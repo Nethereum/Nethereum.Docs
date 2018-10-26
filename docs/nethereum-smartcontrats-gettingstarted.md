@@ -1,6 +1,6 @@
 ﻿# Smart contracts integration with Nethereum
 
-Documentation about Nethereum can be found at: <https://nethereum.readthedocs.io>
+> You can execute this tutorial as a [workbook](https://nethereum.readthedocs.io/en/latest/Nethereum.Workbooks/docs/nethereum-smartcontrats-gettingstarted.workbook), or download a simplified sample [here](https://github.com/Nethereum/Nethereum.CQS.SimpleTokenTransfer)
 
 The purpose of this sample is the following:
 

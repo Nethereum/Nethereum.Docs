@@ -13,6 +13,17 @@ pages:
 - 'Interactive Workbooks' :
     - 'Index' : 'Nethereum.Workbooks/docs/index.md'
     - 'Getting Started Test Chain' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-testchain.workbook'
+    - 'Nethereum Getting Started Infura' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-infura.workbook'
+    - 'Smart Contracts integration' : 'Nethereum.Workbooks/docs/nethereum-smartcontrats-gettingstarted.workbook'
+    - 'Events, Logs and Filters' : 'Nethereum.Workbooks/docs/nethereum-events-gettingstarted.workbook'
+    - 'HD Wallet' : 'Nethereum.Workbooks/docs/nethereum-hdwallet-infura-transfer.workbook'
+    - 'Signing messages' : 'Nethereum.Workbooks/docs/nethereum-signing-messages.workbook'
+    - 'Chain Id Management' : 'Nethereum.Workbooks/docs/Nethereum-ChainID-Management.workbook'
+    - 'Unit conversion' : 'Nethereum.Workbooks/docs/nethereum-converting-units.workbook'
+    - 'Getting Started With Smart Contracts (untyped)' : 'Nethereum.Workbooks/docs/nethereum-smartcontrats-untyped.workbook'
+- 'Unity 3d':
+    - 'Sending Ether' : 'unity3d-sending-ether.md'
+    - 'Smart contract interaction' : 'unity3d-smartcontracts-getting-started.md'
 - 'Ethereum accounts' : 'accounts.md'
 - 'Ethereum clients':
     - 'Introduction' : 'ethereum-and-clients/index.md'

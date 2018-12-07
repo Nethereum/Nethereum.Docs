@@ -1,5 +1,7 @@
 ﻿## Smart contracts Events, Logs and Filters
 
+> You can execute this tutorial as a [workbook](https://nethereum.readthedocs.io/en/latest/Nethereum.Workbooks/docs/nethereum-events-gettingstarted.workbook).
+
 Events in smart contracts write data to the transaction receipt logs, providing a way to get extra information about a smart contract transactions.
 
 A very good example is the “Transfer” event in the ERC20 Standard Token contract. Everytime that a token transfer has ocurred, an event gets logged providing information of the “sender”, “receiver” and the token amount.

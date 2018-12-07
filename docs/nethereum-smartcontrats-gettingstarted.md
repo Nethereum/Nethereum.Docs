@@ -1,6 +1,6 @@
 ﻿# Smart contracts integration with Nethereum
 
-Documentation about Nethereum can be found at: <https://nethereum.readthedocs.io>
+> You can execute this tutorial as a [workbook](https://nethereum.readthedocs.io/en/latest/Nethereum.Workbooks/docs/nethereum-smartcontrats-gettingstarted.workbook), or download a simplified sample [here](https://github.com/Nethereum/Nethereum.CQS.SimpleTokenTransfer)
 
 The purpose of this sample is the following:
 
@@ -25,6 +25,12 @@ The purpose of this sample is the following:
 * Retrieving the state of a smart contract from a previous block
 
 ### Pre-Conditions
+
+In this tutorial we are going to interact with the ERC20 standard token contract. The smart contract provides a standard way to create a new token, transfer it to another account and query the balance of any account. This standard interface allows the interoperability of smart contracts providing the same signature and applications that integrate with it.
+
+![Constructor, transfer, balance and event of ERC20](https://github.com/Nethereum/Nethereum.Workbooks/raw/master/docs/screenshots/simpleERC20.png)
+
+A full sample of the smart contract can be found [here](https://nethereum.readthedocs.io/en/latest/Nethereum.Workbooks/docs/StandardToken.sol)
 
 First of all, we need to declare our namespaces, and contract definition to interact with the smart contract. In this scenario we are only interested in the Deployment, Transfer function and BalanceOf Function of the ERC20 smart contract.
 

@@ -1,5 +1,8 @@
 ## Test RPC Configuration and usage
 
+**ATTENTION: he Truffle team has recently replaced Test RPC with Ganache we recommend reading our Ganache setup instructions [here](ganache-cli.md).**
+
+
 Ethereum TestRPC is a fast and customizable blockchain emulator. It allows making calls to the blockchain without the overheads of running an actual Ethereum node.
 
 * Accounts can be re-cycled, reset and instantiated with a fixed amount of Ether (no need for faucets or mining).

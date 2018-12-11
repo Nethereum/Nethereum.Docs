@@ -2,13 +2,13 @@
 
 This is a quick start sample for new and existing .Net developers with minimal dependencies.
 
-This will take you through the steps of connecting to Infura and retrieve the balance of an account from the mainnet (live Ethereum). 
+This will take you through the steps of connecting to Infura and retrieving the balance of an account from the mainnet (live Ethereum). 
 
 Infura provides a set of public nodes removing the need to have a local or maintained client fully synchronised with the main Ethereum network.
 
 ## 1. Install .Net
 
-Nethereum works with .Net Core or .Net Framework (from 4.5.1 upwards).  You'll need to have the .Net SDK installed.  For new starters we recommend .Net core.  Mac or Linux users will also need .Net Core.  
+Nethereum works with .Net Core or .Net Framework (from 4.5.1 upwards). You'll need to have the .Net SDK installed. For new starters we recommend .Net core. Mac or Linux users will also need .Net Core.  
 
 Not sure which .Net SDK to download? - choose .Net Core 2.1.
 
@@ -30,7 +30,7 @@ dotnet add package Nethereum.Web3
 
 ## 4. Open your IDE (VS Code, Visual Studio etc)
 
-Visual Studio Code or Visual Studio are both good choices for .Net development.  Other good IDE's are also available (Jet Brains Rider etc).
+Visual Studio Code or Visual Studio are both good choices for .Net development. Other good IDE's are also available (Jet Brains Rider etc).
 
 Open the Program.cs file in the editor.
 

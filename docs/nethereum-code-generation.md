@@ -14,22 +14,6 @@ Prerequisites:
 * [Solidity vscode extension](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity).
 * A solidity smart contract [(like any of these)](http://solidity.readthedocs.io/en/develop/solidity-by-example.html)
 
-# Nethereum Code Generator
-
-Nethereum offers a code generator which allows you to generates C# classes from the ABI and Bin output of the compilation of Solidity contracts.
-
-The "smart contract c# service code generator" generates a generic C# service to interact with the smart contract, including Deployment, access to Functions and Events.
-
-There are two types of code generators: a JavaScript one, which is integrated on the Visual Studio Code Solidity extension and a .Net console application
-
-## Code generation using the Visual Studio Code extension
-
-Prerequisites: 
-
-* [Visual Studio Code (windows/Linux or Mac)](https://code.visualstudio.com/) 
-* [Solidity vscode extension](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity).
-* A solidity smart contract [(like any of these)](http://solidity.readthedocs.io/en/develop/solidity-by-example.html)
-
 ### Step 1:
 
 In visual studio code, open the command palette with ``` Ctrl+Shift+P ```. then type "solidity" and select "compile current Solidity contract".
@@ -63,13 +47,80 @@ If you want to adjust your namespace and project name you can do it by including
 
 ![Convert Json file to CS](screenshots/code-generation-mutltiple.contracts.gif)
 
-## Code generation using the Console application.
+## Code generation using the Console application
 
 *Nethereum.Generator.Console*
 
 A dot net core CLI tool which can be run in isolation or installed as a .net tool.
 
 Source Code: [https://github.com/Nethereum/Nethereum/tree/master/src/Nethereum.Generator.Console]
+
+Prerequisites:
+* [Net Core 2.1](https://www.microsoft.com/net/download)
+
+It currently supports a primary command called "generate" with the following sub commands:
+
+* [from-abi](#from-abi)
+* [from-project](#from-project)
+
+### Installing the console as a dot net tool (optional)
+
+The example below installs Nethereum.Generator.Console as a global tool (-g) and references a local folder as a nuget package source (--add-source).
+
+Having a tool makes it easy to call the code generator from anywhere.
+It is especially useful for automated builds and integration scripts.
+
+Installing the tool 
+
+The tool will shortly be available as a package from nuget.  For now, clone the source code and run ```dotnet pack``` to generate a nuget file (nupkg) locally.
+```
+dotnet tool install -g --add-source C:\dev\repos\nethereum\src\Nethereum.Generator.Console\bin\Release Nethereum.Generator.Console
+```
+
+### Accessing the 'Help'
+
+```
+Options:
+  -h | -? | --help  Show help information
+```
+
+#### from-abi
+
+Generates Nethereum code based based on a single abi.
+
+```
+Usage: generate from-abi [options]
+
+Options:
+  -cn | --contractName  The contract name (Optional)
+  -abi | --abiPath      The abi file and path (Mandatory)
+  -bin | --binPath      The bin file and path (Optional)
+  -o | --outputPath     The output path for the generated code (Mandatory)
+  -ns | --namespace     The base namespace for the generated code (Mandatory)
+  -sf | --SingleFile    Generate the message definition in a single file (Optional - default is true)
+  -? | -h | --help      Show help information
+```
+
+**Example**
+
+Create a folder and place your abi and bin files in it.  Go to the folder in the command line.
+
+Sample Compiled Solidity Files:
+* [StandardContract.abi](sample-contracts/StandardContract.abi)
+* [StandardContract.bin](sample-contracts/StandardContract.bin)
+
+Invoke the generator with minimum args.
+```
+Nethereum.Generator.Console generate from-abi -abi StandardContract.abi -o . -ns Sample.Ethereum
+```
+
+After code generation
+
+![Folder Contents - after code generation](screenshots/from-abi-folder-contents-after.PNG "Folder Contents - after code generation")
+
+#### from-project
+
+This command searches for abi files within a project and generates Nethereum code based on them.
 
 Generated code has namespaces and names which are based on the abi files and project structure.
 
@@ -85,8 +136,8 @@ Options:
 
 **Example**
 
-The example below generates Nethereum .net code from the StandardContract.abi in a dot net project folder.
-These instructions require dot net core 2.1 to be installed.
+The example below generates Nethereum .net code from the StandardContract.abi in a .net project folder.
+These instructions require .net core 2.1 to be installed.
 
 Sample Compiled Solidity Files:
 * [StandardContract.abi](sample-contracts/StandardContract.abi)
@@ -135,7 +186,7 @@ Example Nethereum.Generator.json config file.
 
 ### Interacting with the generated code
 
-The code below uses the generated code to deploy a standard contract to a test chain and invoke it's Transfer function.
+The code below uses the generated code to deploy a standard contract to a test chain and invoke its Transfer function.
 (To run the code you need to ensure you have a test chain/node running and that you provide valid account addresses and passwords)
 
 ``` csharp

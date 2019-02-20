@@ -11,7 +11,7 @@ There are two types of accounts: [externally owned accounts](http://www.ethdocs.
 
 ## When is an Ethereum account needed?
 
-Every transaction in Ethereum needs to be signed and sent by an account. Accounts need to sign transactions in order to authenticate as the one sending Ether or interacting with a smart contract.
+Every transaction in Ethereum needs to be signed and sent by an account. Accounts need to sign transactions in order to authenticate as the entity sending Ether or interacting with a smart contract.
 
 ## How to create a new Account?
 
@@ -56,11 +56,11 @@ var account = Nethereum.Web3.Accounts.Account.LoadFromKeyStore(keyStoreEncrypted
 
 To send a transaction, you will either manage your account and sign the raw transaction locally using your account's private key, or let the client (Parity / Geth) manage the account for you. There is a [standard](https://github.com/ethereum/wiki/wiki/Web3-Secret-Storage-Definition) for managing private keys, it is followed by all Ethereum clients.
 
-In the first scenario (manual signing) the account needs to be unlocked, the second scenario requires the password at the time of sending the transaction.
+In the first scenario (manual signing) the account needs to be unlocked, the second scenario requires a password at the time of sending the transaction.
 
-In `Nethereum.Web3`, to simplify the process, two types of account objects can be used: "Account" or "ManagedAccount". Both objects store the account information required to send a transaction: private key, or password.
+In `Nethereum.Web3`, to simplify the process, two types of account objects can be used: `Account` or `ManagedAccount`. Both objects store the account information required to send a transaction: private key, or password.
 
-The difference between an "Account" and a "ManagedAccount" object is mainly about where the private key or the key file is stored and how they are accessed.
+The difference between an `Account` and a `ManagedAccount` object is mainly about where the private key or the key file is stored and how they are accessed.
 
 #### _Please note:_  the below explains how to use `Account` and `ManagedAccount` objects in the context of the Nethereum framework. Those definitions are not to be confused with Ethereum the concepts of EOA and contract accounts. 
 
@@ -69,7 +69,7 @@ The difference between an "Account" and a "ManagedAccount" object is mainly abou
 
 At the time of sending a transaction, the right method to deliver the transaction will be chosen. If using the TransactionManager, deploying a contract or using a contract function, the transaction will either be signed offline using the private key or a [`personal_sendTransaction`](https://wiki.parity.io/JSONRPC-personal-module#personal_sendtransactionmessage) will be sent using the password.
 
-###  Sending transactions using an `account` with Web3
+##  Sending transactions using an `account` with Web3
 
 With a normal `Account`, the key file or private key is not stored on or managed by the blockchain client. Instead, your application manages it. For example. you could store the file locally in your application. You then need to sign all transactions you send offline and send the already signed transaction to the blockchain client.
 
@@ -122,7 +122,7 @@ var account = new ManagedAccount(senderAddress, password);
 var web3 = new Web3.Web3(account);
 ```
 
-When used in conjuction with Web3, now in the same way as an "Account", you can:
+When used in conjuction with Web3, now in the same way as an `Account`, you can:
 
 Transfer an amount to another address, using the transaction manager:
 

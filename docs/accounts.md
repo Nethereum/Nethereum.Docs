@@ -112,6 +112,8 @@ Clients retrieve the private key for an account (if stored on their keystore fol
 
 Having an account unlocked for a certain period of time might be a security issue, so the prefered option in this scenario, is to use the rpc method `personal_sendTransaction`.
 
+As a general rule, unlocking an account only makes sense when you are dealing with your own client. It doesn't make sense to try to unlock accounts on the public mainnet, since you don't have access to the Geth files there.
+
 Nethereum.Web3 wraps this functionality by using a `ManagedAccount`, having the managed account storing the account address and the password information.
 
 ```csharp

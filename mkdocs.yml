@@ -21,6 +21,7 @@ pages:
     - 'Chain Id Management' : 'Nethereum.Workbooks/docs/Nethereum-ChainID-Management.workbook'
     - 'Unit conversion' : 'Nethereum.Workbooks/docs/nethereum-converting-units.workbook'
     - 'Getting Started With Smart Contracts (untyped)' : 'Nethereum.Workbooks/docs/nethereum-smartcontrats-untyped.workbook'
+    - 'Managing nonces' : 'Nethereum.Workbooks/docs/nethereum-managing-nonces.workbook'
     - 'Using Nethereum managed accounts' : 'Nethereum.Workbooks/docs/nethereum-managed-accounts.workbook/index.workbook'
     - 'Creating a new Account using Geth Personal Api' : 'Nethereum.Workbooks/docs/nethereum-creating-a-new-account-using-geth.workbook'
 - 'Unity 3d':

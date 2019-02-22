@@ -7,6 +7,7 @@ pages:
 - 'Transferring Ether' : 'nethereum-transferring-ether.md'
 - 'Smart Contracts Interaction' : 'nethereum-smartcontrats-gettingstarted.md'
 - 'Smart contracts Events / Logs / Filters' : 'nethereum-events-gettingstarted.md'
+- 'Managing Accounts Nethereum' : 'accounts.md'
 - 'Code generation':
     - 'vs-code and console': 'nethereum-code-generation.md'
     - 'ABI based code generator' : 'nethereum-abi-autogen.md'
@@ -25,7 +26,6 @@ pages:
 - 'Unity 3d':
     - 'Sending Ether' : 'unity3d-sending-ether.md'
     - 'Smart contract interaction' : 'unity3d-smartcontracts-getting-started.md'
-- 'Ethereum accounts' : 'accounts.md'
 - 'Ethereum clients':
     - 'Introduction' : 'ethereum-and-clients/index.md'
     - 'Geth (Go client)' : 'ethereum-and-clients/geth.md'

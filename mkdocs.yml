@@ -17,7 +17,7 @@ pages:
     - 'Nethereum Getting Started Infura' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-infura.workbook'
     - 'Smart Contracts integration' : 'Nethereum.Workbooks/docs/nethereum-smartcontrats-gettingstarted.workbook'
     - 'Events, Logs and Filters' : 'Nethereum.Workbooks/docs/nethereum-events-gettingstarted.workbook'
-    - 'Signing messages' : 'Nethereum.Workbooks/docs/nethereum-signing-messages.workbook'
+    - 'Events polling' : 'Nethereum.Workbooks/docs/nethereum-eventdtos-getallchanges.workbook'
     - 'Chain Id Management' : 'Nethereum.Workbooks/docs/Nethereum-ChainID-Management.workbook'
     - 'Unit conversion' : 'Nethereum.Workbooks/docs/nethereum-converting-units.workbook'
     - 'Getting Started With Smart Contracts (untyped)' : 'Nethereum.Workbooks/docs/nethereum-smartcontrats-untyped.workbook'

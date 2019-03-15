@@ -1,6 +1,6 @@
-# Nethereum.Abi.Autogen Nuget Package  (Pre-Release)
+# Nethereum.Autogen.ContractApi.CSharp Nuget Package  (Pre-Release)
 ## A quick path to Dot Net and Ethereum integration
-Nethereum offers a code generator which allows you to generates dot net classes from the ABI and Bin output of the compilation of Solidity contracts.  This generator has a range of front end options (CLI, windows, web, mobile etc).  The Nethereum.Abi.Autogen package incorporates the generator and provides the quickest path to Dot Net and Ethereum integration.  Once the package is added to a project, C# files will be generated during pre-build of the target project based on any solidity files (abi, bin) present in the project (or optionally based on a config file). These code files provide a basis for deploying and interacting with smart contracts.
+Nethereum offers a code generator which allows you to generates dot net classes from the ABI and Bin output of the compilation of Solidity contracts.  This generator has a range of front end options (CLI, windows, web, mobile etc).  The Nethereum.Autogen.ContractApi.CSharp package incorporates the generator and provides the quickest path to Dot Net and Ethereum integration.  Once the package is added to a project, C# files will be generated during pre-build of the target project based on any solidity files (abi, bin) present in the project (or optionally based on a config file). These code files provide a basis for deploying and interacting with smart contracts.
 
 The Nuget package attaches a build targets file to the project, which injects a pre build task during which the code generation occurs. 
 
@@ -35,21 +35,18 @@ Nuget Console Command
 Install-Package Nethereum.Web3
 ```
 
-### Step 5 - Add Nethereum.Abi.Autogen package:
+### Step 5 - Add Nethereum.Autogen.ContractApi.CSharp package:
 
-Add Nethereum.Abi.Autogen nuget
+Add Nethereum.Autogen.ContractApi.CSharp nuget
 
 Nuget Console Command
 ```
-Install-Package Nethereum.Abi.Autogen
+Install-Package Nethereum.Autogen.ContractApi.CSharp
 ```
 
 ### Step 6 - Build the project:
 
 Build the project.  You should see a folder created in the project for each abi file.  For Dot Net Core projects this will be obvious in the IDE as the files will be visible in the project, for .Net Framework v4.* projects check the project folder in the file system.
-
-Example Video (Dot Net Core Project)
-![Abi.Autogen Example Video](screenshots/how-to-use-abi-autogen.gif)
 
 ## Disabling code generation
 
@@ -104,6 +101,6 @@ Be aware that if a config file is present - ONLY abi files in the config will be
 
 ## Alternatives for Code Generation
 
-The Netherum.Abi.Autogen uses the Nethereum.Generator.Console under the hood.  It is possible to use this in isolation.  
+The Nethereum.Autogen.ContractApi.CSharp package uses the Nethereum.Generator.Console under the hood.  It is possible to use this in isolation.  
 
 [Nethereum Generator Console](https://github.com/Nethereum/Nethereum.Docs/edit/master/docs/nethereum-code-generation.md)

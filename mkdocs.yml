@@ -5,7 +5,7 @@ pages:
 - 'Get Started with Nethereum' : 'getting-started.md'
 - 'Nugets' : 'nugets.md'
 - 'Transferring Ether' : 'nethereum-transferring-ether.md'
-- 'Smart Contracts Interaction' : 'nethereum-gettingstarted-smartcontracts.workbook'
+- 'Smart Contracts Interaction' : 'nethereum-gettingstarted-smartcontracts.md'
 - 'Smart contracts Events / Logs / Filters' : 'nethereum-events-gettingstarted.md'
 - 'Managing Accounts Nethereum' : 'accounts.md'
 - 'Code generation':

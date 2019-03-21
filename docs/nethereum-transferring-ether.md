@@ -90,6 +90,17 @@ The unit used to provide the price is Gwei, in this scenario 2 GWei.
 var transaction = await web3.Eth.GetEtherTransferService()
                 .TransferEtherAndWaitForReceiptAsync(toAddress, 1.11m, 2);
 ```
+
+###  Sending Ether using the EtherTransferService providing both the price and the amount of gas
+
+If sending Ether to a smart contract, this might require a bigger amount of gas than the default due the smart contract doing further processing.
+
+In this scenario, we can do the following: 
+
+```csharp
+var transaction = web3.Eth.GetEtherTransferService()
+                .TransferEtherAndWaitForReceiptAsync(toAddress, 1.11m, 2, new BigInteger(25000));
+```
 ### Using a HD Wallet
 
 Required Namespaces:

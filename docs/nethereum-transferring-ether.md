@@ -65,24 +65,27 @@ We also need to instantiate a variable with our recipient's address as value:
 ```csharp
 var toAddress = "0x13f022d72158410433cbd66f5dd8bf6d2d129924";
 ```
-We can now send the transaction itself using the transaction manager. In this case, we let the transaction manager use the default amount of gas to pay for the transaction.
 
-Note: when using the transaction manager,  Ether needs to be converted to Wei before sending, for this we will use the Conversion Utility.
+### Sending Ether using the EtherTransferService with the default gas price and gas amount 
 
-Assuming we need to send 1 Ether we will use:
+The tranfer of Ether is the simplest transaction on chain. This type of transaction uses the default amount of Gas 21000. 
+Each transaction has a price per unit of gas, if we don't specify the gas price the current average price provided by the client would be used.
 
-```csharp
-var wei = Web3.Convert.ToWei(1);
-```
-### Sending Ether using default gas amount
-Sending the transaction with the default amount of gas can be done as such:
+Using the EtherTransferService, we can simply do an Ether transfer as follows:
+
 ```csharp
 var transaction = await web3.Eth.GetEtherTransferService()
                 .TransferEtherAndWaitForReceiptAsync(toAddress, 1.11m);
 ```
 
-### Sending Ether using specific gas amount
-We can also choose the amount of gas we want to attribute to our transaction, by adding its amount as an argument (in this case, the last argument):
+Note, that the amout supplied is in Ether and the service converts it to Wei, the lowest unit value used for transactions.
+
+###  Sending Ether using the EtherTransferService with the default gas amount but suplying the price
+
+We can also choose the gas price for our transaction, in this case the last argument. The higher price of a transaction cost, the higher the possibility to be picked and prioritised by the miners quickly.
+
+The unit used to provide the price is Gwei, in this scenario 2 GWei. 
+
 ```csharp
 var transaction = await web3.Eth.GetEtherTransferService()
                 .TransferEtherAndWaitForReceiptAsync(toAddress, 1.11m, 2);

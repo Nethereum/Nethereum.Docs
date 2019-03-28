@@ -9,7 +9,7 @@ pages:
 - 'Smart contracts Events / Logs / Filters' : 'nethereum-events-gettingstarted.md'
 - 'Managing Accounts Nethereum' : 'accounts.md'
 - 'Code generation':
-    - 'vs-code and console': 'nethereum-code-generation.md'
+    - 'vs-code and console' : 'nethereum-code-generation.md'
     - 'ABI based code generator' : 'nethereum.autogen.contractapi.md'
 - 'Interactive Workbooks' :
     - 'Index' : 'Nethereum.Workbooks/docs/index.md'
@@ -17,6 +17,7 @@ pages:
     - 'Nethereum Getting Started Infura' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-infura.workbook'
     - 'Smart Contracts integration' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-smartcontracts.workbook'
     - 'Events, Logs and Filters' : 'Nethereum.Workbooks/docs/nethereum-events-gettingstarted.workbook'
+    - 'Signing messages with Nethereum' : 'Nethereum.Workbooks/docs/nethereum-signing-messages.workbook'
     - 'Using account objects' : 'Nethereum.Workbooks/docs/nethereum-using-account-objects.workbook'
     - 'Events polling (untyped)' : 'Nethereum.Workbooks/docs/nethereum-eventdtos-getallchanges.workbook'
     - 'Chain Id Management' : 'Nethereum.Workbooks/docs/nethereum-chainID-management.workbook'

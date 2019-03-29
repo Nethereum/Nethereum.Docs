@@ -1,6 +1,6 @@
 ## Unity3d interaction with Smart Contracts using Coroutines and UnityWebRequests
 
-In a similar way to the Nethereum smart contracts, Unity3d can use the contract deployment and function message definitions to interact with the blockchain, using Coroutines and the underlying UnityWebRequest. If you are targetting a framework > 4.6 the Nethereum "vanilla" library can also be used if the platform supports System.Net.HttpClient.
+In a similar way to the Nethereum smart contracts, Unity3d can use the contract deployment and function message definitions to interact with the blockchain together with Coroutines and the underlying UnityWebRequest. If you are targetting a framework > 4.6 the Nethereum "vanilla" library can also be used if the platform supports System.Net.Http.HttpClient together with async / await TPL calls, so there is no need for specific Unity3d documentation.
 
 This sample can be found at https://github.com/Nethereum/Unity3dSimpleSample
 

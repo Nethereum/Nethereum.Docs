@@ -2,7 +2,7 @@
 
 Nethereum provides support for Unity3d UnityWebRequest and yield mechanism for Tasks. A complete separate api of RPC Requests has been created to support this, but if wanted in newer versions of Unity3d if not working in specific environments it is supported Nethereum out of the box targetting Net461 or Netstandard.
 
-Nethereum provides also an AoT net351 build and a net461 build both AoT and normal. The Net461 build includes both the UnityWebRequest and vanilla Nethereum.
+Nethereum provides also an AoT net351 and net461 builds. The Net461 build includes both the UnityWebRequest and vanilla Nethereum.
 
 ## Simple Ether transfer using UnityWebRequests and yield
 

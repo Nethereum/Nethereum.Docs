@@ -15,10 +15,6 @@ An account is generated with a private key, you can generate a new private key a
 
 One of the major advantages, apart from security (avoiding the transfer of passwords in plain text), is that you don't need to have a local installation of a client, allowing you to target public nodes like Infura.
 
-![Offline Signing](screenshots/graph_Ethereum_Managed_Unmanaged_Account_1.png)
-
-![Online Signing](screenshots/graph_Ethereum_Managed_Unmanaged_Account_2.png)
-
 #### Loading an existing Account
 
 Encrypted Accounts key store files can be found in different locations depending on the client and operating system:
@@ -52,7 +48,7 @@ var account = Nethereum.Web3.Accounts.Account.LoadFromKeyStore(keyStoreEncrypted
 
 #### Working with an Account in Web3
 
-Once you have loaded your private keys into your account, if Web3 is instantiated with that acccount all the transactions made using the TransactionManager, Contract deployment or Functions will signed offline using the latest nonce.
+Once you have loaded your private keys into your account, if Web3 is instantiated with that account all the transactions made using the TransactionManager, Contract deployment or Functions will be signed offline using the latest nonce.
 
 For example, in this scenario we are creating an account with the private key from a keystore file, and creating a new instance of Web3 using the default "http://localhost:8545".
 
@@ -104,9 +100,9 @@ The Nethereum.KeyStore library, allows you to encrypt and save your private key,
 Clients retrieve the private key for an account (if stored on their keystore folder) using a password provided to decrypt the file. This is done when unlocking an account, or just at the time of sending a transaction if using personal_sendTransaction with a password.
 
 
-Having an account unlocked for a certain period of time might be a security issue, so the prefered option in this scenario, is to use the rpc method `personal_sendTransaction`.
+Having an account unlocked for a certain period of time might be a security issue, so the preferred option in this scenario, is to use the rpc method `personal_sendTransaction`.
 
-Nethereum.Web3 wraps this functionality by using a ` ManagedAccount `, having the managed account storing the account address and the password information. 
+Nethereum.Web3 wraps this functionality by using a `ManagedAccount`, having the managed account storing the account address and the password information. 
 
 ```csharp
 var senderAddress = "0x12890d2cce102216644c59daE5baed380d84830c";
@@ -116,7 +112,7 @@ var account = new ManagedAccount(senderAddress, password);
 var web3 = new Web3.Web3(account);
 ```
 
-When used in conjuction with Web3, now in the same way as an "Account", you can:
+When used in conjunction with Web3, now in the same way as an "Account", you can:
 
 Transfer an amount to another address, using the transaction manager:
 

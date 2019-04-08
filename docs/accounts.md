@@ -1,39 +1,37 @@
-# Accounts in Web3 Nethereum
 
-Note: If you would like to try the various methods proposed in this article and you haven't installed an Ethereum client yet, you might consider downloading [Testchains](https://github.com/Nethereum/Testchains), and installing one of the Ethereum development client that matches your environment ( https://github.com/Nethereum/Testchains )
+## Accounts in Web3 Nethereum
 
-To start one of TestChain `Geth` clients (geth-clique-linux\\, geth-clique-windows\\ or geth-clique-mac\\) use **startgeth.bat** (Windows) or **startgeth.sh** (Mac/Linux). The chain is setup with Proof of Authority consensus and will start the mining process immediately.
+Every transaction in Ethereum needs to be sent and signed by an account. The account needs to verify (sign) in order to authenticate the account holder of their Ether or the one that intents to interact with a smart contract.
 
-## What is an Ethereum account?
+To send a transaction you will either manage your account and sign the raw transaction locally, or the account will be managed by the client (Parity / Geth), requiring to send the password at the time of sending a transaction or unlock the account before hand.
 
-Accounts are simple public/private keypairs, which are used to sign transactions.
-There are two types of accounts: [externally owned accounts](http://www.ethdocs.org/en/latest/contracts-and-transactions/account-types-gas-and-transactions.html) (EOAs) and [contract-accounts](http://www.ethdocs.org/en/latest/contracts-and-transactions/account-types-gas-and-transactions.html).
+In Nethereum.Web3, to simplify the process, there are two types of accounts that you can use. An "Account" object or a "ManagedAccount" object. Both store the account information required to send a transaction, private key, or password.
 
-## When is an Ethereum account needed?
+At the time of sending a transaction, the right method to deliver the transaction will be chosen. If using the TransactionManager, deploying a contract or using a contract function, the transaction will either be signed offline using the private key or a personal_sendTransaction message will be sent using the password.
 
-Every transaction in Ethereum needs to be signed and sent by an account. Accounts need to sign transactions in order to authenticate as the entity sending Ether or interacting with a smart contract.
+### Working with an Account
 
-## How to create a new Account?
+An account is generated with a private key, you can generate a new private key and store it using the Web3 storage definition (compatible with all clients), or load an existing one from any storage, or from the key storage folder of your locally installed client.
 
-To create a new account you just need to generate a new private key, `Nethereum.Signer` provides a method to do this using `SecureRandom`. The Account object accepts just the private key as a constructor, to reduce any coupling with private key generation, and prescriptive way to generate private keys.
+One of the major advantages, apart from security (avoiding the transfer of passwords in plain text), is that you don't need to have a local installation of a client, allowing you to target public nodes like Infura.
 
-```csharp
-var ecKey = Nethereum.Signer.EthECKey.GenerateKey();
-var privateKey = ecKey.GetPrivateKeyAsBytes().ToHex();
-var account = new Nethereum.Accounts.Account(privateKey);
-```
-## How/where to store accounts?
+![Offline Signing](screenshots/graph_Ethereum_Managed_Unmanaged_Account_1.png)
 
-For an account, the only data that needs to be stored is its private key (accounts' public keys are generated using their private key).
+![Online Signing](screenshots/graph_Ethereum_Managed_Unmanaged_Account_2.png)
 
-An Account's private key can be stored as plain-text in your application or on file, but it is better security-wise to store the private key in an encrypted file. 
-Encrypted Accounts key store files can be found in different locations depending on the client and operating system. 
+#### Loading an existing Account
 
-The `Nethereum.KeyStore` library allows you to encrypt and save your private key in a way that is compatible with all the clients.
+Encrypted Accounts key store files can be found in different locations depending on the client and operating system:
 
-For more details on account storage, please refer to: [Web3 storage definition](https://github.com/ethereum/wiki/wiki/Web3-Secret-Storage-Definition) (compatible with all clients).
+Geth:
+* Linux: ~/.ethereum/keystore
+* Mac: /Library/Ethereum/keystore
+* Windows: %APPDATA%/Ethereum
 
-## How to load an existing Account
+Parity:
+* Windows %APPDATA%\Roaming\Parity\Ethereum
+* Mac: /Library/Application Support/io.parity.ethereum
+* Linux: ~/.local/share/io.parity.ethereum
 
 When using net451 or above you can load your file directly:
 
@@ -52,79 +50,21 @@ If you are targetting other frameworks like core or netstandard, portable loadin
 var account = Nethereum.Web3.Accounts.Account.LoadFromKeyStore(keyStoreEncryptedJson, password);
 ```
 
-## How to send transactions using Accounts
+#### Working with an Account in Web3
 
-To send a transaction, you will either manage your account and sign the raw transaction locally using your account's private key, or let the client (Parity / Geth) manage the account for you. There is a [standard](https://github.com/ethereum/wiki/wiki/Web3-Secret-Storage-Definition) for managing private keys, it is followed by all Ethereum clients.
+Once you have loaded your private keys into your account, if Web3 is instantiated with that acccount all the transactions made using the TransactionManager, Contract deployment or Functions will signed offline using the latest nonce.
 
-In the first scenario (manual signing) the account needs to be unlocked, the second scenario requires a password at the time of sending the transaction.
-
-In `Nethereum.Web3`, to simplify the process, two types of account objects can be used: `Account` or `ManagedAccount`. Both objects store the account information required to send a transaction: private key, or password.
-
-The difference between an `Account` and a `ManagedAccount` object is mainly about where the private key or the key file is stored and how they are accessed.
-
-#### _Please note:_  the below explains how to use `Account` and `ManagedAccount` objects in the context of the Nethereum framework. Those definitions are not to be confused with Ethereum the concepts of EOA and contract accounts. 
-
-
-
-
-At the time of sending a transaction, the right method to deliver the transaction will be chosen. If using the TransactionManager, deploying a contract or using a contract function, the transaction will either be signed offline using the private key or a [`personal_sendTransaction`](https://wiki.parity.io/JSONRPC-personal-module#personal_sendtransactionmessage) will be sent using the password.
-
-##  Sending transactions using an `account` with Web3
-
-With a normal `Account`, the key file or private key is not stored on or managed by the blockchain client. Instead, your application manages it. For example. you could store the file locally in your application. You then need to sign all transactions you send offline and send the already signed transaction to the blockchain client.
-
-If you instantiate Web3  with an existing `account`, all the transactions are made using the `TransactionManager`, simplifying the process of sending transactions. Contract deployment or Functions will be signed offline using the latest nonce.
-
-For example, in the following scenario we will create an account with the private key from a keystore file, and creating a new instance of Web3 that will use the default "http://localhost:8545".
+For example, in this scenario we are creating an account with the private key from a keystore file, and creating a new instance of Web3 using the default "http://localhost:8545".
 
 ```csharp
 var password = "password";
 var accountFilePath = @"c:\xxx\UTC--2015-11-25T05-05-03.116905600Z--12890d2cce102216644c59dae5baed380d84830c";
 var account = Nethereum.Web3.Accounts.Account.LoadFromKeyStoreFile(accountFilePath, string password);
+
 var web3 = new Nethereum.Web3.Web3(account);
 ```
 
-Now, using our Web3 instance, we can transfer an amount to another address, using the transaction manager:
-
-```csharp
-await web3.TransactionManager.SendTransactionAsync(account.Address, addressTo, new HexBigInteger(20));
-```
-
-Deploy a contract:
-
-```csharp
- web3.Eth.DeployContract.SendRequestAsync(abi, byteCode, senderAddress, new HexBigInteger(900000),
-                            multiplier)
-```
-
-Make a contract Function transaction:
-
-```csharp
-var multiplyFunction = contract.GetFunction("multiply");
-await multiplyFunction.SendTransactionAsync(senderAddress,7);
-```
-
-##  Sending transactions using a `ManagedAccount` with Web3
-
-With a `ManagedAccount`, the files containing your accounts' private keys are stored on or managed by the blockchain client (Geth, Parity, ...). When sending a transaction, you have to provide your wallet address and the password for the key file. The blockchain client then decrypts the key file and signs the transaction on your behalf.
-
-Clients retrieve the private key for an account (if stored on their keystore folder) using a password provided to decrypt the file. This is done when unlocking an account, or just at the time of sending a transaction if using `personal_sendTransaction` with a password.
-
-Having an account unlocked for a certain period of time might be a security issue, so the prefered option in this scenario, is to use the rpc method `personal_sendTransaction`.
-
-As a general rule, unlocking an account only makes sense when you are dealing with your own client. It doesn't make sense to try to unlock accounts on the public mainnet, since you don't have access to the Geth files there.
-
-Nethereum.Web3 wraps this functionality by using a `ManagedAccount`, having the managed account storing the account address and the password information.
-
-```csharp
-var senderAddress = "0x12890d2cce102216644c59daE5baed380d84830c";
-var password = "password";
-
-var account = new ManagedAccount(senderAddress, password);
-var web3 = new Web3.Web3(account);
-```
-
-When used in conjuction with Web3, now in the same way as an `Account`, you can:
+Now all these types of transactions will be signed offline.
 
 Transfer an amount to another address, using the transaction manager:
 
@@ -146,4 +86,55 @@ Make a contract Function transaction:
 var multiplyFunction = contract.GetFunction("multiply");
 await multiplyFunction.SendTransactionAsync(senderAddress,7);
 ```
-For more information about accounts in Ethereum, please refer to the [Ethereum documentation](https://github.com/ethereum/go-ethereum/wiki/Managing-your-accounts).
+
+#### Creating a new Account
+
+To create a new account you just need to generate a new private key, Nethereum.Signer provides a method to do this using SecureRandom. The Account object accepts just the private key as a constructor, to reduce any coupling with private key generation, and prescriptive way to generate private keys.
+
+```csharp
+var ecKey = Nethereum.Signer.EthECKey.GenerateKey();
+var privateKey = ecKey.GetPrivateKeyAsBytes().ToHex();
+var account = new Nethereum.Accounts.Account(privateKey);
+```
+
+The Nethereum.KeyStore library, allows you to encrypt and save your private key, in a compatible way to all the clients.
+
+### Working with a Managed Account in Web3
+
+Clients retrieve the private key for an account (if stored on their keystore folder) using a password provided to decrypt the file. This is done when unlocking an account, or just at the time of sending a transaction if using personal_sendTransaction with a password.
+
+
+Having an account unlocked for a certain period of time might be a security issue, so the prefered option in this scenario, is to use the rpc method `personal_sendTransaction`.
+
+Nethereum.Web3 wraps this functionality by using a ` ManagedAccount `, having the managed account storing the account address and the password information. 
+
+```csharp
+var senderAddress = "0x12890d2cce102216644c59daE5baed380d84830c";
+var password = "password";
+
+var account = new ManagedAccount(senderAddress, password);
+var web3 = new Web3.Web3(account);
+```
+
+When used in conjuction with Web3, now in the same way as an "Account", you can:
+
+Transfer an amount to another address, using the transaction manager:
+
+```csharp
+await web3.TransactionManager.SendTransactionAsync(account.Address, addressTo, new HexBigInteger(20));
+
+```
+
+Deploy a contract:
+
+```csharp
+ web3.Eth.DeployContract.SendRequestAsync(abi, byteCode, senderAddress, new HexBigInteger(900000),
+                            multiplier)
+```
+
+Make a contract Function transaction:
+
+```csharp
+var multiplyFunction = contract.GetFunction("multiply");
+await multiplyFunction.SendTransactionAsync(senderAddress,7);
+```

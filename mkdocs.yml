@@ -15,6 +15,7 @@ pages:
     - 'Index' : 'Nethereum.Workbooks/docs/index.md'
     - 'Getting Started Test Chain' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-testchain.workbook'
     - 'Nethereum Getting Started Infura' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-infura.workbook'
+    - 'Nethereum Getting Started Nodesmith' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-nodesmith.workbook'
     - 'Smart Contracts integration' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-smartcontracts.workbook'
     - 'Events, Logs and Filters' : 'Nethereum.Workbooks/docs/nethereum-events-gettingstarted.workbook'
     - 'Signing messages with Nethereum' : 'Nethereum.Workbooks/docs/nethereum-signing-messages.workbook'

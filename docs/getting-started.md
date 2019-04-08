@@ -54,8 +54,7 @@ namespace NethereumSample
 
         static async Task GetAccountBalance()
         {
-            var web3 = new Web3("https://mainnet.infura.io");
-
+var web3 = new Web3("https://mainnet.infura.io/v3/7238211010344719ad14a89db874158c");
             var balance = await web3.Eth.GetBalance.SendRequestAsync("0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae");
             Console.WriteLine($"Balance in Wei: {balance.Value}");
 
@@ -72,10 +71,12 @@ First, we need to add our required namespaces for Nethereum:
 using Nethereum.Web3;
 ```
 
-The next step is to create an instance of Web3, with the infura url for mainnet.
+The next step is to create an instance of Web3, with the infura url for mainnet and your INFURA api key with the format:`https://<network>.infura.io/v3/YOUR-PROJECT-ID`.
+
+For this sample, we’ll use a special API key `7238211010344719ad14a89db874158c`, but for your own project you’ll need to [sign up on INFURA](https://infura.io/register) and generate your own key.
 
 ``` c#
-var web3 = new Web3("https://mainnet.infura.io");
+var web3 = new Web3("https://mainnet.infura.io/v3/7238211010344719ad14a89db874158c");
 ```
 
 Using the Eth API we can execute the GetBalance request asynchronously, for our selected account. In this scenario I have chosen the Ethereum Foundation account. “0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae”

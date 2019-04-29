@@ -25,7 +25,7 @@ pages:
     - 'Signing messages with Nethereum' : 'Nethereum.Workbooks/docs/nethereum-signing-messages.workbook'
     - 'Using account objects' : 'Nethereum.Workbooks/docs/nethereum-using-account-objects.workbook'
     - 'Events polling (untyped)' : 'Nethereum.Workbooks/docs/nethereum-eventdtos-getallchanges.workbook'
-    - 'Managing Hd Wallets and seed phrases' : 'Nethereum.Workbooks/docs/nethereum-managing-hdwallets.workbook/index.workbook'
+    - 'Managing Hd Wallets and seed phrases' : 'Nethereum.Workbooks/docs/nethereum-managing-hdwallets.workbook'
     - 'Chain Id Management' : 'Nethereum.Workbooks/docs/nethereum-chainID-management.workbook'
     - 'Estimating gas for a transaction' : 'Nethereum.Workbooks/docs/nethereum-estimating-gas.workbook/index.workbook'
     - 'Unit conversion' : 'Nethereum.Workbooks/docs/nethereum-converting-units.workbook'

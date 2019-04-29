@@ -10,9 +10,9 @@ pages:
 - 'Managing Accounts Nethereum' : 'accounts.md'
 - 'Code generation':
     - 'Nethereum code generation' : 'nethereum-code-generation.md'
-        - 'VsCode solidity code generation' : 'nethereum-codegen-vscodesolidity.md'
-        - 'Nuget auto code generation' : 'nethereum.autogen.contractapi.md'
-        - 'Console (CLI) code generation' : 'nethereum-codegen-console.md'
+    - 'VsCode solidity code generation' : 'nethereum-codegen-vscodesolidity.md'
+    - 'Nuget auto code generation' : 'nethereum.autogen.contractapi.md'
+    - 'Console (CLI) code generation' : 'nethereum-codegen-console.md'
 - 'Interactive Workbooks' :
     - 'Index' : 'Nethereum.Workbooks/docs/index.md'
     - 'Getting Started Test Chain' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-testchain.workbook'

@@ -9,8 +9,10 @@ pages:
 - 'Smart contracts Events / Logs / Filters' : 'nethereum-events-gettingstarted.md'
 - 'Managing Accounts Nethereum' : 'accounts.md'
 - 'Code generation':
-    - 'vs-code and console' : 'nethereum-code-generation.md'
-    - 'ABI based code generator' : 'nethereum.autogen.contractapi.md'
+    - 'Nethereum code generation' : 'nethereum-code-generation.md'
+        - 'VsCode solidity code generation' : 'nethereum-codegen-vscodesolidity.md'
+        - 'Nuget auto code generation' : 'nethereum.autogen.contractapi.md'
+        - 'Console (CLI) code generation' : 'nethereum-codegen-console.md'
 - 'Interactive Workbooks' :
     - 'Index' : 'Nethereum.Workbooks/docs/index.md'
     - 'Getting Started Test Chain' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-testchain.workbook'

@@ -26,7 +26,7 @@ The [Nethereum.Autogen.ContractApi](https://www.nuget.org/packages/Nethereum.Aut
 	
 ### Nethereum Generator Console: 
 
-The nuget tool [Nethereum.Generator.Console] (https://www.nuget.org/packages/Nethereum.Generator.Console/) provides a cli tool for code generation. It can be installed simply using the following command:
+The nuget tool [Nethereum.Generator.Console](https://www.nuget.org/packages/Nethereum.Generator.Console/) provides a cli tool for code generation. It can be installed simply using the following command:
 	
  ```dotnet tool install -g Nethereum.Generator.Console```. 
 	

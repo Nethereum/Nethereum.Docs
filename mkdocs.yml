@@ -22,7 +22,6 @@ pages:
     - 'Events, Logs and Filters' : 'Nethereum.Workbooks/docs/nethereum-events-gettingstarted.workbook'
     - 'Hd Wallets, seed phrases' : 'Nethereum.Workbooks/docs/nethereum-managing-hdwallets.workbook'
     - 'Signing messages with Nethereum' : 'Nethereum.Workbooks/docs/nethereum-signing-messages.workbook'
-    - 'Understanding receipt statuses' : 'Nethereum.Workbooks/docs/nethereum-receipt-status.workbook'
     - 'Using account objects' : 'Nethereum.Workbooks/docs/nethereum-using-account-objects.workbook'
     - 'Events polling (untyped)' : 'Nethereum.Workbooks/docs/nethereum-eventdtos-getallchanges.workbook'
     - 'Chain Id Management' : 'Nethereum.Workbooks/docs/nethereum-chainID-management.workbook'

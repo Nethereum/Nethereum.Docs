@@ -1,10 +1,28 @@
-# Nethereum Code Generator
+# Nethereum Code Generation
 
-Nethereum offers a code generator which allows you to generates C# classes from the ABI and Bin output of the compilation of Solidity contracts.
+Nethereum offers a code generator which allows you to generate .Net classes (C#, Vb.Net and F#) from the ABI and Bin output of the compilation of Solidity contracts.
 
-The "smart contract c# service code generator" generates a generic C# service to interact with the smart contract, including Deployment, access to Functions and Events.
+The core and first code generators create the .Net contract definitions and services to simplify and speed up the development to interact with Ethereum smart contracts.
 
-There are two types of code generators: a JavaScript one, which is integrated on the Visual Studio Code Solidity extension and a .Net console application
+Nethereum provides different tooling based on the same code generation.
+* Web based code generation: http://codegen.nethereum.com/
+ 
+ 	A simple online tool, to code generate a smart contract definition without the need to install any tools.
+
+* VsCode Solidity extension integrated code generation: https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity
+	
+	The vs code solidity extension can code generate your contract defintions automatically after compilation of a smart contract, and for any existing smart contract or all in the current solidity project workspace. [More info](#code-generation-using-the-visual- studio-code-extension)
+	
+* Nethereum Autogen https://www.nuget.org/packages/Nethereum.Autogen.ContractApi/
+	
+* Nethereum Generator Console: https://www.nuget.org/packages/Nethereum.Generator.Console/
+
+	You can use the Nethereum cli globally by simply typing ```dotnet tool install -g Nethereum.Generator.Console```. 
+
+You can also integrate the generators in your own solution using the Netheruem nugets and npm packages.
+* Nuget packages: https://www.nuget.org/packages/Nethereum.Generators/
+* Npm packages: https://www.npmjs.com/package/nethereum-codegen
+
 
 ## Code generation using the Visual Studio Code extension
 
@@ -71,10 +89,8 @@ Having a tool makes it easy to call the code generator from anywhere.
 It is especially useful for automated builds and integration scripts.
 
 Installing the tool 
-
-The tool will shortly be available as a package from nuget.  For now, clone the source code and run ```dotnet pack``` to generate a nuget file (nupkg) locally.
 ```
-dotnet tool install -g --add-source C:\dev\repos\nethereum\src\Nethereum.Generator.Console\bin\Release Nethereum.Generator.Console
+dotnet tool install -g Nethereum.Generator.Console
 ```
 
 ### Accessing the 'Help'

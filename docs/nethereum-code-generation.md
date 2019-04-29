@@ -8,17 +8,20 @@ Nethereum provides different tooling based on the same code generation.
 
 * Web based code generation: http://codegen.nethereum.com/
  
- 	A simple online tool, to code generate a smart contract definition without the need to install any tools. (Page for this)
+ 	A simple online tool, to code generate a smart contract definition without the need to install any tools. Source code can be found here https://github.com/Nethereum/Nethereum.CodeGen.Blazor
 
 * VsCode Solidity extension integrated code generation: https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity
 	
-	The vs code solidity extension can code generate your contract defintions automatically after compilation of a smart contract, and for any existing smart contract or all in the current solidity project workspace. (Page for this, with the updates)
+	The vs code solidity extension can code generate your contract defintions automatically after compilation of a smart contract, and for any existing smart contract or all in the current solidity project workspace. [More info..](nethereum-codegen-vscodesolidity.md)
 	
 * Nethereum Autogen Nuget https://www.nuget.org/packages/Nethereum.Autogen.ContractApi/
+	A nuget package that will automatically generates your code when building your project.
+	[More info..](nethereum.autogen.contractapi.md)
 	
 * Nethereum Generator Console: https://www.nuget.org/packages/Nethereum.Generator.Console/
 
 	You can use the Nethereum cli globally by simply typing ```dotnet tool install -g Nethereum.Generator.Console```. 
+	[More info..](nethereum-codegen-console.md)
 
 You can also integrate the generators in your own solution using the Netheruem nugets and npm packages.
 

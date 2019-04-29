@@ -6,27 +6,39 @@ The core and first code generators output the .Net contract definitions and serv
 
 Nethereum provides different tooling based on the same code generation.
 
-* Web based code generation: 
+### Web based code generation
  
- 	The Web based code generation [http://codegen.nethereum.com](http://codegen.nethereum.com/) is a simple online tool, to code generate a smart contract definition without the need to install any tools. Just input your Abi, Bytecode, Smart contract name and Namespace. [Source code](https://github.com/Nethereum/Nethereum.CodeGen.Blazor)
+The Web based code generation [http://codegen.nethereum.com](http://codegen.nethereum.com/) is a simple online tool, to code generate a smart contract definition without the need to install any tools. Just input your Abi, Bytecode, Smart contract name and Namespace. 
+	
+[Source code ...](https://github.com/Nethereum/Nethereum.CodeGen.Blazor)
 
-* VsCode Solidity extension integrated code generation: 
+### VsCode Solidity extension integrated code generation: 
 	
-	The [vs code solidity extension](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) can code generate your contract defintions automatically after compilation of a smart contract, and for any existing smart contract or all in the current solidity project workspace. [More info..](nethereum-codegen-vscodesolidity.md)
+The [vs code solidity extension](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) can code generate your contract defintions automatically after compilation of a smart contract, and for any existing smart contract or all in the current solidity project workspace. 
 	
-* Nethereum Autogen Nuget
-	The [Nethereum.Autogen.ContractApi](https://www.nuget.org/packages/Nethereum.Autogen.ContractApi/) is a nuget package that automatically generates your code when building your project, just save your contract abi and bin files at the root of your project.
-	[More info..](nethereum.autogen.contractapi.md)
+[More info on usage..](nethereum-codegen-vscodesolidity.md)
 	
-* Nethereum Generator Console: https://www.nuget.org/packages/Nethereum.Generator.Console/
-	You can install the Nethereum cli globally by simply typing ```dotnet tool install -g Nethereum.Generator.Console```. 
-	[More info..](nethereum-codegen-console.md)
+### Nethereum Autogen Nuget
 
+The [Nethereum.Autogen.ContractApi](https://www.nuget.org/packages/Nethereum.Autogen.ContractApi/) is a nuget package that automatically generates your code when building your project, just save your contract abi and bin files at the root of your project.
+	
+[More info on usage ..](nethereum.autogen.contractapi.md)
+	
+### Nethereum Generator Console: 
+
+The nuget tool [Nethereum.Generator.Console] (https://www.nuget.org/packages/Nethereum.Generator.Console/) provides a cli tool for code generation. It can be installed simply using the following command:
+	
+ ```dotnet tool install -g Nethereum.Generator.Console```. 
+	
+[More info on usage ..](nethereum-codegen-console.md)
+
+
+### Nuget and Npm packages.
 
 To integrate the generators in your own solution we provide both Nugets and Npm packages for .Net and Javascript.
 
-* [Nuget packages] (https://www.nuget.org/packages/Nethereum.Generators/)
-* [Npm package] (https://www.npmjs.com/package/nethereum-codegen)
+* [Nuget packages](https://www.nuget.org/packages/Nethereum.Generators/)
+* [Npm package](https://www.npmjs.com/package/nethereum-codegen)
 
 
 ### Interacting with the generated code

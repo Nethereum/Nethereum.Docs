@@ -23,10 +23,10 @@ Nethereum provides different tooling based on the same code generation.
 	[More info..](nethereum-codegen-console.md)
 
 
-To integrate the generators in your own solution using the Netheruem nugets and npm packages.
+To integrate the generators in your own solution we provide both Nugets and Npm packages for .Net and Javascript.
 
-* Nuget packages: https://www.nuget.org/packages/Nethereum.Generators/
-* Npm packages: https://www.npmjs.com/package/nethereum-codegen
+* [Nuget packages] (https://www.nuget.org/packages/Nethereum.Generators/)
+* [Npm package] (https://www.npmjs.com/package/nethereum-codegen)
 
 
 ### Interacting with the generated code

@@ -37,7 +37,7 @@ pages:
     - 'Parity' : 'ethereum-and-clients/parity.md'
     - 'Quorum' : 'ethereum-and-clients/quorum.md'
     - 'Azure BaaS' : 'azure/set-up-blockchain-on-azure.md'
-    - 'Axure/Quorum integration' : 'nethereum-azure-quorum.md'
+    - 'Azure/Quorum integration' : 'nethereum-azure-quorum.md'
     - 'TestRPC' : 'ethereum-and-clients/test-rpc.md'
     - 'Ganache CLI' : 'ethereum-and-clients/ganache-cli.md'
     - 'Choosing a chain for development' : 'ethereum-and-clients/choosing-a-chain-for-development.md'

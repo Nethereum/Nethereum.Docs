@@ -5,6 +5,7 @@
 !*.gif
 !*.png
 !*.md
+!*.txt
 !.gitignore
 !/docs/index.md
 # etc...

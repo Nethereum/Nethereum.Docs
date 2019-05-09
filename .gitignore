@@ -4,6 +4,9 @@
 # But not these files...
 !*.gif
 !*.png
+!*.ico
+!*.css
+!*.html
 !*.md
 !*.txt
 !.gitignore

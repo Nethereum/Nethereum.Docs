@@ -32,7 +32,7 @@ theme:
     custom_dir: docs/custom_theme
     palette:
         primary: teal
-        accent: green
+        accent: teal
     favicon: 'images/favicon.ico'
     logo:
       icon: 'images/logo.png'

@@ -3,6 +3,8 @@
 
 # But not these files...
 !*.gif
+!*.bin
+!*.abi
 !*.png
 !*.ico
 !*.css

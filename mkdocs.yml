@@ -29,13 +29,13 @@ repo_url: https://github.com/Nethereum/Nethereum
 
 theme:
     name: material
-    # custom_dir: docs/custom_theme
+    custom_dir: docs/custom_theme
     palette:
         primary: teal
         accent: teal
-    favicon: images/favicon.ico
+    favicon: favicon.ico
     logo:
-      icon: account_balance
+      icon: logo.png
 nav:
 - Home : index.md
 - Get Started with Nethereum : getting-started.md

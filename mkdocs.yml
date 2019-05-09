@@ -33,9 +33,9 @@ theme:
     palette:
         primary: teal
         accent: green
-    favicon: favicon.ico
+    favicon: 'images/favicon.ico'
     logo:
-      icon: docs/custom_theme/logo.png
+      icon: 'images/logo.png'
 nav:
 - Home : index.md
 - Get Started with Nethereum : getting-started.md

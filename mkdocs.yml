@@ -28,7 +28,7 @@ repo_name: Nethereum/Nethereum
 repo_url: https://github.com/Nethereum/Nethereum
 
 theme:
-    name: 'material'
+    name: material
     custom_dir: docs/custom_theme
     palette:
         primary: blue-grey

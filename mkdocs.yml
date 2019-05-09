@@ -31,11 +31,11 @@ theme:
     name: material
     custom_dir: docs/custom_theme
     palette:
-        primary: blue-grey
-        accent: teal
-    # favicon: favicon.ico
+        primary: teal
+        accent: green
+    favicon: favicon.ico
     logo:
-      icon: logo.png
+      icon: docs/custom_theme/logo.png
 nav:
 - Home : index.md
 - Get Started with Nethereum : getting-started.md

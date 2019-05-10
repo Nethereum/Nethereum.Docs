@@ -35,7 +35,7 @@ theme:
         accent: teal
     favicon: images/favicon.ico
     logo:
-      icon: 'images/logo.svg'
+      icon: images/logo.svg
 nav:
 - Home : index.md
 - Get Started with Nethereum : getting-started.md

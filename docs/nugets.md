@@ -4,7 +4,7 @@ Nethereum provides two types of packages. Standalone packages targeting Netstand
 
 All the releases can be found in Nuget.
 
-> [!NOTE]
+!!! Note
 **Continuous Integration Builds** - If you want to take advantage of a new feature as soon as they are merged into the code base, or if there are critical bugs you need fixed, we invite you to try the packages on our continuous integration feed. Simply add `https://www.myget.org/F/nethereum/api/v3/index.json` as a package source to either Visual Studio or Visual Studio for Mac.
 
 To add a nuget to your project you can:

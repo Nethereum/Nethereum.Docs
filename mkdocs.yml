@@ -10,7 +10,7 @@
 
 # Project information
 site_name: Nethereum Documentation
-site_url: https://nethereum.readthedocs.io
+site_url: https://docs.nethereum.com
 site_description: Nethereum documentation.
 site_author: Nethereum community
 copyright: Nethereum and its documentation are licensed under the MIT License (MIT)
@@ -20,12 +20,12 @@ copyright: Nethereum and its documentation are licensed under the MIT License (M
 extra:
   support:
     gitter: https://gitter.im/Nethereum/Nethereum
-    nethereum_website: https://nethereum.com/
+    nethereum_website: https://docs.nethereum.com
     issues: https://github.com/Nethereum/Nethereum/issues
 
 # Repository
 repo_name: Nethereum/Nethereum
-repo_url: https://github.com/Nethereum/Nethereum
+repo_url: https://github.com/Nethereum/Nethereum.Docs
 
 theme:
     name: material

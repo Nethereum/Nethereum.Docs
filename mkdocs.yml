@@ -1,58 +1,125 @@
-site_name: Nethereum
-theme: readthedocs
-pages:
-- 'Home' : 'index.md'
-- 'Get Started with Nethereum' : 'getting-started.md'
-- 'Nugets' : 'nugets.md'
-- 'Transferring Ether' : 'nethereum-transferring-ether.md'
-- 'Smart Contracts Interaction' : 'nethereum-smartcontrats-gettingstarted.md'
-- 'Smart contracts Events / Logs / Filters' : 'nethereum-events-gettingstarted.md'
-- 'Managing Accounts Nethereum' : 'accounts.md'
-- 'Code generation':
-    - 'Nethereum code generation' : 'nethereum-code-generation.md'
-    - 'VsCode solidity code generation' : 'nethereum-codegen-vscodesolidity.md'
-    - 'Nuget auto code generation' : 'nethereum.autogen.contractapi.md'
-    - 'Console (CLI) code generation' : 'nethereum-codegen-console.md'
-- 'Interactive Workbooks' :
-    - 'Index' : 'Nethereum.Workbooks/docs/index.md'
-    - 'Getting Started Test Chain' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-testchain.workbook'
-    - 'Nethereum Getting Started Infura' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-infura.workbook'
-    - 'Nethereum Getting Started Nodesmith' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-nodesmith.workbook'
-    - 'Smart Contracts integration' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-smartcontracts.workbook'
-    - 'Events, Logs and Filters' : 'Nethereum.Workbooks/docs/nethereum-events-gettingstarted.workbook'
-    - 'Using receipt statuses' : 'Nethereum.Workbooks/docs/nethereum-receipt-status.workbook/index.workbook'
-    - 'Estimating gas for a transaction' : 'Nethereum.Workbooks/docs/nethereum-estimating-gas.workbook/index.workbook'
-    - 'Signing messages with Nethereum' : 'Nethereum.Workbooks/docs/nethereum-signing-messages.workbook'
-    - 'Using account objects' : 'Nethereum.Workbooks/docs/nethereum-using-account-objects.workbook'
-    - 'Events polling (untyped)' : 'Nethereum.Workbooks/docs/nethereum-eventdtos-getallchanges.workbook'
-    - 'Managing Hd Wallets and seed phrases' : 'Nethereum.Workbooks/docs/nethereum-managing-hdwallets.workbook'
-    - 'Chain Id Management' : 'Nethereum.Workbooks/docs/nethereum-chainID-management.workbook'
-    - 'Estimating gas for a transaction' : 'Nethereum.Workbooks/docs/nethereum-estimating-gas.workbook/index.workbook'
-    - 'Unit conversion' : 'Nethereum.Workbooks/docs/nethereum-converting-units.workbook'
-    - 'Getting Started With Smart Contracts (untyped)' : 'Nethereum.Workbooks/docs/nethereum-gettingstarted-smartcontracts-untyped.workbook'
-    - 'Managing nonces' : 'Nethereum.Workbooks/docs/nethereum-managing-nonces.workbook'
-    - 'Using Nethereum managed accounts' : 'Nethereum.Workbooks/docs/nethereum-managed-accounts.workbook/index.workbook'
-    - 'Creating a new Account using Geth Personal Api' : 'Nethereum.Workbooks/docs/nethereum-creating-a-new-account-using-geth.workbook'
-- 'Unity 3d':
-    - 'Sending Ether' : 'unity3d-sending-ether.md'
-    - 'Smart contract interaction' : 'unity3d-smartcontracts-getting-started.md'
-- 'Ethereum clients':
-    - 'Introduction' : 'ethereum-and-clients/index.md'
-    - 'Geth (Go client)' : 'ethereum-and-clients/geth.md'
-    - 'Parity' : 'ethereum-and-clients/parity.md'
-    - 'Quorum' : 'ethereum-and-clients/quorum.md'
-    - 'Azure BaaS' : 'azure/set-up-blockchain-on-azure.md'
-    - 'Azure/Quorum integration' : 'nethereum-azure-quorum.md'
-    - 'TestRPC' : 'ethereum-and-clients/test-rpc.md'
-    - 'Ganache CLI' : 'ethereum-and-clients/ganache-cli.md'
-    - 'Choosing a chain for development' : 'ethereum-and-clients/choosing-a-chain-for-development.md'
-- 'Other tooling':
-    - 'Kaleido': 'kaleido-and-nethereum.md'
-- 'Web3 and RPC':
-    - 'Web3' : 'introduction/web3.md'
-    - 'RPC' : 'introduction/rpc.md'
-    - 'IPC' : 'introduction/ipc.md'
-- 'Smart Contracts untyped':
-    - 'Create and deploy contracts' : 'contracts/deploying.md'
-    - 'Calls, transactions, events, filters and topics' : 'contracts/calling-transactions-events.md'
-    - 'Multiple output parameters and function DTOs' : 'contracts/functiondtos.md'
+# The MIT License (MIT)
+
+# Copyright (c) 2016 Nethereum.com (Juan Blanco) , Logo by Cass (https://github.com/cassiopaia)
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in all copies or ANY portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+# Project information
+site_name: Nethereum Documentation
+site_url: https://docs.nethereum.com
+site_description: Nethereum documentation.
+site_author: Nethereum community
+copyright: Nethereum and its documentation are licensed under the MIT License (MIT)
+  This <a href="https://readthedocs.org/">Readthedocs.org</a> documentation is maintained with love by <a href="https://nethereum.com/">Nethereum</a>.
+
+#extra project info and template customisation
+extra:
+  support:
+    gitter: https://gitter.im/Nethereum/Nethereum
+    nethereum_website: https://docs.nethereum.com
+    issues: https://github.com/Nethereum/Nethereum/issues
+
+# Repository
+repo_name: Nethereum/Nethereum
+repo_url: https://github.com/Nethereum/Nethereum.Docs
+
+theme:
+    name: material
+    custom_dir: docs/custom_theme
+    palette:
+        primary: teal
+        accent: teal
+    favicon: images/favicon.ico
+    logo:
+      icon: library_books
+nav:
+- Home : index.md
+- Get Started with Nethereum : getting-started.md
+- Nugets : nugets.md
+- Transferring Ether : nethereum-transferring-ether.md
+- Smart Contracts Interaction : nethereum-smartcontrats-gettingstarted.md
+- Smart contracts Events / Logs / Filters : nethereum-events-gettingstarted.md
+- Managing Accounts Nethereum : accounts.md
+- Code generation:
+    - Nethereum code generation : nethereum-code-generation.md
+    - VsCode solidity code generation : nethereum-codegen-vscodesolidity.md
+    - Nuget auto code generation : nethereum.autogen.contractapi.md
+    - Console (CLI) code generation : nethereum-codegen-console.md
+- Interactive Workbooks :
+    - Index : Nethereum.Workbooks/docs/index.md
+    - Getting Started Test Chain : Nethereum.Workbooks/docs/nethereum-gettingstarted-testchain.workbook
+    - Nethereum Getting Started Infura : Nethereum.Workbooks/docs/nethereum-gettingstarted-infura.workbook
+    - Nethereum Getting Started Nodesmith : Nethereum.Workbooks/docs/nethereum-gettingstarted-nodesmith.workbook
+    - Smart Contracts integration : Nethereum.Workbooks/docs/nethereum-gettingstarted-smartcontracts.workbook
+    - Events, Logs and Filters : Nethereum.Workbooks/docs/nethereum-events-gettingstarted.workbook
+    - Using receipt statuses : Nethereum.Workbooks/docs/nethereum-receipt-status.workbook/index.workbook
+    - Estimating gas for a transaction : Nethereum.Workbooks/docs/nethereum-estimating-gas.workbook/index.workbook
+    - Signing messages with Nethereum : Nethereum.Workbooks/docs/nethereum-signing-messages.workbook
+    - Using account objects : Nethereum.Workbooks/docs/nethereum-using-account-objects.workbook
+    - Events polling (untyped) : Nethereum.Workbooks/docs/nethereum-eventdtos-getallchanges.workbook
+    - Managing Hd Wallets and seed phrases : Nethereum.Workbooks/docs/nethereum-managing-hdwallets.workbook
+    - Chain Id Management : Nethereum.Workbooks/docs/nethereum-chainID-management.workbook
+    - Estimating gas for a transaction : Nethereum.Workbooks/docs/nethereum-estimating-gas.workbook/index.workbook
+    - Unit conversion : Nethereum.Workbooks/docs/nethereum-converting-units.workbook
+    - Getting Started With Smart Contracts (untyped) : Nethereum.Workbooks/docs/nethereum-gettingstarted-smartcontracts-untyped.workbook
+    - Managing nonces : Nethereum.Workbooks/docs/nethereum-managing-nonces.workbook
+    - Using Nethereum managed accounts : Nethereum.Workbooks/docs/nethereum-managed-accounts.workbook/index.workbook
+    - Creating a new Account using Geth Personal Api : Nethereum.Workbooks/docs/nethereum-creating-a-new-account-using-geth.workbook
+    - About Workbooks : Nethereum.Workbooks/README.md
+    - License : Nethereum.Workbooks/LICENSE.md
+- Unity 3d:
+    - Sending Ether : unity3d-sending-ether.md
+    - Smart contract interaction : unity3d-smartcontracts-getting-started.md
+- Ethereum clients:
+    - Introduction : ethereum-and-clients/index.md
+    - Geth (Go client) : ethereum-and-clients/geth.md
+    - Parity : ethereum-and-clients/parity.md
+    - Quorum : ethereum-and-clients/quorum.md
+    - Azure BaaS : azure/set-up-blockchain-on-azure.md
+    - Azure/Quorum integration : nethereum-azure-quorum.md
+    - TestRPC : ethereum-and-clients/test-rpc.md
+    - Ganache CLI : ethereum-and-clients/ganache-cli.md
+    - Choosing a chain for development : ethereum-and-clients/choosing-a-chain-for-development.md
+- Other tooling:
+    - Kaleido: kaleido-and-nethereum.md
+- Web3 and RPC:
+    - Web3 : introduction/web3.md
+    - RPC : introduction/rpc.md
+    - IPC : introduction/ipc.md
+- Smart Contracts untyped:
+    - Create and deploy contracts : contracts/deploying.md
+    - Calls, transactions, events, filters and topics : contracts/calling-transactions-events.md
+    - Multiple output parameters and function DTOs : contracts/functiondtos.md
+markdown_extensions:
+    - toc:
+        permalink: 
+        toc_depth: 3
+    - codehilite
+    - markdown_include.include:
+        base_path: docs
+    - admonition
+    - footnotes
+    - def_list
+    - abbr
+    - pymdownx.arithmatex
+    - pymdownx.betterem:
+          smart_enable: all
+    - pymdownx.keys
+    - pymdownx.details
+    - pymdownx.emoji
+    - pymdownx.magiclink
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.superfences
+    - pymdownx.tasklist:
+          custom_checkbox: true
+    - pymdownx.tilde
+    - meta
+    - smarty
+
+plugins:
+    - search

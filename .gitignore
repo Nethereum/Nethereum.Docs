@@ -3,8 +3,15 @@
 
 # But not these files...
 !*.gif
+!*.bin
+!*.svg
+!*.abi
 !*.png
+!*.ico
+!*.css
+!*.html
 !*.md
+!*.txt
 !.gitignore
 !/docs/index.md
 # etc...

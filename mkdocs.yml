@@ -52,24 +52,24 @@ nav:
     - Console (CLI) code generation : nethereum-codegen-console.md
 - Interactive Workbooks :
     - Index : Nethereum.Workbooks/docs/index.md
-    - Getting Started Test Chain : Nethereum.Workbooks/docs/nethereum-gettingstarted-testchain.workbook.md
-    - Nethereum Getting Started Infura : Nethereum.Workbooks/docs/nethereum-gettingstarted-infura.workbook.md
-    - Nethereum Getting Started Nodesmith : Nethereum.Workbooks/docs/nethereum-gettingstarted-nodesmith.workbook.md
-    - Smart Contracts integration : Nethereum.Workbooks/docs/nethereum-gettingstarted-smartcontracts.workbook.md
-    - Events, Logs and Filters : Nethereum.Workbooks/docs/nethereum-events-gettingstarted.workbook.md
-    - Using receipt statuses : Nethereum.Workbooks/docs/nethereum-receipt-status.workbook/index.workbook.md
-    - Estimating gas for a transaction : Nethereum.Workbooks/docs/nethereum-estimating-gas.workbook/index.workbook.md
-    - Signing messages with Nethereum : Nethereum.Workbooks/docs/nethereum-signing-messages.workbook.md
-    - Using account objects : Nethereum.Workbooks/docs/nethereum-using-account-objects.workbook.md
-    - Events polling (untyped) : Nethereum.Workbooks/docs/nethereum-eventdtos-getallchanges.workbook.md
-    - Managing Hd Wallets and seed phrases : Nethereum.Workbooks/docs/nethereum-managing-hdwallets.workbook.md
-    - Chain Id Management : Nethereum.Workbooks/docs/nethereum-chainID-management.workbook.md
-    - Estimating gas for a transaction : Nethereum.Workbooks/docs/nethereum-estimating-gas.workbook/index.workbook.md
-    - Unit conversion : Nethereum.Workbooks/docs/nethereum-converting-units.workbook.md
-    - Getting Started With Smart Contracts (untyped) : Nethereum.Workbooks/docs/nethereum-gettingstarted-smartcontracts-untyped.workbook.md
-    - Managing nonces : Nethereum.Workbooks/docs/nethereum-managing-nonces.workbook.md
-    - Using Nethereum managed accounts : Nethereum.Workbooks/docs/nethereum-managed-accounts.workbook/index.workbook.md
-    - Creating a new Account using Geth Personal Api : Nethereum.Workbooks/docs/nethereum-creating-a-new-account-using-geth.workbook.md
+    - Getting Started Test Chain : Nethereum.Workbooks/docs/nethereum-gettingstarted-testchain.md
+    - Nethereum Getting Started Infura : Nethereum.Workbooks/docs/nethereum-gettingstarted-infura.md
+    - Nethereum Getting Started Nodesmith : Nethereum.Workbooks/docs/nethereum-gettingstarted-nodesmith.md
+    - Smart Contracts integration : Nethereum.Workbooks/docs/nethereum-gettingstarted-smartcontracts.md
+    - Events, Logs and Filters : Nethereum.Workbooks/docs/nethereum-events-gettingstarted.md
+    - Using receipt statuses : Nethereum.Workbooks/docs/nethereum-receipt-status.workbook/index.md
+    - Estimating gas for a transaction : Nethereum.Workbooks/docs/nethereum-estimating-gas.workbook/index.md
+    - Signing messages with Nethereum : Nethereum.Workbooks/docs/nethereum-signing-messages.md
+    - Using account objects : Nethereum.Workbooks/docs/nethereum-using-account-objects.md
+    - Events polling (untyped) : Nethereum.Workbooks/docs/nethereum-eventdtos-getallchanges.md
+    - Managing Hd Wallets and seed phrases : Nethereum.Workbooks/docs/nethereum-managing-hdwallets.md
+    - Chain Id Management : Nethereum.Workbooks/docs/nethereum-chainID-management.md
+    - Estimating gas for a transaction : Nethereum.Workbooks/docs/nethereum-estimating-gas.workbook/index.md
+    - Unit conversion : Nethereum.Workbooks/docs/nethereum-converting-units.md
+    - Getting Started With Smart Contracts (untyped) : Nethereum.Workbooks/docs/nethereum-gettingstarted-smartcontracts-untyped.md
+    - Managing nonces : Nethereum.Workbooks/docs/nethereum-managing-nonces.md
+    - Using Nethereum managed accounts : Nethereum.Workbooks/docs/nethereum-managed-accounts.workbook/index.md
+    - Creating a new Account using Geth Personal Api : Nethereum.Workbooks/docs/nethereum-creating-a-new-account-using-geth.md
     - About Workbooks : Nethereum.Workbooks/README.md
     - License : Nethereum.Workbooks/LICENSE.md
 - Unity 3d:

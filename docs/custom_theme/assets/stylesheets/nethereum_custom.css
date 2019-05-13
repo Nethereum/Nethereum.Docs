@@ -1,7 +1,7 @@
 .feedback{
   padding: 1em;
   text-align: center;
-  background-color: lightseagreen;
+  background-color: #52d3aa;
 }
 .feedback a {
   color: white !important;
@@ -15,7 +15,7 @@
     <!--font-size: larger;-->
 }
 .rst-versions {
-  border-color: lightseagreen !important;
+  border-color: #52d3aa !important;
   border-style: solid !important;
   font-size: large;
 }

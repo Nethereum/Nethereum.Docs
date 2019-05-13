@@ -1,5 +1,5 @@
-from recommonmark.parser import CommonMarkParser
-
+# from recommonmark.parser import CommonMarkParser
+extensions = ['recommonmark']
 source_parsers = {
     '.md': CommonMarkParser,
     '.workbook': CommonMarkParser

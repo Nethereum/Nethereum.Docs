@@ -26,6 +26,7 @@ extra:
 # Repository
 repo_name: Nethereum/Nethereum
 repo_url: https://github.com/Nethereum/Nethereum
+edit_url: https://github.com/Nethereum/Nethereum.Docs
 
 theme:
     name: material

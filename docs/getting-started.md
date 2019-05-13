@@ -22,10 +22,11 @@ dotnet new console -o NethereumSample
 cd NethereumSample
 ```
 
-## 3. Add package reference to Nethereum.Web3
+## 3. Add package reference to Nethereum.Web3 and restore (update / download) the project packages.
 
 ``` sh
 dotnet add package Nethereum.Web3
+dotnet restore
 ```
 
 ## 4. Open your IDE (VS Code, Visual Studio etc)

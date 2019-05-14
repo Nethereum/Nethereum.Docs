@@ -13,8 +13,7 @@ site_name: Nethereum Documentation
 site_url: https://docs.nethereum.com
 site_description: Nethereum documentation.
 site_author: Nethereum community
-copyright: Nethereum and its documentation are licensed under the MIT License (MIT)
-  This <a href="https://readthedocs.org/">Readthedocs.org</a> documentation is maintained with love by <a href="https://nethereum.com/">Nethereum</a>.
+copyright: Nethereum is licensed under the MIT License (MIT), this <a href="https://readthedocs.org/">Readthedocs.org</a> documentation uses <a href="https://www.mkdocs.org/">Mkdocs</a> and the <a href="https://squidfunk.github.io/mkdocs-material">Material theme</a>.
 
 #extra project info and template customisation
 extra:

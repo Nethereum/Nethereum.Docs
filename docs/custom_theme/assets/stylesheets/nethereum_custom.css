@@ -14,6 +14,12 @@
     font-weight: bolder;
     <!--font-size: larger;-->
 }
+
+.md-footer-copyright {
+    font-weight: bolder;
+    <!--font-size: larger;-->
+}
+
 .rst-versions {
   border-color: #52d3aa !important;
   border-style: solid !important;

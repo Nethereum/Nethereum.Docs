@@ -39,7 +39,7 @@ The parameterless constructor uses the defaults address "http://localhost:8545/"
 ### IPC Client constructor
 
 ```csharp
-    var ipcClient = new Nethereum.JsonRpc.IpcClient("./geth.ipc");
+    var ipcClient = new Nethereum.JsonRpc.IpcClient.IpcClient("./geth.ipc");
     var web3 = new Nethereum.Web3.Web3(ipcClient);
 ```
 ## Properties / methods overview

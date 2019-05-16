@@ -36,6 +36,8 @@ theme:
     favicon: images/favicon.ico
     logo:
       icon: library_books
+    feature:
+      tabs: true
 nav:
 - Home : index.md
 - Get Started with Nethereum : getting-started.md

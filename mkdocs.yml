@@ -91,7 +91,9 @@ nav:
     - UI Explorer (sample) : https://github.com/Nethereum/NethereumBlazor
 - Back-end:
     - Blockchain processing : nethereum-blockchain-processing.md
-    - Ujo Backend (sample) : nethereum-ujo-backend.md
+    - Blockchain processing (samples) : https://github.com/Nethereum/Nethereum.BlockchainProcessing/tree/master/Nethereum.BlockchainProcessing.Samples
+    - Ujo Backend : nethereum-ujo-backend.md
+    - Ujo Backend (sample) : https://github.com/Nethereum/ujo-backend/tree/master/spikes/ujo-spike
     - Wonka rules engine : https://github.com/Nethereum/Wonka
 - Unity 3d:
     - Sending Ether : unity3d-sending-ether.md

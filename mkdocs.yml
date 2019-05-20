@@ -87,8 +87,8 @@ nav:
     - Nuget auto code generation : nethereum.autogen.contractapi.md
     - Console (CLI) code generation : nethereum-codegen-console.md
 - Front-end:
+    - Nethereum Blazor (sample) : nethereum-blazor.md
     - UI Wallet (sample) : https://github.com/Nethereum/Nethereum.UI.Wallet.Sample
-    - UI Explorer (sample) : https://github.com/Nethereum/NethereumBlazor
 - Back-end:
     - Blockchain processing : nethereum-blockchain-processing.md
     - Blockchain processing (samples) : https://github.com/Nethereum/Nethereum.BlockchainProcessing/tree/master/Nethereum.BlockchainProcessing.Samples

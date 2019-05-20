@@ -2,7 +2,8 @@
 
 ## Summary
 
-**Read data from the chain sequentially and do what you need with it**
+Nethereum Blockchain Processing library enables you to read data from the chain sequentially and do what you need with it
+
 Repo URL: https://github.com/Nethereum/Nethereum.BlockchainProcessing
 
 What Nethereum BlockchainProcessing library allows you to do:
@@ -20,28 +21,28 @@ Built on core Nethereum libraries:
 * Easy data mapping
 * On-going updates and support 
 
-**Traversing Chain Data**
+### Traversing Chain Data
 
 There are two main options to traverse the chain.  
 
 * Read block by block (which reads in all transactions and events). 
 * Read events in block order (quicker if the event data is all you need).
 
-**Filters**
+### Filters
 
 Create simple or complex filters to isolate and process the data you want with minimal setup.
 
-**Architecture**
+### Architecture
 
 In addition to the processors there are a library of tools and components that can be used separately.
 
-**Storage and Search**
+### Storage and Search
 
 The following projects build on the processing library to provide pluggable off the shelf and re-usable components.
 * Blockchain storage, store chain data - includes adapters for Azure Table Storage, CSV, SQL Server, Sqlite, Cosmos.  https://github.com/Nethereum/Nethereum.BlockchainProcessing/tree/master/Storage
 * Azure Search - index chain data easily  https://github.com/Nethereum/Nethereum.BlockchainProcessing/tree/master/Storage/Nethereum.BlockchainStore.Search.Samples
 
-**WHERE DO I START?**
+### Where to start?
 
 Start with the samples!!  https://github.com/Nethereum/Nethereum.BlockchainProcessing/tree/master/Nethereum.BlockchainProcessing.Samples
 
@@ -55,7 +56,7 @@ In general the processors do not need customisation and you don't need to write 
 
 Handlers are pluggable interfaces.  To inject your own behaviour - you should create a class that implements the relevant handler interface and inject it.
 
-## PROCESSING COMPONENTS
+## Processing Components
 Here is a high level processing overview. 
 
 * Blockchain Processing

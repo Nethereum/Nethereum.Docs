@@ -47,7 +47,7 @@ The following projects build on the processing library to provide pluggable off 
 Start with the samples!!  https://github.com/Nethereum/Nethereum.BlockchainProcessing/tree/master/Nethereum.BlockchainProcessing.Samples
 
 
-# Component Level Information
+### Component Level Information
 
 ## Processors
 
@@ -78,7 +78,7 @@ Here is a high level processing overview.
 		* lower level transaction processors invoke transaction handlers
 	* invokes transaction log processor
 
-## Classes
+### Classes
 
 ### BlockchainProcessor
 The BlockchainProcessor reads blocks sequentially.

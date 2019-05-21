@@ -44,32 +44,30 @@ nav:
     - Get Started with Nethereum : getting-started.md
     - Nugets : nugets.md
     - Transferring Ether : nethereum-transferring-ether.md
-    - Managing Accounts Nethereum : accounts.md
-    - Events, Logs and Filters : Nethereum.Workbooks/docs/nethereum-events-gettingstarted.md
-    - Using receipt statuses : Nethereum.Workbooks/docs/nethereum-receipt-status.workbook/index.md
-    - Estimating gas for a transaction : Nethereum.Workbooks/docs/nethereum-estimating-gas.workbook/index.md
-    - Signing messages with Nethereum : Nethereum.Workbooks/docs/nethereum-signing-messages.md
-    - Using account objects : Nethereum.Workbooks/docs/nethereum-using-account-objects.md
-    - Managing Hd Wallets and seed phrases : Nethereum.Workbooks/docs/nethereum-managing-hdwallets.md
-    - Chain Id Management : Nethereum.Workbooks/docs/nethereum-chainID-management.md
-    - Estimating gas for a transaction : Nethereum.Workbooks/docs/nethereum-estimating-gas.workbook/index.md
     - Unit conversion : Nethereum.Workbooks/docs/nethereum-converting-units.md
-    - Managing nonces : Nethereum.Workbooks/docs/nethereum-managing-nonces.md
-    - Using Nethereum managed accounts : Nethereum.Workbooks/docs/nethereum-managed-accounts.workbook/index.md
-    - Creating a new Account using Geth Personal Api : Nethereum.Workbooks/docs/nethereum-creating-a-new-account-using-geth.md
-    - Create and deploy contracts (untyped): contracts/deploying.md
-    - Calls, transactions, events, filters and topics (untyped): contracts/calling-transactions-events.md
-    - Multiple output parameters and function DTOs (untyped) : contracts/functiondtos.md
-    - Events polling (untyped) : Nethereum.Workbooks/docs/nethereum-eventdtos-getallchanges.md
-- Smart contracts :
-    - Getting Started With Smart Contracts (untyped) : Nethereum.Workbooks/docs/nethereum-gettingstarted-smartcontracts-untyped.md
-    - Smart Contracts integration : Nethereum.Workbooks/docs/nethereum-gettingstarted-smartcontracts.md
-    - Smart Contracts Interaction : nethereum-smartcontrats-gettingstarted.md
-    - Smart contracts Events / Logs / Filters : nethereum-events-gettingstarted.md
-- Web3 and RPC:
-    - Web3 : introduction/web3.md
-    - RPC : introduction/rpc.md
-    - IPC : introduction/ipc.md
+    - Accounts :
+      - Accounts in Nethereum : accounts.md
+      - Account objects : Nethereum.Workbooks/docs/nethereum-using-account-objects.md
+      - Managed accounts : Nethereum.Workbooks/docs/nethereum-managed-accounts.workbook/index.md
+      - Hd Wallets and seed phrases : Nethereum.Workbooks/docs/nethereum-managing-hdwallets.md
+      - Creating a new Account using Geth Personal Api : Nethereum.Workbooks/docs/nethereum-creating-a-new-account-using-geth.md
+      - Chain Ids : Nethereum.Workbooks/docs/nethereum-chainID-management.md
+    - Smart Contracts :
+      - Smart Contracts Interaction : nethereum-smartcontrats-gettingstarted.md
+      - Events, Logs and Filters : Nethereum.Workbooks/docs/nethereum-events-gettingstarted.md
+      - Using receipt statuses : Nethereum.Workbooks/docs/nethereum-receipt-status.workbook/index.md
+      - Estimating gas for a transaction : Nethereum.Workbooks/docs/nethereum-estimating-gas.workbook/index.md
+      - Managing nonces : Nethereum.Workbooks/docs/nethereum-managing-nonces.md
+      - Getting Started With Smart Contracts (untyped) : Nethereum.Workbooks/docs/nethereum-gettingstarted-smartcontracts-untyped.md
+      - Create and deploy contracts (untyped): contracts/deploying.md
+      - Calls, transactions, events, filters and topics (untyped): contracts/calling-transactions-events.md
+      - Multiple output parameters and function DTOs (untyped) : contracts/functiondtos.md
+      - Events polling (untyped) : Nethereum.Workbooks/docs/nethereum-eventdtos-getallchanges.md
+    - Signing messages : Nethereum.Workbooks/docs/nethereum-signing-messages.md
+    - Web3 and RPC:
+        - Web3 : introduction/web3.md
+        - RPC : introduction/rpc.md
+        - IPC : introduction/ipc.md
 - Ethereum clients:
     - Introduction : ethereum-and-clients/index.md
     - Geth (Go client) : ethereum-and-clients/geth.md

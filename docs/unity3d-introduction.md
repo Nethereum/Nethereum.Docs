@@ -4,7 +4,7 @@ Nethereum supports Unity3d for both net351 and net461 / netstandard frameworks.
 
 Nethereum provides support for Unity3d UnityWebRequest and yield mechanism for Tasks. A complete separate api of RPC Requests has been created to support this.
 
-If wanted to work using Tasks using async / await in net461 / netstandard it is also possible in the same way as "vanilla" Nethereum as long as your environment (like webgl) requires to use UnityWebRequest.
+If wanted to work using Tasks using async / await in net461 / netstandard it is also possible in the same way as "vanilla" Nethereum as long as your environment (like webgl) does not require to use UnityWebRequest instead of HttpRequest.
 
 Nethereum provides also an AoT for both net351 and net461 builds.
 

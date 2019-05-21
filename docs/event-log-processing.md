@@ -158,7 +158,7 @@ var processor = new EventLogProcessor(blockchainUrl: "<url>")
     .UseAzureTableStorageForBlockProgress(azureStorageConnectionString, "EventLogProcessing");
 ```
 
-**Custom / Roll Your Own ILogProcessor**
+**Custom / Roll Your Own Progress Repository**
 ``` csharp
 // Your own class implementing IBlockProgressRepository
 public class CustomBlockProgressRepo : IBlockProgressRepository

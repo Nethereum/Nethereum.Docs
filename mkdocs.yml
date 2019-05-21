@@ -94,7 +94,8 @@ nav:
     - Ujo Backend (sample) : nethereum-ujo-backend-sample.md
     - Wonka rules engine : wonka.md
 - Unity 3d:
-    - Sending Ether : unity3d-sending-ether.md
+    - Introduction : unity3d-introduction.md
+    - Sending Ether: : unity3d-sending-ether.md
     - Smart contract interaction : unity3d-smartcontracts-getting-started.md
 - Other tooling:
     - Kaleido: kaleido-and-nethereum.md

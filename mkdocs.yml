@@ -57,7 +57,6 @@ nav:
       - Events, Logs and Filters : Nethereum.Workbooks/docs/nethereum-events-gettingstarted.md
       - Using receipt statuses : Nethereum.Workbooks/docs/nethereum-receipt-status.workbook/index.md
       - Estimating gas for a transaction : Nethereum.Workbooks/docs/nethereum-estimating-gas.workbook/index.md
-      - Estimating gas for a transaction : Nethereum.Workbooks/docs/nethereum-estimating-gas.workbook/index.md
       - Managing nonces : Nethereum.Workbooks/docs/nethereum-managing-nonces.md
       - Getting Started With Smart Contracts (untyped) : Nethereum.Workbooks/docs/nethereum-gettingstarted-smartcontracts-untyped.md
       - Create and deploy contracts (untyped): contracts/deploying.md

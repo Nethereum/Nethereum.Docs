@@ -49,14 +49,14 @@ Start with the samples!!  https://github.com/Nethereum/Nethereum.BlockchainProce
 
 ### Component Level Information
 
-## Processors
+### Processors
 
 Processors are orchestrators. They navigate and retrieve or receive blockchain data, filter it, invoke custom handlers and invoke lower level processors.
 In general the processors do not need customisation and you don't need to write your own. They are there to walk the chain and pass the relevant data to *your* handlers.
 
 Handlers are pluggable interfaces.  To inject your own behaviour - you should create a class that implements the relevant handler interface and inject it.
 
-## Processing Components
+### Processing Components
 Here is a high level processing overview. 
 
 * Blockchain Processing

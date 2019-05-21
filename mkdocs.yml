@@ -64,7 +64,7 @@ nav:
       - Calls, transactions, events, filters and topics (untyped): contracts/calling-transactions-events.md
       - Multiple output parameters and function DTOs (untyped) : contracts/functiondtos.md
       - Events polling (untyped) : Nethereum.Workbooks/docs/nethereum-eventdtos-getallchanges.md
-     - Signing Messages
+     - Signing Messages :
       - Signing messages with Nethereum : Nethereum.Workbooks/docs/nethereum-signing-messages.md
     - Web3 and RPC:
         - Web3 : introduction/web3.md

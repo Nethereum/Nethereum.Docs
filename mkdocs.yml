@@ -91,7 +91,7 @@ nav:
     - Blockchain processing : nethereum-blockchain-processing.md
     - Blockchain processing (samples) : nethereum-blockchain-processing-samples.md
     - Ujo Backend : nethereum-ujo-backend.md
-    - Ujo Backend (sample) : nethereum-ujo-backend-sample.md
+    - Ujo Backend reference architecture : nethereum-ujo-backend-sample.md
     - Wonka rules engine : wonka.md
 - Unity 3d:
     - Introduction : unity3d-introduction.md

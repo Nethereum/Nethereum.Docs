@@ -22,7 +22,17 @@ This class is definitely where you should start.  With a few lines of code you c
 The EventLogProcessor navigates the blockchain in sequential block order and provides functionality to retrieve, decode and filter events.  You just need to plug in your event subscriptions.  It has some error handling and retry logic built in to cope with common problems and provide some resilience.   It's a class that brings together an entire library of processing components which can also be used in isolation.
 
 ## Samples
-This article includes lots of code snippets to get you going.  There are also complete samples in the repository below.
+There are complete samples in the repository below.
+
+* Event subscription for one or many contracts
+* Event subscription for specific events
+* "Catch All" event subscriptions
+* Filtering
+* Storing progress in Azure Table Storage
+* Storing event logs in an Azure Table Storage
+* Adding event logs to an Azure Queue
+* Adding events logs to an Azure Search Index
+
 https://github.com/Nethereum/Nethereum.BlockchainProcessing/blob/master/Nethereum.BlockchainProcessing.Samples/SimpleEventLogProcessing.cs
 
 ### Prerequisites

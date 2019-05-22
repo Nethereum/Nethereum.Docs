@@ -1,49 +1,73 @@
-# Nethereum Ujo Backend Spike
+# Ujo Nethereum backend reference architecture
 
-Quick start samples to demonstrate blockchain processing in the context of a music Dapp.
-Samples are written as unit tests against known data on a publicly available testnet.
+This Backend Ethereum integration uses Nethereum, Blockchain Processing, Data Processing, Azure Search, Azure Table Storage, Queuing, Web jobs and Ipfs. The Ujo elements were deprecated due to a change on architecture direction, but this serves as an example reference architecture on smart contract data driven scenarios (permissioned chains, consortiums, sidechains, etc), and the integration with cloud components in Azure. 
 
-Repo: https://github.com/Nethereum/Nethereum.BlockchainProcessing/tree/master/Nethereum.BlockchainProcessing.Samples 
+The solution for this problem domain focuses on the performance needs required to monitor and process events and log changes of millions of smart contracts (ie artists or works) which are part of common registry. It becomes rather hard to create and maintain filter logs using the bloom filters for that huge amount of smart contracts, which will then be queued or injected interface implentation for further processing of the smart contract changes.
 
-Initial spike (prototype) for a backend in Azure to process blockchain data, events etc, store them and index the information for searching.
+The backend solution is split in several parts:
 
-## Components
+## Common Components / Infrastructure 
+The CCC layer or common infrastructure layer, this is the current reference architecture for Nethereums Blokchain Log Processing and Smart contract data processing.
 
-###[Blockchain Service](https://github.com/ConsenSys/ujo-backend-spike/tree/master/UjoSpike.Service)
-Service wrapper for a contract, including event, function calls.
+### Blockchain Processing 
 
-###[Console Application (Helper)](https://github.com/ConsenSys/ujo-backend-spike/tree/master/UjoSpike.ArtistWriter.Console)
-Application with different helper methods to
-* Deploy the contract
-* Populate with artists
-* Retrive the artists
+The blockchain processing component provides a pluggable infrastructure to monitor and process transactions, smart contracts changes on state and / or events (logs) raised.
 
-Morden contract "0x77caa46901bbad6e6f19615643093dff7bc19394"
+For example, the continuous processing and monitoring of token transfers (Erc20) made by a specific address, or in a more complex scenario the monitoring and processing of all the transactions made by many token contracts (Erc20) registered in an exchange.
+Processing can be of any type, storage of transaction history, indexing of data, data analytics, monitoring of payments, etc.
 
-###[Simple Contract](https://github.com/ConsenSys/ujo-backend-spike/tree/master/contracts)
-A simple artist contract to register Artists
+https://github.com/Nethereum/ujo-backend/tree/master/Consensys.Common/CCC.BlockchainProcessing
 
-###[Web Job](https://github.com/ConsenSys/ujo-backend-spike/tree/master/UjoSpike.WebJob)
-The web job pulls the information from the contract and stores it in an Azure Table Storage
-Deployed to https://manage.windowsazure.com/@andrewkeysconsensys.onmicrosoft.com#Workspaces/WebsiteExtension/Website/ujobackendspike/jobs
-* Configured to use a timer (runs every minute)
-* Connects to a public rpc (Augur in Morden)
-* Checks for the current processed and writes new artists added to Azure Table storage
-Account: ujostorage
-Table: ArtistEntity
-NOTE Configuration settings are held in Azure
+### Registry Processing, a common smart contract registry service
+The registry processing component provides the components to monitor and backend processing of registration and unregistrations of addresses on a standard registration contract.
 
-###Azure search integration
-Azure search is integrated with tables, created an indexer that runs every 15 minutes.
-See [Postman settings](https://github.com/ConsenSys/ujo-backend-spike/blob/master/AzureSearch_PostManIndexers.txt)
-Deployed on Azure ujosearch
+https://github.com/Nethereum/ujo-backend/tree/master/Consensys.Common/CCC.Contracts.Registry.Processing
 
-###[Web page search sample](https://github.com/ConsenSys/ujo-backend-spike/tree/master/UjoSpike.Web)
-Very simple web search sample connecting to Azure Search
-See demo: http://ujobackendspike.azurewebsites.net/
-Search for [content registered here](https://github.com/ConsenSys/ujo-backend-spike/blob/master/UjoSpike.ArtistWriter.Console/RegisterArtists.cs)
+### Data Processing, a common data processing layer 
+The standard data processing component allows to monitor and backend processing all the data changed events of contracts which follow the standard.
 
-###[Blockchain Store](https://github.com/ConsenSys/ujo-backend-spike/tree/master/Ethereum.BlockchainStore)
+#### Standard DataLog Processor
+The StandardDataLogProcessor is an implementation of the ILogProcessor, allowing it to be plugged into the Blockchain Log Processor.
+The log processor validates matching event logs and if contracts belong to the standard data registry.
+#### IStandardDataProcessingService
+Different implementations of the IStandardDataProcessingService can be configured / registered either by code or Queues. Current implementations stores the data in Azure Search for indexing, Azure Table Storage and Azure Sql.
+
+https://github.com/Nethereum/ujo-backend/tree/master/Consensys.Common/CCC.Contracts.StandardData.Processing
+
+## Other commmon services:
+
+### IPFS image services 	
+The IPFS image services provide a webjob queing processing to resize ipfs hosted images and republish them. https://github.com/Nethereum/ujo-backend/tree/master/Ipfs.Services
+
+## Ujo / Music domain specific implementation including
+
+•	Azure search https://github.com/Nethereum/ujo-backend/tree/master/Ujo.Work/Ujo.Work.Search.Service
+
+###	Azure Storage  
+
 Library to store the blockchain in Azure Table Storage, which will allow specific Blockchain Services to retrieve its data, as opposed to having a direct dependency with geth. Partionkeys and rows are indexed in a way so that services can retrieve information specific for their contracts (or vice versa).
 
-![](Ethereum.BlockchainStore/Entities.png)
+https://github.com/Nethereum/ujo-backend/tree/master/Ujo.Work/Ujo.Work.Storage
+
+### Azure Sql 
+https://github.com/Nethereum/ujo-backend/tree/master/Ujo.Work/Ujo.Repository
+
+Web job 
+
+https://github.com/Nethereum/ujo-backend/tree/master/Ujo.Work/Ujo.WorkRegistry.WebJob
+
+•	Simple Ethereum integration https://github.com/Nethereum/ujo-backend/tree/master/Ujo.Work/Ujo.Work.Services.Ethereum
+
+## Road map and Future
+
+* The generic blockchain processing and log processing have been hardened and simplified for usage in the Nethereum.BlockchainProcessing project.
+
+* The Standard Data and Registry will be refactored in the near future to provide a basic smart contract data repository layer, with generic support also for all the cloud components like Search, Storage, Processing (Web jobs), Machine learning (ML.net) etc.
+
+* All these components will be the basis for other specific domain solutions like Commerce or integrated with the Wonka Rule Engine.
+
+# Thanks and credits
+All the love to the Ujo team at the time
+
+Jesse, Simon, Gabe, Karl, Alex and Gael
+

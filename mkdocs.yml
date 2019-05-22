@@ -88,7 +88,9 @@ nav:
     - Nethereum Blazor (sample) : nethereum-blazor.md
     - UI Wallets (samples) : nethereum-ui-wallets.md
 - Back-end:
-    - Blockchain processing : nethereum-blockchain-processing.md
+    - Event Log processing : event-log-processing.md
+    - Blockchain processing (summary) : nethereum-blockchain-processing.md
+    - Blockchain processing (detail) : nethereum-blockchain-processing-detail.md
     - Blockchain processing (samples) : nethereum-blockchain-processing-samples.md
     - Ujo Backend : nethereum-ujo-backend.md
     - Ujo Backend (sample) : nethereum-ujo-backend-sample.md

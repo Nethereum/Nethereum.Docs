@@ -1,14 +1,8 @@
-# Introduction to Unity in Nethereum
-
-Nethereum provides support for Unity3d UnityWebRequest and yield mechanism for Tasks. A complete separate api of RPC Requests has been created to support this, but if wanted in newer versions of Unity3d if not working in specific environments it is supported Nethereum out of the box targetting Net461 or Netstandard.
-
-Nethereum provides also an AoT net351 and net461 builds. The Net461 build includes both the UnityWebRequest and vanilla Nethereum.
-
 ## Simple Ether transfer using UnityWebRequests and yield
 
 This sample can be found at https://github.com/Nethereum/Unity3dSimpleSample
 
-To transfer Ether Nethereum provides a specific Unity Request, the ```EthTransferUnityRequest```.
+To transfer Ether Nethereum provides a specific Unity Request, the ```EthTransferUnityRequest```. Remember that if you use async / await and Tasks with .Net461+ the HttpRequest you can use "vanilla" Nethereum. 
 
 The EthTransferUnityRequest it is instantiated with the "url" of our Ethereum client, the private key to be able to sign transactions and our account address (the same of the private key).
 

@@ -163,7 +163,7 @@ We first create a TransactionSignedUnityRequest and our Function including any p
 Using the transaction receipt we can decoded any logs / events for that transaction.
 
 ```csharp
- var transactionTransferRequest = new TransactionSignedUnityRequest(url, privateKey, account);
+ var transactionTransferRequest = new TransactionSignedUnityRequest(url, privateKey);
         var newAddress = "0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe";
 
 
@@ -363,7 +363,7 @@ public class TokenDeployAndSend : MonoBehaviour {
         var dtoResult = queryRequest.Result;
         Debug.Log(dtoResult.Balance);
 
-        var transactionTransferRequest = new TransactionSignedUnityRequest(url, privateKey, account);
+        var transactionTransferRequest = new TransactionSignedUnityRequest(url, privateKey);
         var newAddress = "0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe";
 
 

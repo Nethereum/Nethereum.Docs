@@ -41,7 +41,9 @@ The IPFS image services provide a webjob queing processing to resize ipfs hosted
 
 ## Ujo / Music domain specific implementation including
 
-•	Azure search https://github.com/Nethereum/ujo-backend/tree/master/Ujo.Work/Ujo.Work.Search.Service
+### Azure search 
+
+https://github.com/Nethereum/ujo-backend/tree/master/Ujo.Work/Ujo.Work.Search.Service
 
 ###	Azure Storage  
 
@@ -52,22 +54,19 @@ https://github.com/Nethereum/ujo-backend/tree/master/Ujo.Work/Ujo.Work.Storage
 ### Azure Sql 
 https://github.com/Nethereum/ujo-backend/tree/master/Ujo.Work/Ujo.Repository
 
-Web job 
+### Web job 
 
 https://github.com/Nethereum/ujo-backend/tree/master/Ujo.Work/Ujo.WorkRegistry.WebJob
 
-•	Simple Ethereum integration https://github.com/Nethereum/ujo-backend/tree/master/Ujo.Work/Ujo.Work.Services.Ethereum
+### Ethereum integration component
 
-## Road map and Future
+https://github.com/Nethereum/ujo-backend/tree/master/Ujo.Work/Ujo.Work.Services.Ethereum
+
+# Road map and Future
 
 * The generic blockchain processing and log processing have been hardened and simplified for usage in the Nethereum.BlockchainProcessing project.
 
 * The Standard Data and Registry will be refactored in the near future to provide a basic smart contract data repository layer, with generic support also for all the cloud components like Search, Storage, Processing (Web jobs), Machine learning (ML.net) etc.
 
 * All these components will be the basis for other specific domain solutions like Commerce or integrated with the Wonka Rule Engine.
-
-# Thanks and credits
-All the love to the Ujo team at the time
-
-Jesse, Simon, Gabe, Karl, Alex and Gael
 

@@ -122,7 +122,7 @@ var processor = new EventLogProcessor(blockchainUrl: "<url>", contractAddress: "
 var processor = new EventLogProcessor(blockchainUrl: "<url>", contractAddresses: new []{"<contract addresses>"})
 ```
 
-**MinimumBlockNumber** - if you have not processed anything previously or the last processed block number in the block progress repository has fallen too far behind - this enables you to set a minimum block number at which to start processing.
+**MinimumBlockNumber** - If this is is not set and the progress repository is empty (i.e. you are starting afresh), processing will begin at the current block on the chain. If you have not processed anything previously or the last processed block number in the block progress repository has fallen too far behind - this enables you to set a minimum block number at which to start processing.  
 
 **MaximumBlocksPerBatch** - a single batch is processed for a specific block number range  (e.g. 10 - 20).  This property limits the number of blocks in that range.  If you're on a busy chain and have lots of matching events you may need to experiment with this value to avoid errors thrown by the node/client when their thresholds are exceeded.
 

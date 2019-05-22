@@ -28,6 +28,8 @@ There are two main options to traverse the chain.
 * Read block by block (which reads in all transactions and events). 
 * Read events in block order (quicker if the event data is all you need).
 
+**[More On Event Log Processing](event-log-processing.md)**
+
 ### Filters
 
 Create simple or complex filters to isolate and process the data you want with minimal setup.

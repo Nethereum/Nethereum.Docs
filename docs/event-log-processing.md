@@ -153,8 +153,8 @@ var backgroundTask = await processor.RunInBackgroundAsync(cancellationTokenSourc
 // the processing phase begins on a background thread and therefore does not block the current thread
 ```
 
-* **RunForLatestBlocksAsync**: 
-    This processes the next block number range.  If there were no blocks waiting to be processed (e.g. processing is already up to date) it will return null.  The number of blocks to process in a batch is dictated by the MaximumBlocksPerBatch property.  It uses the BlockProgressRepository to define which block to start from.   You would normally favour this option to run processing on a timer (e.g. WebJob). 
+* **RunOnceAsync**: 
+    This processes the next batch (block number range).  If there were no blocks waiting to be processed (e.g. processing is already up to date) it will return null.  The number of blocks to process in a batch is dictated by the MaximumBlocksPerBatch property.  It uses the BlockProgressRepository to define which block to start from.   You would normally favour this option to run processing on a timer (e.g. WebJob). 
 
 ### Keeping Track of Block Progress
 The processor needs to know where to start from and what has already been processed. By default the processor keeps track of blocks processed in memory.  That's fine for short lived processing but for resilience and to survive restarts you may consider a persistent block progress repository.  See the options below:

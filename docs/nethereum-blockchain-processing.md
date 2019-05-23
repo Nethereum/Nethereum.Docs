@@ -36,4 +36,4 @@ Event Driven is typically the most popular.  It targets event logs first.  It's 
 ### Block and Transaction Driven (aka Blockchain Processing)
 It crawls blocks, transactions and event logs.  You can filter out irrelevant data but it still has to be retrieved from the chain before being filtered.  Therefore it can be slow.  This is sometimes used to create a copy of all or a subset of chain data.  It's also used where the transactions you are monitoring do not emit events.
 
-**[Blockchain Processing](nethereum-blockchain-processing-detail)**
+**[Blockchain Processing](nethereum-blockchain-processing-detail.md)**

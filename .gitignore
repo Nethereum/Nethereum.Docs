@@ -13,7 +13,8 @@
 !*.html
 !*.md
 !*.txt
-!.gitignore
+!*.gitignore
+!*.yml
 !/docs/index.md
 # etc...
 

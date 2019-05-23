@@ -1,12 +1,12 @@
 # Introduction to Unity in Nethereum
 
-Nethereum supports Unity3d for both net351 and net461 / netstandard frameworks. 
+Nethereum supports the Unity .Net net351, net461 and netstandard frameworks. 
 
-Nethereum provides support for Unity3d UnityWebRequest and yield mechanism for Tasks. A complete separate api of RPC Requests has been created to support this.
+The Nethereum.Unity library is a Nethereum specific Unity library and api which provides support for UnityWebRequest to interact with Ethereum using RPC over Http. The Nethereum.Unity library is the only library that supports using IEnumerator and yield when working with Coroutines in Unity.
 
-If wanted to work using Tasks using async / await in net461 / netstandard it is also possible in the same way as "vanilla" Nethereum as long as your environment (like webgl) does not require to use UnityWebRequest instead of HttpRequest.
+If wanted to work using async / await and Tasks in net461 / netstandard it is also possible in the same way as "vanilla" Nethereum as long as your environment does not require to use UnityWebRequest instead of HttpRequest. (Webgl requires to use UnityWebRequest)
 
-Nethereum provides also an AoT for both net351 and net461 builds.
+Nethereum provides also AoT libraries for both net351 and net461 framework builds.
 
 All the "dlls" can be downloaded from the Nethereum github releases https://github.com/Nethereum/Nethereum/releases.
 

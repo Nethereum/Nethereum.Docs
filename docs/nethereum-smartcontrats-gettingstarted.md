@@ -30,7 +30,7 @@ In this tutorial we are going to interact with the ERC20 standard token contract
 
 ![Constructor, transfer, balance and event of ERC20](https://github.com/Nethereum/Nethereum.Workbooks/raw/master/docs/screenshots/simpleERC20.png)
 
-A full sample of the smart contract can be found [here](https://nethereum.readthedocs.io/en/latest/Nethereum.Workbooks/docs/StandardToken.sol)
+A full sample of the smart contract can be found [here](https://github.com/Nethereum/Nethereum.Workbooks/blob/master/StandardToken.sol).
 
 First of all, we need to declare our namespaces, and contract definition to interact with the smart contract. In this scenario we are only interested in the Deployment, Transfer function and BalanceOf Function of the ERC20 smart contract.
 

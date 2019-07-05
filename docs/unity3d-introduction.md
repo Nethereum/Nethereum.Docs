@@ -26,7 +26,10 @@ You can also play the game here: http://flappyeth.nethereum.com/
 
 ### Simple Unity3d sample
 
-This simple Unity3d sample provides examples on how to transfer ether and interact with smart contracts
+This simple Unity3d sample provides examples on how to interact with Ethereum, transfer ether and interact with smart contracts
 
+There are two options the Net461 
+https://github.com/Nethereum/Unity3dSimpleSampleNet461
+
+And 351
 https://github.com/Nethereum/Unity3dSimpleSample
-

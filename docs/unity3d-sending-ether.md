@@ -1,6 +1,6 @@
 ## Simple Ether transfer using UnityWebRequests and yield
 
-This sample can be found at https://github.com/Nethereum/Unity3dSimpleSample
+The net351 project sample can be found at https://github.com/Nethereum/Unity3dSimpleSample, and the net461 sample project can be found at https://github.com/Nethereum/Unity3dSimpleSampleNet461
 
 To transfer Ether Nethereum provides a specific Unity Request, the ```EthTransferUnityRequest```. Remember that if you use async / await and Tasks with .Net461+ the HttpRequest you can use "vanilla" Nethereum. 
 

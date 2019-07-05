@@ -2,7 +2,7 @@
 
 In a similar way to the Nethereum smart contracts, Unity3d can use the contract deployment and function message definitions to interact with the blockchain together with Coroutines and the underlying UnityWebRequest. If you are targetting a framework > 4.6 the Nethereum "vanilla" library can also be used if the platform supports System.Net.Http.HttpClient together with async / await TPL calls, so there is no need for specific Unity3d documentation.
 
-This sample can be found at https://github.com/Nethereum/Unity3dSimpleSample
+The net351 project sample can be found at https://github.com/Nethereum/Unity3dSimpleSample, and the net461 sample project can be found at https://github.com/Nethereum/Unity3dSimpleSampleNet461
 
 This sample covers all the steps of smart contract integration using the ERC20 standard token.
 

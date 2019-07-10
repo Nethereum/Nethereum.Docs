@@ -15,7 +15,7 @@ Upcoming releases will include functionalities such as [DevP2P](https://github.c
 * Simplified smart contract interaction for deployment, function calling, transaction and event filtering and decoding of topics.
 * [Unity 3d](https://unity3d.com/) Unity integration.
 * ABI to .Net type encoding and decoding, including attribute based for complex object deserialization.
-* Hd Wallet
+* [Hd Wallet](https://docs.nethereum.com/en/latest/)
 * Transaction, RLP and message signing, verification and recovery of accounts.
 * Libraries for standard contracts Token, [ENS](https://ens.domains/) and [Uport](https://www.uport.me/)
 * Integrated TestRPC testing to simplify TDD and BDD (Specflow) development.

@@ -54,13 +54,13 @@ dotnet add package Nethereum.Portable
 | [Nethereum.JsonRpc.RpcClient](https://github.com/Nethereum/Nethereum/tree/master/src/Nethereum.JsonRpc.RpcClient)   | [![NuGet version](https://img.shields.io/nuget/vpre/nethereum.jsonrpc.rpcclient.svg)](https://www.nuget.org/packages/nethereum.jsonrpc.rpcclient) | JsonRpc Rpc Client provider using Edjcase.JsonRpc.Client |
 | [Nethereum JsonRpc IpcClient](https://github.com/Nethereum/Nethereum/tree/master/src/Nethereum.JsonRpc.IpcClient)| [![NuGet version](https://img.shields.io/nuget/vpre/nethereum.jsonRpc.ipcclient.svg)](https://www.nuget.org/packages/nethereum.jsonRpc.ipcclient) |JsonRpc IpcClient provider for Windows, Linux and Unix|
 | [Nethereum.RLP](https://github.com/Nethereum/Nethereum/tree/master/src/Nethereum.RLP)  | [![NuGet version](https://img.shields.io/nuget/vpre/nethereum.rlp.svg)](https://www.nuget.org/packages/nethereum.rlp) | RLP encoding and decoding |
-| [Nethereum.KeyStore](https://github.com/Nethereum/Nethereum/tree/master/src/Nethereum.KeyStore)  | [![NuGet version](https://img.shields.io/nuget/vpre/nethereum.keystore.svg)](https://www.nuget.org/packages/nethereum.keystore) | Keystore generation, encryption and decryption for Ethereum key files using the Web3 Secret Storage definition, https://github.com/ethereum/wiki/wiki/Web3-Secret-Storage-Definition |
+| [Nethereum.KeyStore](https://github.com/Nethereum/Nethereum/tree/master/src/Nethereum.KeyStore)  | [![NuGet version](https://img.shields.io/nuget/vpre/nethereum.keystore.svg)](https://www.nuget.org/packages/nethereum.keystore) | Keystore generation, encryption and decryption for Ethereum key files using the [Web3 Secret Storage definition](https://github.com/ethereum/wiki/wiki/Web3-Secret-Storage-Definition) |
 | [Nethereum.Signer](https://github.com/Nethereum/Nethereum/tree/master/src/Nethereum.Signer)  | [![NuGet version](https://img.shields.io/nuget/vpre/nethereum.signer.svg)](https://www.nuget.org/packages/nethereum.signer) | Nethereum signer library to sign and verify messages, RLP and transactions using an Ethereum account private key |
 | [Nethereum.Contracts](https://github.com/Nethereum/Nethereum/tree/master/src/Nethereum.Contracts)  | [![NuGet version](https://img.shields.io/nuget/vpre/nethereum.contracts.svg)](https://www.nuget.org/packages/nethereum.contracts) | Core library to interact via RPC with Smart contracts in Ethereum |
 | [Nethereum.IntegrationTesting](https://github.com/Nethereum/Nethereum/tree/master/src/Nethereum.IntegrationTesting)  |   | Integration testing module |
 | [Nethereum.HDWallet](https://github.com/Nethereum/Nethereum/tree/master/src/Nethereum.HDWallet)  | [![NuGet version](https://img.shields.io/nuget/vpre/nethereum.HDWallet.svg)](https://www.nuget.org/packages/nethereum.HDWallet) | Generates an HD tree of Ethereum compatible addresses from a randomly generated seed phrase (using BIP32 and BIP39) |
 
-Note: IPC is supported for Windows, Unix and Linux but is only available using Nethereum.Web3 not Nethereum.Portable
+Note: IPC is supported for Windows, Unix and Linux but is only available using Nethereum.Web3, not Nethereum.Portable
  
 ## Smart contract API Libraries
 
@@ -74,7 +74,7 @@ Note: IPC is supported for Windows, Unix and Linux but is only available using N
 
 |  Project Source |  Description |
 | ------------- |--------------------------|
-| [Nethereum.Generator.Console](https://github.com/Nethereum/Nethereum/tree/master/src/Nethereum.Generator.Console) |  |
+| [Nethereum.Generator.Console](https://github.com/Nethereum/Nethereum/tree/master/src/Nethereum.Generator.Console) | A dot net core CLI tool which generates Nethereum code based on abi files |
 | [Nethereum.Console](https://github.com/Nethereum/Nethereum.Console) | A collection of command line utilities to interact with Ethereum and account management |
 
 ## Training modules

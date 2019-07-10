@@ -75,6 +75,8 @@ nav:
     - Quorum : ethereum-and-clients/quorum.md
     - Azure BaaS : azure/set-up-blockchain-on-azure.md
     - Azure/Quorum integration : nethereum-azure-quorum.md
+    - Infura : Nethereum.Workbooks/docs/nethereum-gettingstarted-infura.md
+    - Nodesmith : Nethereum.Workbooks/docs/nethereum-gettingstarted-nodesmith.md
     - TestRPC : ethereum-and-clients/test-rpc.md
     - Ganache CLI : ethereum-and-clients/ganache-cli.md
     - Choosing a chain for development : ethereum-and-clients/choosing-a-chain-for-development.md
@@ -101,8 +103,6 @@ nav:
     - Smart contract interaction : unity3d-smartcontracts-getting-started.md
 - Other tooling:
     - Kaleido: kaleido-and-nethereum.md
-    - Nethereum Getting Started Infura : Nethereum.Workbooks/docs/nethereum-gettingstarted-infura.md
-    - Nethereum Getting Started Nodesmith : Nethereum.Workbooks/docs/nethereum-gettingstarted-nodesmith.md
 markdown_extensions:
     - toc:
         permalink: 

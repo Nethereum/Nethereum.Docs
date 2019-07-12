@@ -42,7 +42,6 @@ In this sample we create an instance of Web3 using a ManagedAccount address and 
 
 Later on, we couple transactions that are executed using the ERC2O standard token service, one to deploy the smart contract, the other to transfer some tokens.
 
-
 ```csharp
   var managedAccount = new ManagedAccount("0xca1e76c9876e5ba1e7c307696a7ea48eb25eec8c", "p455word");
   var web3Managed = new Web3(managedAccount, "https://juanmemberq1.blockchain.azure.com:3200/QNSQSAAE_WoMyS06TPH8KVa2");

@@ -1,104 +1,22 @@
-# Choosing a chain for your development environment 
+# Setting up a client for development 
 
-When developing on Ethereum, different approaches are required depending on your development environment. Below are some tools we recommend:
+Blockchain development often requires to rely on a "fake" Blockchain environment which allows to test code against blockchain, but without the constraints of a real mainnet. These environments are called Testnets or Devchains. 
+Working with a devchain enables you to work faster (devchains use a fast consensus model) and not to pay gas for each transaction (devchains run on "monopoly gas" which doesn't cost anything), in the case of a local Devchain, they also keep your work private.
 
-## Testchains
+Depending on your use-case, you might rely on a public Testnet (like Rinkeby or Gorli) or a local devchain. The main differences between them are:
 
-Blockchain developing often requires to run a local Blockchain client (AKA: TestChain). This is to make sure your work remains private and that any sent transaction gets a fast response.
+- Testnets are not private and require to be online while local devchains are private and can be used offline. 
+While it seems obvious to use a local devchain in every cases, Testnets actually come handy to test assumptions in a "semi-real" environment.
 
-In order to speed up the process, Nethereum offers pre-configured devchains that can be spun  in a few minutes. Each of these chains uses PoA (Proof of Authority) as a consensus model for faster response. They all launch using provided scripts, automatically provided with accounts and passwords. 
+The below lists the main Ethereum clients and how to set them up as devchains. 
 
-First, clone the following repo: https://github.com/Nethereum/TestChains
-
-The preconfigured account is ```0x12890d2cce102216644c59daE5baed380d84830c``` with private key ```0xb5b1870957d373ef0eeffecc6e4812c0fd08f554b37b233526acc331bf1544f7```.
-
-The account key store file password is : ```password```
-
-## Geth
-___
-Devchain version of Geth (Ethereum Go client) configured with PoA (Proof of Authority) for fast reponse.
-
-### - Windows
-
->       > geth-clique-windows > startgeth.bat
-
-Latest versions of geth can be downloaded [here](https://geth.ethereum.org/downloads/), simply download the geth executable and replace the old one.
-
-### - Mac
-
->       > geth-clique-mac > startgeth.sh
-
-Note: use ``` chmod +x startgeth.sh ``` and ``` chmod +x geth ``` to allow geth to execute.
-
-Latest versions of geth can be downloaded [here](https://geth.ethereum.org/downloads/), simply download the geth executable and replace the old one.
-### - Linux
-
->       > geth-clique-linux > startgeth.sh
-
-Note: use ``` chmod +x startgeth.sh ``` and ``` chmod +x geth ``` to allow geth to execute.
-
-
-Latest versions of geth can be downloaded [here](https://geth.ethereum.org/downloads/), simply download the geth executable and replace the old one.
-## Parity
-___
-Devchain version of Parity (Ethereum Rust client) configured with PoA (Proof of Authority) for fast reponse.
-
-### - Windows
-
->       > parity-poa-windows > launch.bat
-
-Latest versions of Parity can be downloaded [here](https://github.com/paritytech/parity-ethereum/releases/latest), simply download the Parity executable and replace the old one.
-
-### - Mac
-
->       > parity-poa-mac > launch.sh
-
-Latest versions of Parity can be downloaded [here](https://github.com/paritytech/parity-ethereum/releases/latest), simply download the Parity executable and replace the old one.
-
-
-Note: use ``` chmod +x launch.sh ``` and ``` chmod +x parity ``` to allow geth to execute.
-
-### - Linux
-
->       > parity-poa-linux > launch.sh
-
-Note: use ``` chmod +x launch.sh ``` and ``` chmod +x parity ``` to allow geth to execute.
-
-Latest versions of Parity can be downloaded [here](https://github.com/paritytech/parity-ethereum/releases/latest), simply download the Parity executable and replace the old one.
-
-## Ganache
-___
-
-parity-poa-windows
-
-CLI version of Truffle's devchain.
-
-### Windows
-npm install -g ganache-cli
->   ganache-windows    > launch.bat
-
-### Mac
-npm install -g ganache-cli
->  ganache-mac    > ./launch.sh
-
-### Linux
-npm install -g ganache-cli
->   ganache-linux    > ./launch.sh
-
-## Quorum
-___
-
-Quorum setup in draft mode.
-
-### Linux
-
->   quorum-linux    > ```./setup.sh``` ```./launch.sh```
-/
 
 ## Setting up a testchain 
 
+All the main Ethereum clients can be configured as Testchains. 
 When working in a local environment, the tools we recommend are ``` Geth Clique ```, ``` Parity PoA ``` and ``` Ganache CLI ```
 
+Below are the most used Ethereum clients:
 ### Geth Clique
 
 Using Geth Clique allows you to test your integration with smart contracts directly in Geth with a fast Proof of Authority consensus.
@@ -184,7 +102,9 @@ Here's a list of testnet Ether sources:
 
 For more specific advice about faucets please check [this article.](https://medium.com/@juanfranblanco/netherum-faucet-and-nuget-templates-4a088f06933d)
 
+## Testchains
 
+At Nethereum, we developed a tool to simplify and accelerate Ethereum Blockchain development. It's called Testchains, installs in minutes and allows you to code fast with your Ethereum client of choice. Testchains can be downloaded at https://github.com/Nethereum/TestChains 
 
 
 

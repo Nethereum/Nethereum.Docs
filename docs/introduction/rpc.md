@@ -7,7 +7,7 @@ The communication uses the JSON RPC interface, the full documentation can be fou
 The simplest datatypes to communicate with Ethereum are Numeric and Data.
 
 Numeric: A HexBigInteger data type has been created to allow the simple conversion of the input and output of numbers from the RPC.
-This types also handles the conversion to and from Big Endian, together with specific usages for Eth "0x0"
+This type also handles the conversion to and from Big Endian, together with specific usages for Eth "0x0"
 
 ```csharp
     var number = new HexBigInteger(21000);

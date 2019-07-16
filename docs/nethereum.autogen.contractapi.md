@@ -1,4 +1,4 @@
-# Nethereum.Autogen.ContractApi Nuget Package  (Pre-Release)
+# Nethereum.Autogen.ContractApi Nuget Package
 ## A quick path to Dotnet and Ethereum integration
 Nethereum offers a code generator which allows you to generates dot net classes from the ABI and Bin output of the compilation of Solidity contracts.  This generator has a range of front end options (CLI, windows, web, mobile etc).  The Nethereum.Autogen.ContractApi package incorporates the generator and provides the quickest path to Dotnet and Ethereum integration.  Once the package is added to a project, C#. Vb or F# files will be generated during pre-build of the target project based on any solidity files (abi, bin) present in the project (or optionally based on a config file). These code files provide a basis for deploying and interacting with smart contracts.
 

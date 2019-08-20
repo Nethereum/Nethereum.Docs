@@ -51,7 +51,8 @@ nav:
       - Managed accounts : Nethereum.Workbooks/docs/nethereum-managed-accounts.workbook/index.md
       - Hd Wallets and seed phrases : Nethereum.Workbooks/docs/nethereum-managing-hdwallets.md
       - Creating a new Account using Geth Personal Api : Nethereum.Workbooks/docs/nethereum-creating-a-new-account-using-geth.md
-      - Chain Ids : Nethereum.Workbooks/docs/nethereum-chainID-management.md
+    - Chain Ids : Nethereum.Workbooks/docs/nethereum-chainID-management.md
+    - Keystore : nethereum-creating-key-store.md
     - Smart Contracts :
       - Smart Contracts Interaction : nethereum-smartcontrats-gettingstarted.md
       - Events, Logs and Filters : Nethereum.Workbooks/docs/nethereum-events-gettingstarted.md
@@ -94,6 +95,7 @@ nav:
     - Blockchain processing (summary) : nethereum-blockchain-processing.md
     - Blockchain processing (detail) : nethereum-blockchain-processing-detail.md
     - Blockchain processing (samples) : nethereum-blockchain-processing-samples.md
+    - Blockchain processing (chain crawling) : nethereum-block-crawl-processing.md
     - Ujo Backend : nethereum-ujo-backend.md
     - Ujo Backend reference architecture : nethereum-ujo-backend-sample.md
     - Wonka rules engine : wonka.md

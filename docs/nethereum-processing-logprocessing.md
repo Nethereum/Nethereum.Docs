@@ -1,7 +1,7 @@
 # Log Processing (aka Event Log Processing)
 
 ## Summary
-Log processing involves retrieving logs in sequential order and doing something with them.  The idea is that plug in your own functionality to handle the relevant event logs whilst Nethereum looks after the navigation, retrieval, decoding and progress monitoring.
+Log processing involves retrieving logs in sequential order and doing something with them.  What you do with them is up to you! The idea is that plug in your own functionality to handle the relevant event logs whilst Nethereum looks after the navigation, retrieval, decoding and progress monitoring.
 
 ### What it's good for!
 The processing components are primarily designed for longer running processes, where an app/process/thread/service is dedicated to continually retrieving logs.  It provides the scaffolding for a dedicated process which allows developers to easily plug in the required handling code. 
@@ -24,7 +24,13 @@ Nethereum still provides all you need to retrieve your events. See the docs:  [G
 There are several samples in the Netherum playground: http://playground.nethereum.com/.
 
 ## What's a Log Processor?
-It orchestrates getting the event logs and invoking the code you plug in.  It means you don't need to write so much repetitive boiler plate code.  It helps you to filter the events you require and can automatically decode them if necessary.  It takes care of progress tracking so you don't need to write your own.  It allows you to plug in actions which can be synchronous or async.  Async actions are ideal for writing to async API's which are common for persistence or messaging.  You can also implement criteria which again can be synchronous or async. Async criteria allows you to do dynamic lookups which may involve external calls to databases or web services etc. 
+It orchestrates retrieving the logs and invoking the code you plug in.  It minimises the boiler plate code you need to write.  It helps you to filter the events you require and can automatically decode them if necessary.  It takes care of progress tracking so you don't need to write your own.   It has some inbuilt retry logic to cope with connectivity errors during log retrieval.
+
+### Actions
+It allows you to plug in actions which can be synchronous or async.  This is where you put the code to handle the matching logs. Async actions are ideal for writing to async API's which are common when integrating with external systems and persistence stores.  
+
+### Criteria
+You can also implement criteria which again can be synchronous or async.  Criteria can dictate whether or not your action is invoked. Async criteria allows you to do dynamic lookups which may involve external calls to registries/databases/web services etc. 
 
 ## Creating a Log Processor
 Let's say we want to sequentially retrieve any log from the Blockchain.
@@ -42,25 +48,25 @@ using System.Threading.Tasks;
 
 You'll need an instance of Web3 configured for the network you want to target.
 ``` csharp
+//if using Infura, you'll need to replace this value "7238211010344719ad14a89db874158c" with your own Infura PROJECT-ID
 var web3 = new Web3("https://rinkeby.infura.io/v3/7238211010344719ad14a89db874158c");
 ```
 
-You'll need somewhere to put the logs retreived, in this example we using an in-memory list.  ``` FilterLog ``` is a Nethereum class that contains the log information such as the block number, transaction hash, event signature and event topics. It can represent any event but the event parameters are encoded and therefore decoding is necessary to read the actual event parameter values.  
+You'll need somewhere to put the logs retreived, in this example we're using an in-memory list.  ``` FilterLog ``` is a Nethereum class that contains the complete log (block number, transaction hash, event topics etc). It can represent any event but the event parameters are encoded and therefore decoding is necessary to read the actual event parameters.  
 ``` csharp
 var logs = new List<FilterLog>(); // somewhere to put our logs
 ```
 
-Creating the processor and injecting a lambda to handle each log.  In this case - we're simply adding it to the list.
+Create the processor and inject a lambda to handle each log.  In this case - we're simply adding it to the list.
 ``` csharp
 var processor = web3.Processing.Logs.CreateProcessor(log => logs.Add(log));
 ```
 
-Executing the processor for a specific block range.  
+Execute the processor for a specific block range.  
 ``` csharp
 //if we need to stop the processor mid execution - call cancel on the cancellation token source
 var cancellationTokenSource = new CancellationTokenSource();
 
-//crawl the required block range
 await processor.ExecuteAsync(
     toBlockNumber: new BigInteger(3146690),
     cancellationToken: cancellationTokenSource.Token,
@@ -78,7 +84,7 @@ During processing, logs are requested one block number range at a time. Filtrati
     * Only logs matching the filter are returned to the processor.  When a filter is not specified an empty filter is passed containing only block range criteria, which means all logs for that block range are returned to the processor from the Blockchain client.
     * The filter can contain contract addresses, event signatures, block number ranges and indexed event parameter values (aka topics).
     * Some of the CreateProcessor methods create a filter implicitly (see below).
-    * For performance reasons it's important to use the appropriate method to create a processor where possible.  It limits the amount of data being retrieved and processed.
+    * For performance reasons it's important to use the appropriate method to create a processor where possible as it limits the amount of data being retrieved and processed.
 
 2. After Log Retrieval: (In the processor criteria).
 
@@ -103,8 +109,17 @@ The processor will only retrieve logs from one of the required contracts (via a 
 ### CreateProcessorForContracts<TEventDTO>
 The processor will only retrieve logs matching an event from one of the required contract addresses (via a filter). Further criteria can then be applied.
 
+## Optional Parameters
+
+* minimumBlockConfirmations
+    * Ensure blocks are only processed if the required number of confirmations is met.  This protects against block reorganisation. Default is 12.
+* log
+    * An instance of ILog to provide extra logging of processing activity. Default is null.
+* blockProgressRepository
+    * see below! Default is an In-Memory repository
+
 ## Progress Repositories
-Providing a persistent block progress repository allows the processor to begin where it left off.  A block progress repository provides storage of the last block processed.  The ``` IBlockProgressRepository ``` interface is very simple and easy to implement.  You can either create your own or use one of the Nethereum implementations.
+Providing a block progress repository allows the processor to begin where it left off.  A block progress repository provides storage of the last block processed.  The ``` IBlockProgressRepository ``` interface is very simple and easy to implement.  You can either create your own or use one of the Nethereum implementations.
 
 The Nethereum.Web3 nuget provides the following simple implementations:
 
@@ -127,14 +142,14 @@ Nethereum provides other implementations in the following nuget packages:
 
 This demonstrates usage of the block progress repository provided for Azure Tables by Nethereum. 
 
-Requires Nuget package: Nethereum.BlockchainStore.AzureTables
+**Requires Nuget package: Nethereum.BlockchainStore.AzureTables**
 
 Namespace
 ``` csharp
 #r using Nethereum.BlockchainStore.AzureTables.Bootstrap;
 ```
 
-Create an azure tables repository factory.  You'll need to pass an azure connection string.  You can also provide a table prefix (in the example we're using "samples") which means any table created in Azure by the factory is prefixed.  It allows the same azure storage account to be used for multiple processors.
+Create an azure tables repository factory.  You'll need to pass your azure connection string.  You can also provide a table prefix (in the example we're using "samples") which means any table created in Azure by the factory is prefixed.  It allows the same azure storage account to be used for multiple processors.
 ``` csharp
 var azureTablesRepositoryFactory = new AzureTablesRepositoryFactory(_azureConnectionString, "samples");
 ```
@@ -232,9 +247,11 @@ var p1 = web3.Processing.Logs.CreateProcessor<TransferEvent>(tfr => erc20transfe
 var p2 = web3.Processing.Logs.CreateProcessor<Erc721TransferEvent>(tfr => erc721TransferEventLogs.Add(tfr));
 ```
 
-## Execution Options
+## Execution
 
-Execution depends on the block progress repository to dictate which block to start from.  If the repository has not been specified an in memory repository is created by default.  The general rule is that processing will start at the last processed block plus one.  However if the progress repository is empty or has fallen too far behind it is possible to set a starting block number ("startAtBlockNumberIfNotProcessed").  If the last processed block in the repository exceeds this starting block then the value from the repository wins.
+Execution depends on the block progress repository to dictate which block to start from.  If the repository has not been specified an in memory repository is created by default.  The general rule is that processing will start at the last processed block plus one.  However if the progress repository is empty or has fallen too far behind it is possible to set a starting block number ("startAtBlockNumberIfNotProcessed").  If the last processed block in the progress repository exceeds the starting block the value from the repository wins.
+
+To stop the processor during execution, call ``` cancellationTokenSource.Cancel() ```.
 
 Processing a specific range:
 ``` csharp

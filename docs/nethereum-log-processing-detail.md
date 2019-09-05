@@ -205,9 +205,9 @@ var processor = web3.Processing.Logs.CreateProcessor(
 ## Event specific processing
 
 Relevant to:
-* CreateProcessor<TEventDTO>
-* CreateProcessorForContract<TEventDTO>
-* CreateProcessor<TEventDTO>ForContracts<TEventDTO>
+* ``` CreateProcessor<TEventDTO> ```
+* ``` CreateProcessorForContract<TEventDTO> ```
+* ``` CreateProcessor<TEventDTO>ForContracts<TEventDTO> ```
 
 Creating a processor for a specific event ensures the processor will only retrieve logs matching the event and can accept event specific actions and criteria.  The logs will be decoded automatically.  Therefore the decoded event log is passed to the criteria and the action.  Therefore you can access the event parameters via typed properties on the event DTO.
 

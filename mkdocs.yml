@@ -90,6 +90,7 @@ nav:
     - Nethereum Blazor (sample) : nethereum-blazor.md
     - UI Wallets (samples) : nethereum-ui-wallets.md
 - Back-end:
+    - Log Processing : nethereum-log-processing-detail.md
     - Ujo Backend : nethereum-ujo-backend.md
     - Ujo Backend reference architecture : nethereum-ujo-backend-sample.md
     - Wonka rules engine : wonka.md

@@ -91,6 +91,7 @@ nav:
     - UI Wallets (samples) : nethereum-ui-wallets.md
 - Back-end:
     - Log Processing : nethereum-log-processing-detail.md
+    - Block Processing : nethereum-block-processing-detail.md
     - Ujo Backend : nethereum-ujo-backend.md
     - Ujo Backend reference architecture : nethereum-ujo-backend-sample.md
     - Wonka rules engine : wonka.md

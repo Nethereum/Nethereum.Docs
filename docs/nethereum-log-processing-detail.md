@@ -131,6 +131,9 @@ Logs matching the contract addresses (via a filter) for a specific event. Furthe
 * blockProgressRepository (vital for restartability!)
     * Storage of the last block number processed. (see below!). Default is an In-Memory repository
 
+## Retries
+The log retrieval process has some error handling and retry logic built in.  It requests logs from the client/node by block number range.  By default the range is 100 blocks.  At the time of writing (Nethereum.Web3 3.4.0) this is not configurable but will be soon.  The number of logs to return may exceed client limits and cause an error.   Log retrieval errors are caught within processing.  The process logs the error and retries with a reduced block range relative to the number or retries.  If the block range drops below 1 block and errors are still being thrown these are rethrown for you to handle. 
+
 ## Block Progress Repository
 Providing a block progress repository is necessary for continual processing, it allows the processor to begin where it left off.  A block progress repository provides storage of the last block processed.  The ``` IBlockProgressRepository ``` interface is very simple and easy to implement.  You can either use one of the Nethereum implementations or create your own.  If you don't provide a repository an in-memory repository is created for each processor.
 

@@ -17,6 +17,8 @@ The processsing classes build on core Nethereum event log classes which are defi
 * Retrieving and decoding a single event.
 * When you don't need continual or batch processing.
 * Learning about event retrieval in Nethereum.
+* Absolute real-time processing (see below):
+    * Strictly speaking, log processing is not real-time, it's an intelligent polling mechanism. It can be configured to be close enough for most needs.  However another option is to use  Web Socket Streaming for data retrieval.  This can makes sense when you only need the newest logs and are not concerned with the past. Example: https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.WebSocketsStreamingTest/Program.cs
 
 DON'T WORRY THOUGH - Nethereum still fulfils your event requirements. See the docs:  [Getting started with events](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/nethereum-events-gettingstarted/). 
 

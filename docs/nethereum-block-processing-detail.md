@@ -15,7 +15,9 @@ The processing components are primarily designed for longer running processes, w
 Block processing walks each block and each transaction. It's not necessarily the fastest or best way to retrieve data.  There are ways to speed it up but it's not the right fit for every need where there are better alternatives available.
 
  * Event / Log based monitoring
-    * If events are the trigger for your requirements, use [log processing](nethereum-log-processing-detail.md) instead.  It retrieves event logs by sequential block number range. It doesn't request or process each transaction in a block (unless you want it to).  Therefore it's much faster than navigating the whole chain block by block and transaction by transaction.
+    * If events are the trigger for your requirements there are other preferable options:
+        1. [log processing](nethereum-log-processing-detail.md).  It retrieves event logs by sequential block number range. It doesn't request or process each transaction in a block (unless you want it to).  Therefore it's much faster than navigating the whole chain block by block and transaction by transaction.
+        2. Web Socket Streaming.  Real time event log retrieval. Example: https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.WebSocketsStreamingTest/Program.cs
  * One-off data retrieval
  * Inter-contract calls
     * Currently the processor can't access inter-contract calls (calls made between contracts within a single transaction). There are some Geth specific classes in the "Nethereum.Geth" nuget for debugging transactions and some experimental options to parse the stack trace to retrieve inter-contract calls.

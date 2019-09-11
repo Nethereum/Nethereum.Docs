@@ -22,16 +22,17 @@ To visualise the docs in context and to see how they'll look when published, you
 
 Tested against:
 * Windows 10
-* Python 3.7.4 (python --version)
-* mkdocs-material 4.4.2 (pip show mkdocs-material)
-* mkdocs 1.0.4 (pip show mkdocs)
-* markdown 3.1.1 (pip show markdown)
-* markdown-include 0.5.1 (pip show markdown-include)
+* Python 3.7.4 (``` python --version ```)
+* mkdocs-material 4.4.2 (``` pip show mkdocs-material ```)
+* mkdocs 1.0.4 (``` pip show mkdocs ```)
+* markdown 3.1.1 (``` pip show markdown ```)
+* markdown-include 0.5.1 (``` pip show markdown-include ```)
 * Firefox 69.0
 
-Prerequisites:
+### Prerequisites
 **Python must be installed first**.  Preferably 3.7.4, other version may work but are untested.  
 
+### Instructions
 Make sure your "Path" environmental variable includes the path to the python install.  If using the windows installer, tick this box during the install process.  If you have had previous versions of python or mkdocs installed you may run into issues.  If in doubt - and if possible, try uninstalling python completely and removing any python paths from your "Path" environmental variable.  Then reinstalling python and mkdocs afresh.
 
 Mkdocs and theme setup (installs markdown and mkdocs)

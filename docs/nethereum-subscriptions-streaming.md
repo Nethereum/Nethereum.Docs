@@ -44,6 +44,11 @@ Where subscriptions and streaming are not suitable, Nethereum provides these alt
 ## Example
 Below is a sample of streaming and subscriptions.  The same sample is available in the repo: https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.WebSocketsStreamingTest/Program.cs
 
+### Required Nuget Packages:
+* Nethereum.JsonRpc.WebSocketClient
+* Nethereum.RPC.Reactive
+* Nethereum.Web3
+
 ``` csharp
 using Nethereum.Contracts;
 using Nethereum.JsonRpc.WebSocketStreamingClient;

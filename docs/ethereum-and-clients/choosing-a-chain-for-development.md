@@ -39,6 +39,13 @@ Note: use ``` chmod +x startgeth.sh ``` and ``` chmod +x geth ``` to allow geth 
 
 
 Latest versions of geth can be downloaded [here](https://geth.ethereum.org/downloads/), simply download the geth executable and replace the old one.
+
+## Nethereum's Online Testchain
+___
+
+For short testing sessions (resets every 10 minutes). Ideal for short testing sessions.
+Check details [in this documentation](nethereum-online-testchain.md)
+
 ## Parity
 ___
 Devchain version of Parity (Ethereum Rust client) configured with PoA (Proof of Authority) for fast reponse.

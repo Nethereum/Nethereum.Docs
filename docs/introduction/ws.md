@@ -10,9 +10,10 @@ There are two main Websocket clients provided by Nethereum.
 
 ## WebSocketClient
 
-### Related Nuget Packages:
-* Nethereum.JsonRpc.WebSocketClient
-* Nethereum.Web3
+**Related Nuget Packages:**
+
++ Nethereum.JsonRpc.WebSocketClient
++ Nethereum.Web3
 
 Full Name: Nethereum.JsonRpc.WebSocketClient.WebSocketClient
 
@@ -49,11 +50,12 @@ namespace NethereumSocketsAndStreaming
 
 ## StreamingWebSocketClient
 
-### Related Nuget Packages:
-* Nethereum.JsonRpc.WebSocketClient
-* Nethereum.RPC.Reactive
-* Nethereum.Parity.Reactive
-* Nethereum.Web3
+**Related Nuget Packages:**
+
++ Nethereum.JsonRpc.WebSocketClient
++ Nethereum.RPC.Reactive
++ Nethereum.Parity.Reactive
++ Nethereum.Web3
 
 Full Name: Nethereum.JsonRpc.WebSocketStreamingClient
 
@@ -63,7 +65,8 @@ Subscriptions are available in these nuget packages:
 * Nethereum.RPC.Reactive
 * Nethereum.Parity.Reactive
 
-See (subscription docs)[../nethereum-subscriptions-streaming.md] for more detail and examples.
+### Subscription Documentation
+See [subscription docs](../nethereum-subscriptions-streaming.md) for more detail and examples.
 
 ### Creating and using a StreamingWebSocketClient
 

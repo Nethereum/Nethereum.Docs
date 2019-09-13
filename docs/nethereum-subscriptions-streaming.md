@@ -2,6 +2,8 @@
 
 Nethereum has support for both subscriptions (aka pub-sub) and streaming using Reactive extensions (observables).  They are mechanisms to receive changes occuring on the Blockchain which do not require you to write any polling code.
 
+[Websocket client docs](introduction/ws.md)
+
 **IMPORTANT**
 A subscription is tied to a web socket connection.  When that socket connection is closed or broken, the subscription will no longer receive data.  See the Subscription Considerations below.
 

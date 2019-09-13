@@ -80,6 +80,7 @@ nav:
     - TestRPC : ethereum-and-clients/test-rpc.md
     - Ganache CLI : ethereum-and-clients/ganache-cli.md
     - Choosing a chain for development : ethereum-and-clients/choosing-a-chain-for-development.md
+    - "Nethereum's online testchain" : nethereum-online-testchain.md 
     - Getting Started Test Chain : Nethereum.Workbooks/docs/nethereum-gettingstarted-testchain.md
 - Code generation:
     - Nethereum code generation : nethereum-code-generation.md

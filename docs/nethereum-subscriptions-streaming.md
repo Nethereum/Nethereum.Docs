@@ -240,10 +240,6 @@ namespace Nethereum.WebSocketsStreamingTest
         public static async Task GetLogsTokenTransfer_Observable_Subscription()
         {
             // ** SEE THE TransferEventDTO class below **
-            // This class describes the Transfer event
-            // It allows untyped logs to be decoded into typed representations
-            // This allows the event parameters to be decoded
-            // It also provides a basis for creating filters which are used to retrieve matching logs 
 
             using(var client = new StreamingWebSocketClient("wss://mainnet.infura.io/ws"))
             { 
@@ -298,6 +294,13 @@ namespace Nethereum.WebSocketsStreamingTest
             }
         }
 
+        // This class describes the Transfer event
+        // It allows untyped logs to be decoded into typed representations
+        // This allows the event parameters to be decoded
+        // It also provides a basis for creating filters which are used to retrieve matching logs 
+        // It can be created by hand but often this class is code generated 
+        // It is marked as partial to allow you to extend it without breaking everytime the code is regenerated
+        // http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/nethereum-events-gettingstarted/
         public partial class TransferEventDTO : TransferEventDTOBase { }
 
         [Event("Transfer")]

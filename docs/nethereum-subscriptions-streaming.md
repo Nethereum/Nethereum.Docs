@@ -2,6 +2,9 @@
 
 Nethereum has support for both subscriptions (aka pub-sub) and streaming using Reactive extensions (observables).  They are mechanisms to receive changes occuring on the Blockchain which do not require you to write any polling code.
 
+**IMPORTANT**
+A subscription is tied to a web socket connection.  When that socket connection is closed or broken, the subscription will no longer receive data.  See the Subscription Considerations below.
+
 ## Subscriptions
 Geth and Parity subscriptions are supported. 
 
@@ -31,6 +34,9 @@ From the Geth documentation - but most of it applies to Parity as well:
 ## Streaming Considerations
 
 Much the same as subscription in practice.  
+
+** Websockets vs Streaming Websockets
+See the (docs)[introduction/ws.md] for more info.
 
 **Warning**
 As of Nethereum v3.4.0 subscriptions and streaming are not compatible with Blazor.  This is because Blazor does yet not support Reactive and Websockets.

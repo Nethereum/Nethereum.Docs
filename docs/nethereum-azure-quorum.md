@@ -5,8 +5,10 @@ This article demonstrates how to integrate with the Azure Blockchain Service and
 For the sake of simplicity, this article is based on a sample using the Standard Token Library Service, you can generate the same service using one of Nethereum Code generators using VsCode, Console, web ui etc.
 For more info: https://nethereum.readthedocs.io/en/latest/nethereum-code-generation/
 
+## Setting Up Quorum On Azure 
+Our documentation dedicates an article on [how to spin up an instance of Quorum on Azure](set-up-blockchain-on-azure.md)
 ## Interacting with Quorum 
-It is assumed you have already set up validator nodes and transaction nodes.
+It is assumed you have already set up validator nodes and transaction nodes as per [this article](set-up-blockchain-on-azure.md).
 
 ### Web3 setup and authentication
 

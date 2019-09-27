@@ -5,14 +5,14 @@ This article demonstrates how to integrate with the Azure Blockchain Service and
 ## 1 - Creating an [Azure Account](https://azure.microsoft.com/en-us/resources/videos/sign-up-for-microsoft-azure/) or [sign](https://azure.microsoft.com/en-us/account/) in if you already have one
 
 ## 2 - Creating A Quorum Blockchain Member On Your Azure Dashboard
-![](set-up-blockchain-on-azure1.png)
+![](screenshots/set-up-blockchain-on-azure1.png)
 Creating a Blockchain member will spin up a network with two validator nodes and one transaction node on Azure, create a consortium and make you a member of that consortium. If you create a member in an existing consortium, Azure will add your account as a member.
 
 ## Interacting with Quorum 
 
 ### Web3 setup and authentication
 
-![](set-up-blockchain-on-azure3.png)
+![](screenshots/set-up-blockchain-on-azure3.png)
 
 Select the name of your newly created consortium member, then select "transaction nodes", choose the node
 you need to connect to from the list of nodes, then "sample code" and finally select the 'Nethereum' tab. You'll obtain a list of pre-filled methods you can pick from to connect to your particular Quorum instance.

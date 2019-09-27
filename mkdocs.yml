@@ -69,6 +69,7 @@ nav:
         - Web3 : introduction/web3.md
         - RPC : introduction/rpc.md
         - IPC : introduction/ipc.md
+        - WS : introduction/ws.md
 - Ethereum clients:
     - Introduction : ethereum-and-clients/index.md
     - Geth (Go client) : ethereum-and-clients/geth.md

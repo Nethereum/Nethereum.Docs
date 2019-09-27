@@ -130,9 +130,6 @@ Logs matching the contract addresses (via a filter) for a specific event. Furthe
     * An instance of ILog to provide extra logging of processing activity. Default is null.
 * blockProgressRepository (vital for restartability!)
     * Storage of the last block number processed. (see below!). Default is an In-Memory repository
-* blockRangeRequestStrategy 
-    * (will be availabe in Nethereum.Web3 in versions after v3.4.0).
-    * It controls the number of blocks per request and the retry handling.  The retry handling may involve reducing the block range in order to avoid client errors.  If not provided, it is defaulted to a new instance of BlockRangeRequestStrategy.  This class allows the default number of blocks per request to be specified and reduces the number of blocks on a retry according to the retry number and retry weight.
 
 ## Retries
 The log retrieval process has error handling and retry logic built in.  It requests logs from the client/node by block number range.  By default the range is 100 blocks.  At the time of writing (using Nethereum.Web3 3.4.0) this is not easily configurable but will be soon - see the "blockRangeRequestStrategy" above.  The number of logs to return may exceed client limits and cause an error.   Log retrieval errors are caught within processing.  The process logs the error and retries with a reduced block range relative to the number or retries.  If the block range drops below 1 block and errors are still being thrown these are rethrown for you to handle. 

@@ -4,7 +4,7 @@
 
 The purpose of this sample is the following:
 
-* Understanding how to create contract deployment, function and event definitions to interact with a smart contracts
+* Understanding how to create contract deployment, function and event definitions to interact with a smart contract
 
 * Creating an account object using a private key, this will allow to sign transactions "offline".
 
@@ -77,9 +77,9 @@ public class StandardTokenDeployment : ContractDeploymentMessage
 
 We can call the functions of smart contract to query the state of a smart contract or do any computation, which will not affect the state of the blockchain.
 
-To do so we will need to create a class which inherits from "FunctionMessage". First we will decorate the class with a "Function" attribute, including the name and return type.
+To do so we will need to create a class which inherits from "FunctionMessage". First we will decorate the class with a "Function" attribute, including the name and return type as you can see in the snippet below.
 
-Each parameter of the the function will be a property of the class, each of them decorated with the "Parameter" attribute, including the smart contract name, type and parameter order.
+Each parameter of the function will be a property of the class, each of them decorated with the "Parameter" attribute, including the smart contract name, type and parameter order.
 
 For the ERC20 smart contract, the "balanceOf" function definition, provides the query interface to get the token balance of a given address. As we can see this function includes only one parameter "\_owner", of the type "address".
 
@@ -191,7 +191,7 @@ var balance = await balanceHandler.QueryAsync<BigInteger>(contractAddress, balan
 
 To retrieve the balance, we will create a QueryHandler and finally using our contract address and message retrieve the balance amount.
 
-##### Multiple return types or complex objects
+#### Multiple return types or complex objects
 
 Functions of smart contracts can return one or multiple values in a single call. To decode the return values, we use a FunctionOutputDTO.
 
@@ -243,11 +243,11 @@ var balance = await balanceHandler.QueryDeserializingToObjectAsync<BalanceOfOutp
 
 #### Transfer
 
-Making a transfer will change, the state of the blockchain, so in this scenario we will need to create a TransactionHandler using the TransferFunction definition.
+Making a transfer will change the state of the blockchain, so in this scenario we will need to create a TransactionHandler using the TransferFunction definition.
 
 In the transfer message, we will include the receiver address "To", and the "TokenAmount" to transfer.
 
-The final step is to Send the request wait for the receipt to be “mined” and included in the blockchain.
+The final step is to send the request and wait for the receipt to be “mined” and included in the blockchain.
 
 Another option will be not to wait (poll) for the transaction to mined and just retrieve the transaction hash.
 
@@ -262,7 +262,7 @@ var transfer = new TransferFunction()
 var transactionReceipt = await transferHandler.SendRequestAndWaitForReceiptAsync(contractAddress, transfer);
 ```
 
-##### Transferring Ether to a smart contract
+#### Transferring Ether to a smart contract
 
 A function or deployment transaction can send Ether to the smart contract. The FunctionMessage and DeploymentMessage have the property "AmountToSend".
 
@@ -274,7 +274,7 @@ transfer.AmountToSend = Nethereum.Web3.Web3.Convert.ToWei(1);
 
 The GasPrice is set in "Wei" which is the lowest unit in Ethereum, so in the scenario above we have converted 1 Ether to Wei.
 
-##### Gas Price
+#### Gas Price
 
 Nethereum sets automatically the GasPrice if not provided by using the clients "GasPrice" call, which provides the average gas price from previous blocks.
 
@@ -286,7 +286,7 @@ If you want to have more control of the GasPrice these can be set in both Functi
 
 The GasPrice is set in "Wei" which is the lowest unit in Ethereum, so if we are used to the usual "Gwei" units, this will need to be converted using the Nethereum Convertion utilities.
 
-##### Estimating Gas
+#### Estimating Gas
 
 Nethereum does an automatic estimation of the total gas necessary to make the function transaction by calling the "EthEstimateGas" internally with the "CallInput".
 
@@ -297,19 +297,19 @@ If wanted this can be done manually, using the TransactionHandler and the "trans
  transfer.Gas = estimate.Value;
 ```
 
-##### Nonces
+#### Nonces
 
 Each account transaction has a Nonce associated with it, this is the order and unique number for that transaction. This allows each transaction to be differentiate it from each other, but also ensure transactions are processed on the same order.
 
 Nethereum calculates the Nonce automatically for all Transactions by retrieving the latest count of the transactions from the chain. Also internally manages at Account level an in memory counter on the nonces, to allow for situations in which we want to send multiple transactions before giving time to the Ethereum client to update its internal counter.
 
-Nevertheless it might be scenarios, we want to supply our Nonce, for example if we want to sign the transaction completely offline.
+Nevertheless there may be scenarios where we want to supply our Nonce, for example if we want to sign the transaction completely offline.
 
 ```csharp
 transfer.Nonce = 2;
 ```
 
-##### Signing a Function / Deployment message online / offline
+#### Signing a Function / Deployment message online / offline
 
 The TransactionHandler also provides a mechanism to sign the Function and Deployments messages, provided we use an Account and/or ExternalAccount
 
@@ -326,7 +326,7 @@ transfer.GasPrice =  Nethereum.Web3.Web3.Convert.ToWei(25, UnitConversion.EthUni
 var signedTransaction = await transferHandler.SignTransactionAsync(ContractAddress, transfer);
 ```
 
-##### Extension methods for Functions and Deployment Messages
+#### Extension methods for Functions and Deployment Messages
 
 There are a number of extensions that can simplify the interaction with Function messages and Deployment messages.
 

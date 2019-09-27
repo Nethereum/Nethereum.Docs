@@ -1,10 +1,10 @@
-#Web3
+# Web3
 
 Web3 provides a simple interaction wrapper to access the RPC methods provided by the Ethereum client categorised by their similar functionality.
 
 It also provides a simplified way to interact with contracts by combining the ABI encoding / decoding of the input / output of the contracts together with the Eth RPC requests.
 
-There are two types of RPC calls the Standard Ethereum JSON RPC
+There are two types of RPC calls the Standard [Ethereum JSON RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC)
 
 * Eth
 * Net
@@ -83,7 +83,7 @@ Wei conversion can be accessed though Convert
    Convert.FromWei
 ```
 [//]: # (CJuan> The below URL is broken )
-Further example can be found on the [conversion unit tests](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Web3.Tests/ConversionTests.cs)
+Further example can be found on the [conversion unit tests](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Util.UnitTests/ConversionTests.cs)
 
 #### Offline transaction signing
 
@@ -139,9 +139,7 @@ To send the encoded transaction you will use the RPC method "SendRawTransaction"
 var txId = await web3.Eth.Transactions.SendRawTransaction.SendRequestAsync("0x" + encoded);
 ```
 
-[//]: # (CJuan> The below URL is broken )
-
-The complete example can be found on the [Transactions signing unit tests](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Web3.Tests/TransactionSigningTests.cs)
+The complete example can be found on the [Transactions signing unit tests](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Signer.IntegrationTests/TransactionSigningTests.cs)
 or you can see a complete use case on the [Game sample](https://github.com/Nethereum/Nethereum.Game.Sample/) and its service [Source code](https://github.com/Nethereum/Nethereum.Game.Sample/blob/master/Forms/Core/Ethereum/GameScoreService.cs)
 
 #### Address checksum validation and formatting

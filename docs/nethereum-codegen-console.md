@@ -99,7 +99,7 @@ mkdir MyStandardContractProject
 ``` 
 cd MyStandardContractProject 
 ```
-!!! IMPORTANT
+!!! warning
 copy and paste your abi and bin files into folder
 3. Create a dot net class library: 
 ``` 

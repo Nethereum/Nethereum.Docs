@@ -30,11 +30,12 @@ Options:
   -h | -? | --help  Show help information
 ```
 
-#### from-abi
-
-Generates Nethereum code based based on a single abi.
-
 ```
+from-abi
+```
+- `from-abi` Generates Nethereum code based on a single abi.
+
+`
 Usage: generate from-abi [options]
 
 Options:
@@ -45,7 +46,7 @@ Options:
   -ns | --namespace     The base namespace for the generated code (Mandatory)
   -sf | --SingleFile    Generate the message definition in a single file (Optional - default is true)
   -? | -h | --help      Show help information
-```
+`
 
 **Example**
 
@@ -55,7 +56,7 @@ Sample Compiled Solidity Files:
 * [StandardContract.abi](sample-contracts/StandardContract.abi)
 * [StandardContract.bin](sample-contracts/StandardContract.bin)
 
-Invoke the generator with minimum args.
+Invoke the generator with minimum args
 ```
 Nethereum.Generator.Console generate from-abi -abi StandardContract.abi -o . -ns Sample.Ethereum
 ```
@@ -86,17 +87,36 @@ The example below generates Nethereum .net code from the StandardContract.abi in
 These instructions require .net core 2.1 to be installed.
 
 Sample Compiled Solidity Files:
-* [StandardContract.abi](sample-contracts/StandardContract.abi)
-* [StandardContract.bin](sample-contracts/StandardContract.bin)
+1.[StandardContract.abi](sample-contracts/StandardContract.abi)
+2.[StandardContract.bin](sample-contracts/StandardContract.bin)
 
 Steps:
-- create new folder  ``` mkdir MyStandardContractProject ```
-- navigate to folder ``` cd MyStandardContractProject ```
-- IMPORTANT - copy and paste your abi and bin files into folder
-- Create a dot net class library ``` dotnet new classLib ```
-- Add Nethereum.Web3 as a dependency ``` dotnet add package -v 3.0.0-rc1 Nethereum.Web3 ```
-- Generate the code ``` Nethereum.Generator.Console generate from-project ```
-- Build the code ``` dotnet build ```
+1. create new folder:
+``` 
+mkdir MyStandardContractProject 
+```
+2. navigate to folder: 
+``` 
+cd MyStandardContractProject 
+```
+!!! IMPORTANT
+copy and paste your abi and bin files into folder
+3. Create a dot net class library: 
+``` 
+dotnet new classLib 
+```
+4. Add Nethereum.Web3 as a dependency: 
+```
+dotnet add package -v 3.0.0-rc1 Nethereum.Web3
+```
+5. Generate the code: 
+```
+Nethereum.Generator.Console generate from-project
+```
+6. Build the code: 
+``` 
+dotnet build 
+```
 
 Folder contents - after code generation.
 

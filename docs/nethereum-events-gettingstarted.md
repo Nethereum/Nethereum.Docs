@@ -13,7 +13,7 @@ The Transfer event can be seen in the function prefixed with the “emit” keyw
 
 ### Pre-Conditions
 
-First of all, we need to declare our namespaces, and contract definition to interact with the smart contract. In this scenario we are only interested in the Deployment, Transfer function and Transfer Event of the ERC20 smart contract.
+First of all, we need to declare our namespaces and contract definition to interact with the smart contract. In this scenario we are only interested in the Deployment, Transfer function and Transfer Event of the ERC20 smart contract.
 
 ```csharp
 using Nethereum.Web3;

@@ -63,15 +63,21 @@ var memberPassword = "THEPASSWORD";
 var web3 = new Web3(urlWithToken);
 ```
 
-Creating a managed account will take care of unlocking our account when needed
-```
-var managedAccount = new ManagedAccount(memberAddress, memberPassword);
-var web3Managed = new Web3(managedAccount, urlWithToken);
-```
- We can now  check the balance of the member account should be 0 as we don't need Ether
-```
-var balance = await web3Managed.Eth.GetBalance.SendRequestAsync(memberAddress);
-Console.WriteLine("Balance of member account: " + balance.Value);
+# Managed account and Contract interaction
+
+To interact with the the Transaction node (sending transactions) you can create a Managed Account with transaction nodes address and password.
+You can read more about Accounts here: https://nethereum.readthedocs.io/en/latest/accounts/
+
+In this sample we create an instance of Web3 using a ManagedAccount address and password. 
+
+Later on, we couple transactions that are executed using the ERC2O standard token service, one to deploy the smart contract, the other to transfer some tokens.
+
+## Creating A Web3 Instance Using A Managed Account
+
+```csharp
+  var managedAccount = new ManagedAccount("0xca1e76c9876e5ba1e7c307696a7ea48eb25eec8c", "password");
+  var web3Managed = new Web3(managedAccount, "https://membername.blockchain.azure.com:3200/<token>");
+  var balance = await web3Managed.Eth.GetBalance.SendRequestAsync("0xca1e76c9876e5ba1e7c307696a7ea48eb25eec8c");
 ```
 
  We can use the same setup to deploy an ERC20 smart contract and interact with it is the same as per

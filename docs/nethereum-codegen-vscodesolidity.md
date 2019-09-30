@@ -6,7 +6,7 @@ Prerequisites:
 * [Solidity vscode extension](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity).
 * A solidity smart contract [(like any of these)](http://solidity.readthedocs.io/en/develop/solidity-by-example.html)
 
-## Automatic code generation and the Nethereum Code generation settings file.
+## Automatic code generation and the Nethereum Code generation settings file
 The simplest way is to automatically code generate your api, for this you need to create a file called "nethereum-gen.settings" at the root of your project, with the following contents.
 
 ```json
@@ -39,8 +39,7 @@ If you work in Vb.Net or FSharp chose those instead.
 
 ![Convert Json file to CS](screenshots/code-generation-single-contract.gif)
 
-
-## Step 2 Multiple contracts
+## Step 3 Multiple contracts:
 
 Open the command palette, type solidity and select ``` Solidity: Code generate CSharp project from all compiled files```
 

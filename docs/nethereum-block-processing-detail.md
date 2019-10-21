@@ -57,9 +57,16 @@ The source code for these adapters can be found in the repo below:
 Blockchain Storage Repo: https://github.com/Nethereum/Nethereum.BlockchainStorage
 
 ## Too impatient to read further!? Show me the SAMPLES!
-There are several varied samples in the Netherum playground: http://playground.nethereum.com/.
-
+There are several varied samples in the Netherum playground:
+Block Crawl Processing: Process block and cancel	http://playground.nethereum.com/csharp/id/1022
+Block Crawl Processing: Process blocks for a specific contract	http://playground.nethereum.com/csharp/id/1023
+Block Crawl Processing: Process blocks for a specific function	http://playground.nethereum.com/csharp/id/1024
+Block Crawl Processing: Full sample	http://playground.nethereum.com/csharp/id/1025
+Block Crawl Processing: With Block Progress Repository	http://playground.nethereum.com/csharp/id/1026
+Block Crawl Processing: Transaction criteria	http://playground.nethereum.com/csharp/id/1027
+  
 ## What's a Block Processor?
+
 It is an orchestrator that co-ordinates crawling the Blockchain, applying criteria and invoking the code you plug in. It minimises the boiler plate code you need to write to navigate and retrieve the data.  It takes care of progress tracking so you gain "restartability"!  It has some inbuilt retry logic to cope with connectivity errors during log retrieval.
 
 ### Value Objects (those classes with a VO suffix!)

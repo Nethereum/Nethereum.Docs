@@ -32,6 +32,10 @@ In this tutorial we are going to interact with the ERC20 standard token contract
 
 A full sample of the smart contract can be found [here](https://github.com/Nethereum/Nethereum.Workbooks/blob/master/StandardToken.sol).
 
+!!! note
+    You can execute the code pertaining to this article in Nethereum's
+    playground: http://playground.nethereum.com/csharp/id/1007
+
 First of all, we need to declare our namespaces, and contract definition to interact with the smart contract. In this scenario we are only interested in the Deployment, Transfer function and BalanceOf Function of the ERC20 smart contract.
 
 Add a reference to the nuget package "Nethereum.Web3"

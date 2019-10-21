@@ -5,6 +5,13 @@ In Ethereum, the ABI is used to encode contract calls for the EVM and to read da
 
 Nethereum provides a `abiEncode` class with methods to serialize/deserialize data to and from the ABI format.
 
+!!! note
+    You can execute samples pertaining to ABI encoding in Nethereum's playground
+    at the following link: 
+    - ABI Encoding: Encoding using ABI Values, Parameters and Default values	http://playground.nethereum.com/csharp/id/1015
+    - ABI Encoding Packed: Encoding using ABI Values	http://playground.nethereum.com/csharp/id/1016
+    - ABI Encoding Packed: Encoding using parameters	http://playground.nethereum.com/csharp/id/1017
+    - ABI Encoding Packed: Encoding using default values	http://playground.nethereum.com/csharp/id/1018 
 ## GetSha3ABIParamsEncodedPacked
 
 ```csharp

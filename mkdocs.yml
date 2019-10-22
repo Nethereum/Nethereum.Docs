@@ -95,7 +95,9 @@ nav:
     - UI Wallets (samples) : nethereum-ui-wallets.md
 - Back-end:
     - Log Processing : nethereum-log-processing-detail.md
-    - Block Processing : nethereum-block-processing-detail.md
+    - Block Processing:
+        - What is block processing : nethereum-block-processing-detail.md
+        - Azure Table Storage : nethereum-block-storage-azure.md
     - Subscriptions and Streaming : nethereum-subscriptions-streaming.md
     - Ujo Backend : nethereum-ujo-backend.md
     - Ujo Backend reference architecture : nethereum-ujo-backend-sample.md

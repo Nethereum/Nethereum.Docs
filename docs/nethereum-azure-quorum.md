@@ -1,6 +1,10 @@
 # Nethereum: Integrating With Azure And Quorum
 
-This article demonstrates how to integrate with the Azure Blockchain Service and Quorum.
+This article demonstrates how to integrate with the Azure Blockchain Service and
+Quorum, if you would like to run the sample directly, feel free to use
+Nethereum's playground: 
+- Azure Blockchain Service: Interacting with a Quorum member node	http://playground.nethereum.com/csharp/id/1046
+- Azure Blockchain Service: Interacting in private with a Quorum member	http://playground.nethereum.com/csharp/id/1047.
 
 ## 1 - Creating an [Azure Account](https://azure.microsoft.com/en-us/resources/videos/sign-up-for-microsoft-azure/) or [sign](https://azure.microsoft.com/en-us/account/) in if you already have one
 

@@ -24,6 +24,14 @@ DON'T WORRY THOUGH - Nethereum still fulfils your event requirements. See the do
 
 ## Too impatient to read further!? Show me the SAMPLES!
 There are several varied samples in the Netherum playground: http://playground.nethereum.com/.
+- Log Processing: Any contract any log	http://playground.nethereum.com/csharp/id/1028
+- Log Processing: With Block Progress Repository	http://playground.nethereum.com/csharp/id/1029
+- Log Processing: Any contract any log with criteria	http://playground.nethereum.com/csharp/id/1030
+- Log Processing: Any contract many event async	http://playground.nethereum.com/csharp/id/1031
+- Log Processing: Any contract one event	http://playground.nethereum.com/csharp/id/1033
+- Log Processing: One contract one event async	http://playground.nethereum.com/csharp/id/1037
+- Log Processing: One contract one event with criteria	http://playground.nethereum.com/csharp/id/1038
+- Log Processing: With In-Depth Configuration	http://playground.nethereum.com/csharp/id/1040
 
 ## What's a Log Processor?
 It is an orchestrator that co-ordinates retrieving logs, applying criteria and invoking the code you plug in.  It minimises the boiler plate code you need to write.  It helps you to filter the events you require and can automatically decode them if necessary.  It takes care of progress tracking so you gain "restartability"!   It has some inbuilt retry logic to cope with connectivity errors during log retrieval.

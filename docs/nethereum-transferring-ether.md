@@ -3,6 +3,11 @@
 
 This article will show you how to send Ether using a local Ethereum Node.
 
+!!! note
+    You have also the possibility to run similar code directly in your browser
+    by using Nethereum's playground at the following link:
+    *Ether: Transfer Ether to an account* http://playground.nethereum.com/csharp/id/1003
+    
 ## Pre-requisites
 
 The below instructions apply to Windows, Mac and Linux OSes.

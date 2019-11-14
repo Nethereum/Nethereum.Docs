@@ -9,18 +9,22 @@ Prerequisites:
 ## Automatic code generation and the Nethereum Code generation settings file
 The simplest way is to automatically code generate your api, for this you need to create a file called "nethereum-gen.settings" at the root of your project, with the following contents.
 
+This file can be also auto-generated for you if you press F1 and type 'Solidity Create 'nethereum-gen.settings'
+
 ```json
 {
     "projectName": "Solidity.Samples",
     "namespace": "Solidity.Samples",
     "lang":0,
-    "autoCodeGen":true
+    "autoCodeGen":true,
+    "projectPath": "../SoliditySamples"
 }
-
 ```
 "lang" indicates what language to generate the code, 0 = CSharp, 1 = Vb.Net and 3 = FSharp
 
 The "projectName" and "namespace" settings will be also used for the manual code generation.
+
+Use the "projectPath" to set the relative path of your .Net project, this allows to work in a "solution" mode so you can work as an both in Visual Studio Code and Visual Studio (Fat) with your .Net project, or two windows of vscode.
 
 ## Single smart contract manual code generation
 

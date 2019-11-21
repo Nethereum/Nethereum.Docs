@@ -59,7 +59,7 @@ nav:
       - Using receipt statuses : Nethereum.Workbooks/docs/nethereum-receipt-status.workbook/index.md
       - Estimating gas for a transaction : Nethereum.Workbooks/docs/nethereum-estimating-gas.workbook/index.md
       - Managing nonces : Nethereum.Workbooks/docs/nethereum-managing-nonces.md
-      - Getting Started With Smart Contracts (untyped) : Nethereum.Workbooks/docs/nethereum-gettingstarted-smartcontracts-untyped.md
+      - Getting Started With Smart Contracts (untyped) : nethereum-gettingstarted-smartcontracts-untyped.md
       - Create and deploy contracts (untyped): contracts/deploying.md
       - Calls, transactions, events, filters and topics (untyped): contracts/calling-transactions-events.md
       - Multiple output parameters and function DTOs (untyped) : contracts/functiondtos.md

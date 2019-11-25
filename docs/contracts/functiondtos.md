@@ -10,151 +10,170 @@ This video provides an introduction on how to store and retrieve data from struc
 [![Mappings, Structs, Arrays and complex Functions Output (DTOs)](http://img.youtube.com/vi/o8UC96K0rg8/0.jpg)](https://www.youtube.com/watch?v=o8UC96K0rg8 "Mappings, Structs, Arrays and complex Functions Output (DTOs)")
 
 ## The test contract
-The following contract has a mapping "documents" which bytes32 key can resolve an array of struct documents.
-
+The following contract returns multiple values, the amount and the currency as a string
 ```javascript
-contract test {
+contract MultipleBalanceReturn {
 
-    mapping (bytes32=>Document[]) public documents;
-
-    struct Document{
-        string name;
-        string description;
-        address sender;
-    }
-
-    function StoreDocument(bytes32 key, string name, string description) returns (bool success) {
-       var doc = Document(name, description, msg.sender);
-       documents[key].push(doc);
-       return true;
+    function GetBalance(address owner) public returns (int amount, string memory currency) {
+       return (10, "DAI");
     }
 }
 ```
 
-When a transaction calls the StoreDocument a new document struct is created and added to the array that matches the given bytes32 key.
-
-## Retrieving the a document using a DTO
+## Retrieving the output using a DTO
 
 ### The abi for the mapping
-If we inspect the abi and find "documents" we can see that it is a function and has multiple outputs, name, description and sender. The outputs match the attributes of our struct.
+If we inspect the abi and find "documents" we can see that it is a function and has multiple outputs, amount and currency. The outputs match the paramater outputs of our function
 
-```
-{'constant':true,
-
-'inputs':[{'name':'','type':'bytes32'},{'name':'','type':'uint256'}],
-
-'name':'documents',
-
-'outputs': [{'name':'name','type':'string'},{'name':'description','type':'string'},{'name':'sender','type':'address'}],
-
-'type':'function'}
+[
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      }
+    ],
+    "name": "GetBalance",
+    "outputs": [
+      {
+        "internalType": "int256",
+        "name": "amount",
+        "type": "int256"
+      },
+      {
+        "internalType": "string",
+        "name": "currency",
+        "type": "string"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
 
 ```
 ### The function DTO
 
-To create a function output DTO we start by decorating a class with the [FunctionOutput] attribute, if it we were going to use it as an input we would have use [FunctionInput]
+To create a function output DTO we start by decorating a class with the [FunctionOutput] attribute and the interface IFunctionDTO
 
 ```csharp
-    [FunctionOutput]
-    public class Document
-    {
-        [Parameter("string", "name", 1)]
-        public string Name {get; set;}
-
-        [Parameter("string", "description", 2)]
-        public string Description {get; set;}
-
-        [Parameter("address", "sender", 3)]
-        public string Sender {get; set;}
-    }
+ [FunctionOutput]
+public class GetBalanceOutputDTO: IFunctionOutputDTO 
+{
+    [Parameter("int256", "amount", 1)]
+    public virtual BigInteger Amount { get; set; }
+    [Parameter("string", "currency", 2)]
+    public virtual string Currency { get; set; }
+}
 ```
 
 The next step is to "map" each of the properties to the function parameters. The property needs to be decorated with the Parameter attribute, providing the type, name and parameter order.
 When retrieving the data each parameter will be decoded based on the type defined.
 
 ### Accessing the data
-Given that we have submitted a transaction to store using the key "key1", the document name "hello" with the description as "solidity is great".
+Given that we have already deployed the contract, we can call it as follows:
 
 ```csharp
-    await storeFunction.SendTransactionAsync(senderAddress, new HexBigInteger(900000), null, "key1", "hello", "solidity is great");
-```
+    var balanceFunction = contract.GetFunction("GetBalance");
+     var balance = await balanceFunction.CallDeserializingToObjectAsync<GetBalanceOutputDTO>(account.Address);
 
-Once the transaction is mined we can do a Call to retrieve the document, this time as we are using a Function DTO we are Deserialising / Decoding to an object, so the function to use is CallDeserializingToObjectAsync.
-
-```csharp
-    await documentsFunction.CallDeserializingToObjectAsync<Document>("key1", 1);
+   Console.WriteLine(balance.Amount);
+   Console.WriteLine(balance.Currency);
 ```
 
 ### The final code
 
-All the source code can be found under FunctionDTOs in the [Tutorials solution](https://github.com/Nethereum/Nethereum/tree/master/src/Nethereum.Tutorials)
 
 ```csharp
-[Fact]
-        public async Task ShouldBeAbleToEncodeDecodeComplexInputOutput()
-        {
-          var senderAddress = "0x12890d2cce102216644c59daE5baed380d84830c";
-          var password = "password";
+using Nethereum.Web3;
+using Nethereum.ABI.FunctionEncoding.Attributes;
+using Nethereum.Contracts.CQS;
+using Nethereum.Util;
+using Nethereum.Web3.Accounts;
+using Nethereum.Hex.HexConvertors.Extensions;
+using Nethereum.Contracts;
+using Nethereum.Contracts.Extensions;
+using Nethereum.RPC.Eth.DTOs;
+using System;
+using System.Numerics;
+using System.Threading;
+using System.Threading.Tasks;
 
-          var abi = @"[{'constant':false,'inputs':[{'name':'key','type':'bytes32'},{'name':'name','type':'string'},{'name':'description','type':'string'}],'name':'StoreDocument','outputs':[{'name':'success','type':'bool'}],'type':'function'},{'constant':true,'inputs':[{'name':'','type':'bytes32'},{'name':'','type':'uint256'}],'name':'documents','outputs':[{'name':'name','type':'string'},{'name':'description','type':'string'},{'name':'sender','type':'address'}],'type':'function'}]";
+public class GetStartedSmartContracts
+{
 
-          var byteCode = "0x6060604052610659806100126000396000f360606040526000357c0100000000000000000000000000000000000000000000000000000000900480634a75c0ff1461004457806379c17cc5146100fe57610042565b005b6100e86004808035906020019091908035906020019082018035906020019191908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050909091908035906020019082018035906020019191908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509090919050506102c9565b6040518082815260200191505060405180910390f35b61011d600480803590602001909190803590602001909190505061025b565b6040518080602001806020018473ffffffffffffffffffffffffffffffffffffffff1681526020018381038352868181546001816001161561010002031660029004815260200191508054600181600116156101000203166002900480156101c65780601f1061019b576101008083540402835291602001916101c6565b820191906000526020600020905b8154815290600101906020018083116101a957829003601f168201915b50508381038252858181546001816001161561010002031660029004815260200191508054600181600116156101000203166002900480156102495780601f1061021e57610100808354040283529160200191610249565b820191906000526020600020905b81548152906001019060200180831161022c57829003601f168201915b50509550505050505060405180910390f35b600060005060205281600052604060002060005081815481101561000257906000526020600020906003020160005b9150915050806000016000509080600101600050908060020160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905083565b60006060604051908101604052806020604051908101604052806000815260200150815260200160206040519081016040528060008152602001508152602001600081526020015060606040519081016040528085815260200184815260200133815260200150905060006000506000868152602001908152602001600020600050805480600101828181548183558181151161049257600302816003028360005260206000209182019101610491919061037f565b8082111561048d57600060008201600050805460018160011615610100020316600290046000825580601f106103b557506103f2565b601f0160209004906000526020600020908101906103f191906103d3565b808211156103ed57600081815060009055506001016103d3565b5090565b5b5060018201600050805460018160011615610100020316600290046000825580601f1061041f575061045c565b601f01602090049060005260206000209081019061045b919061043d565b80821115610457576000818150600090555060010161043d565b5090565b5b506002820160006101000a81549073ffffffffffffffffffffffffffffffffffffffff02191690555060010161037f565b5090565b5b5050509190906000526020600020906003020160005b8390919091506000820151816000016000509080519060200190828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061050357805160ff1916838001178555610534565b82800160010185558215610534579182015b82811115610533578251826000505591602001919060010190610515565b5b50905061055f9190610541565b8082111561055b5760008181506000905550600101610541565b5090565b50506020820151816001016000509080519060200190828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106105b657805160ff19168380011785556105e7565b828001600101855582156105e7579182015b828111156105e65782518260005055916020019190600101906105c8565b5b50905061061291906105f4565b8082111561060e57600081815060009055506001016105f4565b5090565b505060408201518160020160006101000a81548173ffffffffffffffffffffffffffffffffffffffff0219169083021790555050505060019150610651565b50939250505056";
+		//This sample demonstrates how to interact with a smart contract function that returns multiple parameters 
+
+		// Given a solidity smart contract:
+		/******************
+		
+		contract MultipleBalanceReturn {
+
+				function GetBalance(address owner) public returns (int amount, string memory currency) {
+					return (10, "DAI");
+				}
+		}
+		
+		**************/
+
+			//We can define an ouput DTO, including the Amount and Currency multiple parameters in the output:
+
+		 [FunctionOutput]
+		 public class GetBalanceOutputDTO: IFunctionOutputDTO 
+		 {
+    		[Parameter("int256", "amount", 1)]
+    		public virtual BigInteger Amount { get; set; }
+    		[Parameter("string", "currency", 2)]
+    		public virtual string Currency { get; set; }
+		 } 
 
 
 
-          var web3 = new Web3.Web3();
+    public static async Task Main()
+    {
 
-          var unlockResult = await web3.Personal.UnlockAccount.SendRequestAsync(senderAddress, password, new HexBigInteger(120));
-          Assert.True(unlockResult);
+#region Web3 and Deployment region
+				// Instantiating Web3 and the Account
+				// To create an instance of web3 we first provide the url of our testchain and the private key of our account. 
+				// Here we are using http://testchain.nethereum.com:8545 which is our simple single node Nethereum testchain.
+				// When providing an Account instantiated with a  private key, all our transactions will be signed by Nethereum.
 
-          var transactionHash = await web3.Eth.DeployContract.SendRequestAsync(byteCode, senderAddress, new HexBigInteger(900000));
-          var receipt = await MineAndGetReceiptAsync(web3, transactionHash);
+        var url = "http://testchain.nethereum.com:8545";
+        var privateKey = "0x7580e7fb49df1c861f0050fae31c2224c6aba908e116b8da44ee8cd927b990b0";
+        var account = new Account(privateKey);
+        var web3 = new Web3(account, url);
 
-          var contractAddress = receipt.ContractAddress;
+				//This is the contract bytecode and Abi after compiling our contract
+        var contractByteCode =
+            "608060405234801561001057600080fd5b50610121806100206000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c806343e2e50414602d575b600080fd5b605060048036036020811015604157600080fd5b50356001600160a01b031660cc565b6040518083815260200180602001828103825283818151815260200191508051906020019080838360005b838110156091578181015183820152602001607b565b50505050905090810190601f16801560bd5780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b5060408051808201909152600381526244414960e81b6020820152600a9156fea265627a7a72315820d57fb3347ed5d978951aa39de3588c454023e7a3293ce8cee405447b1998fe7364736f6c634300050d0032";
+        var abi =
+            @"[{""constant"":false,""inputs"":[{""internalType"":""address"",""name"":""owner"",""type"":""address""}],""name"":""GetBalance"",""outputs"":[{""internalType"":""int256"",""name"":""amount"",""type"":""int256""},{""internalType"":""string"",""name"":""currency"",""type"":""string""}],""payable"":false,""stateMutability"":""nonpayable"",""type"":""function""}]";
 
-          var contract = web3.Eth.GetContract(abi, contractAddress);
 
-          var storeFunction = contract.GetFunction("StoreDocument");
-          var documentsFunction = contract.GetFunction("documents");
+				//Deploying the smart contract:
 
+        var senderAddress = account.Address;
+				//estimating the gas
+				var estimatedGas = await web3.Eth.DeployContract.EstimateGasAsync(abi, contractByteCode, senderAddress);
+				// deploying the contract
+        var receipt = await web3.Eth.DeployContract.SendRequestAndWaitForReceiptAsync(abi,
+            contractByteCode, senderAddress, estimatedGas);
+        Console.WriteLine("Contract deployed at address: " + receipt.ContractAddress);
 
-          transactionHash = await storeFunction.SendTransactionAsync(senderAddress, new HexBigInteger(900000), null, "key1", "hello", "solidity is great");
-          transactionHash = await storeFunction.SendTransactionAsync(senderAddress, new HexBigInteger(900000), null,  "key1", "hello again", "ethereum is great");
+#endregion
 
-          receipt = await MineAndGetReceiptAsync(web3, transactionHash);
+			//Using our contract address we can interact with the contract as follows:
+      var contract = web3.Eth.GetContract(abi, receipt.ContractAddress);
 
-          var result = await documentsFunction.CallDeserializingToObjectAsync<Document>("key1", 0);
-          var result2 = await documentsFunction.CallDeserializingToObjectAsync<Document>("key1", 1);
+      var balanceFunction = contract.GetFunction("GetBalance");
+      var balance = await balanceFunction.CallDeserializingToObjectAsync<GetBalanceOutputDTO>(account.Address);
 
-           Assert.Equal("hello", result.Name);
-           Assert.Equal("solidity is great", result.Description);
-
-           Assert.Equal("hello again", result2.Name);
-           Assert.Equal("ethereum is great", result2.Description);
-
-        }
-
-       /*
-
-       struct Document{
-        string name;
-        string decription;
-        address sender;
-       }
-
-      */
-
-        [FunctionOutput]
-        public class Document
-        {
-            [Parameter("string", "name", 1)]
-            public string Name {get; set;}
-
-            [Parameter("string", "description", 2)]
-            public string Description {get; set;}
-
-            [Parameter("address", "sender", 3)]
-            public string Sender {get; set;}
-        }
+       Console.WriteLine(balance.Amount);
+       Console.WriteLine(balance.Currency);
+    }
+}
 ```
 

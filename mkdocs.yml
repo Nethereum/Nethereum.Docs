@@ -44,27 +44,27 @@ nav:
     - Get Started with Nethereum : getting-started.md
     - Nugets : nugets.md
     - Transferring Ether : nethereum-transferring-ether.md
-    - Unit conversion : Nethereum.Workbooks/docs/nethereum-converting-units.md
+    - Unit conversion : nethereum-converting-units.md
     - Accounts :
       - Accounts in Nethereum : accounts.md
-      - Account objects : Nethereum.Workbooks/docs/nethereum-using-account-objects.md
+      - Account objects : nethereum-using-account-objects.md
       - Managed accounts : Nethereum.Workbooks/docs/nethereum-managed-accounts.workbook/index.md
-      - Hd Wallets and seed phrases : Nethereum.Workbooks/docs/nethereum-managing-hdwallets.md
-      - Creating a new Account using Geth Personal Api : Nethereum.Workbooks/docs/nethereum-creating-a-new-account-using-geth.md
-    - Chain Ids : Nethereum.Workbooks/docs/nethereum-chainID-management.md
+      - Hd Wallets and seed phrases : nethereum-managing-hdwallets.md
+      - Creating a new Account using Geth Personal Api : nethereum-creating-a-new-account-using-geth.md
+    - Chain Ids : nethereum-chainID-management.md
     - Keystore : nethereum-creating-key-store.md
     - Smart Contracts :
       - Smart Contracts Interaction : nethereum-smartcontrats-gettingstarted.md
-      - Events, Logs and Filters : Nethereum.Workbooks/docs/nethereum-events-gettingstarted.md
+      - Events, Logs and Filters : nethereum-events-gettingstarted.md
       - Using receipt statuses : Nethereum.Workbooks/docs/nethereum-receipt-status.workbook/index.md
       - Estimating gas for a transaction : Nethereum.Workbooks/docs/nethereum-estimating-gas.workbook/index.md
-      - Managing nonces : Nethereum.Workbooks/docs/nethereum-managing-nonces.md
+      - Managing nonces : nethereum-managing-nonces.md
       - Getting Started With Smart Contracts (untyped) : nethereum-gettingstarted-smartcontracts-untyped.md
       - Create and deploy contracts (untyped): contracts/deploying.md
       - Calls, transactions, events, filters and topics (untyped): contracts/calling-transactions-events.md
       - Multiple output parameters and function DTOs (untyped) : contracts/functiondtos.md
-      - Events polling (untyped) : Nethereum.Workbooks/docs/nethereum-eventdtos-getallchanges.md
-    - Signing messages : Nethereum.Workbooks/docs/nethereum-signing-messages.md
+      - Events polling (untyped) : nethereum-eventdtos-getallchanges.md
+    - Signing messages : nethereum-signing-messages.md
     - Web3 and RPC:
         - Web3 : introduction/web3.md
         - RPC : introduction/rpc.md
@@ -77,12 +77,12 @@ nav:
     - Quorum : ethereum-and-clients/quorum.md
     - Azure BaaS : azure/set-up-blockchain-on-azure.md
     - Azure/Quorum integration : nethereum-azure-quorum.md
-    - Infura : Nethereum.Workbooks/docs/nethereum-gettingstarted-infura.md
-    - Nodesmith : Nethereum.Workbooks/docs/nethereum-gettingstarted-nodesmith.md
+    - Infura : nethereum-gettingstarted-infura.md
+    - Nodesmith : nethereum-gettingstarted-nodesmith.md
     - TestRPC : ethereum-and-clients/test-rpc.md
     - Ganache CLI : ethereum-and-clients/ganache-cli.md
     - Choosing a chain for development : ethereum-and-clients/choosing-a-chain-for-development.md
-    - Getting Started Test Chain : Nethereum.Workbooks/docs/nethereum-gettingstarted-testchain.md
+    - Getting Started Test Chain : nethereum-gettingstarted-testchain.md
 - Code generation:
     - Nethereum code generation : nethereum-code-generation.md
     - VsCode solidity code generation : nethereum-codegen-vscodesolidity.md

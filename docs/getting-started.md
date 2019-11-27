@@ -6,6 +6,11 @@ This will take you through the steps of connecting to Infura and retrieving the 
 
 Infura provides a set of public nodes removing the need to have a local or maintained client fully synchronised with the main Ethereum network.
 
+!!! note
+    You can find an executable code sample about the same topic on the Nethereum Playground:
+    [Query Ether account balance using Infura](http://playground.nethereum.com/csharp/id/1001)
+
+
 ## 1. Install .Net
 
 Nethereum works with .Net Core or .Net Framework (from 4.5.1 upwards). You'll need to have the .Net SDK installed. For new starters we recommend .Net core. Mac or Linux users will also need .Net Core.  

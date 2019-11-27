@@ -1,13 +1,5 @@
 # Managing HD wallets
 
-This document is a Workbook, an interactive document where you can run code.
-To run workbooks natively, you can:
-
-* [Install the runtime](https://docs.microsoft.com/en-us/xamarin/tools/workbooks/install)
-
-* [Download the native file for this document](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/nethereum-managing-hdwallets.workbook)
-
-The entirety of Nethereum workbooks can be found [here](https://github.com/Nethereum/Nethereum.Workbooks)
 
 Documentation about Nethereum can be found at: <https://docs.nethereum.com>
 
@@ -25,20 +17,14 @@ This short sample explains how to:
 * transfer Ether using a HD Wallet
 
 * retrieve an account using the mnemonic backup seed words
+ 
+!!! note
+    You can find executable code samples about HD Wallet on the Nethereum Playground: 
+    - [Introduction to HD Wallets](http://playground.nethereum.com/csharp/id/1043)
+    - [Deriving HD Wallet accounts using indexes](http://playground.nethereum.com/csharp/id/1041)
+    - [Generating mnemonics for HdWallets](http://playground.nethereum.com/csharp/id/1042)
 
-First of all we need to add a nuget package reference to `Nethereum.HdWallet`, `NBitcoin` and `Nethereum.Web3`.
-
-```csharp
-#r "Nethereum.HdWallet"
-```
-
-```csharp
-#r "NBitcoin"
-```
-
-```csharp
-#r "Nethereum.Web3"
-```
+## Prerequisites
 
 ```csharp
 using NBitcoin;

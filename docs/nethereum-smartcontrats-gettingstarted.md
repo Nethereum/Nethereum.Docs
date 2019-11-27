@@ -144,6 +144,8 @@ When providing an Account instantiated with a  private key, all our transactions
 
 ### Deploying the Contract
 
+Find an executable sample online on the [ Nethereum playground ](http://playground.nethereum.com/csharp/id/1006).
+
 The next step is to deploy our Standard Token ERC20 smart contract, in this scenario the total supply (number of tokens) is going to be 100,000.
 
 First we create an instance of the StandardTokenDeployment with the TotalSupply amount.
@@ -171,6 +173,7 @@ Once we have deployed the contract, we can start interaction with the contract.
 
 #### Querying
 
+
 To retrieve the balance of an address we can create an instance of the BalanceFunction message and set the parameter as our account "Address", because we are the "owner" of the Token the full balance has been assigned to us.
 
 ```csharp
@@ -184,6 +187,7 @@ var balance = await balanceHandler.QueryAsync<BigInteger>(contractAddress, balan
 ```
 
 To retrieve the balance, we will create a QueryHandler and finally using our contract address and message retrieve the balance amount.
+
 
 #### Multiple return types or complex objects
 
@@ -291,6 +295,8 @@ If wanted this can be done manually, using the TransactionHandler and the "trans
  transfer.Gas = estimate.Value;
 ```
 
+Find an executable sample of the above on the [ Nethereum playground ](http://playground.nethereum.com/csharp/id/1010).
+
 #### Nonces
 
 Each account transaction has a Nonce associated with it, this is the order and unique number for that transaction. This allows each transaction to be differentiate it from each other, but also ensure transactions are processed on the same order.
@@ -319,6 +325,8 @@ transfer.Gas = 21000;
 transfer.GasPrice =  Nethereum.Web3.Web3.Convert.ToWei(25, UnitConversion.EthUnit.Gwei);
 var signedTransaction = await transferHandler.SignTransactionAsync(ContractAddress, transfer);
 ```
+
+Find an executable sample of the above on the [ Nethereum playground ](http://playground.nethereum.com/csharp/id/1011).
 
 #### Extension methods for Functions and Deployment Messages
 

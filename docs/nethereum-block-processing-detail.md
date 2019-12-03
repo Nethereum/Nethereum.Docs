@@ -36,9 +36,12 @@ Block processing walks each block and each transaction. It's not necessarily the
 Both crawl the Blockchain in the same order and both allow criteria to dictate what is processed.
 
 * Block Processing 
+
   * e.g ``` web3.Processing.Blocks.CreateBlockProcessor ```
   * Crawls the Blockchain and provides value objects for you to filter and handle completely as you wish. 
+  
 * Block Storage Processing 
+
   * e.g. ``` web3.Processing.Blocks.CreateBlockStorageProcessor ``` 
   * Crawls the Blockchain and stores the data in a persistent store. It also allows criteria to dictate what is stored. Nethereum provides ready made adapters, entities and mapping for this and it is relatively easy to write your own adapter.
 
@@ -62,12 +65,12 @@ Blockchain Storage Repo: https://github.com/Nethereum/Nethereum.BlockchainStorag
 
 There are several varied samples in the Netherum playground:
 
-Block Crawl Processing: Process block and cancel	http://playground.nethereum.com/csharp/id/1022
-Block Crawl Processing: Process blocks for a specific contract	http://playground.nethereum.com/csharp/id/1023
-Block Crawl Processing: Process blocks for a specific function	http://playground.nethereum.com/csharp/id/1024
-Block Crawl Processing: Full sample	http://playground.nethereum.com/csharp/id/1025
-Block Crawl Processing: With Block Progress Repository	http://playground.nethereum.com/csharp/id/1026
-Block Crawl Processing: Transaction criteria	http://playground.nethereum.com/csharp/id/1027
+* Block Crawl Processing: Process block and cancel	http://playground.nethereum.com/csharp/id/1022
+* Block Crawl Processing: Process blocks for a specific contract	http://playground.nethereum.com/csharp/id/1023
+* Block Crawl Processing: Process blocks for a specific function	http://playground.nethereum.com/csharp/id/1024
+* Block Crawl Processing: Full sample	http://playground.nethereum.com/csharp/id/1025
+* Block Crawl Processing: With Block Progress Repository	http://playground.nethereum.com/csharp/id/1026
+* Block Crawl Processing: Transaction criteria	http://playground.nethereum.com/csharp/id/1027
   
 ## What's a Block Processor?
 

@@ -25,6 +25,7 @@ Block processing walks each block and each transaction. It's not necessarily the
  Nethereum has all you need to retrieve data from the Blockchain. Processing is simply a layer on top. If you have one-off retrieval requirements these are easy to use. To get started, here's the docs: http://docs.nethereum.com/en/latest/getting-started/.
 
  Also see:
+ 
  * ``` web3.Eth.Blocks ```
  * ``` web3.Eth.Transactions ```
  * ``` web3.Eth.Filters ```
@@ -42,6 +43,7 @@ Both crawl the Blockchain in the same order and both allow criteria to dictate w
   * Crawls the Blockchain and stores the data in a persistent store. It also allows criteria to dictate what is stored. Nethereum provides ready made adapters, entities and mapping for this and it is relatively easy to write your own adapter.
 
 #### Nethereum Block Storage Adapters (nugets)
+
 * Nethereum.BlockchainStore.AzureTables
 * Nethereum.BlockchainStore.Csv
 * Nethereum.BlockchainStore.EF.Sqlite
@@ -57,7 +59,9 @@ The source code for these adapters can be found in the repo below:
 Blockchain Storage Repo: https://github.com/Nethereum/Nethereum.BlockchainStorage
 
 ## Too impatient to read further!? Show me the SAMPLES!
+
 There are several varied samples in the Netherum playground:
+
 Block Crawl Processing: Process block and cancel	http://playground.nethereum.com/csharp/id/1022
 Block Crawl Processing: Process blocks for a specific contract	http://playground.nethereum.com/csharp/id/1023
 Block Crawl Processing: Process blocks for a specific function	http://playground.nethereum.com/csharp/id/1024
@@ -85,6 +89,7 @@ The Step criteria dictates whether or not any of the handlers for the step are i
 Each handler can have it's own criteria which is evaluated only if the step criteria is matched. For instance you might want to process all transactions from a specific address (step criteria) but require special handling when the transaction meets certain conditions (handler specific criteria).
 
 Steps (in crawl order):
+
 * BlockStep (returns BlockWithTransactions);
 * TransactionStep (returns TransactionVO);
 * TransactionReceiptStep (returns TransactionReceiptVO);
@@ -104,11 +109,11 @@ For instance, if you can filter transactions in the "TransactionStep" instead of
 
 ## Optional Parameters
 
-* minimumBlockConfirmations
+* MinimumBlockConfirmations
   * This ensures blocks are only processed once the required number of confirmations is met. This helps to protect against processing data affected by block reorganisation. The default is 12. 
-* log
+* Log
   * An instance of ILog to provide extra logging of processing activity. The default is null.
-* blockProgressRepository (vital for restartability!)
+* BlockProgressRepository (vital for restartability!)
   * Storage of the last block number processed. (see below!). The default is an In-Memory repository for Block processing. For Block Storage Processing, if the repository factory supports block progress it will use that, else it will fallback to an in-memory implementation.
 
 ## Block Processing Example
@@ -207,6 +212,7 @@ public class BlockProcessing_StartHere
 The example below uses an in-memory repository to store block chain data. The in-memory repository is really only for demo and testing purposes. There are several Nethereum adapters for different storage implementations but the setup is common.
 
 Nethereum Block Storage Adapters (nugets)
+
 * Nethereum.BlockchainStore.AzureTables
 * Nethereum.BlockchainStore.Csv
 * Nethereum.BlockchainStore.EF.Sqlite

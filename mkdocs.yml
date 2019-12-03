@@ -88,6 +88,7 @@ nav:
     - VsCode solidity code generation : nethereum-codegen-vscodesolidity.md
     - Nuget auto code generation : nethereum.autogen.contractapi.md
     - Console (CLI) code generation : nethereum-codegen-console.md
+    - Developer Workflow for code generation: nethereum-codegen-vsfull-workflow.md
 - ABI Encoding:
     - Nethereum ABI Encoding : nethereum-abi-encoding.md
 - Front-end:

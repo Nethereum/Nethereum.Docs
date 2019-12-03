@@ -33,17 +33,19 @@ Block processing walks each block and each transaction. It's not necessarily the
  There are several easy to use methods to retrieve Blockchain data.
 
 ### Block Processing vs Block Storage Processing
-Both crawl the Blockchain in the same order and both allow criteria to dictate what is processed.
+Both crawl the Blockchain in the same order and both allow criteria to dictate what is processed and custom execution for each step.
+The Block storage processing is mainly an specialisation of block processing in which is step has an execution handler to write the contents to a repository.
 
-* Block Processing 
-
-  * e.g ``` web3.Processing.Blocks.CreateBlockProcessor ```
-  * Crawls the Blockchain and provides value objects for you to filter and handle completely as you wish. 
-  
+* Block Processing
+ 
+ For example:  ``` web3.Processing.Blocks.CreateBlockProcessor ```
+ Crawls the Blockchain and provides value objects for you to filter and provide step handling execution completely as you wish.  
+ 
 * Block Storage Processing 
 
-  * e.g. ``` web3.Processing.Blocks.CreateBlockStorageProcessor ``` 
-  * Crawls the Blockchain and stores the data in a persistent store. It also allows criteria to dictate what is stored. Nethereum provides ready made adapters, entities and mapping for this and it is relatively easy to write your own adapter.
+ For example: ``` web3.Processing.Blocks.CreateBlockStorageProcessor ``` 
+ Crawls the Blockchain and stores the data in a persistent store. It also allows criteria to dictate what is stored. Nethereum provides ready made adapters, entities and mapping for this and it is relatively easy to write your own adapter.
+ At the same time you can provide your own extra handling execution for each one of the steps.
 
 #### Nethereum Block Storage Adapters (nugets)
 

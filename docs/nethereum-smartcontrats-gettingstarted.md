@@ -1,6 +1,5 @@
 ﻿# Smart contracts integration with Nethereum
 
-> You can execute this tutorial as a [workbook](https://nethereum.readthedocs.io/en/latest/Nethereum.Workbooks/docs/nethereum-smartcontrats-gettingstarted.workbook), or download a simplified sample [here](https://github.com/Nethereum/Nethereum.CQS.SimpleTokenTransfer)
 
 The purpose of this sample is the following:
 
@@ -38,15 +37,6 @@ A full sample of the smart contract can be found [here](https://github.com/Nethe
 
 First of all, we need to declare our namespaces, and contract definition to interact with the smart contract. In this scenario we are only interested in the Deployment, Transfer function and BalanceOf Function of the ERC20 smart contract.
 
-Add a reference to the nuget package "Nethereum.Web3"
-
-```csharp
-#r "Nethereum.Web3"
-```
-
-```csharp
-#r "Nethereum.Accounts"
-```
 
 ```csharp
 using Nethereum.Web3;
@@ -102,7 +92,7 @@ For example The "transfer" function definition for the ERC20 smart contract, inc
 
 In a similar way to the "balanceOf" function, all the parameters include the solidity type, parameter name and parameter order.
 
-Note: When working with functions, it is very important to have the parameters types, and function name correct as all of these make the signature of the function.
+!!! Note: When working with functions, it is very important to have the parameters types, and function name correct as all of these make the signature of the function.
 
 ```csharp
 [Function("transfer", "bool")]
@@ -140,19 +130,21 @@ public class TransferEventDTO : IEventDTO
 ```
 
 ### Instantiating Web3 and the Account
-
-A simple way to run this sample is to use one of the pre-configured private chains which can be found https://github.com/Nethereum/TestChains (Geth, Parity, Ganache) using the Account “0x12890d2cce102216644c59daE5baed380d84830c” with private key “0xb5b1870957d373ef0eeffecc6e4812c0fd08f554b37b233526acc331bf1544f7“, or alternatively use your own testchain with your own account / private key.
-
-To create an instance of web3 we first provide the url of our testchain and the private key of our account. When providing an Account instantiated with a  private key all our transactions will be signed by Nethereum.
+    
+To create an instance of web3 we first provide the url of our testchain and the private key of our account. 
+Here we are using http://testchain.nethereum.com:8545 which is our simple single node Nethereum testchain.
+When providing an Account instantiated with a  private key, all our transactions will be signed by Nethereum.
 
 ```csharp
-var url = "http://localhost:8545";
-var privateKey = "0xb5b1870957d373ef0eeffecc6e4812c0fd08f554b37b233526acc331bf1544f7";
-var account = new Account(privateKey);
-var web3 = new Web3(account, url);
+        var url = "http://testchain.nethereum.com:8545";
+        var privateKey = "0x7580e7fb49df1c861f0050fae31c2224c6aba908e116b8da44ee8cd927b990b0";
+        var account = new Account(privateKey);
+        var web3 = new Web3(account, url);
 ```
 
 ### Deploying the Contract
+
+Find an executable sample online on the [ Nethereum playground ](http://playground.nethereum.com/csharp/id/1006).
 
 The next step is to deploy our Standard Token ERC20 smart contract, in this scenario the total supply (number of tokens) is going to be 100,000.
 
@@ -181,6 +173,7 @@ Once we have deployed the contract, we can start interaction with the contract.
 
 #### Querying
 
+
 To retrieve the balance of an address we can create an instance of the BalanceFunction message and set the parameter as our account "Address", because we are the "owner" of the Token the full balance has been assigned to us.
 
 ```csharp
@@ -194,6 +187,7 @@ var balance = await balanceHandler.QueryAsync<BigInteger>(contractAddress, balan
 ```
 
 To retrieve the balance, we will create a QueryHandler and finally using our contract address and message retrieve the balance amount.
+
 
 #### Multiple return types or complex objects
 
@@ -301,6 +295,8 @@ If wanted this can be done manually, using the TransactionHandler and the "trans
  transfer.Gas = estimate.Value;
 ```
 
+Find an executable sample of the above on the [ Nethereum playground ](http://playground.nethereum.com/csharp/id/1010).
+
 #### Nonces
 
 Each account transaction has a Nonce associated with it, this is the order and unique number for that transaction. This allows each transaction to be differentiate it from each other, but also ensure transactions are processed on the same order.
@@ -329,6 +325,8 @@ transfer.Gas = 21000;
 transfer.GasPrice =  Nethereum.Web3.Web3.Convert.ToWei(25, UnitConversion.EthUnit.Gwei);
 var signedTransaction = await transferHandler.SignTransactionAsync(ContractAddress, transfer);
 ```
+
+Find an executable sample of the above on the [ Nethereum playground ](http://playground.nethereum.com/csharp/id/1011).
 
 #### Extension methods for Functions and Deployment Messages
 

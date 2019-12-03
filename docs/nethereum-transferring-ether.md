@@ -4,9 +4,9 @@
 This article will show you how to send Ether using a local Ethereum Node.
 
 !!! note
-    You have also the possibility to run similar code directly in your browser
+    You also have the possibility to run similar code directly in your browser
     by using Nethereum's playground at the following link:
-    *Ether: Transfer Ether to an account* http://playground.nethereum.com/csharp/id/1003
+    [Ether: Transfer Ether to an account](http://playground.nethereum.com/csharp/id/1003)
     
 ## Pre-requisites
 
@@ -107,6 +107,10 @@ var transaction = web3.Eth.GetEtherTransferService()
                 .TransferEtherAndWaitForReceiptAsync(toAddress, 1.11m, 2, new BigInteger(25000));
 ```
 ### Using a HD Wallet
+
+!!! note
+    If you're not already familiar with HD Wallets you can learn more [in this article](nethereum-managing-hdwallets.md) and by using Nethereum's playground at the following link:
+    [Accounts: HD Wallets (Introduction)](http://playground.nethereum.com/csharp/id/1043)
 
 Required Namespaces:
 ```csharp

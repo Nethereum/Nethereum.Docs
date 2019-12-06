@@ -12,8 +12,9 @@ The Transfer event can be seen in the function prefixed with the “emit” keyw
 
 !!! note
     You also have the possibility to run similar code directly in your browser
-    by using Nethereum's playground at the following link:
+    by using Nethereum's playground at the following links:
     [Smart Contracts: Events (End to End Introduction)](http://playground.nethereum.com/csharp/id/1008)
+    [Smart Contracts: Events (Retrieving Events from Chain)](http://playground.nethereum.com/csharp/id/1009)
 
 ### Pre-Conditions
 

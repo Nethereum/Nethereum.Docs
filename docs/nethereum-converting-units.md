@@ -1,18 +1,10 @@
 # Converting crypto currency units with Nethereum
 
-This document is a Workbook, an interactive document where you can run code.
-To run workbooks natively, you can:
-* [Install the runtime](https://docs.microsoft.com/en-us/xamarin/tools/workbooks/install)
-
-* [Download the native file for this document](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/nethereum-converting-units.workbook)
-
-The entirety of Nethereum workbooks can be found [here](https://github.com/Nethereum/Nethereum.Workbooks)
-
 Documentation about Nethereum can be found at: <https://docs.nethereum.com>
 
-This workbook will walk you through Nethereum methods for converting Ethereum currency units.
+This document will walk you through Nethereum methods for converting Ethereum currency units.
 
-## A primer on crypto currency units
+## A primer on crypto-currency units
 
 Crypto currencies offer several units of value in order to manipulate big and small amounts accurately, exactly like one can tally an amount in cents or dollars depending on the amount to transact.
 
@@ -22,19 +14,17 @@ Below is the breakdown of units for **Ether**:
 
 Now that we've covered the basics of crypto currency units in Ethereum, let’s prepare our environment to interact with a chain and learn with live code:
 
+!!! note
+    You also have the possibility to run a conversion-related code directly in your browser
+    by using Nethereum's playground at the following link:
+    [Ether: Unit conversion between Ether and Wei](http://playground.nethereum.com/csharp/id/1014)
+
 ## Quick playground setup
 
 First, let's download the test chain matching your environment from <https://github.com/Nethereum/Testchains>
 
 Start a Geth chain (geth-clique-linux/, geth-clique-windows/ or geth-clique-mac/) using **_startgeth.bat_** (Windows) or **_startgeth.sh_** (Mac/Linux). The chain is setup with the Proof of Authority consensus and will start the mining process immediately.
 
-```csharp
-#r "Nethereum.Web3"
-```
-
-```csharp
-#r "Nethereum.Accounts"
-```
 
 ```csharp
 using Nethereum.Web3;

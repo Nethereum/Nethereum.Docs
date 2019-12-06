@@ -16,3 +16,8 @@ Repo: https://github.com/Nethereum/Wonka
 * Custom Operator functionality in the Ethereum engine, where the engine can execute an user-defined rule by calling a function on another contract within the blockchain.
 * Registry and Grove functionality, helping users to discover/reuse existing RuleTree instances and group them into collections.
 * Export functionality, so that a RuleTree existing on the blockchain side can be extracted and then serialized into a legible form (like XML).
+
+
+!!! note
+    You have the possibility to run wonka directly in your browser
+    by using Nethereum's playground at the following link:[Wonka Rule Engine Preview: Loading external rules and pre validation](http://playground.nethereum.com/csharp/id/1044)

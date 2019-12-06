@@ -12,6 +12,7 @@ Nethereum provides a `abiEncode` class with methods to serialize/deserialize dat
     - ABI Encoding Packed: Encoding using ABI Values	http://playground.nethereum.com/csharp/id/1016
     - ABI Encoding Packed: Encoding using parameters	http://playground.nethereum.com/csharp/id/1017
     - ABI Encoding Packed: Encoding using default values	http://playground.nethereum.com/csharp/id/1018 
+
 ## GetSha3ABIParamsEncodedPacked
 
 ```csharp

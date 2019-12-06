@@ -2,7 +2,12 @@
 
 This article explains how to create a keystore file using Nethereum.  
 
-The code used below can be easily run in-browser using http://playground.nethereum.com
+
+!!! note
+    You also have the possibility to run similar code directly in your browser
+    by using Nethereum's playground at the following link:
+    [Key Store: Create Scrypt based KeyStore using custom params](http://playground.nethereum.com/csharp/id/1021)
+
 
 Definition: A keystore is a JSON-encoded file that contains a single (randomly generated) private key, encrypted by a passphrase for extra security (using https://github.com/ethereum/wiki/wiki/Web3-Secret-Storage-Definition#scrypt).
 Keystores are a standard way to store private keys locally to let clients such as Geth handle privateKey/signin for you. 

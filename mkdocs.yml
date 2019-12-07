@@ -57,7 +57,7 @@ nav:
       - Smart Contracts Interaction : nethereum-smartcontrats-gettingstarted.md
       - Events, Logs and Filters : nethereum-events-gettingstarted.md
       - Using receipt statuses : nethereum-receipt-status.md
-      - Estimating gas for a transaction : Nethereum.Workbooks/docs/nethereum-estimating-gas.workbook/index.md
+      - Estimating gas for a transaction : nethereum-estimating-gas.md
       - Managing nonces : nethereum-managing-nonces.md
       - Getting Started With Smart Contracts (untyped) : nethereum-gettingstarted-smartcontracts-untyped.md
       - Create and deploy contracts (untyped): contracts/deploying.md

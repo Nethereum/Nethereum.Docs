@@ -16,11 +16,11 @@ Using Azure Storage Tables for storage is a pragmatic and cheap.  Nethereum prov
 Within the Nethereum.Web3 nuget (aka Nethereum core) there are block processing components which provide navigation, retrieval and filtration.  It also defines common interfaces for objects in the chain such as blocks, transactions and logs etc.  The Azure tables implementation provides repositories and entities which implement and extend these interfaces.  This makes writing Blockchain data to Azure Storage Tables very straightforward.  You really only need the Azure connection string to get started.
 
 **Disclaimer:**
-The Azure storage library is primarily concerned with persistence.  The idea was to to quickly and easily write the Blockchain data into tables with sensible pre-defined schema's.  But, whilst it does provide a minimal query interface, to analyse the data captured in more depth you may require 3rd party packages or design your own queries using the WindowsAzure.Storage nuget.
+The Azure storage library is primarily concerned with persistence.  The idea was to quickly and easily write the Blockchain data into tables with sensible pre-defined schema's.  But, whilst it does provide a minimal query interface, to analyse the data captured in more depth you may require 3rd party packages or design your own queries using the WindowsAzure.Storage nuget.
 
 ## Sample (in full)
 
-This is a full sample, feel free to copy and paste and play with it.  It demonstrates storing the data for a particular block.  To run the code all you need to do is set your Azure connection string.
+This is a full sample. Feel free to copy and paste and play with it.  It demonstrates storing the data for a particular block.  To run the code all you need to do is set your Azure connection string.
 
 Beneath the sample, the individual steps are explained and broken down.
 
@@ -252,7 +252,9 @@ Whilst the processor is executing, to cancel it, call Cancel on the cancellation
 
 ### Execution
 
-The processor supports two main execution options.  Option 1 is running for a specific block range.  Option 2 is a continuous processing model.
+The processor supports two main execution options. 
+- Option 1 is running for a specific block range.  
+- Option 2 is a continuous processing model.
 
 The parameter "startAtBlockNumberIfNotProcessed" is optional.  By default block progress is read from and updated in a table in Azure ("Counters").  Ordinarily this table would dictate what the next block to process is.  However if you no previous progress, or the last processed block is too old this parameter will dictate the starting block number.
 
@@ -389,4 +391,3 @@ If you wish to clear existing data and start again you can delete the tables in 
 // WARNING you can't undo this!!
 await repoFactory.DeleteAllTables(); 
 ```
-

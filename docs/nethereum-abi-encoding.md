@@ -1,17 +1,17 @@
 
-A Smart Contract’s ABI is specified as a JSON array of function descriptions events. A function description is a JSON object with fields type, name, inputs, outputs, constant, and payable. An event description object has fields type, name, inputs, and anonymous.
+A Smart Contract’s ABI is specified as a JSON array of function descriptions events. A **function description** is a JSON object with fields type, name, inputs, outputs, constant, and payable. An **event description** object has fields type, name, inputs, and anonymous.
 
 In Ethereum, the ABI is used to encode contract calls for the EVM and to read data out of transactions. The purpose of an ABI is to define the functions in the contract that can be invoked and describe how each function will accept arguments and return its result.
 
 Nethereum provides a `abiEncode` class with methods to serialize/deserialize data to and from the ABI format.
 
-!!! note
+Note!!!
     You can execute samples pertaining to ABI encoding in Nethereum's playground
-    at the following link: 
-    - ABI Encoding: Encoding using ABI Values, Parameters and Default values	http://playground.nethereum.com/csharp/id/1015
-    - ABI Encoding Packed: Encoding using ABI Values	http://playground.nethereum.com/csharp/id/1016
-    - ABI Encoding Packed: Encoding using parameters	http://playground.nethereum.com/csharp/id/1017
-    - ABI Encoding Packed: Encoding using default values	http://playground.nethereum.com/csharp/id/1018 
+    using the following links: 
+    - [ABI Encoding: Encoding using ABI Values, Parameters and Default values ](http://playground.nethereum.com/csharp/id/1015)
+    - [ABI Encoding Packed: Encoding using ABI Values ](http://playground.nethereum.com/csharp/id/1016)
+    - [ABI Encoding Packed: Encoding using parameters ](http://playground.nethereum.com/csharp/id/1017)
+    - [ABI Encoding Packed: Encoding using default values](http://playground.nethereum.com/csharp/id/1018) 
 
 ## GetSha3ABIParamsEncodedPacked
 

@@ -1,11 +1,10 @@
 ﻿# Smart contracts integration with Nethereum
 
-
 The purpose of this sample is the following:
 
 * Understanding how to create contract deployment, function and event definitions to interact with a smart contract
 
-* Creating an account object using a private key, this will allow to sign transactions "offline".
+* Creating an account object using a private key, allowing to sign transactions "offline".
 
 * Deploying a smart contract (the sample provided is the standard ERC20 token contract)
 

@@ -1,25 +1,27 @@
 # Nethereum: Integrating With Azure And Quorum
 
-This article demonstrates how to integrate with the Azure Blockchain Service and
-Quorum, if you would like to run the sample directly, feel free to use
+This article demonstrates how to integrate Nethereum with the Azure Blockchain Service and
+Quorum. If you would like to run the sample directly, feel free to use
 Nethereum's playground: 
-- Azure Blockchain Service: Interacting with a Quorum member node	http://playground.nethereum.com/csharp/id/1046
-- Azure Blockchain Service: Interacting in private with a Quorum member	http://playground.nethereum.com/csharp/id/1047.
+- [Azure Blockchain Service: Interacting with a Quorum member node](http://playground.nethereum.com/csharp/id/1046)
+- [Azure Blockchain Service: Interacting in private with a Quorum member](http://playground.nethereum.com/csharp/id/1047)
 
-## 1 - Creating an [Azure Account](https:azure.microsoft.com/en-us/resources/videos/sign-up-for-microsoft-azure/) or [sign](https:azure.microsoft.com/en-us/account/) in if you already have one
+### 1 - Creating an [Azure Account](https:azure.microsoft.com/en-us/resources/videos/sign-up-for-microsoft-azure/) or click [sign](https:azure.microsoft.com/en-us/account/) in if you already have one
 
-## 2 - Creating A Quorum Blockchain Member On Your Azure Dashboard
+### 2 - Creating A Quorum Blockchain Member On Your Azure Dashboard
 ![](screenshots/set-up-blockchain-on-azure1.png)
 Creating a Blockchain member will spin up a network with two validator nodes and one transaction node on Azure, create a consortium and make you a member of that consortium. If you create a member in an existing consortium, Azure will add your account as a member.
 
-## Interacting with Quorum 
+# Interacting with Quorum 
 
 ### Web3 setup and authentication
 
 ![](screenshots/set-up-blockchain-on-azure3.png)
 
-Select the name of your newly created consortium member, then select "transaction nodes", choose the node
-you need to connect to from the list of nodes, then "sample code" and finally select the 'Nethereum' tab. You'll obtain a list of pre-filled methods you can pick from to connect to your particular Quorum instance.
+- Select the name of your newly created consortium member
+- Select "transaction nodes"
+- Choose the node you need to connect to, from the list of nodes, then "sample code"
+- Finally select the 'Nethereum' tab. You'll obtain a list of pre-filled methods you can pick from, to connect to your particular Quorum instance.
 
 ## Interacting With a Quorum Azure Service Member In Public Mode
 
@@ -70,7 +72,7 @@ var web3 = new Web3(urlWithToken);
 # Managed account and Contract interaction
 
 To interact with the the Transaction node (sending transactions) you can create a Managed Account with transaction nodes address and password.
-You can read more about Accounts here: https://nethereum.readthedocs.io/en/latest/accounts/
+You can read more about **Accounts** here: https://nethereum.readthedocs.io/en/latest/accounts/
 
 In this sample we create an instance of Web3 using a ManagedAccount address and password. 
 
@@ -84,7 +86,7 @@ Later on, we couple transactions that are executed using the ERC2O standard toke
   var balance = await web3Managed.Eth.GetBalance.SendRequestAsync("0xca1e76c9876e5ba1e7c307696a7ea48eb25eec8c");
 ```
 
- We can use the same setup to deploy an ERC20 smart contract and interact with it is the same as per
+ We can use the same setup to deploy an ERC20 smart contract and interaction with it is the same as per
 New ERC20 smart contract (contracts and function definition at the end of this page)
 ```
 var deploymentMessage = new StandardTokenDeployment

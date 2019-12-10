@@ -1,10 +1,10 @@
 # Getting Started with Nethereum
 
-This is a quick start sample for new and existing .Net developers with minimal dependencies.
+ This is a quick start sample with minimal dependencies. It is meant to help new and seasoned .Net developers.
 
-This will take you through the steps of connecting to Infura and retrieving the balance of an account from the mainnet (live Ethereum). 
+This will take you through the steps of connecting to Infura and retrieving the balance of an account from the mainnet (the public Ethereum chain). 
 
-Infura provides a set of public nodes removing the need to have a local or maintained client fully synchronised with the main Ethereum network.
+Infura provides a set of public nodes removing the need to have a local or maintained client fully synchronized with the main Ethereum network.
 
 !!! note
     You can find an executable code sample about the same topic on the Nethereum Playground:
@@ -13,15 +13,16 @@ Infura provides a set of public nodes removing the need to have a local or maint
 
 ## 1. Install .Net
 
-Nethereum works with .Net Core or .Net Framework (from 4.5.1 upwards). You'll need to have the .Net SDK installed. For new starters we recommend .Net core. Mac or Linux users will also need .Net Core.  
+Nethereum works with .Net Core or .Net Framework (from 4.5.1 upwards). You'll need to have the .Net SDK installed. For new starters we recommend .Net core. Mac or Linux users will also need .Net Core. 
 
-Not sure which .Net SDK to download? - choose .Net Core 2.1.
+Not sure which .Net SDK to download? - choose .Net Core 3.1.
 
 [Download .Net SDK](https://www.microsoft.com/net/download)
 
 ## 2. Create your app
 
 Create a project using the .Net CLI (below) OR create a project in Visual Studio.
+
 ``` sh
 dotnet new console -o NethereumSample
 cd NethereumSample
@@ -97,3 +98,9 @@ The amount returned is in Wei, the lowest unit of value. We can convert this to 
 var etherAmount = Web3.Convert.FromWei(balance.Value);
 ```
 
+!!! note
+    You can find executable code samples to experiment further on the Nethereum Playground, some examples: 
+    - [Smart Contracts: Smart Contracts Deployment, Querying, Transactions, Nonces, Estimating Gas, Gas Price](http://playground.nethereum.com/csharp/id/1007)
+    - [Chain information: Query Ether account balance using Infura](http://playground.nethereum.com/csharp/id/1001)
+    - [Generating mnemonics for HdWallets](http://playground.nethereum.com/csharp/id/1042)
+    - [Azure Blockchain Service: Interacting with a Quorum member node](http://playground.nethereum.com/csharp/id/1046)

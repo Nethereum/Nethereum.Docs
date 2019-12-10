@@ -12,6 +12,9 @@ The purpose of this sample is the following:
 
 * Making a call to a smart contract (in this scenario get the balance of an account)
         
+!!! note
+    The following article uses lines of code, you have the possibility to run similar code directly in your browser by using Nethereum's playground at the following link:
+    [Smart Contracts: (Untyped) Deployment, Calls(Querying), Transactions](http://playground.nethereum.com/csharp/id/1045)
 
 ## Prerequisites:
         
@@ -50,7 +53,7 @@ This is the contract bytecode (compile executable) and Abi
             @"[{""constant"":false,""inputs"":[{""name"":""_spender"",""type"":""address""},{""name"":""_value"",""type"":""uint256""}],""name"":""approve"",""outputs"":[{""name"":""success"",""type"":""bool""}],""type"":""function""},{""constant"":true,""inputs"":[],""name"":""totalSupply"",""outputs"":[{""name"":""supply"",""type"":""uint256""}],""type"":""function""},{""constant"":false,""inputs"":[{""name"":""_from"",""type"":""address""},{""name"":""_to"",""type"":""address""},{""name"":""_value"",""type"":""uint256""}],""name"":""transferFrom"",""outputs"":[{""name"":""success"",""type"":""bool""}],""type"":""function""},{""constant"":true,""inputs"":[{""name"":""_owner"",""type"":""address""}],""name"":""balanceOf"",""outputs"":[{""name"":""balance"",""type"":""uint256""}],""type"":""function""},{""constant"":false,""inputs"":[{""name"":""_to"",""type"":""address""},{""name"":""_value"",""type"":""uint256""}],""name"":""transfer"",""outputs"":[{""name"":""success"",""type"":""bool""}],""type"":""function""},{""constant"":true,""inputs"":[{""name"":""_owner"",""type"":""address""},{""name"":""_spender"",""type"":""address""}],""name"":""allowance"",""outputs"":[{""name"":""remaining"",""type"":""uint256""}],""type"":""function""},{""inputs"":[{""name"":""_initialAmount"",""type"":""uint256""}],""type"":""constructor""},{""anonymous"":false,""inputs"":[{""indexed"":true,""name"":""_from"",""type"":""address""},{""indexed"":true,""name"":""_to"",""type"":""address""},{""indexed"":false,""name"":""_value"",""type"":""uint256""}],""name"":""Transfer"",""type"":""event""},{""anonymous"":false,""inputs"":[{""indexed"":true,""name"":""_owner"",""type"":""address""},{""indexed"":true,""name"":""_spender"",""type"":""address""},{""indexed"":false,""name"":""_value"",""type"":""uint256""}],""name"":""Approval"",""type"":""event""}]";
 ```
 
- ##### DEPLOYING THE SMART CONTRACT
+##### DEPLOYING THE SMART CONTRACT
  
 The solidity smart contract constructor for this standard ERC20 smart contract is as follows:
 
@@ -60,7 +63,7 @@ function Standard_Token(uint256 _initialAmount)
 {         balances[msg.sender] = _initialAmount;         
          _totalSupply = _initialAmount;     
 }
-```
+```[Smart Contracts: Query ERC20 Smart contract balance](http://playground.nethereum.com/csharp/id/1005)
 This means we need to supply a parameter to a constructor on deployment
 
 ```csharp
@@ -105,6 +108,7 @@ A function, has different methods, the main ones are:
 Using a CallAsyc we can query the smart contract for values:
 
 This is the solidity function to get balance:
+
 ```js
 //SOLIDITY: balanceOf address
  function balanceOf(address _owner) public view returns (uint256 balance) {
@@ -113,6 +117,7 @@ This is the solidity function to get balance:
 
 ```
 This is the csharp call: 
+
 ```csharp
         var balance = await balanceFunction.CallAsync<int>(newAddress);
         Console.WriteLine($"Account {newAddress} balance: {balance}");
@@ -124,6 +129,7 @@ Sending transactions will commit the information to the chain, before submission
 In a similar way, any parameters required by the function are included at the end of the method in the same order as per the solidity function.
 
 This is a simplified solidity smart contract transfer
+
 ```js
 function transfer(address _to, uint256 _value) public returns (bool success) {
         require(balances[msg.sender] >= _value);

@@ -72,6 +72,10 @@ var toAddress = "0x12890D2cce102216644c59daE5baed380d84830c";
 var transaction = await web3.TransactionManager.SendTransactionAsync(account.Address, toAddress, new Nethereum.Hex.HexTypes.HexBigInteger(1));
 ```
 
+!!! note
+    Nethereum offers a set of address utilities to facilitate Ethereum Address address management. You can explore those utilities directly in your browser by using Nethereum's playground at the following link:
+    [Utilities: Address Utilities](http://playground.nethereum.com/csharp/id/1039)
+
 ### Sending a transaction with a `managed account` object
 
 As said earlier: Nethereum's managed accounts are maintained by the Ethereum client (geth/parity), allowing the automatic signing of transactions and the secure management of the account's private key:

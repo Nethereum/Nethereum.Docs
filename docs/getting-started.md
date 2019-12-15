@@ -37,9 +37,10 @@ dotnet restore
 
 ## 4. Open your IDE (VS Code, Visual Studio etc)
 
-Visual Studio Code or Visual Studio are both good choices for .Net development. Other good IDE's are also available (Jet Brains Rider etc).
+Visual Studio Code or Visual Studio are both good choices for .Net development. Other good IDE's are also available (Jet Brains Rider for instance).
+Nethereum's playground can help you get started immediately with no setup, yet, just be aware that it's not a full-fledged IDE http://playground.nethereum.com/
 
-Open the Program.cs file in the editor.
+Now, open the Program.cs file in the editor.
 
 ## 5. Code to retrieve account balance
 
@@ -92,7 +93,7 @@ Using the Eth API we can execute the GetBalance request asynchronously, for our 
 var balance = await web3.Eth.GetBalance.SendRequestAsync("0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae");
 ```
 
-The amount returned is in Wei, the lowest unit of value. We can convert this to Ether using the Convertion utility:
+The amount returned is in Wei, the lowest unit of value. We can convert this unit to Ether using the Convertion utility:
 
 ``` c#
 var etherAmount = Web3.Convert.FromWei(balance.Value);

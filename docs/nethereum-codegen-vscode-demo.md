@@ -115,28 +115,28 @@ Next you will consume this new API in a console program.
 ## Create Console Project
 Now you will create a solution file and add a console project to try out the generated API. Open a command prompt in the top level solution folder `\NethereumCodeGenDemo` and follow these steps:
 
- 1. Create Solution file:
+(1.) Create Solution file:
 ```
 dotnet new sln --name NethereumCodeGenDemo
 ```
- 2. Add new Console project:
+(2.) Add new Console project:
  ```
 dotnet new console --name SimpleStorageConsole
 dotnet sln add .\SimpleStorageConsole\SimpleStorageConsole.csproj
 dotnet sln add .\EthereumSmartContracts\EthereumSmartContracts.csproj
 ```
- 3. Add references to the Console project:
+(3.) Add references to the Console project:
 ```
 cd SimpleStorageConsole
 dotnet add package Nethereum.Web3
 dotnet add reference ..\EthereumSmartContracts\EthereumSmartContracts.csproj
 ```
 
- 4. You are now ready to add some code to the `Program.cs` file in the `SimpleStorageConsole` project. If you prefer you could use Visual Studio to do this, but for this demo VS Code will be used. So in VS Code, open the top level solution folder `\NethereCodeGenDemo` and select the `Program.cs` file from the `SimpleStorageConsole` project. You should see something like this:
+(4.) You are now ready to add some code to the `Program.cs` file in the `SimpleStorageConsole` project. If you prefer you could use Visual Studio to do this, but for this demo VS Code will be used. So in VS Code, open the top level solution folder `\NethereCodeGenDemo` and select the `Program.cs` file from the `SimpleStorageConsole` project. You should see something like this:
 
 ![Program](screenshots/wfm_vscode_program.png)
 
- 5. Paste the code below into `Program.cs`, replacing everything that is currently there. The code below uses the generated C# API code (notice the `using EthereumSmartContracts.Contracts.SimpleStorage` statement) to create a `SimpleStorageService` object. That object is then used to retrieve the latest stored value from the contract.
+(5.) Paste the code below into `Program.cs`, replacing everything that is currently there. The code below uses the generated C# API code (notice the `using EthereumSmartContracts.Contracts.SimpleStorage` statement) to create a `SimpleStorageService` object. That object is then used to retrieve the latest stored value from the contract.
 
 ```csharp
 using EthereumSmartContracts.Contracts.SimpleStorage;

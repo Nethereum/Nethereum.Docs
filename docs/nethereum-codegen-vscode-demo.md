@@ -119,12 +119,15 @@ Now you will create a solution file and add a console project to try out the gen
 ```
 dotnet new sln --name NethereumCodeGenDemo
 ```
+
 (2.) Add new Console project:
- ```
+
+```
 dotnet new console --name SimpleStorageConsole
 dotnet sln add .\SimpleStorageConsole\SimpleStorageConsole.csproj
 dotnet sln add .\EthereumSmartContracts\EthereumSmartContracts.csproj
 ```
+
 (3.) Add references to the Console project:
 ```
 cd SimpleStorageConsole

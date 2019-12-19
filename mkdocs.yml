@@ -85,7 +85,8 @@ nav:
     - Getting Started Test Chain : Nethereum.Workbooks/docs/nethereum-gettingstarted-testchain.md
 - Code generation:
     - Nethereum code generation : nethereum-code-generation.md
-    - VsCode solidity code generation : nethereum-codegen-vscodesolidity.md
+    - VS Code Solidity code generation : nethereum-codegen-vscodesolidity.md
+    - VS Code Solidity code generation demo : nethereum-codegen-vscode-demo.md
     - Nuget auto code generation : nethereum.autogen.contractapi.md
     - Console (CLI) code generation : nethereum-codegen-console.md
     - Developer Workflow for code generation: nethereum-codegen-vsfull-workflow.md

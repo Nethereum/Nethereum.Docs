@@ -1,8 +1,9 @@
 # Nethereum: Integrating With Azure And Quorum
 
 This article demonstrates how to integrate Nethereum with the Azure Blockchain Service and
-Quorum. If you would like to run the sample directly, feel free to use
-Nethereum's playground: 
+Quorum. 
+
+If you would like to run the sample directly, feel free to use Nethereum's playground: 
 - [Azure Blockchain Service: Interacting with a Quorum member node](http://playground.nethereum.com/csharp/id/1046)
 - [Azure Blockchain Service: Interacting in private with a Quorum member](http://playground.nethereum.com/csharp/id/1047)
 
@@ -10,7 +11,8 @@ Nethereum's playground:
 
 ### 2 - Creating A Quorum Blockchain Member On Your Azure Dashboard
 ![](screenshots/set-up-blockchain-on-azure1.png)
-Creating a Blockchain member will spin up a network with two validator nodes and one transaction node on Azure, create a consortium and make you a member of that consortium. If you create a member in an existing consortium, Azure will add your account as a member.
+
+Creating a Blockchain member will spin-up a network with two validators nodes and one transaction node on Azure, create a consortium and make you a member of that consortium. If you create a member in an existing consortium, Azure will add your account as a member.
 
 # Interacting with Quorum 
 
@@ -20,7 +22,7 @@ Creating a Blockchain member will spin up a network with two validator nodes and
 
 - Select the name of your newly created consortium member
 - Select "transaction nodes"
-- Choose the node you need to connect to, from the list of nodes, then "sample code"
+- Choose the node you need to connect to from the list of nodes, then "sample code"
 - Finally select the 'Nethereum' tab. You'll obtain a list of pre-filled methods you can pick from, to connect to your particular Quorum instance.
 
 ## Interacting With a Quorum Azure Service Member In Public Mode
@@ -56,6 +58,7 @@ var blockNumber = await web3.Eth.Blocks.GetBlockNumber.SendRequestAsync();
 #### Token based authentication
 
 Authentication tokens can be found on your Azure dashboard at ```home > {quorumMemberName} - Transaction nodes > {quorumMemberName} - Access Keys```
+
 Access token authentication will use the following format:
 
 ```https:membername.blockchain.azure.com:3200/<token>```

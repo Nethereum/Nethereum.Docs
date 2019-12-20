@@ -4,24 +4,29 @@ Web3 provides a simple interaction wrapper to access the RPC methods provided by
 
 It also provides a simplified way to interact with contracts by combining the ABI encoding / decoding of the input / output of the contracts together with the Eth RPC requests.
 
-There are two types of RPC calls the Standard [Ethereum JSON RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC)
+There are two types of RPC calls:
 
-* Eth
-* Net
-* Shh
+### Standard calls [Ethereum JSON RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC)
 
-And the management RPC.
+* `Eth`
+* `Net`
+* `Shh`
 
-* Admin
-* Personal
-* Debug
+### Management RPC.
+
+* `Admin`
+* `Personal`
+* `Debug`
 
 The best way to learn about the different RPC methods provided is to use as a reference [the official Ethereum RPC API documentation](https://github.com/ethereum/wiki/wiki/JSON-RPC) or the [the official management api for geth](https://github.com/ethereum/go-ethereum/wiki/Management-APIs)
 So we won't go into major detail here.
 
 ## Web3 constructor
 
-Web3 accepts as a constructor either an url which will use as the default the RPC client, or an IClient which can be an IPC Client, or custom RPC Client.
+Web3 accepts the following constructor: 
+- A url which will be used as the default RPC client, or,
+- An IClient which can be an IPC Client, or,
+- A custom RPC Client.
 
 The parameterless constructor uses the defaults address "http://localhost:8545/", which is the default port and used by the ethereum clients to accept RPC requests.
 

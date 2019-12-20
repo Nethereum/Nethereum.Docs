@@ -1,14 +1,5 @@
 # Using Account Objects with Nethereum
 
-This document is a Workbook, an interactive document where you can run code.
-To run workbooks natively, you can:
-
-* [Install the runtime](https://docs.microsoft.com/en-us/xamarin/tools/workbooks/install)
-
-* [Download the native file for this document](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/nethereum-using-account-objects.workbook)
-
-The entirety of Nethereum workbooks can be found [here](https://github.com/Nethereum/Nethereum.Workbooks)
-
 Documentation about Nethereum can be found at: <https://docs.nethereum.com>
 
 ## What happens when you send a transaction with Ethereum?
@@ -24,14 +15,6 @@ The following will demonstrate how to use Nethereum to send a transaction with N
 First, let's download the test chain matching your environment from <https://github.com/Nethereum/Testchains>
 
 Start a Geth chain (geth-clique-linux\\, geth-clique-windows\\ or geth-clique-mac\\) using **startgeth.bat** (Windows) or **startgeth.sh** (Mac/Linux). The chain is setup with the Proof of Authority consensus and will start the mining process immediately.
-
-```csharp
-#r "Nethereum.Web3"
-```
-
-```csharp
-#r "Nethereum.Accounts"
-```
 
 Then, let's add the using statement to Nethereum.Web3.
 

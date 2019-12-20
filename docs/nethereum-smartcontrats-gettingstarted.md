@@ -26,9 +26,8 @@ The purpose of this sample is the following:
 
 In this tutorial we are going to interact with the ERC20 standard token contract. The smart contract provides a standard way to create a new token, transfer it to another account and query the balance of any account. This standard interface allows the interoperability of smart contracts providing the same signature and applications that integrate with it.
 
-![Constructor, transfer, balance and event of ERC20](https://github.com/Nethereum/Nethereum.Workbooks/raw/master/docs/screenshots/simpleERC20.png)
+![Constructor, transfer, balance and event of ERC20](./screenshots/simpleERC20.png)
 
-A full sample of the smart contract can be found [here](https://github.com/Nethereum/Nethereum.Workbooks/blob/master/StandardToken.sol).
 
 !!! note
     You can execute the code pertaining to this article in Nethereum's

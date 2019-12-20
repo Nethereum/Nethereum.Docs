@@ -85,9 +85,9 @@ Deploying a transaction will return a transactionHash which will be using later 
 
 The transaction that has deployed the contract needs to be verified by the network, if we are running a private chain with a single node we will need to mine the transaction.
 
-PS: Nethereum offers a quick and easy way to start your local test , just execute  startgeth.bat (for Windows) or startgeth.sh (for Mac and Linux) at: https://github.com/Nethereum/Nethereum.Workbooks/tree/master/testchain/clique
+PS: Nethereum offers a quick and easy way to start your local test , just execute  startgeth.bat (for Windows) or startgeth.sh (for Mac and Linux) at: https://github.com/Nethereum/testchains
 
-Start the chain using startgeth.bat (Windows) or startgeth.sh (Mac/Linux). The chain is setup with the Proof of Authority consensus and will start the mining process inmediatly.
+Start the chain using startgeth.bat (Windows) or startgeth.sh (Mac/Linux). The chain is setup with the Proof of Authority consensus and will start the mining process immediately.
 
 ```csharp
  var mineResult = await web3.Miner.Start.SendRequestAsync(6);

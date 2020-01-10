@@ -47,6 +47,7 @@ nav:
     - Unit conversion : nethereum-converting-units.md
     - Accounts :
       - Accounts in Nethereum : accounts.md
+      - Managed Accounts : nethereum-managed-accounts.md
       - Account objects : nethereum-using-account-objects.md
       - Managed accounts : Nethereum.Workbooks/docs/nethereum-managed-accounts.workbook/index.md
       - Hd Wallets and seed phrases : nethereum-managing-hdwallets.md

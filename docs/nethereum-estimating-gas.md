@@ -43,6 +43,7 @@ using Nethereum.Contracts;
 using Nethereum.Contracts.Extensions;
 using System.Numerics;
 ```
+
 ### Web3
 
 Web3 provides a simple interaction wrapper with Ethereum clients. To create an instance of Web3, we need to supply our Account and the RPC uri of the Ethereum client. In this scenario we will use Nethereum's public testchain, on the default RPC uri “http://testchain.nethereum.com:8545”

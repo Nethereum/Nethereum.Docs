@@ -1,4 +1,5 @@
-# TestChain Getting Started Guide
+
+# TestChains: Getting Started Guide
 
 Documentation about Nethereum can be found at: <https://docs.nethereum.com>
 
@@ -14,12 +15,6 @@ First, we need to new up a web3 object for localhost:8545 (this uses RPC)
 
 ```csharp
 var web3 = new Nethereum.Web3.Web3();
-```
-
-Are we mining? (startgeth.sh|bat auto-starts mining)
-
-```csharp
-var isMining = await web3.Eth.Mining.IsMining.SendRequestAsync();
 ```
 
 List all pre-defined accounts in the devchain

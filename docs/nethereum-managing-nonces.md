@@ -1,14 +1,5 @@
 # Managing nonces with Nethereum
 
-This document is a Workbook, an interactive document where you can run code.
-To run workbooks natively, you can:
-
-* [Install the runtime](https://docs.microsoft.com/en-us/xamarin/tools/workbooks/install)
-
-* [Download the native file for this document](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/nethereum-managing-nonces.workbook)
-
-The entirety of Nethereum workbooks can be found [here](https://github.com/Nethereum/Nethereum.Workbooks)
-
 ## What are nonces?
 
 The nonce is an important component of a transaction, it is an attribute of a an address that represents the number of transactions sent by that address. Nonces act as counters that keeps track of the number of transactions sent  by an account.
@@ -46,18 +37,10 @@ The `NonceService` keeps track of pending transactions thus preventing the error
 
 ## Prerequisites:
 
-In order to run the code in this workbook, we recommended the following setup:
+In order to run the code contained in this document, we recommended the following setup:
 First, download the test chain matching your environment from <https://github.com/nethereum/testchains>
 
 Start a geth chain (geth-clique-linux\\, geth-clique-windows\\ or geth-clique-mac\\) using **startgeth.bat** (windows) or **startgeth.sh** (mac/linux). the chain is setup with the proof of authority consensus and will start the mining process immediately.
-
-```csharp
-#r "nethereum.web3"
-```
-
-```csharp
-#r "nethereum.Accounts"
-```
 
 Then we will need to add `using` statements:
 

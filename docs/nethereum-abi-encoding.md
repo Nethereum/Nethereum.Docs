@@ -1,3 +1,4 @@
+# ABI Encoding with Ethereum
 
 A Smart Contract’s ABI is specified as a JSON array of function descriptions events. A **function description** is a JSON object with fields type, name, inputs, outputs, constant, and payable. An **event description** object has fields type, name, inputs, and anonymous.
 

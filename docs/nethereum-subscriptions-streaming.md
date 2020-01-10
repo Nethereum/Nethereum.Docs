@@ -308,7 +308,7 @@ namespace Nethereum.WebSocketsStreamingTest
         // It also provides a basis for creating filters which are used to retrieve matching logs 
         // It can be created by hand but often this class is code generated 
         // It is marked as partial to allow you to extend it without breaking everytime the code is regenerated
-        // http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/nethereum-events-gettingstarted/
+        // .nethereum-events-gettingstarted/
         public partial class TransferEventDTO : TransferEventDTOBase { }
 
         [Event("Transfer")]

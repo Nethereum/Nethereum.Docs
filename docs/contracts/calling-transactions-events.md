@@ -4,11 +4,12 @@ The previous guide covered how to deploy and call a contract, this guide will de
 
 ## Videos
 
-This hands on demo covers the steps provided in this guide for calls, transactions, events, filters and topics
+This hands-on demo covers the steps provided in this guide for calls, transactions, events, filters and topics
 
 [![Introduction to Calls, Transactions, Events, Filters and Topics](http://img.youtube.com/vi/Yir_nu5mmw8/0.jpg)](https://www.youtube.com/watch?v=Yir_nu5mmw8 "Introduction to Calls, Transactions, Events, Filters and Topics")
 
 ## The test contract
+
 The following smart contract is an updated version of the "multiply" contract from the previous guide:
 
 ```javascript
@@ -28,11 +29,11 @@ contract test {
     }
  }
 ```
-The smart contract now includes an Event
- "Multiplied". The event will store on the log the original parameter for multiplication "a", the address of the "sender" and the "result" of the multiplication.
+The smart contract now includes an Event called "Multiplied". The event will store on the log the original parameter for multiplication "a", the address of the "sender" and the "result" of the multiplication.
  The parameter "a" and the "sender" address are both indexed so we can create specific filters for those two values using topics.
 
 ## Deploying the contract
+
 As per the previous guide, we can deploy the contract as follows:
 
 ```csharp
@@ -57,7 +58,7 @@ As per the previous guide, we can deploy the contract as follows:
 
 ## The multiply transaction
 
-When performing a call we are either retrieving data which is stored in the smart contract state or we are performing an action (i.e multiplication), calls are not transactions which are verified through the blockchain consensus.
+When performing a call, we are either retrieving data which is stored in the smart contract state or we are performing an action (i.e multiplication), calls are not transactions which are verified through the blockchain consensus.
 
 Submitting a transaction to perform a function operation in a smart contract does not return the result of the operation, events can be used to retrieve information or we can inspect the state of the smart contract by using function calls.
 
@@ -80,7 +81,7 @@ The function object simplifies submitting transactions in the same way as calls.
 
 There is also the option to specify the gas or include an Ether value as part of the transaction.
 
-On the example we have submitted 2 transactions to perform a multiplication for 7 and 8 respectively, and wait for the transaction to be mined on our private test chain.
+On the example, we have submitted 2 transactions to perform a multiplication for 7 and 8 respectively, and are waiting for the transaction to be mined on our private test chain.
 
 ## Events, filters and topics
 
@@ -92,7 +93,7 @@ Events are defined as part of the abi, and similarly to the functions we can get
  var multiplyEvent = contract.GetEvent("Multiplied");
 ```
 
-The event object allows to create filters to retrieve the information stored on the log.
+The event object allows to create filters in order to retrieve the information stored on the log.
 
 We can create filters that retrieve all the event logs
 
@@ -106,9 +107,9 @@ Or for an specific topic
 var filter7 = await multiplyEvent.CreateFilterAsync(7);
 ```
 
-In the example above we are retrieving the logs which multiply parameter is 7, because the input parameter for the multiplication is marked as indexed, we can filter for that topic.
+In the example above we are retrieving the logs in which the multiply parameter is 7, because the input parameter for the multiplication is marked as indexed, we can filter for that topic.
 
-In a similar way we can filter for the sender address as it is also marked as indexed, but if we wanted to filter for that specific topic we will use the the second parameter when creating the filter.
+In a similar way, we can filter the sender address as it is also marked as indexed, but if we wanted to filter for that specific topic we will use the second parameter when creating the filter.
 
 ```csharp
 var filterSender = await multiplyEvent.CreateFilterAsync(null, senderAddress);
@@ -132,12 +133,12 @@ Event data transfer objects allows to simply decode all the event parameters int
  }
 
 ```
-In the example above the MultipliedEvent properties have been "mapped" with custom parameter attributes to the event parameters. Each parameter specifies the original type, name, order and if is indexed or not.
-As we can see types like address are decoded into strings and in our scenario we are safe to decode int256 to int32 but if not known the final type BigInteger would have been a better option.
+In the example above, the MultipliedEvent properties have been "mapped" with custom parameter attributes to the event parameters. Each parameter specifies the original type, name, order and if is indexed or not.
+As we can see, types like address are decoded into strings and in our scenario we are safe to decode `int256` to `int32` but if not known, the final type `BigInteger` would have been a better option.
 
 ### Retrieving the events and logs
 
-Using the filters we have already created we can retrieve the logs and events.
+Using the filters we have already created, we can retrieve the logs and events.
 
 ```csharp
 
@@ -146,12 +147,12 @@ Using the filters we have already created we can retrieve the logs and events.
 
 ```
 
-Above we are using GetFilterChanges, this can be used to retrieve any logs that match our criteria since the filter was created or since the last time we tried to get the changes.
-Other option would have been to use GetAllChanges using the FilterInput.
+Above we are using `GetFilterChanges`, which can be used to retrieve any logs that matches our criteria since the filter was created or since the last time we tried to retrieve the changes.
+Other option would have been to use `GetAllChanges` using the `FilterInput`.
 
 ### The final code
 
-All the source code can be found under CallTransactionEvents in the [Tutorials solution](https://github.com/Nethereum/Nethereum/tree/master/src/Nethereum.Tutorials)
+All the source code can be found under `CallTransactionEvents` in the [Tutorials solution](https://github.com/Nethereum/Nethereum/tree/master/src/Nethereum.Tutorials)
 
 ```csharp
     public async Task ShouldBeAbleCallAndReadEventLogs()

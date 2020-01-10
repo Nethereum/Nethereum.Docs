@@ -1,16 +1,18 @@
 # Multiple output parameters and function DTOs
 
-There are many scenarios where a function might return  multiple outputs, structured using structs and mappings, or simply by having multiple outputs.
+There are many scenarios where a function might return multiple outputs, structured using structs and mappings, or simply by having multiple outputs.
 The simplest way to decode all this data is by using Function DTOs similarly to Event DTOs explained previously.
 
 ## Video guide
 
-This video provides an introduction on how to store and retrieve data from structs, mappings and arrays decoding multiple output parameters to Data Transfer Objects
+This video provides an introduction on how to store and retrieve data from structs, mappings and arrays decoding multiple output parameters to Data Transfer Objects.
 
 [![Mappings, Structs, Arrays and complex Functions Output (DTOs)](http://img.youtube.com/vi/o8UC96K0rg8/0.jpg)](https://www.youtube.com/watch?v=o8UC96K0rg8 "Mappings, Structs, Arrays and complex Functions Output (DTOs)")
 
 ## The test contract
-The following contract returns multiple values, the amount and the currency as a string
+
+The following contract returns multiple values, the amount and the currency as a string:
+
 ```javascript
 contract MultipleBalanceReturn {
 
@@ -22,8 +24,10 @@ contract MultipleBalanceReturn {
 
 ## Retrieving the output using a DTO
 
-### The abi for the mapping
-If we inspect the abi and find "documents" we can see that it is a function and has multiple outputs, amount and currency. The outputs match the paramater outputs of our function
+### The ABI for the mapping
+
+If we inspect the ABI and find "documents" we can see that it is a function and has multiple outputs: `amount` and `currency`. The outputs match the parameter outputs of our function.
+    
 ```json
 [
   {
@@ -49,7 +53,7 @@ If we inspect the abi and find "documents" we can see that it is a function and 
       }
     ],
     "payable": false,
-    "stateMutability": "nonpayable",
+    "stateMutABIlity": "nonpayable",
     "type": "function"
   }
 ]
@@ -146,27 +150,27 @@ public class GetStartedSmartContracts
         var account = new Account(privateKey);
         var web3 = new Web3(account, url);
 
-        //This is the contract bytecode and Abi after compiling our contract
+        //This is the contract bytecode and ABI after compiling our contract
         var contractByteCode =
             "608060405234801561001057600080fd5b50610121806100206000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c806343e2e50414602d575b600080fd5b605060048036036020811015604157600080fd5b50356001600160a01b031660cc565b6040518083815260200180602001828103825283818151815260200191508051906020019080838360005b838110156091578181015183820152602001607b565b50505050905090810190601f16801560bd5780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b5060408051808201909152600381526244414960e81b6020820152600a9156fea265627a7a72315820d57fb3347ed5d978951aa39de3588c454023e7a3293ce8cee405447b1998fe7364736f6c634300050d0032";
-        var abi =
-            @"[{""constant"":false,""inputs"":[{""internalType"":""address"",""name"":""owner"",""type"":""address""}],""name"":""GetBalance"",""outputs"":[{""internalType"":""int256"",""name"":""amount"",""type"":""int256""},{""internalType"":""string"",""name"":""currency"",""type"":""string""}],""payable"":false,""stateMutability"":""nonpayable"",""type"":""function""}]";
+        var ABI =
+            @"[{""constant"":false,""inputs"":[{""internalType"":""address"",""name"":""owner"",""type"":""address""}],""name"":""GetBalance"",""outputs"":[{""internalType"":""int256"",""name"":""amount"",""type"":""int256""},{""internalType"":""string"",""name"":""currency"",""type"":""string""}],""payable"":false,""stateMutABIlity"":""nonpayable"",""type"":""function""}]";
 
 
         //Deploying the smart contract:
 
         var senderAddress = account.Address;
         //estimating the gas
-        var estimatedGas = await web3.Eth.DeployContract.EstimateGasAsync(abi, contractByteCode, senderAddress);
+        var estimatedGas = await web3.Eth.DeployContract.EstimateGasAsync(ABI, contractByteCode, senderAddress);
         // deploying the contract
-        var receipt = await web3.Eth.DeployContract.SendRequestAndWaitForReceiptAsync(abi,
+        var receipt = await web3.Eth.DeployContract.SendRequestAndWaitForReceiptAsync(ABI,
             contractByteCode, senderAddress, estimatedGas);
         Console.WriteLine("Contract deployed at address: " + receipt.ContractAddress);
 
 #endregion
 
       //Using our contract address we can interact with the contract as follows:
-      var contract = web3.Eth.GetContract(abi, receipt.ContractAddress);
+      var contract = web3.Eth.GetContract(ABI, receipt.ContractAddress);
 
       var balanceFunction = contract.GetFunction("GetBalance");
       var balance = await balanceFunction.CallDeserializingToObjectAsync<GetBalanceOutputDTO>(account.Address);

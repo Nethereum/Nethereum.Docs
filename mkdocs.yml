@@ -56,7 +56,7 @@ nav:
     - Keystore : nethereum-creating-key-store.md
     - Smart Contracts :
       - Smart Contracts Interaction : nethereum-smartcontrats-gettingstarted.md
-      - Developer Workflow for code generation: nethereum-codegen-vsfull-workflow.md
+      - VS Code Solidity code generation demo : nethereum-codegen-vscode-demo.md
       - Events, Logs and Filters : nethereum-events-gettingstarted.md
       - Using receipt statuses : nethereum-receipt-status.md
       - Estimating gas for a transaction : nethereum-estimating-gas.md
@@ -87,7 +87,8 @@ nav:
     - Getting Started Test Chain : nethereum-gettingstarted-testchain.md
 - Code generation:
     - Nethereum code generation : nethereum-code-generation.md
-    - VsCode solidity code generation : nethereum-codegen-vscodesolidity.md
+    - VS Code Solidity code generation : nethereum-codegen-vscodesolidity.md
+    - VS Code Solidity code generation demo : nethereum-codegen-vscode-demo.md
     - Nuget auto code generation : nethereum.autogen.contractapi.md
     - Console (CLI) code generation : nethereum-codegen-console.md
 - ABI Encoding:

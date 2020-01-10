@@ -95,7 +95,6 @@ Note: IPC is supported for Windows, Unix and Linux but is only available using N
 
 |  Project Source |  Description |
 | ------------- |--------------------------|
-|[Nethereum.Workbooks](https://github.com/Nethereum/Nethereum.Workbooks) | Xamarin Workbook tutorials including executable code | 
 |[Nethereum.Tutorials](https://github.com/Nethereum/Nethereum/tree/master/src/Nethereum.Tutorials) | Tutorials to run on VS Studio |
 
 ## Code templates

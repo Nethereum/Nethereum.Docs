@@ -2,7 +2,7 @@
 
 *Nethereum.Generator.Console*
 
-A dot net core CLI tool which can be run in isolation or installed as a .net tool. It is especially useful for automated builds and integration scripts.
+A dotnet core CLI tool which can be run in isolation or installed as a dotnet. It is especially useful for automated builds and integration scripts.
 
 Source Code: [https://github.com/Nethereum/Nethereum/tree/master/src/Nethereum.Generator.Console]
 
@@ -11,14 +11,15 @@ Prerequisites:
 
 It currently supports a primary command called "generate" with the following sub commands:
 
-* [from-abi](#from-abi)
+* [from-ABi](#from-ABi)
 * [from-project](#from-project)
 
-### Installing the console as a dot net tool (optional)
+### Installing the console as a dotnet tool (optional)
 
 The example below installs Nethereum.Generator.Console as a global tool (-g) and references a local folder as a nuget package source (--add-source).
 
-Installing the tool 
+### Installing the tool 
+
 ```
 dotnet tool install -g Nethereum.Generator.Console
 ```
@@ -31,16 +32,15 @@ Options:
 ```
 
 ```
-from-abi
+from-ABi
 ```
-- `from-abi` Generates Nethereum code based on a single abi.
+- `from-ABi` Generates Nethereum code based on a single ABi.
 
-`
-Usage: generate from-abi [options]
+Usage: generate from-ABi [options]
 
 Options:
   -cn | --contractName  The contract name (Optional)
-  -abi | --abiPath      The abi file and path (Mandatory)
+  -ABi | --ABiPath      The ABi file and path (Mandatory)
   -bin | --binPath      The bin file and path (Optional)
   -o | --outputPath     The output path for the generated code (Mandatory)
   -ns | --namespace     The base namespace for the generated code (Mandatory)
@@ -50,26 +50,26 @@ Options:
 
 **Example**
 
-Create a folder and place your abi and bin files in it.  Go to the folder in the command line.
+Create a folder and place your ABi and bin files in it. Go to the folder in the command line.
 
 Sample Compiled Solidity Files:
-* [StandardContract.abi](sample-contracts/StandardContract.abi)
+* [StandardContract.ABi](sample-contracts/StandardContract.ABi)
 * [StandardContract.bin](sample-contracts/StandardContract.bin)
 
 Invoke the generator with minimum args
 ```
-Nethereum.Generator.Console generate from-abi -abi StandardContract.abi -o . -ns Sample.Ethereum
+Nethereum.Generator.Console generate from-ABi -ABi StandardContract.ABi -o . -ns Sample.Ethereum
 ```
 
 After code generation
 
-![Folder Contents - after code generation](screenshots/from-abi-folder-contents-after.PNG "Folder Contents - after code generation")
+![Folder Contents - after code generation](screenshots/from-ABi-folder-contents-after.PNG "Folder Contents - after code generation")
 
 #### from-project
 
-This command searches for abi files within a project and generates Nethereum code based on them.
+This command searches for ABi files within a project and generates Nethereum code based on them.
 
-Generated code has namespaces and names which are based on the abi files and project structure.
+Generated code has namespaces and names which are based on the ABi files and project structure.
 
 ```
 Usage: generate from-project [options]
@@ -83,11 +83,11 @@ Options:
 
 **Example**
 
-The example below generates Nethereum .net code from the StandardContract.abi in a .net project folder.
+The example below generates Nethereum .net code from the StandardContract.ABi in a .net project folder.
 These instructions require .net core 2.1 to be installed.
 
 Sample Compiled Solidity Files:
-1.[StandardContract.abi](sample-contracts/StandardContract.abi)
+1.[StandardContract.ABi](sample-contracts/StandardContract.ABi)
 2.[StandardContract.bin](sample-contracts/StandardContract.bin)
 
 Steps:
@@ -100,8 +100,10 @@ mkdir MyStandardContractProject
 cd MyStandardContractProject 
 ```
 !!! warning
-copy and paste your abi and bin files into folder
-3. Create a dot net class library: 
+    copy and paste your ABi and bin files into folder
+     
+3. Create a dotnet class library: 
+
 ``` 
 dotnet new classLib 
 ```
@@ -136,7 +138,7 @@ Example Nethereum.Generator.json config file.
 		{
 			"ContractName":"StandardContractA",
 			"ABI":null,
-			"ABIFile":"solidity\\StandardContract.abi",
+			"ABIFile":"solidity\\StandardContract.ABi",
 			"ByteCode":null,
 			"BinFile":null,
 			"BaseNamespace":null,

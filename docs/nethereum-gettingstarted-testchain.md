@@ -1,13 +1,4 @@
-# TestChain Getting Started Guide
-
-This document is a Workbook, an interactive document where you can run code.
-To run workbooks natively, you can:
-
-* [Install the runtime](https://docs.microsoft.com/en-us/xamarin/tools/workbooks/install)
-
-* [Download the native file for this document](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/nethereum-gettingstarted-testchain.workbook)
-
-The entirety of Nethereum workbooks can be found [here](https://github.com/Nethereum/Nethereum.Workbooks)
+# TestChains: Getting Started Guide
 
 Documentation about Nethereum can be found at: <https://docs.nethereum.com>
 
@@ -27,12 +18,6 @@ First, we need to new up a web3 object for localhost:8545 (this uses RPC)
 
 ```csharp
 var web3 = new Nethereum.Web3.Web3();
-```
-
-Are we mining? (startgeth.sh|bat auto-starts mining)
-
-```csharp
-var isMining = await web3.Eth.Mining.IsMining.SendRequestAsync();
 ```
 
 List all pre-defined accounts in the devchain

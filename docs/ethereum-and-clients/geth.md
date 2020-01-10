@@ -63,7 +63,8 @@ The JSON RPC can also be started from the geth console using the ```admin.startR
 
 ## Quick start
 
-You might consider using our [Creating a new Account using Geth Personal Api](https://github.com/Nethereum/Nethereum.Workbooks/blob/master/docs/nethereum-creating-a-new-account-using-geth.workbook) workbook to get a first feel of interacting with Geth using Nethereum.
+You might consider using our [Creating a new Account using Geth Personal Api](./nethereum-creating-a-new-account-using-geth.md) document to get a first feel of interacting with Geth using Nethereum.
+
 
 ### Setting up your own testnet
 

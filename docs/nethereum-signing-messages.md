@@ -1,13 +1,5 @@
 # Signing messages with Nethereum
 
-This document is a Workbook, an interactive document where you can run code.
-To run workbooks natively, you can:
-
-* [Install the runtime](https://docs.microsoft.com/en-us/xamarin/tools/workbooks/install)
-
-* [Download the native file for this document](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/nethereum-managing-nonces.workbook)
-
-The entirety of Nethereum workbooks can be found [here](https://github.com/Nethereum/Nethereum.Workbooks)
 
 ## Ethereum signing basics
 
@@ -24,13 +16,6 @@ Let's now explore how to use `EthereumMessageSigner` with two very common scenar
 
 Let's first reference our assemblies and namespaces:
 
-```csharp
-#r "Nethereum.Web3"
-```
-
-```csharp
-#r "Nethereum.ABI"
-```
 
 ```csharp
 using Nethereum.Web3;

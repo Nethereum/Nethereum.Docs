@@ -1,16 +1,5 @@
 # Setting Up Events Polling Services Using Nethereum
 
-This document is a Workbook, an interactive document where you can run code.
-To run workbooks natively, you can:
-
-* [Install the runtime](https://docs.microsoft.com/en-us/xamarin/tools/workbooks/install)
-
-* [Download the native file for this document](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/nethereum-eventdtos-getallchanges.workbook) 
-
-The entirety of Nethereum workbooks can be found [here](https://github.com/Nethereum/Nethereum.Workbooks)
-
-This workbook explains how to set up a polling service tracking events occurring on a Smart Contract.
-
 Background:
 
 In the Ethereum environment, functions don't return anything. In order to compensate for that limitation,  Solidity offers a way to log state changes which is called Event. The following explains how to track events using Nethereum.
@@ -21,21 +10,18 @@ Download the test chain matching your environment from https://github.com/Nether
 
 Start a Geth chain ( **geth-clique-linux\_** **_geth-clique-windows_** **_geth-clique-mac_**) using startgeth.bat (Windows) or startgeth.sh (Mac/Linux). The chain is setup with the Proof of Authority consensus and will start the mining process immediately.
 
-```csharp
-#r "Nethereum.Web3"
-```
 
 ```csharp
-#r "Nethereum.Accounts"
-```
-
-```csharp
-using Nethereum.Web3;using Nethereum.Web3.Accounts;using System.Numerics; using Nethereum.RPC.Eth.DTOs;using Nethereum.ABI.FunctionEncoding.Attributes;
+using Nethereum.Web3;
+using Nethereum.Web3.Accounts;
+using System.Numerics; 
+using Nethereum.RPC.Eth.DTOs;
+using Nethereum.ABI.FunctionEncoding.Attributes;
 ```
 
 Here is the Smart Contract we are going to log using events:
 
-![](https://github.com/Nethereum/Nethereum.Workbooks/raw/master/docs/screenshots/testEventContract.jpg)
+![](./screenshots/testEventContract.jpg)
 
 In order to deploy your Smart Contract, you will need first to compile it  (using the VS Code’s “Solidity” extension, for instance), and declare your ABI and ByteCode in your CSharp class from the compilation output.
 

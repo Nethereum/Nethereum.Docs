@@ -1,12 +1,5 @@
 # Getting started using Infura with Nethereum
 
-This document is a Workbook, an interactive document where you can run code.
-To run workbooks natively, you can:
-
-* [Install the runtime](https://docs.microsoft.com/en-us/xamarin/tools/workbooks/install)
-
-* [Download the native file for this document](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/nethereum-gettingstarted-infura.workbook) 
-The entirety of Nethereum workbooks can be found [here](https://github.com/Nethereum/Nethereum.Workbooks)
 
 Documentation about Nethereum can be found at: <https://docs.nethereum.com>
 
@@ -20,13 +13,8 @@ The first step to use INFURA is to [sign up](https://infura.io/register) and get
 For this sample, we’ll use a special API key `7238211010344719ad14a89db874158c`, but for your own project you’ll need your own key.
 
 ```csharp
-#r "Nethereum.Web3"
-```
-
-```csharp
 using Nethereum.Web3;
 ```
-
 Let’s create an instance of Web3, with the infura url for mainnet.
 
 ```csharp

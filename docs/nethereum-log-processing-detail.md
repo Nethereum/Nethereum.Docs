@@ -11,7 +11,7 @@ Typical use cases:
 * event reporting.
 * auditing.
 
-The processsing classes build on core Nethereum event log classes which are definitely worth understanding first. [Getting started with events](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/nethereum-events-gettingstarted/)
+The processsing classes build on core Nethereum event log classes which are definitely worth understanding first. [Getting started with events](./nethereum-events-gettingstarted/)
 
 ### What it's not for!
 * Retrieving and decoding a single event.
@@ -19,8 +19,6 @@ The processsing classes build on core Nethereum event log classes which are defi
 * Learning about event retrieval in Nethereum.
 * Absolute real-time processing (see below):
     * Strictly speaking, log processing is not real-time, it's an intelligent polling mechanism. It can be configured to be close enough for most needs.  However another option is to use  Web Socket Streaming and Subscriptions for data retrieval.  This can makes sense when you only need the newest logs and are not concerned with the past. Example: https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.WebSocketsStreamingTest/Program.cs
-
-DON'T WORRY THOUGH - Nethereum still fulfils your event requirements. See the docs:  [Getting started with events](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/nethereum-events-gettingstarted/). 
 
 ## Too impatient to read further!? Show me the SAMPLES!
 There are several varied samples in the Netherum playground: http://playground.nethereum.com/.
@@ -40,7 +38,7 @@ It is an orchestrator that co-ordinates retrieving logs, applying criteria and i
 The processor allows you to plug in actions which can be synchronous or async.  This is where you put the code to handle the matching logs. Async actions are ideal for writing to async API's which are common when integrating with external systems and persistence stores. Synchronous actions are great for performance when you don't need async calls.
 
 ### Criteria (sync and async)
-You can implement criteria which can be synchronous or async.  Criteria dictates whether or not your action is invoked. Async criteria allows you to do dynamic lookups which may involve external calls to registries/databases/web services etc.  For instance, whilst processing you may need to check dynamic registries as part of your criteria and naturally these calls tend to be async.  Synchronous criteria allows you to inject in-memory criteria easily.
+You can implement criteria which can be synchronous or async.  Criteria dictate whether or not your action is invoked. Async criteria allow you to do dynamic lookups which may involve external calls to registries/databases/web services etc.  For instance, whilst processing you may need to check dynamic registries as part of your criteria and naturally these calls tend to be async.  Synchronous criteria allows you to inject in-memory criteria easily.
 
 ### ProcessorHandler
 Under the hood - the actions and criteria are loaded into a ProcessorHandler for you.  If you prefer not to use actions and criteria in the form of Lambda's you can inject your own instances of a ProcessorHandler.  This can provide more flexibility, for instance see "Processing multiple specific events" below. The ProcessHandler approach allows you to use your choice of DI framework to build these handlers. 
@@ -73,7 +71,7 @@ You need something to do with the logs retrieved. In this example we're going to
 var logs = new List<FilterLog>(); // somewhere to put our logs
 ```
 
-Create the processor and inject a lambda to handle each log.  In this case - we're simply adding it to the list.
+Create the processor and inject a lambda to handle each log. In this case we're simply adding it to the list.
 ``` csharp
 var processor = web3.Processing.Logs.CreateProcessor(log => logs.Add(log));
 ```
@@ -92,9 +90,11 @@ await processor.ExecuteAsync(
 The processor will run until logs for the last block number have been processed.
 
 ## Log Processor Creation Options
+
 There are several methods to create a log processor e.g. ``` web3.Processing.Logs.CreateProcessor ```.  They are designed to help you create the right processor for your needs.
 
 ### Selecting the logs you want
+
 During processing, logs are requested sequentially by block number range. Selection of the logs to process can occur in two places and it's important to understand them.
 
 1. During Log Retrieval: (when logs are requested from the Blockchain client).

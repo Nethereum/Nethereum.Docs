@@ -96,9 +96,9 @@ Further example can be found on the [conversion unit tests](https://github.com/N
 This is very convenient as light clients may not be able to store the whole chain, but would prefer to use their privates keys to sign transactions and broadcast the signed raw transaction to the network.
 
 ```csharp
-web3.OfflineTransactionSigning.SignTransaction
-web3.OfflineTransactionSigning.GetSenderAddress
-web3.OfflineTransactionSigning.VerifyTransaction
+Web3.OfflineTransactionSigning.SignTransaction
+Web3.OfflineTransactionSigning.GetSenderAddress
+Web3.OfflineTransactionSigning.VerifyTransaction
 ```
 
 To provide offline transaction signing in Nethereum you can do the following:
@@ -121,7 +121,7 @@ The txCount will be used as the nonce to sign the transaction.
 Now using web3 again, you can build an encoded transaction as following:
 
 ```csharp
-var encoded = web3.OfflineTransactionSigning.SignTransaction(privateKey, receiveAddress, 10, txCount.Value);
+var encoded = Web3.OfflineTransactionSigning.SignTransaction(privateKey, receiveAddress, 10, txCount.Value);
 ```
 
 If you need to include the data and gas there are overloads for it.
@@ -129,19 +129,19 @@ If you need to include the data and gas there are overloads for it.
 You can verify an encoded transaction:
 
 ```csharp
-Assert.True(web3.OfflineTransactionSigning.VerifyTransaction(encoded));
+Assert.True(Web3.OfflineTransactionSigning.VerifyTransaction(encoded));
 ```
 
 Or get the sender address from an encoded transaction:
 
 ```csharp
-web3.OfflineTransactionSigning.GetSenderAddress(encoded);
+Web3.OfflineTransactionSigning.GetSenderAddress(encoded);
 ```
 
 To send the encoded transaction you will use the RPC method "SendRawTransaction"
 
 ```csharp
-var txId = await web3.Eth.Transactions.SendRawTransaction.SendRequestAsync("0x" + encoded);
+var txId = await Web3.Eth.Transactions.SendRawTransaction.SendRequestAsync("0x" + encoded);
 ```
 
 The complete example can be found on the [Transactions signing unit tests](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Signer.IntegrationTests/TransactionSigningTests.cs)

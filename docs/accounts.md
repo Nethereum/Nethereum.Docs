@@ -85,7 +85,7 @@ await multiplyFunction.SendTransactionAsync(senderAddress,7);
 
 #### Creating a new Account
 
-To create a new account you just need to generate a new private key, Nethereum.Signer provides a method to do this using SecureRandom. The Account object accepts just the private key as a constructor, to reduce any coupling with private key generation, and prescriptive way to generate private keys.
+To create a new account you just need to generate a new private key, Nethereum.Signer provides a method to do this using "SecureRandom". The Account object accepts just the private key as a constructor, to reduce any coupling with private key generation, and prescriptive way to generate private keys. It is recommended that you use a more complex random generator to create your private keys than using "SecureRandom", but this is simple enough for testing.
 
 ```csharp
 var ecKey = Nethereum.Signer.EthECKey.GenerateKey();

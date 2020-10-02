@@ -116,7 +116,7 @@ var filterSender = await multiplyEvent.CreateFilterAsync(null, senderAddress);
 ```
 ### Event DTO
 
-Event data transfer objects allows to simply decode all the event parameters into a transfer object, in a similar way as we will deserialise a Json object.
+Event data transfer objects allows to simply decode all the event parameters into a transfer object, in a similar way as we will deserialize a Json object.
 
 ```csharp
  public class MultipliedEvent

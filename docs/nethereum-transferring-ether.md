@@ -85,7 +85,7 @@ var transaction = await web3.Eth.GetEtherTransferService()
 
 Note, that the amout supplied is in Ether and the service converts it to Wei, the lowest unit value used for transactions.
 
-###  Sending Ether using the EtherTransferService with the default gas amount but suplying the price
+###  Sending Ether using the EtherTransferService with the default gas amount but supplying the price
 
 We can also choose the gas price for our transaction, in this case the last argument. The higher price of a transaction cost, the higher the possibility to be picked and prioritised by the miners quickly.
 

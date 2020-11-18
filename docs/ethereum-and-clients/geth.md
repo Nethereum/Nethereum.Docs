@@ -14,7 +14,7 @@ The installer puts geth into your PATH automatically. The zip file contains the 
 - Download zip file
 - Extract geth.exe from zip
 - Open a command prompt
-- Excute geth.exe
+- Execute geth.exe
 
 ### Mac
 

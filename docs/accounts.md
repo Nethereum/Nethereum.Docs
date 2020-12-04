@@ -40,8 +40,8 @@ var account = Account.LoadFromKeyStoreFile(accountFilePath, string password);
 If you are targetting other frameworks like core or netstandard, portable loading directly from a file is not supported, to allow for major platform compatibility, in this scenario you will need to extract the json fist and pass it as a parameter.
 
 ```csharp
- var password = "password";
- var keyStoreEncryptedJson =
+var password = "password";
+var keyStoreEncryptedJson =
              @"{""crypto"":{""cipher"":""aes-128-ctr"",""ciphertext"":""b4f42e48903879b16239cd5508bc5278e5d3e02307deccbec25b3f5638b85f91"",""cipherparams"":{""iv"":""dc3f37d304047997aa4ef85f044feb45""},""kdf"":""scrypt"",""mac"":""ada930e08702b89c852759bac80533bd71fc4c1ef502291e802232b74bd0081a"",""kdfparams"":{""n"":65536,""r"":1,""p"":8,""dklen"":32,""salt"":""2c39648840b3a59903352b20386f8c41d5146ab88627eaed7c0f2cc8d5d95bd4""}},""id"":""19883438-6d67-4ab8-84b9-76a846ce544b"",""address"":""12890d2cce102216644c59dae5baed380d84830c"",""version"":3}";
 var account = Nethereum.Web3.Accounts.Account.LoadFromKeyStore(keyStoreEncryptedJson, password);
 ```
@@ -72,7 +72,7 @@ await web3.TransactionManager.SendTransactionAsync(account.Address, addressTo, n
 Deploy a contract:
 
 ```csharp
- web3.Eth.DeployContract.SendRequestAsync(abi, byteCode, senderAddress, new HexBigInteger(900000),
+web3.Eth.DeployContract.SendRequestAsync(abi, byteCode, senderAddress, new HexBigInteger(900000),
                             multiplier)
 ```
 
@@ -124,7 +124,7 @@ await web3.TransactionManager.SendTransactionAsync(account.Address, addressTo, n
 Deploy a contract:
 
 ```csharp
- web3.Eth.DeployContract.SendRequestAsync(abi, byteCode, senderAddress, new HexBigInteger(900000),
+web3.Eth.DeployContract.SendRequestAsync(abi, byteCode, senderAddress, new HexBigInteger(900000),
                             multiplier)
 ```
 

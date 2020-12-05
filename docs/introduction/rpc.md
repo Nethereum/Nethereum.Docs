@@ -12,10 +12,10 @@ The simplest datatypes to communicate with Ethereum are Numeric and Data.
 This type also handles the conversion to and from Big Endian, together with specific usages for Eth "0x0"
 
 ```csharp
-    var number = new HexBigInteger(21000);
-    var anotherNumber = new HexBigInteger("0x5208");
-    var hex = number.HexValue; //0x5208
-    BigInteger val = anotherNumber; //2100
+var number = new HexBigInteger(21000);
+var anotherNumber = new HexBigInteger("0x5208");
+var hex = number.HexValue; //0x5208
+BigInteger val = anotherNumber; //2100
 ```
 
 ### Data
@@ -53,55 +53,55 @@ The clients provide an OverridingRequestInterceptor which can be used in these s
 This is an example of mock implementation of an interceptor
 
 ```csharp
- public class OverridingInterceptorMock:RequestInterceptor
+public class OverridingInterceptorMock:RequestInterceptor
+{
+    public override async Task<RpcResponse> InterceptSendRequestAsync(Func<RpcRequest, string, Task<RpcResponse>> interceptedSendRequestAsync, RpcRequest request, string route = null)
     {
-        public override async Task<RpcResponse> InterceptSendRequestAsync(Func<RpcRequest, string, Task<RpcResponse>> interceptedSendRequestAsync, RpcRequest request, string route = null)
+        if (request.Method == "eth_accounts")
         {
-            if (request.Method == "eth_accounts")
-            {
-                return BuildResponse(new string[] { "hello", "hello2"}, route);
-            }
-
-            if (request.Method == "eth_getCode")
-            {
-                return BuildResponse("the code", route);
-            }
-            return await interceptedSendRequestAsync(request, route);
+            return BuildResponse(new string[] { "hello", "hello2"}, route);
         }
 
-        public RpcResponse BuildResponse(object results, string route = null)
+        if (request.Method == "eth_getCode")
         {
-            var token = JToken.FromObject(results);
-            return new RpcResponse(route, token);
+            return BuildResponse("the code", route);
         }
-
-       ...
+        return await interceptedSendRequestAsync(request, route);
     }
+
+    public RpcResponse BuildResponse(object results, string route = null)
+    {
+        var token = JToken.FromObject(results);
+        return new RpcResponse(route, token);
+    }
+
+    ...
+}
 
 ```
 
 And the usage on a unit test
 ```csharp
-    [Fact]
-    public async void ShouldInterceptNoParamsRequest()
-    {
-        var client = new RpcClient(new Uri("http://localhost:8545/"));
+[Fact]
+public async void ShouldInterceptNoParamsRequest()
+{
+    var client = new RpcClient(new Uri("http://localhost:8545/"));
 
-        client.OverridingRequestInterceptor = new OverridingInterceptorMock();
-        var ethAccounts = new EthAccounts(client);
-        var accounts = await ethAccounts.SendRequestAsync();
-        Assert.True(accounts.Length == 2);
-        Assert.Equal(accounts[0],"hello");
-    }
+    client.OverridingRequestInterceptor = new OverridingInterceptorMock();
+    var ethAccounts = new EthAccounts(client);
+    var accounts = await ethAccounts.SendRequestAsync();
+    Assert.True(accounts.Length == 2);
+    Assert.Equal(accounts[0],"hello");
+}
 
-    [Fact]
-    public async void ShouldInterceptParamsRequest()
-    {
-        var client = new RpcClient(new Uri("http://localhost:8545/"));
+[Fact]
+public async void ShouldInterceptParamsRequest()
+{
+    var client = new RpcClient(new Uri("http://localhost:8545/"));
 
-        client.OverridingRequestInterceptor = new OverridingInterceptorMock();
-        var ethGetCode = new EthGetCode(client);
-        var code = await ethGetCode.SendRequestAsync("address");
-        Assert.Equal(code, "the code");
-    }
+    client.OverridingRequestInterceptor = new OverridingInterceptorMock();
+    var ethGetCode = new EthGetCode(client);
+    var code = await ethGetCode.SendRequestAsync("address");
+    Assert.Equal(code, "the code");
+}
 ```

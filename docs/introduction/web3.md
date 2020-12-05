@@ -33,19 +33,19 @@ The parameterless constructor uses the defaults address "http://localhost:8545/"
 ### Parameterless constructor
 
 ```csharp
-    var web3 = new Nethereum.Web3.Web3();
+var web3 = new Nethereum.Web3.Web3();
 ```
 
 ### Url constructor
 
 ```csharp
-    var web3 = new Nethereum.Web3.Web3("https://myclient.com:8545");
+var web3 = new Nethereum.Web3.Web3("https://myclient.com:8545");
 ```
 ### IPC Client constructor
 
 ```csharp
-    var ipcClient = new Nethereum.JsonRpc.IpcClient.IpcClient("./geth.ipc");
-    var web3 = new Nethereum.Web3.Web3(ipcClient);
+var ipcClient = new Nethereum.JsonRpc.IpcClient.IpcClient("./geth.ipc");
+var web3 = new Nethereum.Web3.Web3(ipcClient);
 ```
 ## Properties / methods overview
 
@@ -61,19 +61,19 @@ Eth, Net, Miner, Admin, Personal and DebugGeth. Eth, Net are as described before
 Eth it is subdivided in further wrappers to enable a simpler way to organise the different RPC calls.
 
 ```csharp
-    web3.Eth.Transactions.GetTransactionReceipt;
-    web3.Eth.Transactions.Call;
-    web3.Eth.Transactions.EstimateGas;
-    web3.Eth.Transactions.GetTransactionByBlockHashAndIndex;
-    web3.Net.PeerCount;
-    web3.Eth.GetBalance;
-    web3.Eth.Mining.IsMining;
-    web3.Eth.Accounts;
+web3.Eth.Transactions.GetTransactionReceipt;
+web3.Eth.Transactions.Call;
+web3.Eth.Transactions.EstimateGas;
+web3.Eth.Transactions.GetTransactionByBlockHashAndIndex;
+web3.Net.PeerCount;
+web3.Eth.GetBalance;
+web3.Eth.Mining.IsMining;
+web3.Eth.Accounts;
 ```
 Each object is a RPC command which can be executed Async as:
 
 ```csharp
-    await web3.Eth.Transactions.GetTransactionReceipt.SendRequestAsync(transactionHash);
+await web3.Eth.Transactions.GetTransactionReceipt.SendRequestAsync(transactionHash);
 ```
 
 ### Utilities
@@ -84,8 +84,8 @@ Web3 also provides several utilities to simplify the interaction.
 Wei conversion can be accessed though Convert
 
 ```csharp
-   Convert.ToWei
-   Convert.FromWei
+Convert.ToWei
+Convert.FromWei
 ```
 [//]: # (CJuan> The below URL is broken )
 Further example can be found on the [conversion unit tests](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Util.UnitTests/ConversionTests.cs)
@@ -158,18 +158,16 @@ An example of the expectations on the [encoding and decoding can be found on the
 The web3 transaction request to an offline signed transaction interceptor, provides a mechanism to intercept all transactions and automatically offline sign them and send a raw transaction with a preconfigured private key.
 
 ```csharp
-  var privateKey = "0xb5b1870957d373ef0eeffecc6e4812c0fd08f554b37b233526acc331bf1544f7";
-  var senderAddress = "0x12890d2cce102216644c59daE5baed380d84830c";
+var privateKey = "0xb5b1870957d373ef0eeffecc6e4812c0fd08f554b37b233526acc331bf1544f7";
+var senderAddress = "0x12890d2cce102216644c59daE5baed380d84830c";
 
-  var web3 = new Web3();
-  var transactionInterceptor = new TransactionRequestToOfflineSignedTransactionInterceptor(senderAddress, privateKey, web3);
-  web3.Client.OverridingRequestInterceptor = transactionInterceptor;
+var web3 = new Web3();
+var transactionInterceptor = new TransactionRequestToOfflineSignedTransactionInterceptor(senderAddress, privateKey, web3);
+web3.Client.OverridingRequestInterceptor = transactionInterceptor;
 ```
 
 The interceptor requires the private key, the corresponding address and an instance of web3. Once the web3 rpc client is configured all the requests will be the same.
 
 ```csharp
-    var txId = await web3.Eth.DeployContract.SendRequestAsync(abi, contractByteCode, senderAddress, new HexBigInteger(900000), 7);
+var txId = await web3.Eth.DeployContract.SendRequestAsync(abi, contractByteCode, senderAddress, new HexBigInteger(900000), 7);
 ```
-
-

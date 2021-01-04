@@ -25,21 +25,20 @@ using Nethereum.ABI.FunctionEncoding.Attributes;
 using Nethereum.Util;
 using Nethereum.ABI;
 
-		public class TestParamsInput
-		{
-				[Parameter("string", 1)] public string First { get; set; }
-				[Parameter("int8", 2)] public int Second { get; set; }
-				[Parameter("address", 3)] public string Third { get; set; }
-		}
+public class TestParamsInput
+{
+	[Parameter("string", 1)] public string First { get; set; }
+	[Parameter("int8", 2)] public int Second { get; set; }
+	[Parameter("address", 3)] public string Third { get; set; }
+}
 
-    static void Main(string[] args)
-    {
-				var abiEncode = new ABIEncode();
-				var result = abiEncode.GetSha3ABIParamsEncodedPacked(new TestParamsInput()
-						{First = "Hello!%", Second = -23, Third = "0x85F43D8a49eeB85d32Cf465507DD71d507100C1d"});
-				Console.WriteLine("Result: " + result.ToHex(true));
-
-    }
+static void Main(string[] args)
+{
+	var abiEncode = new ABIEncode();
+	var result = abiEncode.GetSha3ABIParamsEncodedPacked(new TestParamsInput()
+			{First = "Hello!%", Second = -23, Third = "0x85F43D8a49eeB85d32Cf465507DD71d507100C1d"});
+	Console.WriteLine("Result: " + result.ToHex(true));
+}
 ```
 
 ## GetABIEncoded
@@ -55,17 +54,16 @@ public class AbiEncode_AbiValue_Parameters_Default
 {
 	public class TestParamsInput
 	{
-			[Parameter("string", 1)]
-			public string First { get; set; }
-			[Parameter("int256", 2)]
-			public int Second { get; set; }
-			[Parameter("string", 3)]
-			public string Third { get; set; }
+		[Parameter("string", 1)]
+		public string First { get; set; }
+		[Parameter("int256", 2)]
+		public int Second { get; set; }
+		[Parameter("string", 3)]
+		public string Third { get; set; }
 	}
 
-    static void Main(string[] args)
-    {
-            
+	static void Main(string[] args)
+	{
 		var abiEncode = new ABIEncode();
 		var result = abiEncode.GetABIEncoded(new ABIValue("string", "hello"), new ABIValue("int", 69),
 						new ABIValue("string", "world")).ToHex();
@@ -76,8 +74,7 @@ public class AbiEncode_AbiValue_Parameters_Default
 		result = abiEncode.GetABIEncoded("1", "2", "3").ToHex();
 
 		Console.WriteLine("Encoded 1, 2, 3 strings using  default convertor: " + result);
-
-    }
+	}
 }
 ```
 
@@ -96,17 +93,16 @@ public class AbiEncode_AbiValue_Parameters_Default
 {
 	public class TestParamsInput
 	{
-			[Parameter("string", 1)]
-			public string First { get; set; }
-			[Parameter("int256", 2)]
-			public int Second { get; set; }
-			[Parameter("string", 3)]
-			public string Third { get; set; }
+		[Parameter("string", 1)]
+		public string First { get; set; }
+		[Parameter("int256", 2)]
+		public int Second { get; set; }
+		[Parameter("string", 3)]
+		public string Third { get; set; }
 	}
 
-    static void Main(string[] args)
-    {
-            
+	static void Main(string[] args)
+	{     
 		var abiEncode = new ABIEncode();
 		var result = abiEncode.GetABIEncoded(new ABIValue("string", "hello"), new ABIValue("int", 69),
 						new ABIValue("string", "world")).ToHex();
@@ -114,9 +110,9 @@ public class AbiEncode_AbiValue_Parameters_Default
 		Console.WriteLine("Encoded hello, 69 and world using ABIValue: " + result);
 
 		result = abiEncode.GetABIParamsEncoded(new TestParamsInput(){First = "hello", Second = 69, Third = "world"}).ToHex();
-		
+
 		Console.WriteLine("Encoded hello, 69 and world using Parameter attributes: " + result);
-    }
+	}
 }
 ```
 
@@ -135,16 +131,16 @@ public class AbiEncodePacked_UsingDefaultValues
 {
     static void Main(string[] args)
     {
-					var abiEncode = new ABIEncode();
-            var result = abiEncode.GetSha3ABIEncodedPacked(234564535,
-                "0xfff23243".HexToByteArray(), true, -10);
-						Console.WriteLine("Encoded 234564535, 0xfff23243, true and -10:" + result.ToHex());
+	var abiEncode = new ABIEncode();
+	var result = abiEncode.GetSha3ABIEncodedPacked(234564535,
+		"0xfff23243".HexToByteArray(), true, -10);
+	Console.WriteLine("Encoded 234564535, 0xfff23243, true and -10:" + result.ToHex());
 
-            var result2 = abiEncode.GetSha3ABIEncodedPacked("Hello!%");
-						Console.WriteLine("Encoded Hello!%:" + result2.ToHex());
-          
-            var result3 = abiEncode.GetSha3ABIEncodedPacked(234);
-            Console.WriteLine("Encoded 234:" + result2.ToHex());
+	var result2 = abiEncode.GetSha3ABIEncodedPacked("Hello!%");
+	Console.WriteLine("Encoded Hello!%:" + result2.ToHex());
+
+	var result3 = abiEncode.GetSha3ABIEncodedPacked(234);
+	Console.WriteLine("Encoded 234:" + result2.ToHex());
     }
 }
 ```

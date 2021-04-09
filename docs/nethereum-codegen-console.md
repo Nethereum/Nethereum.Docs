@@ -7,11 +7,12 @@ A dotnet core CLI tool which can be run in isolation or installed as a dotnet. I
 Source Code: [https://github.com/Nethereum/Nethereum/tree/master/src/Nethereum.Generator.Console]
 
 Prerequisites:
+
 * [Net Core 2.1](https://www.microsoft.com/net/download)
 
 It currently supports a primary command called "generate" with the following sub commands:
 
-* [from-ABi](#from-ABi)
+* [from-abi](#from-abi)
 * [from-project](#from-project)
 
 ### Installing the console as a dotnet tool (optional)
@@ -27,16 +28,17 @@ dotnet tool install -g Nethereum.Generator.Console
 ### Accessing the 'Help'
 
 ```
-Options:
-  -h | -? | --help  Show help information
+Nethereum.Generator.Console -h
 ```
 
-```
-from-ABi
-```
-- `from-ABi` Generates Nethereum code based on a single ABi.
+### Commands
 
-Usage: generate from-ABi [options]
+#### from-abi
+
+Generates Nethereum code based on a single abi.
+
+```
+Usage: generate from-abi [options]
 
 Options:
   -cn | --contractName  The contract name (Optional)
@@ -46,28 +48,29 @@ Options:
   -ns | --namespace     The base namespace for the generated code (Mandatory)
   -sf | --SingleFile    Generate the message definition in a single file (Optional - default is true)
   -? | -h | --help      Show help information
-`
+```
 
 **Example**
 
 Create a folder and place your ABi and bin files in it. Go to the folder in the command line.
 
 Sample Compiled Solidity Files:
-* [StandardContract.ABi](sample-contracts/StandardContract.ABi)
-* [StandardContract.bin](sample-contracts/StandardContract.bin)
+
+* [StandardContract.abi](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Generator.Console/sample/StandardContract.abi)
+* [StandardContract.bin](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Generator.Console/sample/StandardContract.bin)
 
 Invoke the generator with minimum args
 ```
-Nethereum.Generator.Console generate from-ABi -ABi StandardContract.ABi -o . -ns Sample.Ethereum
+Nethereum.Generator.Console generate from-abi -abi ./StandardContract.abi -o . -ns Sample.Ethereum
 ```
 
-After code generation
+Folder contents - after code generation:
 
-![Folder Contents - after code generation](screenshots/from-ABi-folder-contents-after.PNG "Folder Contents - after code generation")
+![Folder Contents - after code generation](screenshots/from-abi-folder-contents-after.PNG)
 
 #### from-project
 
-This command searches for ABi files within a project and generates Nethereum code based on them.
+This command searches for ABI files within a project and generates Nethereum code based on them.
 
 Generated code has namespaces and names which are based on the ABi files and project structure.
 
@@ -78,7 +81,6 @@ Options:
   -p | --projectPath   The full project file path or path to the project folder (Optional - default is current directory).
   -a | --assemblyName  The output assembly name for the project (Optional - can be infered from project).
   -? | -h | --help     Show help information
-
 ```
 
 **Example**
@@ -87,8 +89,9 @@ The example below generates Nethereum .net code from the StandardContract.ABi in
 These instructions require .net core 2.1 to be installed.
 
 Sample Compiled Solidity Files:
-1.[StandardContract.ABi](sample-contracts/StandardContract.ABi)
-2.[StandardContract.bin](sample-contracts/StandardContract.bin)
+
+* [StandardContract.abi](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Generator.Console/sample/StandardContract.abi)
+* [StandardContract.bin](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Generator.Console/sample/StandardContract.bin)
 
 Steps:
 1. create new folder:
@@ -100,7 +103,7 @@ mkdir MyStandardContractProject
 cd MyStandardContractProject 
 ```
 !!! warning
-    copy and paste your ABi and bin files into folder
+    copy and paste your ABI and bin files into folder
      
 3. Create a dotnet class library: 
 
@@ -109,7 +112,7 @@ dotnet new classLib
 ```
 4. Add Nethereum.Web3 as a dependency: 
 ```
-dotnet add package -v 3.0.0-rc1 Nethereum.Web3
+dotnet add package Nethereum.Web3
 ```
 5. Generate the code: 
 ```
@@ -120,9 +123,9 @@ Nethereum.Generator.Console generate from-project
 dotnet build 
 ```
 
-Folder contents - after code generation.
+Folder contents - after code generation:
 
-![Folder Contents - after code generation](screenshots/from-project-folder-contents-after-0.PNG "Folder Contents - after code generation")
+![Folder Contents - after code generation](screenshots/from-project-folder-contents-after-0.PNG)
 
 **Config driven generation**
 

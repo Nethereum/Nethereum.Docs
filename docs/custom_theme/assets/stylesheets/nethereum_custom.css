@@ -34,3 +34,10 @@
   font-weight: 900;
   font-size: small;
 }
+
+.md-header__button.md-logo img, .md-header__button.md-logo svg {
+    fill: currentColor;
+    display: block;
+    height: 3rem;
+    width: 3rem;
+}

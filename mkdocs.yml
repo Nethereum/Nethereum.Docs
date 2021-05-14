@@ -18,7 +18,7 @@ copyright: Nethereum is licensed under the MIT License (MIT), this <a href="http
 #extra project info and template customisation
 extra:
   support:
-    gitter: https://gitter.im/Nethereum/Nethereum
+    gitter: https://discord.gg/u3Ej2BReNn
     nethereum_website: https://docs.nethereum.com
     issues: https://github.com/Nethereum/Nethereum/issues
 
@@ -34,8 +34,7 @@ theme:
         primary: teal
         accent: teal
     favicon: images/favicon.ico
-    logo:
-      icon: library_books
+    logo: assets/logo.png
     feature:
       tabs: true
 nav:

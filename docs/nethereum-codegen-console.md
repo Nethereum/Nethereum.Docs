@@ -4,7 +4,7 @@
 
 A dotnet core CLI tool which can be run in isolation or installed as a dotnet. It is especially useful for automated builds and integration scripts.
 
-Source Code: [https://github.com/Nethereum/Nethereum/tree/master/src/Nethereum.Generator.Console]
+Source Code: [https://github.com/Nethereum/Nethereum/tree/master/generators/Nethereum.Generator.Console]
 
 Prerequisites:
 
@@ -56,8 +56,8 @@ Create a folder and place your ABi and bin files in it. Go to the folder in the 
 
 Sample Compiled Solidity Files:
 
-* [StandardContract.abi](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Generator.Console/sample/StandardContract.abi)
-* [StandardContract.bin](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Generator.Console/sample/StandardContract.bin)
+* [StandardContract.abi](https://github.com/Nethereum/Nethereum/tree/master/generators/Nethereum.Generator.Console/sample/StandardContract.abi)
+* [StandardContract.bin](https://github.com/Nethereum/Nethereum/tree/master/generators/Nethereum.Generator.Console/sample/StandardContract.bin)
 
 Invoke the generator with minimum args
 ```
@@ -90,8 +90,8 @@ These instructions require .net core 2.1 to be installed.
 
 Sample Compiled Solidity Files:
 
-* [StandardContract.abi](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Generator.Console/sample/StandardContract.abi)
-* [StandardContract.bin](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Generator.Console/sample/StandardContract.bin)
+* [StandardContract.abi](https://github.com/Nethereum/Nethereum/tree/master/generators/Nethereum.Generator.Console/sample/StandardContract.abi)
+* [StandardContract.bin](https://github.com/Nethereum/Nethereum/tree/master/generators/Nethereum.Generator.Console/sample/StandardContract.bin)
 
 Steps:
 1. create new folder:

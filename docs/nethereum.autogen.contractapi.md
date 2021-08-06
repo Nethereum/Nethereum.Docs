@@ -105,4 +105,4 @@ Be aware that if a config file is present - ONLY ABI files in the config will be
 
 The Nethereum.Autogen.ContractApi.CSharp package uses the Nethereum.Generator.Console under the hood. It is possible to use this in isolation.  
 
-[Nethereum Generator Console](https://github.com/Nethereum/Nethereum.Docs/edit/master/docs/nethereum-code-generation.md)
+[Nethereum Generator Console](https://github.com/Nethereum/Nethereum.Docs/blob/master/docs/nethereum-code-generation.md)

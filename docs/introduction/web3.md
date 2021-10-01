@@ -95,57 +95,11 @@ Further example can be found on the [conversion unit tests](https://github.com/N
 "OfflineTransactionSigning" enables the signing of transactions, get the sender address or verify already signed transactions without interacting directly with the client.
 This is very convenient as light clients may not be able to store the whole chain, but would prefer to use their privates keys to sign transactions and broadcast the signed raw transaction to the network.
 
-```csharp
-Web3.OfflineTransactionSigning.SignTransaction
-Web3.OfflineTransactionSigning.GetSenderAddress
-Web3.OfflineTransactionSigning.VerifyTransaction
-```
+To sign transactions "offline" the simplest way is to either:
+Use directly the ```Nethereum.Web3.Accounts.AccountOfflineTransactionSigner``` which depending on the TransactionInput values will detect the type of transaction and use the specific TransactionSigner (EIP1559, Legacy, etc)
 
-To provide offline transaction signing in Nethereum you can do the following:
+Or use directly the ```web3.Eth.TransactionManager.SignTransactionAsync`` when Web3 has already has been instatiated with an ```Account("privateKey", chainId)```.
 
-First, you will need your private key, and sender address. You can retrieve the sender address from your private key using Nethereum.Core.Signing.Crypto.EthECKey.GetPublicAddress(privateKey); if you only have the private key.
-
-```csharp
-var privateKey = "0xb5b1870957d373ef0eeffecc6e4812c0fd08f554b37b233526acc331bf1544f7";
-var senderAddress = "0x12890d2cce102216644c59daE5baed380d84830c";
-```
-
-Now using web3 first you will need to retrieve the total number of transactions of your sender address.
-
-```csharp
-var web3 = new Web3(); var txCount = await web3.Eth.Transactions.GetTransactionCount.SendRequestAsync(senderAddress);
-```
-
-The txCount will be used as the nonce to sign the transaction.
-
-Now using web3 again, you can build an encoded transaction as following:
-
-```csharp
-var encoded = Web3.OfflineTransactionSigning.SignTransaction(privateKey, receiveAddress, 10, txCount.Value);
-```
-
-If you need to include the data and gas there are overloads for it.
-
-You can verify an encoded transaction:
-
-```csharp
-Assert.True(Web3.OfflineTransactionSigning.VerifyTransaction(encoded));
-```
-
-Or get the sender address from an encoded transaction:
-
-```csharp
-Web3.OfflineTransactionSigning.GetSenderAddress(encoded);
-```
-
-To send the encoded transaction you will use the RPC method "SendRawTransaction"
-
-```csharp
-var txId = await Web3.Eth.Transactions.SendRawTransaction.SendRequestAsync("0x" + encoded);
-```
-
-The complete example can be found on the [Transactions signing unit tests](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Signer.IntegrationTests/TransactionSigningTests.cs)
-or you can see a complete use case on the [Game sample](https://github.com/Nethereum/Nethereum.Game.Sample/) and its service [Source code](https://github.com/Nethereum/Nethereum.Game.Sample/blob/master/Forms/Core/Ethereum/GameScoreService.cs)
 
 #### Address checksum validation and formatting
 There are also utilities to both validate and format addresses

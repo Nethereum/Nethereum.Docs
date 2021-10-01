@@ -87,19 +87,18 @@ Wei conversion can be accessed though Convert
 Convert.ToWei
 Convert.FromWei
 ```
-[//]: # (CJuan> The below URL is broken )
-Further example can be found on the [conversion unit tests](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Util.UnitTests/ConversionTests.cs)
 
-#### Offline transaction signing
+Further example can be found on the [conversion unit tests](https://github.com/Nethereum/Nethereum/blob/master/tests/Nethereum.Util.UnitTests/ConversionTests.cs)
+
+#### Offline transaction signing
 
 "OfflineTransactionSigning" enables the signing of transactions, get the sender address or verify already signed transactions without interacting directly with the client.
 This is very convenient as light clients may not be able to store the whole chain, but would prefer to use their privates keys to sign transactions and broadcast the signed raw transaction to the network.
 
-To sign transactions "offline" the simplest way is to either:
-Use directly the ```Nethereum.Web3.Accounts.AccountOfflineTransactionSigner``` which depending on the TransactionInput values will detect the type of transaction and use the specific TransactionSigner (EIP1559, Legacy, etc)
+To sign ign transactions "offline" you can either use:
+```Nethereum.Web3.Accounts.AccountOfflineTransactionSigner``` or directly ```web3.Eth.TransactionManager.SignTransactionAsync```, both require that you use an Account instantiated with a private key and chainId.
 
-Or use directly the ```web3.Eth.TransactionManager.SignTransactionAsync`` when Web3 has already has been instatiated with an ```Account("privateKey", chainId)```.
-
+Both of these detect the specific transaction type provided by the ```transactionInput``` and will select the specific signer (eip1559, legacy, etc).
 
 #### Address checksum validation and formatting
 There are also utilities to both validate and format addresses

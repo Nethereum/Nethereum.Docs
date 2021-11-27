@@ -2,7 +2,7 @@
 
 Nethereum is the .Net integration library for Ethereum, simplifying smart contract management and interaction with Ethereum nodes whether they are public, like [ Geth ](https://geth.ethereum.org/), [Parity](https://www.parity.io/) or private, like [Quorum](https://www.jpmorgan.com/global/Quorum) and [Besu](https://besu.hyperledger.org/en/stable/).
 
-Nethereum is being developed targeting netstandard 1.1, net451 and also as a portable library, hence it is compatible with all major operating systems (Windows, Linux, MacOS, Android and OSX) and has been tested on cloud, mobile, desktop, Xbox, hololens and windows IoT.
+Nethereum is being developed targeting netstandard 1.1, net451 and also as a portable library, hence it is compatible with all major operating systems (Windows, Linux, macOS, Android, and iOS) and has been tested on cloud, mobile, desktop, Xbox, hololens and Windows IoT.
 
 Upcoming releases will be Ethereum 2.0 compliant (when Ethereum 2.0 is released) and include functionalities such as [DevP2P](https://github.com/ethereum/devp2p), [Plasma](https://plasma.io/plasma.pdf) and Micro-Payments.
 

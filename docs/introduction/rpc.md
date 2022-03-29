@@ -15,7 +15,7 @@ This type also handles the conversion to and from Big Endian, together with spec
 var number = new HexBigInteger(21000);
 var anotherNumber = new HexBigInteger("0x5208");
 var hex = number.HexValue; //0x5208
-BigInteger val = anotherNumber; //2100
+BigInteger val = anotherNumber; //21000
 ```
 
 ### Data

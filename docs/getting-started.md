@@ -41,6 +41,7 @@ Visual Studio Code or Visual Studio are both good choices for .Net development. 
 Nethereum's playground can help you get started immediately with no setup, yet, just be aware that it's not a full-fledged IDE http://playground.nethereum.com/
 
 Now, open the Program.cs file in the editor.
+If Visual Studio Code prompts you to add additional extensions, click 'Yes'.
 
 ## 5. Code to retrieve account balance
 

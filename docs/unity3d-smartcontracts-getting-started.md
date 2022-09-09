@@ -177,7 +177,7 @@ Using the transaction receipt we can decoded any logs / events for that transact
         yield return transactionTransferRequest.SignAndSendTransaction(transactionMessage, deploymentReceipt.ContractAddress);
         var transactionTransferHash = transactionTransferRequest.Result;
 
-        Debug.Log("Transfer txn hash:" + transactionHash);
+        Debug.Log("Transfer txn hash:" + transactionTransferHash);
 
         transactionReceiptPolling = new TransactionReceiptPollingRequest(url);
         yield return transactionReceiptPolling.PollForReceipt(transactionTransferHash, 2);
@@ -377,7 +377,7 @@ public class TokenDeployAndSend : MonoBehaviour {
         yield return transactionTransferRequest.SignAndSendTransaction(transactionMessage, deploymentReceipt.ContractAddress);
         var transactionTransferHash = transactionTransferRequest.Result;
 
-        Debug.Log("Transfer txn hash:" + transactionHash);
+        Debug.Log("Transfer txn hash:" + transactionTransferHash);
 
         transactionReceiptPolling = new TransactionReceiptPollingRequest(url);
         yield return transactionReceiptPolling.PollForReceipt(transactionTransferHash, 2);

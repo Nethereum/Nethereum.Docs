@@ -1,8 +1,8 @@
 ﻿## Smart contracts Events, Logs and Filters
 
-Events in smart contracts write data to the transaction receipt logs, providing a way to get extra information about a smart contract transactions.
+Events in smart contracts write data to the transaction receipt logs, providing a way to get extra information about smart contract transactions.
 
-A very good example is the “Transfer” event in the ERC20 Standard Token contract. Everytime that a token transfer has ocurred, an event gets logged providing information of the “sender”, “receiver” and the token amount.
+A very good example is the “Transfer” event in the ERC20 Standard Token contract. Everytime that a token transfer has occurred, an event gets logged providing information of the “sender”, “receiver” and the token amount.
 
 ![Transfer and transfer event](screenshots/TransferEvent.png)
 
@@ -54,7 +54,7 @@ We can call the functions of smart contract to query the state of a smart contra
 
 To do so we will need to create a class which inherits from "FunctionMessage". First we will decorate the class with a "Function" attribute, including the name and return type.
 
-Each parameter of the the function will be a property of the class, each of them decorated with the "Parameter" attribute, including the smart contract name, type and parameter order.
+Each parameter of the function will be a property of the class, each of them decorated with the "Parameter" attribute, including the smart contract name, type and parameter order.
 
 For the ERC20 smart contract, the "balanceOf" function definition, provides the query interface to get the token balance of a given address. As we can see this function includes only one parameter "_owner", of the type "address".
 
@@ -150,7 +150,7 @@ var contractAddress = transactionReceipt.ContractAddress;
 
 Once we have deployed the contract, we can execute our first transfer transaction. The transfer function will write to the log the transfer event.
 
-First we can create a TransactionHandler using the TrasferFunction definition and a TransferFunction message including the “receiverAddress” and the amount of tokens we want to send.
+First we can create a TransactionHandler using the TransferFunction definition and a TransferFunction message including the “receiverAddress” and the amount of tokens we want to send.
 
 Finally do the transaction transfer and wait for the receipt to be “mined” and included in the blockchain.
 
@@ -177,9 +177,9 @@ var transferEventOutput = transactionReceipt.DecodeAllEvents<TransferEventDTO>()
 
 ## Contract Filters and Event Logs
 
-Another way to access the event logs of a smart contract is to either get all changes of the logs (providing a filter message) or create filters and retrieve changes which apply to our filter message periodically.\
-\
-To access the logs, first of all, we need to create a transfer event handler for our contract address, and Evend definition.(TransferEventDTO).
+Another way to access the event logs of a smart contract is to either get all changes of the logs (providing a filter message) or create filters and retrieve changes which apply to our filter message periodically.
+
+To access the logs, first of all, we need to create a transfer event handler for our contract address, and event definition (TransferEventDTO).
 
 ```csharp
 var transferEventHandler = web3.Eth.GetEvent<TransferEventDTO>(contractAddress);
@@ -231,7 +231,7 @@ var filterTransferEventsForContractAllReceiverAddress2 = transferEventHandler.Cr
 var transferEventsForContractAllReceiverAddress2 = await transferEventHandler.GetAllChanges(filterTransferEventsForContractAllReceiverAddress2);
 ```
 
-Another scenario is when you want to include multiple indexed values, for example transfers for “receiverAddress1” OR “receiverAddress2”. Then you will need to use an array of the values you are interested.
+Another scenario is when you want to include multiple indexed values, for example transfers for “receiverAddress1” OR “receiverAddress2”. Then you will need to use an array of the values you are interested in.
 
 ```csharp
 var filterTransferEventsForContractAllReceiverAddresses = transferEventHandler.CreateFilterInput(null, new []{receiverAddress2, receiverAddress});
@@ -248,7 +248,7 @@ Using the same filter message we created before we can create the filter and get
 var filterIdTransferEventsForContractAllReceiverAddress2  = await transferEventHandler.CreateFilterAsync(filterTransferEventsForContractAllReceiverAddress2);
 ```
 
-One thing to note, if  try to get the filter changes now, we will not get any results because the filter only returns the changes since creation.
+One thing to note, if we try to get the filter changes now, we will not get any results because the filter only returns the changes since creation.
 
 ```csharp
 var result = await transferEventHandler.GetFilterChanges(filterIdTransferEventsForContractAllReceiverAddress2);
@@ -302,7 +302,7 @@ var filterAllTransferEventsForAllContracts = transferEventHandlerAnyContract.Cre
 var allTransferEventsForContract = await transferEventHandlerAnyContract.GetAllChanges(filterAllTransferEventsForAllContracts);
 ```
 
-If we want to retrieve only all the transfers to the “receiverAddress”,  we can create the same filter as before ,including only the second indexed parameter (“to”). This will return the Transfers only to this address for both contracts.
+If we want to retrieve only all the transfers to the “receiverAddress”,  we can create the same filter as before, including only the second indexed parameter (“to”). This will return the Transfers only to this address for both contracts.
 
 ```csharp
 var filterTransferEventsForAllContractsReceiverAddress2 = transferEventHandlerAnyContract.CreateFilterInput<string, string>(null, receiverAddress);

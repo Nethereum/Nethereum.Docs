@@ -105,7 +105,7 @@ A function, has different methods, the main ones are:
 * EstimateGasAsync: where the transaction is simulated on chain to calculate the gas amount necessary to send the transaction.
 
 
-Using a CallAsyc we can query the smart contract for values:
+Using a CallAsync we can query the smart contract for values:
 
 This is the solidity function to get balance:
 

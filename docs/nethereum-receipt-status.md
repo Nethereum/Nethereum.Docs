@@ -5,7 +5,7 @@ Since the Byzantium fork, Ethereum provides with a way to know if a transaction 
 
 * `0` transaction has failed (for whatever reason)
 
-* `1` transaction was succesful.
+* `1` transaction was successful.
 
 ## How to retrieve a transaction status with Nethereum
 

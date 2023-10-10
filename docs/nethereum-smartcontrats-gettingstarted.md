@@ -277,7 +277,7 @@ Nethereum sets automatically the GasPrice if not provided by using the clients "
 If you want to have more control of the GasPrice these can be set in both FunctionMessages and DeploymentMessages.
 
 ```csharp
-transfer.GasPrice =  Nethereum.Web3.Web3.Convert.ToWei(25, UnitConversion.EthUnit.Gwei);
+transfer.GasPrice = Nethereum.Web3.Web3.Convert.ToWei(25, UnitConversion.EthUnit.Gwei);
 ```
 
 The GasPrice is set in "Wei" which is the lowest unit in Ethereum, so if we are used to the usual "Gwei" units, this will need to be converted using the Nethereum Convertion utilities.

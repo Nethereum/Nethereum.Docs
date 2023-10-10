@@ -320,7 +320,7 @@ Nethereum internally calls the Ethereum client to set the GasPrice, Nonce and es
 ```csharp
 transfer.Nonce = 2;
 transfer.Gas = 21000;
-transfer.GasPrice =  Nethereum.Web3.Web3.Convert.ToWei(25, UnitConversion.EthUnit.Gwei);
+transfer.GasPrice = Nethereum.Web3.Web3.Convert.ToWei(25, UnitConversion.EthUnit.Gwei);
 var signedTransaction = await transferHandler.SignTransactionAsync(ContractAddress, transfer);
 ```
 

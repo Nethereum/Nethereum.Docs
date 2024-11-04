@@ -37,7 +37,7 @@ var accountFilePath = @"c:\xxx\UTC--2015-11-25T05-05-03.116905600Z--12890d2cce10
 var account = Account.LoadFromKeyStoreFile(accountFilePath, string password);
 ```
 
-If you are targetting other frameworks like core or netstandard, portable loading directly from a file is not supported, to allow for major platform compatibility, in this scenario you will need to extract the json fist and pass it as a parameter.
+If you are targetting other frameworks like core or netstandard, portable loading directly from a file is not supported, to allow for major platform compatibility, in this scenario you will need to extract the json first and pass it as a parameter.
 
 ```csharp
 var password = "password";

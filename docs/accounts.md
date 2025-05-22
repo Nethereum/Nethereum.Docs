@@ -90,7 +90,7 @@ To create a new account you just need to generate a new private key, Nethereum.S
 ```csharp
 var ecKey = Nethereum.Signer.EthECKey.GenerateKey();
 var privateKey = ecKey.GetPrivateKeyAsBytes().ToHex();
-var account = new Nethereum.Accounts.Account(privateKey);
+var account = new Nethereum.Web3.Accounts.Account(privateKey);
 ```
 
 The Nethereum.KeyStore library, allows you to encrypt and save your private key, in a compatible way to all the clients.
